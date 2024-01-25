@@ -48,3 +48,20 @@ a {
 #registro {
     background-color: #D97D0D;
 }
+.navegacion {
+    margin: 0px;
+    padding: 0px;
+    background-color: #83a63765;
+    display: flex;
+}
+ul.nav-list {
+    display: flex;
+    justify-content: center;
+   
+}
+.elemt-list {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
