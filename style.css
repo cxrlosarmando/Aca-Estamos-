@@ -1,14 +1,46 @@
 footer {
-    display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.barracolor {
+    display: flex;
+    height: 10px;
+}
+.color1 {
+    color: #D95525;
+    flex-grow: 1;
+    float: left;
+    background-color:#D95525;
+}
+.color2 {
+    flex-grow: 1;
+    float: left;
+    background-color: #D97D0D;
+}
+.color3 {
+    flex-grow: 1;
+    float: left;
+    background-color: #83A637;
+}
+.color4 {
+    flex-grow: 1;
+    float: left;
+    background-color: #03A688;
+}
+
+.cuadradofooter {
+    display: flex;
+}
 #footerverde {
     background-color: #83A637;
-    width: 100%;
+    width: 101%;
+}
+.logosred {
+    margin-top: 2%;
 }
 .orgullosa {
     color: #83A637;
+    margin-top: 2%;
 }
 .crece {
     color: #D95525;
@@ -26,6 +58,7 @@ footer {
 .logos-container img {
     height: 5rem;
     margin-right: 1rem;
+    margin-top: 10%;
 }
 #datosfooter {
     list-style: none;
