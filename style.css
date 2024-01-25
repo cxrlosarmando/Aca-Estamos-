@@ -1,6 +1,7 @@
 footer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 #footerverde {
     background-color: #83A637;
@@ -16,7 +17,15 @@ footer {
     color:#D97D0D;
 }
 .renca {
-    width: 50%;
+    width: 60%;
+}
+.logos-container {
+    display: flex; 
+    justify-content: flex-start;
+}
+.logos-container img {
+    height: 5rem;
+    margin-right: 1rem;
 }
 #datosfooter {
     list-style: none;
