@@ -65,3 +65,22 @@ ul.nav-list {
     margin: 10px;
     padding: 10px 10px 10px 10px;
 }
+
+div.from-ingreso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+#bt-login {
+    background-color: #D95525;
+}
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
