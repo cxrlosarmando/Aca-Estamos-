@@ -1,15 +1,27 @@
 footer {
     display: flex;
     justify-content: space-around;
-    background-color: #83A637; 
     height: 200px; 
 }
-
-#nombres {
-    text-align: left;
-}#datosfooter {
+#footerverde {
+    background-color: #83A637;
+}
+.orgullosa {
+    color: #83A637;
+}
+.crece {
+    color: #D95525;
+}
+.participa {
+    color:#D97D0D;
+}
+#datosfooter {
     list-style: none;
 }
+#nombres {
+    text-align: left;
+}
+
 a {
     color: white;
     text-decoration: none;
