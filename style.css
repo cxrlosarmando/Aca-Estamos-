@@ -165,3 +165,31 @@ div#buscador-pr.conteiner-fluid {
 #botonInicio{
     margin-left: 20px;
 }
+
+#card-empleo {
+    margin: 40px;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+#img-empresa {
+    width: 400px;
+    height: 250px;
+}
+#boton-postula {
+    background-color: #03A688;
+
+}
+
+#boton-postula:hover {
+    background-color: #03a688a1;
+}
+
+#boton-info {
+    background-color: #D95525;
+
+}
+
+#boton-info:hover {
+    background-color: #d95525a6;
+}
