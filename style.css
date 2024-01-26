@@ -36,29 +36,24 @@ footer {
     float: left;
     background-color: #03A688;
 }
-
-.container-fluids {
-    margin-left: auto; 
-}
-
 .cuadradofooter {
     display: flex;
 }
 #footerverde {
     background-color: #83A637;
-    width: 50%;
+    width: 777px;
 }
 .logosred {
-    margin-top: 2%;
+    margin-top: 3%;
 }
 .renca {
     margin-left: 10px;
-    width: 70%;
+    width: 200px;
     font-size: 150%;  
 }
 .orgullosa {
     color: #0192d0;
-    margin-top: 10%;
+    margin-top: 17%;
     margin-bottom: 0px;
 }
 .crece {
@@ -72,13 +67,10 @@ footer {
 
 .logos-container {
     display: flex;
-    float: right;
 }
-
 .logos-container img {
-    height: 5rem;
-    margin-right: 20%;
-    margin-top: 20%;
+    margin-top: 60px;
+    margin-left: 70%;
     height: 100px; 
     width: 100px; 
 }
