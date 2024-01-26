@@ -13,7 +13,7 @@ footer {
 .barracolor {
     display: flex;
     height: 10px;
-    width: 1000px;
+    width: auto;
 }
 .color1 {
     color: #D95525;
@@ -213,4 +213,9 @@ div#buscador-pr.conteiner-fluid {
     border-style: solid; 
     border-color: rgba(0, 0, 0, 0.322); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+}
+
+.container-fluids img {
+
+    width: 100%;
 }
