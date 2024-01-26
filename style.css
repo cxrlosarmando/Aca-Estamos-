@@ -1,6 +1,5 @@
 footer {
     align-items: center;
-    
     justify-content: space-between;
 }
 .barracolor {
@@ -34,32 +33,38 @@ footer {
 }
 #footerverde {
     background-color: #83A637;
-    width: 101%;
+    width: 100%;
 }
 .logosred {
     margin-top: 2%;
 }
 .orgullosa {
     color: #83A637;
-    margin-top: 2%;
+    margin-top: 10%;
+    margin-bottom: 0px;
 }
 .crece {
     color: #D95525;
+    margin-bottom: 0px;
 }
 .participa {
     color:#D97D0D;
+    margin-bottom: 0px;
 }
 .renca {
-    width: 60%;
+    width: 40%;
+    font-size: 150%;   
 }
 .logos-container {
-    display: flex; 
-    justify-content: flex-start;
+    display: flex;
 }
+
 .logos-container img {
     height: 5rem;
     margin-right: 1rem;
     margin-top: 10%;
+    height: 100px; 
+    width: auto; 
 }
 #datosfooter {
     list-style: none;
