@@ -159,7 +159,7 @@ div#buscador-pr.conteiner-fluid {
     margin-left: 30px; 
 }
 #iconos{
-    margin-top: 7%;   
+    margin-top: 5%;   
 }
 .l{
     margin-right: 20px;
@@ -170,6 +170,16 @@ div#buscador-pr.conteiner-fluid {
 }
 #botonInicio{
     margin-left: 20px;
+    
+}
+
+#botonesnav{
+    margin-left: 15%;
+    margin-top: 0%;
+}
+
+#botonInicio{
+    margin-top: 10px;
 }
 
 #card-empleo {
@@ -216,3 +226,4 @@ div#buscador-pr.conteiner-fluid {
 
     width: 100%;
 }
+
