@@ -180,6 +180,15 @@ div#buscador-pr.conteiner-fluid {
     margin-left: 20px;
 }
 
+#botonesnav{
+    margin-left: 15%;
+    margin-top: 0%;
+}
+
+#botonInicio{
+    margin-top: 10px;
+}
+
 #card-empleo {
     margin: 40px;
     padding: 0%;
@@ -224,3 +233,4 @@ div#buscador-pr.conteiner-fluid {
 
     width: 100%;
 }
+
