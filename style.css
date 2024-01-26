@@ -13,6 +13,7 @@ footer {
 .barracolor {
     display: flex;
     height: 10px;
+    width: 1000px;
 }
 .color1 {
     color: #D95525;
