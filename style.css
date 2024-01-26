@@ -119,3 +119,12 @@ ul.nav-list {
     height: 100%; 
     display: block; 
 }
+
+div#buscador-pr.conteiner-fluid {
+    margin: 100px;
+    padding: 40px;
+
+}
+#buscar-ofertas {
+    margin: 50px;
+}
