@@ -114,10 +114,17 @@ ul.nav-list {
     margin: auto; 
 }
 
+
+.carousel-item {
+    width: 100%;
+    height:300px;
+    overflow: hidden;
+}
+
 .carousel-item img {
     width: 100%; 
     height: 100%; 
-    display: block; 
+    object-fit: cover;
 }
 
 div#buscador-pr.conteiner-fluid {
