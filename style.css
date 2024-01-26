@@ -1,0 +1,114 @@
+footer {
+    align-items: center;
+    
+    justify-content: space-between;
+}
+.barracolor {
+    display: flex;
+    height: 10px;
+}
+.color1 {
+    color: #D95525;
+    flex-grow: 1;
+    float: left;
+    background-color:#D95525;
+}
+.color2 {
+    flex-grow: 1;
+    float: left;
+    background-color: #D97D0D;
+}
+.color3 {
+    flex-grow: 1;
+    float: left;
+    background-color: #83A637;
+}
+.color4 {
+    flex-grow: 1;
+    float: left;
+    background-color: #03A688;
+}
+
+.cuadradofooter {
+    display: flex;
+}
+#footerverde {
+    background-color: #83A637;
+    width: 101%;
+}
+.logosred {
+    margin-top: 2%;
+}
+.orgullosa {
+    color: #83A637;
+    margin-top: 2%;
+}
+.crece {
+    color: #D95525;
+}
+.participa {
+    color:#D97D0D;
+}
+.renca {
+    width: 60%;
+}
+.logos-container {
+    display: flex; 
+    justify-content: flex-start;
+}
+.logos-container img {
+    height: 5rem;
+    margin-right: 1rem;
+    margin-top: 10%;
+}
+#datosfooter {
+    list-style: none;
+}
+#nombres {
+    text-align: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#inicio {
+    background-color: #83A637;
+    
+    
+}
+
+#registro {
+    background-color: #D97D0D;
+}
+.navegacion {
+    margin: 0px;
+    padding: 0px;
+    background-color: #83a63765;
+    display: flex;
+}
+ul.nav-list {
+    display: flex;
+    justify-content: center;
+   
+}
+.elemt-list {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.carousel {
+    width: 100%; 
+    max-height: 400px; 
+    overflow: hidden; 
+    margin: auto; 
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+}
