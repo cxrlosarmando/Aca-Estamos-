@@ -114,10 +114,17 @@ ul.nav-list {
     margin: auto; 
 }
 
+
+.carousel-item {
+    width: 100%;
+    height:300px;
+    overflow: hidden;
+}
+
 .carousel-item img {
     width: 100%; 
     height: 100%; 
-    display: block; 
+    object-fit: cover;
 }
 
 div#buscador-pr.conteiner-fluid {
@@ -127,4 +134,33 @@ div#buscador-pr.conteiner-fluid {
 }
 #buscar-ofertas {
     margin: 50px;
+}
+
+/* Navbar */
+.nav-link{
+    color: #83A637;
+    margin-right: 90px;    
+}
+#hastag{
+    list-style: none;
+    font-size: 110%; 
+}
+#hire{
+    margin-left: 30px;
+}
+#rencaorgullosa{
+    margin-left:0%;
+}
+#iconos{
+    margin-top: 7%;   
+}
+.l{
+    margin-right: 20px;
+}
+#navbarNav2{
+    margin-top: 6%;
+    margin-left: 10%;
+}
+#botonInicio{
+    margin-left: 20px;
 }
