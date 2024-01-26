@@ -141,15 +141,15 @@ div#buscador-pr.conteiner-fluid {
     color: #83A637;
     margin-right: 90px;    
 }
-#hastag{
-    list-style: none;
-    font-size: 110%; 
-}
+.ml-4{
+    margin-left:10%;
+    font-size: 90%; 
+    color: white;
+
+}   
+
 #hire{
-    margin-left: 30px;
-}
-#rencaorgullosa{
-    margin-left:0%;
+    margin-left: 30px; 
 }
 #iconos{
     margin-top: 7%;   
