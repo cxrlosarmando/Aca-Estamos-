@@ -38,23 +38,25 @@ footer {
 .logosred {
     margin-top: 2%;
 }
+.renca {
+    margin-left: 10px;
+    width: 39%;
+    font-size: 150%;   
+}
 .orgullosa {
-    color: #83A637;
+    color: #0192d0;
     margin-top: 10%;
     margin-bottom: 0px;
 }
 .crece {
-    color: #D95525;
+    color: #d75e24;
     margin-bottom: 0px;
 }
 .participa {
-    color:#D97D0D;
+    color:#769e33;
     margin-bottom: 0px;
 }
-.renca {
-    width: 40%;
-    font-size: 150%;   
-}
+
 .logos-container {
     display: flex;
 }
