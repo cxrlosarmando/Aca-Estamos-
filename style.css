@@ -6,77 +6,110 @@
 header {
     margin: 0%;
 }
-footer {
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 0; 
+    margin-right: 0;
+    padding: 0; 
+  }
+  .footer {
     align-items: center;
     justify-content: space-between;
-}
-.barracolor {
+    width: 100%;
+  }
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .footer-info1, .footer-info2, .footer-info3 {
+    width: 100%;
+  }
+  .footer-info1 {
+    width: 58%;
+    background-color:#83A637 ;
+  }
+  .footer-info2, .footer-info3 {
+    width: 21%;
+  }
+  .barracolor {
     display: flex;
     height: 10px;
     width: auto;
-}
-.color1 {
+  }
+  .color1 {
     color: #D95525;
     flex-grow: 1;
-    float: left;
     background-color:#D95525;
-}
-.color2 {
+  }
+  .color2 {
     flex-grow: 1;
-    float: left;
     background-color: #D97D0D;
-}
-.color3 {
+  }
+  .color3 {
     flex-grow: 1;
-    float: left;
     background-color: #83A637;
-}
-.color4 {
+  }
+  .color4 {
     flex-grow: 1;
-    float: left;
     background-color: #03A688;
-}
-.cuadradofooter {
-    display: flex;
-}
-#footerverde {
-    background-color: #83A637;
-    width: 777px;
-}
-.logosred {
-    margin-top: 3%;
-}
-.renca {
+  }
+  
+  .logosred a {
+    margin-top: 15px;
+    transition: all .3s ease;
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+  }
+  .logosred a:hover {
+    color:#ffffff;
+    padding-left: 6px;
+  }
+  #datosfooter {
+    list-style: none;
+  }
+  .renca {
     margin-left: 10px;
     width: 200px;
     font-size: 150%;  
-}
-.orgullosa {
+  }
+  .orgullosa {
     color: #0192d0;
     margin-top: 17%;
     margin-bottom: 0px;
-}
-.crece {
+  }
+  .crece {
     color: #d75e24;
     margin-bottom: 0px;
-}
-.participa {
+  }
+  .participa {
     color:#769e33;
     margin-bottom: 0px;
-}
-
-.logos-container {
+  }
+  
+  .logos-container {
     display: flex;
-}
-.logos-container img {
+    margin-left: 50px;
+  }
+  .logos-container img {
     margin-top: 60px;
-    margin-left: 70%;
     height: 100px; 
-    width: 100px; 
-}
-#datosfooter {
-    list-style: none;
-}
+    width: 220px; 
+  }
+  @media (min-width: 350px) and (max-width: 991px) {
+    .footer-info1, .footer-info2, .footer-info3 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .logos-container img {
+      align-items: center;
+      height: 100px; 
+      width: 160px; 
+      margin-left: 20px;
+    }
+  }  
 #nombres {
     text-align: left;
 }
