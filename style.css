@@ -91,7 +91,7 @@ header {
   
   .logos-container {
     display: flex;
-    margin-left: 50px;
+    margin-left: 40px;
   }
   .logos-container img {
     margin-top: 60px;
@@ -104,10 +104,15 @@ header {
       margin-bottom: 30px;
     }
     .logos-container img {
-      align-items: center;
+
       height: 100px; 
-      width: 160px; 
-      margin-left: 20px;
+      width: 170px; 
+    }
+    .logosred {
+      margin-left: 60px;
+    }  
+    .renca {
+      margin-left: 40px;
     }
   }  
 #nombres {
