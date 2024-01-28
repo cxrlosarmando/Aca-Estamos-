@@ -5,8 +5,9 @@
 }
 header {
     margin: 0%;
+    overflow-x: hidden;
 }
-.container {
+.container-fluid {
     width: 100%;
     margin: 0 auto;
     margin-left: 0; 
@@ -32,11 +33,13 @@ header {
     width: 100%;
   }
   .footer-info1 {
-    width: 58%;
+    width: 50%;
     background-color:#83A637 ;
   }
-  .footer-info2, .footer-info3 {
-    width: 21%;
+  .footer-info2 {
+    width: 20%;
+  } .footer-info3 {
+    width: 30%;
   }
   .barracolor {
     display: flex;
@@ -93,10 +96,8 @@ header {
     color:#769e33;
     margin-bottom: 0px;
   }
-  
   .logos-container {
     display: flex;
-    margin-left: 40px;
   }
   .logos-container img {
     margin-top: 60px;
@@ -109,12 +110,12 @@ header {
       margin-bottom: 30px;
     }
     .logos-container img {
-
+      margin-left: 25px;
       height: 100px; 
       width: 170px; 
     }
     .logosred {
-      margin-left: 60px;
+      margin-left: 65px;
     }  
     .renca {
       margin-left: 40px;
