@@ -286,13 +286,13 @@ div.col-lg-8.bg-light  {
   padding: 0%;
 }
 
-div > img {
+#responsive > img {
     border-radius: 8px;
     width: 100%;
     height: auto;
 }
 
-div{
+#responsive {
     display: grid;
     grid-template-columns:
     repeat(
