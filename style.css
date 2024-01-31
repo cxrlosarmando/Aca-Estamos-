@@ -439,25 +439,6 @@ margin-bottom: 0%;
   padding: 2%;
 }
 
-/* From de Inicio */
-#login-user {
-  width: 800px;
-  margin: 50px;
-} 
-
-.Olvide {
-  display: flex;
-  justify-content: center;
- 
-}
-.Olvide-con {
-  color: #0192d0;
-  margin: 0%;
-  padding: 0%;
-}
-
-
-
 /* FORM RECUPERAR CONTRASEÑA */
 
 #ContenedorOlvCont {
