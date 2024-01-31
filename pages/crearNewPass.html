@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acá Estamos - Registrate! </title>
+    <title>Acá Estamos - Login </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -52,7 +52,7 @@
                             id="botonesnav">
                             <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
                                 style="background-color:#83A637;">
-                                <a href="./pages/login.html">Iniciar Sesión</a>
+                                <a href="./login.html">Iniciar Sesión</a>
                             </button>
                             <button class="btn btn-primary btn-lg me-2" type="button" id="botonInicio"
                                 style="background-color: #D97D0D">
@@ -92,92 +92,51 @@
         </div>
     </header>
 
+    <main class="d-flex justify-content-center vh-100 w-100">
+        <div class="row">
+            <div id="ContenedorOlvCont" class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 align-self-center">
+                <div class="border p-4 mb-4 mb-lg-5 mx-lg-1"
+                    style="border-radius: 20px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); word-wrap: break-word;">
+                    <h2 class="text-center">Recuperación de contraseña</h2>
+                    <div class="from-ingreso">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputPass1" class="form-label">Ingrese nueva contraseña</label>
+                                <input type="password" class="form-control form-control-lg" id="exampleInputPass1"
+                                    aria-describedby="password">
+                                
 
-    <main class="d-flex justify-content-center"> 
-    <div style="margin: 50px auto; max-width: 800px;">
-        <div class="border p-4"
-            style="margin: 50px auto 50px auto; background-color: rgba(255, 255, 255, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            <h2 class="text-center">Datos Registro</h2>
-            <div class="from-Registro">
-                <form>
-                    <div class="row">
-                        <div class="col">
-                            <div class="col">
-                            
-                                <div class="md-5">
-                                    <label for="validationCustom01" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" >
-                                    <div class="valid-feedback">
-                                      Looks good!
-                                    </div>
-                                  </div>
-                                  <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Apellido">
-                                    <div class="valid-feedback">
-                                      Looks good!
-                                    </div>
-                                  </div>
-                                  <div class="md-5">
-                                      <label for="validationCustom02" class="form-label">Teléfono</label>
-                                      <input type="text" class="form-control" id="validationCustom02" placeholder="+59 999999999">
-                                      <div class="invalid-feedback">
-                                        Please choose a username.
-                                      </div>
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="md-5">
-                                      <label for="validationCustom02" class="form-label">Rut</label>
-                                      <input type="text" class="form-control" id="validationCustom02" placeholder="11.111.111-1">
-                                      <div class="invalid-feedback">
-                                        Please choose a username.
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Correo</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="example@Email.com">
-                                    <div class="invalid-feedback">
-                                      Please choose a username.
-                                    </div>
-                                  </div>
-                                  <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Repetir Correo</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="example@Email.com">
-                                    <div class="invalid-feedback">
-                                      Please choose a username.
-                                    </div>
-                                  </div>
-                                  <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Contraseña</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
-                                    <div class="invalid-feedback">
-                                      Please choose a username.
-                                    </div>
-                                  </div>
-                                  
-                                  <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Repetir Contraseña</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
-                                    <div class="invalid-feedback">
-                                      Please choose a username.
-                                    </div>
-                                  </div>
-                                  <div class="row" id="contendor-registro">
-                                    <button type="button" class="btn btn-primary btn-lg" id="boton-regist">Registrarse</button>
-                                  </div>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPass2" class="form-label">Repita contraseña</label>
+                                    <input type="password" class="form-control form-control-lg" id="exampleInputPass2"
+                                        aria-describedby="emailHelp">
+                                        
+                                </div>        
 
-                        
-                       
-                       
+
+
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                
+                                <button type="submit" class="btn btn-primary btn-lg" id="bt-login">Confirmar Cambio</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
     </main>
+    
+    
+    
+
+    
+    
+
+
+
+
+
 
     <footer class="footer">
         <div class="barracolor">
@@ -229,7 +188,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <script src="scripts.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

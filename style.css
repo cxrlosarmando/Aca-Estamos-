@@ -422,7 +422,7 @@ margin-bottom: 0%;
 
 }
 
-/* From de Inicio */
+/* Form de Inicio */
 #login-user {
   width: 800px;
   margin: 50px;
@@ -445,3 +445,28 @@ margin-bottom: 0%;
   margin-left: 0%;
 }
 
+/* Comienza estilos de form de Registro */
+
+
+#boton-regist {
+
+  margin-top: 10%;
+  background-color: #D95525;
+  border-color: #D95525;
+}
+
+
+
+
+/*AQUI COMIENZA DISEÑO DE EDITAR CV */ 
+
+
+
+
+
+
+
+
+
+
+/* ACA TERMINA DISEÑO DE EDITAR CV */
