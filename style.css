@@ -410,3 +410,13 @@ div.col-lg-8.bg-light {
     repeat(auto-fit,
     );
 }
+
+
+
+
+#ContenedorOlvCont{
+
+width: 100%;
+height: 50%;
+margin-bottom: 0%;
+}
