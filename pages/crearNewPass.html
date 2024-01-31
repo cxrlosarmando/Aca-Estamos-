@@ -52,7 +52,7 @@
                             id="botonesnav">
                             <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
                                 style="background-color:#83A637;">
-                                <a href="../pages/login.html">Iniciar Sesión</a>
+                                <a href="./login.html">Iniciar Sesión</a>
                             </button>
                             <button class="btn btn-primary btn-lg me-2" type="button" id="botonInicio"
                                 style="background-color: #D97D0D">
@@ -101,14 +101,24 @@
                     <div class="from-ingreso">
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Ingrese su correo electrónico</label>
-                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">Ingrese un correo electrónico registrado</div>
+                                <label for="exampleInputPass1" class="form-label">Ingrese nueva contraseña</label>
+                                <input type="password" class="form-control form-control-lg" id="exampleInputPass1"
+                                    aria-describedby="password">
+                                
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPass2" class="form-label">Repita contraseña</label>
+                                    <input type="password" class="form-control form-control-lg" id="exampleInputPass2"
+                                        aria-describedby="emailHelp">
+                                        
+                                </div>        
+
+
+
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <button type="button" class="btn btn-secondary btn-lg" id="btn-back" onclick="volverAInicioDeSesion()" style="margin-right: 5px;">Volver</button>
-                                <button type="submit" class="btn btn-primary btn-lg" id="bt-login">Recuperar Contraseña</button>
+                            <div class="d-flex justify-content-center">
+                                
+                                <button type="submit" class="btn btn-primary btn-lg" id="bt-login">Confirmar Cambio</button>
                             </div>
                         </form>
                     </div>
