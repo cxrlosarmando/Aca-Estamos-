@@ -412,18 +412,7 @@ div.col-lg-8.bg-light {
   padding: 0%;
 }
 
-#responsive>img {
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-}
 
-#responsive {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit,
-    );
-}
 
 
 
@@ -498,3 +487,21 @@ div.col-lg-8.bg-light {
 
 
 /* ACA TERMINA DISEÑO DE EDITAR CV */
+
+/* Aqui comienza diseño de registro(registro.html) */
+#responsive>img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+#responsive {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,
+    );
+}
+
+/* #mar-boton-reg {
+  border-color: #D95525;
+} */
