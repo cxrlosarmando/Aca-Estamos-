@@ -535,3 +535,21 @@ div.col-lg-8.bg-light {
 /* #mar-boton-reg {
   border-color: #D95525;
 } */
+
+
+/* Responsive formularios */
+@media (min-width: 280px) and (max-width: 999px) {
+  #Datos-personales, #Educacion, #Experiencia, #Editarperfil, #Editperfilempresa {
+    width: 90%;
+  }
+  #Editarperfil .form-Perfil, #Educacion .form-Educacion, #Experiencia .form-Experiencia {
+    width: 100% !important;
+  }
+  #Datos-personales .row, #Editperfilempresa .row {
+    display: flex;
+    flex-direction: column;
+  }
+  #Datos-personales .col, #Editperfilempresa .col {
+    width: 100%;
+  }
+}
