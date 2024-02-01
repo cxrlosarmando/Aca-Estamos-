@@ -93,91 +93,39 @@
     </header>
 
     <div style="margin: 50px auto; max-width: 800px;">
-        <div class="border p-4"
-            style="margin: 50px auto 50px auto; background-color: rgba(4, 157, 217, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            <h2 class="text-center">Datos Personales</h2>
-            <div class="from-Datospersonales">
+        <div class="border p-4" style="background-color: rgba(4, 157, 217, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <h2 class="text-center">Perfil</h2>
+            <div style="width: 80%; margin: auto;" class="form-Perfil">
                 <form>
-                    <div class="row">
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="nombres" class="form-label">Nombres:</label>
-                                <input type="text" class="form-control" id="nombres"
-                                    placeholder="Nombre1 Nombre2">
-                            </div>
-                            <div class="mb-3">
-                                <label for="apellidos" class="form-label">Apellidos:</label>
-                                <input type="text" class="form-control" id="apellidos"
-                                    placeholder="Apellido1 Apellido2">
-                            </div>
-                            <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono:</label>
-                                <input type="text" class="form-control" id="telefono" placeholder="(9)12345678">
-                            </div>
-                            <div class="mb-3">
-                                <label for="rut" class="form-label">Rut:</label>
-                                <input type="text" class="form-control" id="rut" placeholder="11.111.111-1">
-                            </div>
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo:</label>
-                                <input type="text" class="form-control" id="correo" placeholder="correo@gmail.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="estadoCivil" class="form-label">Estado Civil:</label>
-                                <input type="text" class="form-control" id="estadoCivil" placeholder="Ejemplo: Soltero">
-                            </div>
-                            <div class="mb-3">
-                                <label for="fechaNacimiento" class="form-label">Fecha Nacimiento:</label>
-                                <input type="date" class="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="perfilLinkedIn" class="form-label">Perfil LinkedIn:</label>
-                                <input type="text" class="form-control" id="perfilLinkedIn"
-                                    placeholder="Inserte URL de su perfil">
-                            </div>
-                            <div class="mb-3">
-                                <label for="disponibilidad" class="form-label">Disponibilidad:</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="disponibilidad">
-                                    <label class="form-check-label" for="disponibilidad">
-                                        Inmediata
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">CV PDF:</label>
-                                <input class="form-control" type="file">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Certificados de Estudios:</label>
-                                <input class="form-control" type="file">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Certificado de Antecedentes:</label>
-                                <input class="form-control" type="file">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Certificados de Cursos:</label>
-                                <input class="form-control" type="file">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Foto Perfil:</label>
-                                <input class="form-control" type="file">
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Nombre a mostrar:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoEmpleo" class="form-label">Titular:</label>
+                        <input type="text" class="form-control" placeholder="Desarrollador Web / Diseñador">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreEmpresa" class="form-label">Acerca de:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCargo" class="form-label">Conocimientos Técnicos:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Excel Medio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCargo" class="form-label">Cursos Realizados:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Inglés II">
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-secondary btn-lg me-2">Cancelar</button>
                         <button type="button" class="btn btn-primary btn-lg">Guardar</button>
                     </div>
-                    
-                   
                 </form>
             </div>
         </div>
     </div>
+    
 
 
     <footer class="footer">
