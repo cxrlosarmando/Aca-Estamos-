@@ -91,44 +91,48 @@
             </nav>
         </div>
     </header>
+ <!-- Comienza el buscador -->
+    <div class="container-fluid" id="buscardor-pr">
+        <form class="d-flex" role="search" id="buscar-ofertas">
+            <input class="form-control me-2" type="search" placeholder="Buscar Ofertas.."
+                aria-label="Buscar Ofertas...">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+    </div>
+    <!-- Termina el buscador comienza card de Empleos -->
+    <div class="contenido-empleos">
+        <div class="justify-content-center">
+            <h2 class="h2-empleos">Oferta recomendadas</h2>
+        </div>
+        <div id="card-empleo">
 
-    <div style="margin: 50px auto; max-width: 800px;">
-        <div class="border p-4"
-            style="background-color: rgba(4, 157, 217, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            <h2 class="text-center">Perfil</h2>
-            <div style="width: 80%; margin: auto;" class="form-Perfil">
-                <form>
-                    <div class="mb-3">
-                        <label for="cargo" class="form-label">Nombre a mostrar:</label>
-                        <input type="text" class="form-control" placeholder="Ej. Nombre">
+            <div class="card mb-10" style="max-width: 5000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../Img/post-empresa.png" class="img-fluid rounded-start" id="img-empresa">
                     </div>
-                    <div class="mb-3">
-                        <label for="tipoEmpleo" class="form-label">Titular:</label>
-                        <input type="text" class="form-control" placeholder="Desarrollador Web / Diseñador">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Conserje</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum porro
+                                nemo inventore
+                                neque exercitationem quasi enim animi similique eveniet obcaecati molestiae temporibus
+                                culpa placeat
+                                dolor consectetur repudiandae nihil, voluptas impedit?.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary" type="button" id="boton-info">Info</button>
+                                <button class="btn btn-primary me-md-2" type="button" id="boton-postula">Postular
+                                </button>
+
+                            </div>
+                            <p class="card-text"><small class="text-body-secondary">Publicado hace 3 Días</small></p>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="nombreEmpresa" class="form-label">Acerca de:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="descripcionCargo" class="form-label">Conocimientos Técnicos:</label>
-                        <input type="text" class="form-control" placeholder="Ej. Excel Medio">
-                    </div>
-                    <div class="mb-3">
-                        <label for="descripcionCargo" class="form-label">Cursos Realizados:</label>
-                        <input type="text" class="form-control" placeholder="Ej. Inglés II">
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary btn-lg me-2">Cancelar</button>
-                        <button type="button" class="btn btn-primary btn-lg">Guardar</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-
-
-
+    
     <footer class="footer">
         <div class="barracolor">
             <div class="color1"> </div>

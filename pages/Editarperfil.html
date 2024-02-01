@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acá Estamos - Editar CV usuario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acá Estamos - Login </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/style.css">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=pop">
 </head>
 
@@ -52,11 +52,11 @@
                             id="botonesnav">
                             <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
                                 style="background-color:#83A637;">
-                                <a class="buttonInicio" href="./pages/login.html">Iniciar Sesión</a>
+                                <a href="./pages/login.html">Iniciar Sesión</a>
                             </button>
                             <button class="btn btn-primary btn-lg me-2" type="button" id="botonInicio"
                                 style="background-color: #D97D0D">
-                                <a class="buttonInicio" href="/pages/registro.html">Regístrate</a>
+                                <a href="/pages/registro.html">Regístrate</a>
                             </button>
                         </div>
                     </nav>
@@ -92,22 +92,40 @@
         </div>
     </header>
 
-    <!--**************** Inicio cv ****************-->
-
-    <div class="container-fluid justify-content-center border">
-        <div class="row align-items-center">
-            <div class="col-10 text-center" style="background-color:black">
-                <h1 style="color: white;">Nombre de la persona c:</h1>
-                .
+    <div id=Editarperfil style="margin: 50px auto; max-width: 800px;">
+        <div class="border p-4"
+            style="font-family: Poppins-Regular; background-color: rgba(4, 157, 217, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <h2 style="font-family:Heavitas" class="text-center">Perfil</h2>
+            <div  class="form-Perfil" style="width: 80%; margin: auto">
+                <form>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Nombre a mostrar:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoEmpleo" class="form-label">Titular:</label>
+                        <input type="text" class="form-control" placeholder="Desarrollador Web / Diseñador">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreEmpresa" class="form-label">Acerca de:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCargo" class="form-label">Conocimientos Técnicos:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Excel Medio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCargo" class="form-label">Cursos Realizados:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Inglés II">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary btn-lg me-2">Cancelar</button>
+                        <button type="button" class="btn btn-primary btn-lg">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 
 

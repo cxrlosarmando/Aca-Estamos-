@@ -1,3 +1,32 @@
+/* ************** Fuentes ************** */
+@font-face{
+  font-family: "Heavitas";
+  src: url("/Fuentes/Heavitas.ttf");
+}
+@font-face {
+  font-family: "Poppins-Bold" ;
+  src: url("Fuentes/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-ExtraBoldItalic" ;
+  src: url("/Fuentes/Poppins-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: "Poppins-Italic";
+  src: url("/Fuentes/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: "Poppins-MediumItalic";
+  src: url("/Fuentes/Poppins-MediumItalic.ttf");
+}
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("/Fuentes/Poppins-ExtraLight.ttf");
+}@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/Fuentes/Poppins-Regular.ttf");
+}
+/* ************** Fin Fuentes ************** */
 * {
   margin: 0px;
   padding: 0px;
@@ -91,16 +120,18 @@ header {
 
 #datosfooter {
   list-style: none;
+  font-family: "Poppins-Regular";
 }
 
 .renca {
+  font-family: "Poppins-Italic";
   margin-left: 10px;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .orgullosa {
   color: #0192d0;
-  margin-top: 35px;
+  margin-top: 45px;
   margin-bottom: 0px;
 }
 
@@ -244,15 +275,16 @@ div#buscador-pr.conteiner-fluid {
   /*imagen acá estamos*/
   margin-left: 30px;
 }
-
-.ml-4 {
-  /*hashtags*/
+.ml-4 {/*hashtags*/
   margin-left: 10%;
   font-size: 110%;
+  font-family: "Poppins-Italic";
   color: white;
   margin-right: 10%;
+} 
+.buttonInicio{
+  font-family: "Poppins-Regular";
 }
-
 #margenNav {
   margin-top: 4%;
   text-align: center;
@@ -268,8 +300,8 @@ div#buscador-pr.conteiner-fluid {
   color: #83A637;
   margin-right: 90px;
   font-size: larger;
+  font-family: "Poppins-Regular";
 }
-
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
@@ -486,7 +518,7 @@ div.col-lg-8.bg-light {
 
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
-/* Aqui comienza diseño de registro(registro.html) */
+/* Aqui comienza estilo de letra de registro(registro.html) */
 #responsive>#img-reg {
   border-radius: 8px;
   width: 100%;
