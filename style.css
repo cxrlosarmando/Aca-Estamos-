@@ -19,6 +19,13 @@
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("/Fuentes/Poppins-ExtraLight.ttf");
+}@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/Fuentes/Poppins-Regular.ttf");
+}
 /* ************** Fin Fuentes ************** */
 * {
   margin: 0px;
@@ -509,7 +516,7 @@ div.col-lg-8.bg-light {
 
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
-/* Aqui comienza diseño de registro(registro.html) */
+/* Aqui comienza estilo de letra de registro(registro.html) */
 #responsive>#img-reg {
   border-radius: 8px;
   width: 100%;
