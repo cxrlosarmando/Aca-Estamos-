@@ -19,10 +19,6 @@
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
-@font-face {
-  font-family: "Poppins-ExtraLight";
-  src: url("/Fuentes/Poppins-ExtraLight.ttf");
-}
 /* ************** Fin Fuentes ************** */
 * {
   margin: 0px;
@@ -279,7 +275,7 @@ div#buscador-pr.conteiner-fluid {
   color: white;
   margin-right: 10%;
 }
-
+.buttonInicio{ font-family: "Poppins-Italic";}
 #margenNav {
   margin-top: 4%;
   text-align: center;
@@ -295,8 +291,8 @@ div#buscador-pr.conteiner-fluid {
   color: #83A637;
   margin-right: 90px;
   font-size: larger;
+  font-family: "Poppins-Bold";
 }
-
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
