@@ -22,6 +22,9 @@
 @font-face {
   font-family: "Poppins-ExtraLight";
   src: url("/Fuentes/Poppins-ExtraLight.ttf");
+}@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/Fuentes/Poppins-Regular.ttf");
 }
 /* ************** Fin Fuentes ************** */
 * {
