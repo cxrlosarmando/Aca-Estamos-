@@ -120,16 +120,18 @@ header {
 
 #datosfooter {
   list-style: none;
+  font-family: "Poppins-Regular";
 }
 
 .renca {
+  font-family: "Poppins-Italic";
   margin-left: 10px;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .orgullosa {
   color: #0192d0;
-  margin-top: 35px;
+  margin-top: 45px;
   margin-bottom: 0px;
 }
 
