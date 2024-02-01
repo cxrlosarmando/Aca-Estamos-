@@ -461,7 +461,7 @@ margin-bottom: 0%;
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
 /* Aqui comienza diseño de registro(registro.html) */
-#responsive>img {
+#responsive>#img-reg {
   border-radius: 8px;
   width: 100%;
   height: auto;
