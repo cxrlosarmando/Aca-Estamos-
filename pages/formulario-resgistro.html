@@ -99,7 +99,7 @@
                 style="margin: 50px auto 50px auto; background-color: rgba(255, 255, 255, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
                 <h2 class="text-center">Datos Registro</h2>
                 <div class="from-Registro">
-                    <form>
+                    <form id="registroForm">
                         <div class="row">
                             <div class="col">
                                 <div class="col">
@@ -140,7 +140,8 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="fechaNacimiento" class="form-label">Fecha Nacimiento:</label>
-                                    <input type="date" class="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA">
+                                    <input type="date" class="form-control" id="fechaNacimiento"
+                                        placeholder="DD/MM/AAAA">
                                 </div>
                             </div>
                             <div class="md-5">
@@ -175,15 +176,15 @@
                                 </div>
                             </div>
                             <div class="row" id="contendor-registro">
-                                <button type="button" class="btn btn-primary btn-lg"
-                                    id="boton-regist"><a href="./SesiónIniciadaUsuario.html">Registrarse</a></button>
+                                <button type="button" class="btn btn-primary btn-lg" id="boton-regist" onclick="validarFormulario()"><a
+                                        href="./SesiónIniciadaUsuario.html">Registrarse</a></button>
                             </div>
                             <div class="col">
                                 <div class="google-icon">
                                     <a href=""><img class="img-google" src="/Img/Google.icon.jpg"></a>
                                 </div>
                             </div>
-                         
+
                         </div>
 
 

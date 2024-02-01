@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acá Estamos - Registrate! </title>
+    <title>Acá Estamos - Login </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -52,11 +52,11 @@
                             id="botonesnav">
                             <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
                                 style="background-color:#83A637;">
-                                <a href="/pages/login.html">Iniciar Sesión</a>
+                                <a href="./login.html">Iniciar Sesión</a>
                             </button>
                             <button class="btn btn-primary btn-lg me-2" type="button" id="botonInicio"
                                 style="background-color: #D97D0D">
-                                <a href="/pages/registro.html">Regístrate</a>
+                                <a href="./registro.html">Regístrate</a>
                             </button>
                         </div>
                     </nav>
@@ -93,110 +93,109 @@
     </header>
 
 
-    <main class="d-flex justify-content-center">
-        <div style="margin: 50px auto; max-width: 800px;">
-            <div class="border p-4"
-                style="margin: 50px auto 50px auto; background-color: rgba(131, 166, 55, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-                <h2 class="text-center">Datos Registro</h2>
-                <div class="from-Registro">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <div class="col">
-
-                                    <div class="md-5">
-                                        <label for="validationCustom01" class="form-label">Nombre Empresa</label>
-                                        <input type="text" class="form-control" id="validationCustom01"
-                                            placeholder="Nombre Empresa">
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                    </div>
-                                    <div class="md-5">
-                                        <label for="validationCustom02" class="form-label">Rut Empresa</label>
-                                        <input type="text" class="form-control" id="validationCustom02"
-                                            placeholder="11.111.111-1">
-                                        <div class="valid-feedback">
-                                            Looks good!
-                                        </div>
-                                    </div>
-                                    <div class="md-5">
-                                        <label for="validationCustom02" class="form-label">Teléfono</label>
-                                        <input type="text" class="form-control" id="validationCustom02"
-                                            placeholder="+59 999999999">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="md-5">
-                                    <label for="validationCustom02" class="form-label">Rubro</label>
-                                    <input type="text" class="form-control" id="validationCustom02"
-                                        placeholder="Hoteleria, Consultoria, ect...">
-                                    <div class="invalid-feedback">
-                                        Please choose a username.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="md-5">
-                                <label for="validationCustom02" class="form-label">Correo</label>
-                                <input type="text" class="form-control" id="validationCustom02"
-                                    placeholder="example@Email.com">
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                            <div class="md-5">
-                                <label for="validationCustom02" class="form-label">Repetir Correo</label>
-                                <input type="text" class="form-control" id="validationCustom02"
-                                    placeholder="example@Email.com">
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                            <div class="md-5">
-                                <label for="validationCustom02" class="form-label">Url de Página web</label>
-                                <input type="text" class="form-control" id="validationCustom02"
-                                    placeholder="Url">
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                            <div class="md-5">
-                                <label for="validationCustom02" class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-
-                            <div class="md-5">
-                                <label for="validationCustom02" class="form-label">Repetir Contraseña</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                            <div class="row" id="contendor-registro">
-                                <button type="button" class="btn btn-primary btn-lg"
-                                    id="boton-regist">Registrarse</button>
-                            </div>
-                            <div class="col">
-                                <div class="google-icon">
-                                    <a href=""><img class="img-google" src="/Img/Google.icon.jpg"></a>
-                                </div>
-                            </div>
+    <main class="container-fluid">
+        <div id="buscardor-pr">
+            <form class="d-flex" role="search" id="buscar-ofertas">
+                <input class="form-control me-2" type="search" placeholder="Buscar Ofertas.."
+                    aria-label="Buscar Ofertas...">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+        <div id="Oferta-laboral">
+            <div class="Oferta">
+                <div class="border p-4"
+                    style="margin: 50px auto 50px auto; background-color: rgba(131, 166, 55, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="../Img/post-empresa.png" class="img-fluid rounded-start" id="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="text-oferta">Conserje - ClinicaRenca</h2>
+                            <p>Fecha de Publicación</p>
                         </div>
 
+                        <div class="col-md-6" id="boton-postular">
+                            <div class="col-6">
+                                <h3 class="Vacantes-h3">Vacantes</h3>
+                            </div>
+                            <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
+                                style="background-color: #049DD9;">
+                                <a href="./login.html">Postular</a>
+                            </button>
+                            <div class="col-8" id="boton-guardar ">
+                                <button class="btn btn-primary btn-lg me-md-2" type="button" id="botonInicio"
+                                    style="background-color: rgba(4, 157, 217, 0.15)">
+                                    <a href="./registro.html">Guardar</a>
+                                </button>
+                            </div>
 
 
 
-                    </form>
+                        </div>
+                    
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <h4>Descripción</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-0">
+                        <p>El conserje desempeña un papel crucial en la gestión y mantenimiento de las instalaciones,
+                            garantizando un entorno limpio, seguro y acogedor. Este profesional llevará a cabo una
+                            variedad de tareas para mantener la integridad y la funcionalidad de las instalaciones.</p>
+
+                        </p>
+                        <p>Sus Principales funciones serán:</p>
+                        <ul>
+                            <li>
+                                <p>Limpieza y Mantenimiento</p>
+                            </li>
+                            <li>
+                                <p>Manejo de Residuos</p>
+                            </li>
+                            <li>
+                                <p>Seguridad y Vigilancia</p>
+                            </li>
+                            <li>
+                                <p>Mantenimiento Básico</p>
+                            </li>
+                            <li>
+                                <p>Gestión de Suministros</p>
+                            </li>
+                            <li>
+                                <p>Interacción con Residentes o Visitantes</p>
+                            </li>
+                        </ul>
+                        <p>Requisitos:</p>
+                        <ul>
+                            <li>
+                                <p>Experiencia previa en funciones de conserjería o mantenimiento.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Habilidades básicas de mantenimiento y reparación.</p>
+                            </li>
+                            <li>
+                                <p>Capacidad para seguir procedimientos de seguridad y protocolos de limpieza.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Buena habilidad de comunicación y actitud amable.</p>
+                            </li>
+                            <li>
+                                <p>Disponibilidad para trabajar en horarios flexibles, incluyendo noches y fines de semana según sea necesario.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+
+
+
                 </div>
+
             </div>
         </div>
-
     </main>
 
     <footer class="footer">

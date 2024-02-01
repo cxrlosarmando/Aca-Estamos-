@@ -500,6 +500,29 @@ div.col-lg-8.bg-light {
     );
 }
 
-/* #mar-boton-reg {
-  border-color: #D95525;
-} */
+#Oferta-laboral {
+  display: flex;
+  justify-content: left;
+
+}
+.text-oferta {
+  display: flex;
+  justify-content: left;
+  justify-items: left;
+}
+#img-fluid {
+  width: 250px;
+  height: 150px;
+
+}
+#boton-postular {
+  width: auto;
+  height: auto;
+}
+
+#boton-guardar {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
