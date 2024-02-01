@@ -19,6 +19,10 @@
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("/Fuentes/Poppins-ExtraLight.ttf");
+}
 /* ************** Fin Fuentes ************** */
 * {
   margin: 0px;
