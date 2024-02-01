@@ -52,11 +52,11 @@
                             id="botonesnav">
                             <button class="btn btn-primary btn-lg me-2" id="botonInicio" type="button"
                                 style="background-color:#83A637;">
-                                <a href="./login.html">Iniciar Sesión</a>
+                                <a href="./pages/login.html">Iniciar Sesión</a>
                             </button>
                             <button class="btn btn-primary btn-lg me-2" type="button" id="botonInicio"
                                 style="background-color: #D97D0D">
-                                <a href="./registro.html">Regístrate</a>
+                                <a href="/pages/registro.html">Regístrate</a>
                             </button>
                         </div>
                     </nav>
@@ -92,42 +92,46 @@
         </div>
     </header>
 
-
-    <main class="d-flex justify-content-center vh-100 w-100">
-        <div class="row" id="login-user">
-            <div class="col align-self-center">
-                <div class="border p-4"
-                    style="border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-                    <h2 class="text-center">Inicio de sesión</h2>
-                    <div style="width: 80%; margin: auto;" class="from-ingreso">
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Ingrese email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">Ingrese un Email Registrado</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Guardar contraseña</label>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary" id="bt-login">Ingresar</button><br>
-                                
-                            </div>
-                            <div class="Olvide"><a class="Olvide-con" href="./olvidoContra.html">Recuperar Contraseña</a></div>
-                            
-
-                        </form>
+    <div style="margin: 50px auto; max-width: 800px;">
+        <div class="border p-4"
+            style="background-color: rgba(4, 157, 217, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <h2 class="text-center">Educación</h2>
+            <div style="width: 80%; margin: auto;" class="form-Educacion">
+                <form>
+                    <div class="mb-3">
+                        <label for="cargo" class="form-label">Nivel educacional:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Universitario completo">
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="tipoEmpleo" class="form-label">Institución Educativa:</label>
+                        <input type="text" class="form-control" placeholder="Ej. Universidad Austral">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombreEmpresa" class="form-label">Título:</label>
+                        <input type="text" class="form-control" " placeholder=" Ej. MQQ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaInicio" class="form-label">Fecha Inicio:</label>
+                        <input type="date" class="form-control" placeholder="DD/MM/AAAA">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha finalización:</label>
+                        <input type="date" class="form-control" placeholder="DD/MM/AAAA">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionCargo" class="form-label">Descripción:</label>
+                        <input type="text" class="form-control" placeholder="Agrega una descripción de  carrera">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary btn-lg me-2">Cancelar</button>
+                        <button type="button" class="btn btn-primary btn-lg">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </main>
+    </div>
+
+
 
     <footer class="footer">
         <div class="barracolor">
