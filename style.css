@@ -120,16 +120,18 @@ header {
 
 #datosfooter {
   list-style: none;
+  font-family: "Poppins-Regular";
 }
 
 .renca {
+  font-family: "Poppins-Italic";
   margin-left: 10px;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .orgullosa {
   color: #0192d0;
-  margin-top: 35px;
+  margin-top: 45px;
   margin-bottom: 0px;
 }
 
@@ -390,7 +392,12 @@ div#buscador-pr.conteiner-fluid {
   width: 400px;
   height: 250px;
 }
-
+@media (min-width: 280px) and (max-width: 767px) {
+  #img-empresa {
+    width: 300px;
+    height: 150px;
+  }
+}
 #boton-postula {
   background-color: #03A688;
 
@@ -530,6 +537,36 @@ div.col-lg-8.bg-light {
     );
 }
 
-/* #mar-boton-reg {
-  border-color: #D95525;
-} */
+#Oferta-laboral {
+  display: flex;
+  justify-content: left;
+
+}
+.text-oferta {
+  display: flex;
+  justify-content: left;
+  justify-items: left;
+}
+#img-fluid {
+  width: 250px;
+  height: 150px;
+
+}
+#boton-postular {
+  width: auto;
+  height: auto;
+}
+
+#boton-guardar {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+#Oferta-laboral {
+  padding: 6%;
+  margin: 6%;
+  display: flex;
+  justify-content: left;
+
+}
