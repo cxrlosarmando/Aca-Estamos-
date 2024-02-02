@@ -567,3 +567,22 @@ div.col-lg-8.bg-light {
   justify-content: left;
 
 }
+/*Responsive formulario*/
+@media (min-width: 280px) and (max-width: 999px) {
+#Datos-personales, #Editarperfil, #Experiencia, #Educacion, #Editperfilempresa {
+  width: 90%;
+}
+#Editarperfil .form-Perfil, #Experiencia .form-Experiencia, #Educacion .form-Educacion {
+  width: 95% !important;
+}
+
+.form-Datospersonales .row, .form-DatosEmpresa .row {
+    display: flex;
+    flex-direction: column;
+}.form-Datospersonales .col, .form-DatosEmpresa .col {
+    width: 100%;
+    margin-right: 0;
+}
+}
+
+
