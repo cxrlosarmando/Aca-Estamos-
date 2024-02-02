@@ -76,8 +76,7 @@ function registrarUsuario() {
     window.location.href = "/pages/login.html";
 }
 
-// También puedes imprimir la lista de usuarios fuera de la función
-console.log("Lista de usuarios al inicio:", listaUsuarios);
+
 
 // En la página de inicio u otra página donde necesitas acceder a la lista de usuarios
 var listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
