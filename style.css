@@ -303,14 +303,13 @@ div#buscador-pr.conteiner-fluid {
   margin-top: 10px;
   align-items: center;
 }
-
-.nav-link {
+ 
+.nav-link {  
   color: #83A637;
-  margin-right: 90px;
+  /* margin-right: 0px; */
   font-size: larger;
   font-family: "Poppins-Regular";
 }
-
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
@@ -320,23 +319,26 @@ div#buscador-pr.conteiner-fluid {
   #greenContainer {
     justify-content: center;
   }
-
   #hire {
     text-align: center;
     margin-left: 0px;
   }
-
   #hashtagDelInicio {
+    text-align: center;
+  }
+  #Nav2{
     text-align: center;
   }
 }
 
 @media (min-width: 280px) and (max-width: 767px) {
-
   .logosNav,
   #botonesnav {
     width: 100%;
     justify-content: center;
+  }
+  #Nav2{
+    text-align: center;
   }
 
 }
@@ -345,7 +347,6 @@ div#buscador-pr.conteiner-fluid {
   .logosNav {
     justify-content: left;
     margin-left: 5%;
-
   }
 
   #botonesnav {
@@ -357,6 +358,9 @@ div#buscador-pr.conteiner-fluid {
   #greenContainer {
     width: 100%;
     justify-content: center;
+  }
+  #Nav2{
+    text-align: center;
   }
 }
 
@@ -374,6 +378,9 @@ div#buscador-pr.conteiner-fluid {
   #greenContainer {
     width: 1%;
   }
+  .nav-link {
+  margin-right: 50px;
+  margin-left: 50px;}
 }
 
 @media (min-width: 1115px) and (max-width: 1930px) {
@@ -385,7 +392,9 @@ div#buscador-pr.conteiner-fluid {
     width: 100%;
     margin-right: 10%;
   }
-
+  .nav-link {
+    margin-right: 50px;
+    margin-left: 50px;}
 }
 
 
