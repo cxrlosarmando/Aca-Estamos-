@@ -92,15 +92,17 @@
     </header>
 
     <main>
-        <nav class="navbar bg-body-tertiary">
-            <form class="container-sm">
-              <div class="input-group">
-                <input id="bar-bus" type="text" class="form-control" placeholder="Buscar empleo" aria-label="Buscar empleo" aria-describedby="basic-addon1">
-                <span class="input-group-text" id="basic-addon1"><button><img src="../Img/Lupa.png" alt="Descripción de la imagen"
-                    class="img-fluid"></button></span>
-              </div>
+        <!-- Comienza el buscador -->
+
+        <div class="container-fluid" id="buscardor-pr">
+            <form class="d-flex" role="search" id="buscar-ofertas">
+                <input class="form-control me-2" type="search" placeholder="Buscar Ofertas.."
+                    aria-label="Buscar Ofertas...">
+                <button class="btn btn-outline-success" type="submit"><img src="../Img/Lupa.png" alt="Descripción de la imagen" class="img-fluid"></button>
+                <button style="background-color:#049DD9; width: 120px;" class="btn btn-outline-light" type="submit">Más filtros</button>
             </form>
-          </nav>
+        </div>
+        <!-- Termina el buscador -->
     </main>
 
 
@@ -148,7 +150,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
