@@ -392,7 +392,12 @@ div#buscador-pr.conteiner-fluid {
   width: 400px;
   height: 250px;
 }
-
+@media (min-width: 280px) and (max-width: 767px) {
+  #img-empresa {
+    width: 300px;
+    height: 150px;
+  }
+}
 #boton-postula {
   background-color: #03A688;
 
