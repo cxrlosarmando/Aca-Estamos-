@@ -99,14 +99,14 @@
                 style="margin: 50px auto 50px auto; background-color: rgba(255, 255, 255, 0.15); border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
                 <h2 class="text-center">Datos Registro</h2>
                 <div class="from-Registro">
-                    <form>
+                    <form id="registroForm">
                         <div class="row">
                             <div class="col">
                                 <div class="col">
 
                                     <div class="md-5">
                                         <label for="validationCustom01" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="validationCustom01"
+                                        <input type="text" class="form-control" id="nombre"
                                             placeholder="Nombre">
                                         <div class="valid-feedback">
                                             Looks good!
@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="md-5">
                                         <label for="validationCustom02" class="form-label">Apellido</label>
-                                        <input type="text" class="form-control" id="validationCustom02"
+                                        <input type="text" class="form-control" id="apellido"
                                             placeholder="Apellido">
                                         <div class="valid-feedback">
                                             Looks good!
@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="md-5">
                                         <label for="validationCustom02" class="form-label">Teléfono</label>
-                                        <input type="text" class="form-control" id="validationCustom02"
+                                        <input type="text" class="form-control" id="telefono"
                                             placeholder="+59 999999999">
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -132,7 +132,7 @@
 
                                 <div class="md-5">
                                     <label for="validationCustom02" class="form-label">Rut</label>
-                                    <input type="text" class="form-control" id="validationCustom02"
+                                    <input type="text" class="form-control" id="rut"
                                         placeholder="11.111.111-1">
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -140,12 +140,13 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="fechaNacimiento" class="form-label">Fecha Nacimiento:</label>
-                                    <input type="date" class="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA">
+                                    <input type="date" class="form-control" id="fechaNacimiento"
+                                        placeholder="DD/MM/AAAA">
                                 </div>
                             </div>
                             <div class="md-5">
                                 <label for="validationCustom02" class="form-label">Correo</label>
-                                <input type="text" class="form-control" id="validationCustom02"
+                                <input type="text" class="form-control" id="correo"
                                     placeholder="example@Email.com">
                                 <div class="invalid-feedback">
                                     Please choose a username.
@@ -153,7 +154,7 @@
                             </div>
                             <div class="md-5">
                                 <label for="validationCustom02" class="form-label">Repetir Correo</label>
-                                <input type="text" class="form-control" id="validationCustom02"
+                                <input type="text" class="form-control" id="repetirCorreo"
                                     placeholder="example@Email.com">
                                 <div class="invalid-feedback">
                                     Please choose a username.
@@ -161,7 +162,7 @@
                             </div>
                             <div class="md-5">
                                 <label for="validationCustom02" class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
+                                <input type="password" class="form-control" id="contraseña" placeholder="*********">
                                 <div class="invalid-feedback">
                                     Please choose a username.
                                 </div>
@@ -169,21 +170,21 @@
 
                             <div class="md-5">
                                 <label for="validationCustom02" class="form-label">Repetir Contraseña</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="*********">
+                                <input type="password" class="form-control" id="repetircontraseña" placeholder="*********">
                                 <div class="invalid-feedback">
                                     Please choose a username.
                                 </div>
                             </div>
                             <div class="row" id="contendor-registro">
-                                <button type="button" class="btn btn-primary btn-lg"
-                                    id="boton-regist"><a href="./SesiónIniciadaUsuario.html">Registrarse</a></button>
+                                <button type="button" class="btn btn-primary btn-lg" onclick="registrarUsuario(event)"
+                                    id="boton-regist"><a>Registrarse</a></button>
                             </div>
                             <div class="col">
                                 <div class="google-icon">
                                     <a href=""><img class="img-google" src="/Img/Google.icon.jpg"></a>
                                 </div>
                             </div>
-                         
+
                         </div>
 
 
@@ -246,7 +247,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
+    
 </body>
 
 </html>
