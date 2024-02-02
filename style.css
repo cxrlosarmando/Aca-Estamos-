@@ -558,3 +558,10 @@ div.col-lg-8.bg-light {
   display: flex;
   justify-content: center;
 }
+#Oferta-laboral {
+  padding: 6%;
+  margin: 6%;
+  display: flex;
+  justify-content: left;
+
+}
