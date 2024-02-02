@@ -83,3 +83,44 @@ console.log("Lista de usuarios al inicio:", listaUsuarios);
 var listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 
 console.log("Lista de usuarios en la página de inicio:", listaUsuarios);
+
+
+
+
+
+
+//FUNCIONALIDAD BOTON LOGIN
+
+// Función para realizar el inicio de sesión
+function iniciarSesion() {
+    // Obtener los valores de los campos del formulario
+    var correoInicioSesion = document.getElementById("correoInicioSesion").value;
+    var contraseñaInicioSesion = document.getElementById("contraseñaInicioSesion").value;
+
+    // Validar que los campos no estén vacíos
+    if (correoInicioSesion === "" || contraseñaInicioSesion === "") {
+        alert("Por favor, ingresa tu correo y contraseña.");
+        return;
+    }
+
+    // Buscar el usuario en la lista por correo electrónico
+    var usuarioEncontrado = listaUsuarios.find(function(usuario) {
+        return usuario.correo === correoInicioSesion;
+    });
+
+    // Verificar si el usuario existe y la contraseña coincide
+    if (usuarioEncontrado && usuarioEncontrado.contraseña === contraseñaInicioSesion) {
+        alert("Inicio de sesión exitoso. Redirigiendo a la página principal.");
+        // Puedes redirigir a la página principal u otra página después del inicio de sesión
+        window.location.href = "./SesiónIniciadaUsuario.html";
+    } else {
+        alert("Correo o contraseña incorrectos. Por favor, verifica tus credenciales.");
+    }
+}
+
+// Asigna la función iniciarSesion al evento click del botón de inicio de sesión
+document.getElementById("BotonInicioSesion").addEventListener("click", iniciarSesion);
+
+
+
+
