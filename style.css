@@ -1,31 +1,39 @@
 /* ************** Fuentes ************** */
-@font-face{
+@font-face {
   font-family: "Heavitas";
   src: url("/Fuentes/Heavitas.ttf");
 }
+
 @font-face {
-  font-family: "Poppins-Bold" ;
+  font-family: "Poppins-Bold";
   src: url("Fuentes/Poppins-Bold.ttf");
 }
+
 @font-face {
-  font-family: "Poppins-ExtraBoldItalic" ;
+  font-family: "Poppins-ExtraBoldItalic";
   src: url("/Fuentes/Poppins-ExtraBoldItalic.ttf");
 }
+
 @font-face {
   font-family: "Poppins-Italic";
   src: url("/Fuentes/Poppins-Italic.ttf");
 }
+
 @font-face {
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
+
 @font-face {
   font-family: "Poppins-ExtraLight";
   src: url("/Fuentes/Poppins-ExtraLight.ttf");
-}@font-face {
+}
+
+@font-face {
   font-family: "Poppins-Regular";
   src: url("/Fuentes/Poppins-Regular.ttf");
 }
+
 /* ************** Fin Fuentes ************** */
 * {
   margin: 0px;
@@ -271,20 +279,20 @@ div#buscador-pr.conteiner-fluid {
 }
 
 /* *****************************Navbar***************************** */
-#hire {
-  /*imagen acá estamos*/
-  margin-left: 30px;
-}
-.ml-4 {/*hashtags*/
+
+.ml-4 {
+  /*hashtags*/
   margin-left: 10%;
   font-size: 110%;
   font-family: "Poppins-Italic";
   color: white;
   margin-right: 10%;
-} 
-.buttonInicio{
+}
+
+.buttonInicio {
   font-family: "Poppins-Regular";
 }
+
 #margenNav {
   margin-top: 4%;
   text-align: center;
@@ -302,6 +310,7 @@ div#buscador-pr.conteiner-fluid {
   font-size: larger;
   font-family: "Poppins-Regular";
 }
+
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
@@ -392,12 +401,14 @@ div#buscador-pr.conteiner-fluid {
   width: 400px;
   height: 250px;
 }
+
 @media (min-width: 280px) and (max-width: 767px) {
   #img-empresa {
     width: 300px;
     height: 150px;
   }
 }
+
 #boton-postula {
   background-color: #03A688;
 
@@ -542,16 +553,19 @@ div.col-lg-8.bg-light {
   justify-content: left;
 
 }
+
 .text-oferta {
   display: flex;
   justify-content: left;
   justify-items: left;
 }
+
 #img-fluid {
   width: 250px;
   height: 150px;
 
 }
+
 #boton-postular {
   width: auto;
   height: auto;
@@ -562,4 +576,42 @@ div.col-lg-8.bg-light {
   height: auto;
   display: flex;
   justify-content: center;
+}
+
+#Oferta-laboral {
+  padding: 6%;
+  margin: 6%;
+  display: flex;
+  justify-content: left;
+
+}
+
+/*Responsive formulario*/
+@media (min-width: 280px) and (max-width: 999px) {
+
+  #Datos-personales,
+  #Editarperfil,
+  #Experiencia,
+  #Educacion,
+  #Editperfilempresa {
+    width: 90%;
+  }
+
+  #Editarperfil .form-Perfil,
+  #Experiencia .form-Experiencia,
+  #Educacion .form-Educacion {
+    width: 95% !important;
+  }
+
+  .form-Datospersonales .row,
+  .form-DatosEmpresa .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-Datospersonales .col,
+  .form-DatosEmpresa .col {
+    width: 100%;
+    margin-right: 0;
+  }
 }
