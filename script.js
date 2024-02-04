@@ -11,7 +11,10 @@ function irRegistro() {
     window.location.href ='formulario-resgistro.html'
 }
 
+function irRegistroempresas() {
 
+    window.location.href ='forms-registro-empresa.html';
+}
 
 
 function RedirigiraloginE() {
