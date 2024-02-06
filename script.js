@@ -13,7 +13,7 @@ function irRegistro() {
 
 function irRegistroempresas() {
 
-    window.location.href ='../pages-empresas/../pages-empresas/forms-registro-empresas';
+    window.location.href ='../pages-empresas/forms-registro-empresas';
 }
 
 
