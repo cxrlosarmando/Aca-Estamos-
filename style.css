@@ -471,9 +471,6 @@ div.col-lg-8.bg-light {
 
 
 
-
-
-
 #ContenedorOlvCont {
 
   width: 100%;
@@ -623,4 +620,26 @@ div.col-lg-8.bg-light {
     width: 100%;
     margin-right: 0;
   }
+}
+/*Perfil usuario*/
+.mi-perfil{
+  margin: 40px;
+}
+.perfilusuario {
+  margin: 40px;
+  padding: 0%;
+  justify-content: center;
+}
+#user-perfil {
+  width: 300px;
+}
+.actualizar-datos{
+  display: flex;
+}
+#pen-edit {
+  width: 40px;
+}
+
+.elementos-adjuntos {
+  display: flex;
 }
