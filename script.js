@@ -8,12 +8,12 @@ function volverAInicioDeSesion() {
 
 function irRegistro() {
     
-    window.location.href ='formulario-resgistro.html'
+    window.location.href ='formulario-registro.html'
 }
 
 function irRegistroempresas() {
 
-    window.location.href ='forms-registro-empresa.html';
+    window.location.href ='../pages-empresas/forms-registro-empresa.html';
 }
 
 
