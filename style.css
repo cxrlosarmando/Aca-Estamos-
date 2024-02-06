@@ -624,6 +624,7 @@ div.col-lg-8.bg-light {
 /*Perfil usuario*/
 .mi-perfil{
   margin: 40px;
+  font-family: 'Poppins-Regular';
 }
 .perfilusuario {
   margin: 40px;
@@ -637,9 +638,10 @@ div.col-lg-8.bg-light {
   display: flex;
 }
 #pen-edit {
-  width: 40px;
+  width: 20px;
 }
 
 .elementos-adjuntos {
   display: flex;
+  font-family: 'Poppins-Regular';
 }
