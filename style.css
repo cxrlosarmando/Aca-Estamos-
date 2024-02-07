@@ -787,3 +787,30 @@ div.col-lg-8.bg-light {
   
 }
 
+/* paneladmin*/ 
+.perfiladmin {
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#btn-empresas {
+  font-family: 'Heavitas';
+  padding: 35px 80px;
+  background-color:#03A688;
+  margin: 70px 200px 70px 50px
+  
+}
+#btn-solicitudes {
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color:#D97D0D;
+  margin: 70px 80px;
+}
+#btn-ofertas {
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color:#83A637;
+  margin: 70px 30px;
+}
