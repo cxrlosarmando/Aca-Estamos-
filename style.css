@@ -279,34 +279,38 @@ div#buscador-pr.conteiner-fluid {
 }
 
 /* *****************************Navbar***************************** */
-
+#hire:hover{
+  transform: scale(1.04);
+}
 .ml-4 {
   /*hashtags*/
-  margin-left: 10%;
-  font-size: 110%;
+  margin-left: 5%;
+  font-size: 100%;
   font-family: "Poppins-Italic";
   color: white;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .buttonInicio {
   font-family: "Poppins-Regular";
 }
-
-#margenNav {
-  margin-top: 4%;
-  text-align: center;
-}
-
 #botonInicio {
-  margin-left: 0px;
+  /* margin-left: 0px; */
   margin-top: 10px;
-  align-items: center;
+  /* align-items: center; */
 }
- 
+.btn-custom{ /*sombra para botones*/
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+.btn-custom:hover { /*efecto movimiento en botones*/
+  transform: translateY(-4px);
+} 
 .nav-link {  
   color: #83A637;
-  /* margin-right: 0px; */
+  margin-right: 50px;
+  margin-left: 50px;
   font-size: larger;
   font-family: "Poppins-Regular";
 }
@@ -315,13 +319,13 @@ div#buscador-pr.conteiner-fluid {
   margin-right: 5%;
 }
 
-@media (min-width: 280px) and (max-width: 408px) {
+@media (min-width: 280px) and (max-width: 766px) {
   #greenContainer {
     justify-content: center;
   }
-  #hire {
+  #botonesnav {
+    width: 100%;
     text-align: center;
-    margin-left: 0px;
   }
   #hashtagDelInicio {
     text-align: center;
@@ -331,74 +335,55 @@ div#buscador-pr.conteiner-fluid {
   }
 }
 
-@media (min-width: 280px) and (max-width: 767px) {
-  .logosNav,
+@media (min-width: 767px) and (max-width: 990px) {
+
   #botonesnav {
-    width: 100%;
-    justify-content: center;
+    width: 55%;
+    align-items:flex-end;
+    text-align: right; 
+    margin-top: 0%;
+    margin-left: 0%;
   }
-  #Nav2{
-    text-align: center;
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .logosNav {
-    justify-content: left;
+  .ml-4{
     margin-left: 5%;
+    margin-right: auto;
   }
-
+  #Nav2{
+    text-align: center;
+  }
+}
+@media (min-width: 991px) and (max-width: 1000px) {
+  #hire{
+    margin-left: 50%;
+  }
+  .ml-4{
+    margin-left: 0px;
+    margin-right: 15%;
+  }
   #botonesnav {
-    justify-content: right;
-    margin-right: 5%;
-    margin-bottom: 3%;
-  }
-
-  #greenContainer {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    margin-right: 10%;
+    margin-top: 0;
+    text-align: right;
   }
   #Nav2{
     text-align: center;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1114px) {
-  .logosNav {
-    width: 100%;
-    justify-content: left;
+@media (min-width: 1001px) and (max-width: 1930px) {
+  #hire{
+    margin-left: 50%;
   }
-
-  #botonesnav {
-    width: 100%;
-    justify-content: right;
+  .ml-4{
+    margin-left: 10%;
   }
-
-  #greenContainer {
-    width: 1%;
-  }
-  .nav-link {
-  margin-right: 50px;
-  margin-left: 50px;}
-}
-
-@media (min-width: 1115px) and (max-width: 1930px) {
-  .logosNav {
-    width: 100%;
-  }
-
   #botonesnav {
     width: 100%;
     margin-right: 10%;
   }
-  .nav-link {
-    margin-right: 50px;
-    margin-left: 50px;}
 }
-
-
-/* fin css navbar */
+/******************** fin css navbar ********************/
 #card-empleo {
   margin: 40px;
   padding: 0%;
@@ -537,6 +522,36 @@ div.col-lg-8.bg-light {
 
 
 /*AQUI COMIENZA DISEÑO DE EDITAR CV */
+#cvContainer {
+  /*estp es main*/
+  margin-top: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: #03A688;
+}
+#ccv {
+  margin: 0%;
+  padding: 0%;
+}
+.cursosUsuario,
+.cTecnics {
+  list-style:none;
+  padding: 0%;
+}
+.colName{
+  padding: 3%;
+}
+.iconCv{
+  color: white;
+  margin: 0;
+}
+
+
+
+
+
+
 
 
 
