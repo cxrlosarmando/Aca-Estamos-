@@ -646,6 +646,22 @@ div.col-lg-8.bg-light {
   }
 }
 /*Perfil usuario*/
+
+.row-perfil{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.col-perfil2 {
+  width: 50%;
+}
+
+.col-perfil1, .col-perfil3 {
+  width: 25%;
+}
+
 .mi-perfil{
   margin: 40px;
   font-family: 'Heavitas';
@@ -659,7 +675,7 @@ div.col-lg-8.bg-light {
   width: 300px;
 }
 .Nombre-perfil{
-  margin-top: 38px;
+  margin-top: 41px;
 }
 .Elementos-perfil {
   margin-top: 20px;
@@ -687,23 +703,6 @@ div.col-lg-8.bg-light {
 
 .elementos-adjuntos {
   font-family: 'Poppins-Regular';
-}
-/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
-#Img-Empleos {
-  display: flex;
-  padding: 4%;
-  margin: 4%;
-
-}
-/* Por definir el height para que sea responsive las img */
-.carousel-item img {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; /* Para mantener la proporción de aspecto */
-}
-.carousel-item {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; 
-  
 }
 
 .certificadoslist {
@@ -738,3 +737,53 @@ div.col-lg-8.bg-light {
 #mostrar-perfil{
   width: 16px;
 }
+
+@media (min-width: 460px) and (max-width: 1130px) {
+  .certificadoslist {
+    text-align: start;
+  }
+  }
+@media (min-width: 280px) and (max-width: 1131px) {
+  .perfilusuario {
+    text-align: center; 
+}
+.Elementos-perfil {
+    text-align: start; 
+    padding-left: 10px;
+}
+.actualizar-datos{
+  text-align: center; 
+}
+  .col-perfil1,
+  .col-perfil2,
+  .col-perfil3 {
+    width: 100%;
+  }
+  #user-perfil {
+    height: 200px;
+    width: 200px;
+  }
+  .Nombre-perfil{
+    margin-top: 0px;
+  }
+
+}
+
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%; /* Forzar el máximo ancho al 100% */
+  height: auto; /* Para mantener la proporción de aspecto */
+}
+.carousel-item {
+  max-width: 100%; /* Forzar el máximo ancho al 100% */
+  height: auto; 
+  
+}
+
