@@ -737,7 +737,13 @@ div.col-lg-8.bg-light {
 #mostrar-perfil{
   width: 16px;
 }
-@media (min-width: 280px) and (max-width: 1100px) {
+
+@media (min-width: 460px) and (max-width: 1130px) {
+  .certificadoslist {
+    text-align: start;
+  }
+  }
+@media (min-width: 280px) and (max-width: 1131px) {
   .perfilusuario {
     text-align: center; 
 }
