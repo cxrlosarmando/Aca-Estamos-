@@ -9,6 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=pop">
+    <script src="https://kit.fontawesome.com/a23830e2ef.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,10 +19,10 @@
                 <div class="container-fluid text-light p-3" style="background-color: #83A637;">
                     <nav class="navbar navbar-expand-lg ">
                         <div class="container-fluid" style="background-color: #83A637;" id="greenContainer">
-
+    
                             <div>
-                                <a class="navbar-brand " href="/index.html"><img src="/Logos/logo2.0.png"
-                                        alt="Bootstrap" width="100" height="100" id="hire"></a>
+                                <a class="navbar-brand " href="/index.html"><img src="/Logos/logo2.0.png" alt="Bootstrap"
+                                        width="100" height="100" id="hire"></a>
                             </div>
                             <div class="ml-4" id="hashtagDelInicio">
                                 <p class="mb-0">#RencaOrgullosa</p>
@@ -30,10 +31,21 @@
                             </div>
                             <div class="container-fluid gap-5 d-md-flex justify-content-md-end p-4"
                                 style="justify-content: flex-end;" id="botonesnav">
-                                <button class="btn btn-custom btn-lg me-2" id="botonInicio" type="button"
-                                    style="background-color:#049DD9;">
-                                    <a href="./pages/login.html">Iniciar Sesión</a>
-                                </button>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi Perfil
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+                                        <!-- Agrega cualquier elemento adicional del menú desplegable según sea necesario -->
+                                        <a class="dropdown-item" href="#">Item 1</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                        <!-- ... -->
+                                    </div>
+                                </li>
                                 <button class="btn btn-custom btn-lg me-2" type="button" id="botonInicio"
                                     style="background-color: #D97D0D">
                                     <a href="/pages/registro.html">Regístrate</a>
@@ -42,7 +54,7 @@
                         </div>
                     </nav>
                 </div>
-
+    
                 <div class="container-fluid" style="background-color: #f2f7ea;">
                     <nav class="navbar navbar-expand-lg  ">
                         <div class="container-fluid " style="background-color: #f2f7ea;">
@@ -237,7 +249,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
 </body>
