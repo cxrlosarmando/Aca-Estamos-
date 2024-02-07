@@ -9,6 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=pop">
+    <script src="https://kit.fontawesome.com/a23830e2ef.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,17 +29,25 @@
                                 <p class="mb-0">#RencaCrece</p>
                                 <p class="mb-0">#RencaParticipa</p>
                             </div>
-                            <div class="container-fluid gap-5 d-md-flex justify-content-md-end p-4"
-                                style="justify-content: flex-end;" id="botonesnav">
-                                <button class="btn btn-custom btn-lg me-2" id="botonInicio" type="button"
-                                    style="background-color:#049DD9;">
-                                    <a href="./pages/login.html">Iniciar Sesión</a>
-                                </button>
-                                <button class="btn btn-custom btn-lg me-2" type="button" id="botonInicio"
-                                    style="background-color: #D97D0D">
-                                    <a href="/pages/registro.html">Regístrate</a>
-                                </button>
-                            </div>
+
+                            <button class="btn btn-lg me-2 userButton" type="button" style="background-color: #D97D0D;">
+                                <a href="#"><i class="fa-solid fa-bell"></i></a>
+                            </button>
+                            <!-- <div class="container"> -->
+                                <div class="dropdown" style="position: absolute; top: 100%; right: 0; z-index: 1000;">
+                                    <button class="btn dropdown-toggle btn-lg bell" type="button"
+                                        style="background-color: #049DD9" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Nombre de usuario
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Mi perfil</a></li>
+                                        <li><a href="#" class="dropdown-item">Actualizar mi CV </a></li>
+                                        <li><a href="#" class="dropdown-item">Notificaciones</a></li>
+                                        <li><a href="#" class="dropdown-item">Cerrar sesión</a></li>
+                                    </ul>
+                                </div>
+                            <!-- </div> -->
                         </div>
                     </nav>
                 </div>
@@ -237,7 +246,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
 </body>
