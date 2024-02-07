@@ -91,107 +91,159 @@
     </div>
   </header>
   <!-- Acá comienza el contenido  -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+  <div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Img/carrusel1.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./Img/carrusel2.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="./Img/carrusel3.png" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./Img/carrusel1.png" class="d-block w-100" alt="..." />
-      </div>
-      <div class="carousel-item">
-        <img src="./Img/carrusel2.png" class="d-block w-100" alt="..." />
-      </div>
-      <div class="carousel-item">
-        <img src="./Img/carrusel3.png" class="d-block w-100" alt="..." />
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-  <!-- Acá termina el carrusel -->
+  <!-- Acá termina el carrusel comienza pasos a seguir en la pagina -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="./Img/Nota-registrate.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">1</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Registrate</h6>
+          <p class="card-text">Regístrate en un abrir y cerrar de ojos, completa tus datos en un instante y conéctate para comenzar.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="./Img/Nota-curriculum.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">2</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Currilum</h6>
+          <p class="card-text">Arma tu </p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="./Img/Conecta-Nota3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">3</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Conecta</h6>
+          <p class="card-text">Conecta con empresas</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Comienza el buscador -->
 
-  <div class="container-fluid" id="buscardor-pr">
+  <!--  <div class="container-fluid" id="buscardor-pr">
     <form class="d-flex" role="search" id="buscar-ofertas">
       <input class="form-control me-2" type="search" placeholder="Buscar Ofertas.." aria-label="Buscar Ofertas...">
       <button class="btn btn-outline-success" type="submit">Buscar</button>
     </form>
-  </div>
-  <!-- Termina el buscador comienza Empresas alidas -->
+  </div> -->
+
+  <!-- Termina el buscador comienza Empresas aliadas -->
   <div class="contenido-empleos">
-    <div class="justify-content-center">
-      <h2 class="h2-empleos">Colaboradores</h2>
+    <div class="container-fluid">
+      <h2 class="h2-empleos text-fluid">¡Colaboradores!</h2>
     </div>
     <div class="container-my-5">
-      <div class="row">
-        <div class="col-md-12 head-bordered my-5">
-          <h2>Ellos Confían en Nosotros</h2>
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <h3 class="h3-Partners text-fluid">Ellos Confían en Nosotros</h3>
         </div>
-        <div class="col-md-8">
-          <div class="col-6">
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/CCU-empresas.jpg" alt="">
-              </div>
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/CCU-empresas.jpg" class="img-fluid" alt="CCU">
             </div>
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/bancochile-empresas.jpg" alt="">
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/bancochile-empresas.jpg" class="img-fluid" alt="Banco Chile">
             </div>
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/COCACOLA-Empresas.jpg" alt="">
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/COCACOLA-Empresas.jpg" class="img-fluid" alt="Coca Cola">
             </div>
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/costanera-empresas.jpg" alt="">
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/costanera-empresas.jpg" class="img-fluid" alt="Costanera">
             </div>
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/DO_Smart-Empresas.jpg" alt="">
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/DO_Smart-Empresas.jpg" class="img-fluid" alt="DO Smart">
             </div>
-            <div class="col-md-3 col-6">
-              <div class="img">
-                <img src="./Img/HUELLALOCAL-Empresas.png" alt="">
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="img">
+              <img src="./Img/HUELLALOCAL-Empresas.png" class="img-fluid" alt="Huella Local">
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
+  </div>
+
+
+  </div>
+  </div>
+
+  </div>
+  </div>
 
 
 
 
 
   </div>
-  
+
 
   <!--Testimonios de usuarios -->
   <div class="contenido-Testimonios">
     <div class="justify-content-center">
       <h2 class="h2-testi">Testimonios</h2>
+    </div>
+    <div class="conteiner-fluid">
+      <div class="row">
+        <div class="testimonios-1">
+  
+  
+        </div>
+      </div>
+      
+    </div>
     </div>
 
 

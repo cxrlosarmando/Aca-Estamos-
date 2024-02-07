@@ -428,7 +428,16 @@ div#buscador-pr.conteiner-fluid {
 }
 
 .h2-empleos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #03A688;
+}
+.h3-Partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 #boton-info {
@@ -644,4 +653,21 @@ div.col-lg-8.bg-light {
 .elementos-adjuntos {
   display: flex;
   font-family: 'Poppins-Regular';
+}
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%; /* Forzar el máximo ancho al 100% */
+  height: auto; /* Para mantener la proporción de aspecto */
+}
+.carousel-item {
+  max-width: 100%; /* Forzar el máximo ancho al 100% */
+  height: auto; 
+  
 }
