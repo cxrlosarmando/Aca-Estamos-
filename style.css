@@ -624,7 +624,7 @@ div.col-lg-8.bg-light {
 /*Perfil usuario*/
 .mi-perfil{
   margin: 40px;
-  font-family: 'Poppins-Regular';
+  font-family: 'Heavitas';
 }
 .perfilusuario {
   margin: 40px;
@@ -634,14 +634,66 @@ div.col-lg-8.bg-light {
 #user-perfil {
   width: 300px;
 }
+.Nombre-perfil{
+  margin-top: 38px;
+}
+.Elementos-perfil {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+.Elementos-perfil li {
+  margin-bottom: 10px;
+}
 .actualizar-datos{
   display: flex;
+  justify-content: flex-end; 
+  margin-top: 15px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.actualizar-datos a {
+  color: inherit;
+  text-decoration: none;
 }
 #pen-edit {
-  width: 20px;
+  width: 15px;
 }
 
 .elementos-adjuntos {
-  display: flex;
   font-family: 'Poppins-Regular';
+}
+
+.certificadoslist {
+  list-style-type: none;
+  color: inherit;
+  text-decoration: none;
+  padding: 0;
+  font-weight: bold;
+}
+.certificadoslist li a {
+  color: inherit;
+  text-decoration: none;
+}
+.colcv {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: underline;
+  font-weight: bold; 
+}
+.colcv p {
+  font-weight: bold; 
+  margin-right: 5px;
+  
+}
+.colcv a {
+  color: inherit; 
+  text-decoration: none; 
+}
+.colcv img {
+  margin-right: 10px; 
+}
+#mostrar-perfil{
+  width: 16px;
 }

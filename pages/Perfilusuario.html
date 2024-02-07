@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acá Estamos - Login </title>
+    <title>Acá Estamos - Perfil Usuario </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -112,8 +112,8 @@
                     <img src="../Img/user-perfil.png" alt="Imagen perfil" id="user-perfil">
                 </div>
                 <div class="col">
-                    <h3>Nombre</h3>
-                    <ul>
+                    <h3 class="Nombre-perfil">Nombre</h3>
+                    <ul class="Elementos-perfil">
                         <li><a>Disponibilidad:</a></li>
                         <li><a>Correo:</a></li>
                         <li><a>LinkedIn:</a></li>
@@ -122,29 +122,36 @@
                 </div>
                 <div class="col">
                     <div class="actualizar-datos">
-                        <p href="./Datosperso.html">Actualizar datos Perfil</p>
+                        <p> <a href="./Datosperso.html">Actualizar datos Perfil</p></a>
                         <a href="./Datosperso.html"> <img src="../Img/pen-edit.png" alt="Editar perfil icon"
                                 id="pen-edit"></a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
         <div class="elementos-adjuntos">
             <div class="row">
                 <div class="col">
                     <h3>Archivos Adjuntos</h3>
 
-                    <ul>
-                        <li><a>CV</a></li>
-                        <li><a>Certificado de Estudios</a></li>
-                        <li><a>Certificado de Antecedentes</a></li>
-                        <li><a>Certificado de Cursos</a></li>
+                    <ul class="certificadoslist">
+                        <li><a href="#">CV</a></li>
+                        <li><a href="#">Certificado de Estudios</a></li>
+                        <li><a href="#">Certificado de Antecedentes</a></li>
+                        <li><a href="#">Certificado de Cursos</a></li>
                     </ul>
                 </div>
-                <div class="col" style="display: flex;">
-                    <p href="#">Mostrar CV Generado</p>
-                    <p href="#">/</p>
-                    <p href="#">Actualizar y crear CV</p>
+                <div class="col">
+                    <div class="colcv">
+                        <p> <a href="#">Mostrar CV Generado</p></a>
+                    <a href="#"> <img src="../Img/mostrar.png" alt="Mostrar perfil icon"
+                        id="mostrar-perfil"></a>
+                        <p> <a href="./editarCV.html">Actualizar y crear CV</p></a>
+                    <a href="./editarCV.html"> <img src="../Img/pen-edit.png" alt="Editar perfil icon"
+                        id="pen-edit"></a>
+                </div>
+                </div>
                 </div>
 
             </div>
