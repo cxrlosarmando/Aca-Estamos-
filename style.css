@@ -830,8 +830,13 @@ div.col-lg-8.bg-light {
   padding: 25px 50px;
   background-color:#83A637;
   margin: 70px 30px;
-}.dropdown-menu {
-    position: fixed;
+}
+/* Finde lo danny <3 que es panel Admin */
+
+
+/* De quién es es este dropdown */
+.dropdown-menu {
+  position: fixed;
 
 }
 
@@ -891,3 +896,4 @@ div.col-lg-8.bg-light {
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
+/* Fin de los cambios del carlos */
