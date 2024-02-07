@@ -546,10 +546,10 @@ div.col-lg-8.bg-light {
   color: white;
   margin: 0;
 }
+.userButton{
+  justify-content: right;
 
-
-
-
+}
 
 
 
@@ -813,4 +813,12 @@ div.col-lg-8.bg-light {
   padding: 25px 50px;
   background-color:#83A637;
   margin: 70px 30px;
+}.dropdown-menu {
+    position: fixed;
+
+}
+
+/* Estilos para evitar la distorsión del contenido cuando el menú está desplegado */
+.navbar-collapse {
+    position: relative;
 }
