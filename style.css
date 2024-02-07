@@ -547,21 +547,6 @@ div.col-lg-8.bg-light {
   margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
 /* Aqui comienza estilo de letra de registro(registro.html) */
@@ -696,16 +681,15 @@ div.col-lg-8.bg-light {
 
 }
 /* Por definir el height para que sea responsive las img */
-.carousel-item img {
+/* .carousel-item img {
   max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; /* Para mantener la proporción de aspecto */
-}
+/*   height: auto; /* Para mantener la proporción de aspecto */
+/* }
 .carousel-item {
   max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; 
+/*   height: auto; 
   
-}
-
+} */ 
 .certificadoslist {
   list-style-type: none;
   color: inherit;
@@ -737,4 +721,56 @@ div.col-lg-8.bg-light {
 }
 #mostrar-perfil{
   width: 16px;
+}
+
+/* Cambios en las cards  */
+.contenido-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2%;
+  padding: 2%;
+}
+.Paso {
+  margin: 2%;
+  padding: 1%;
+}
+.step {
+  flex-grow: 1;
+  background-color: #ffffff; 
+  border: 1px solid #dee2e6;
+  border-radius: 8px; 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  max-width: 200px; 
+  height: 200px;
+  }
+
+.step.contenido-card {
+  display: flex;
+  position: absolute;
+}
+
+.step img {
+  width: 95%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 95%; /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Escala y recorta la imagen para que se ajuste al contenedor */
+  border-top-left-radius: 8px; /* Redondea solo las esquinas superiores izquierdas */
+  border-top-right-radius: 8px; /* Espacio inferior entre la imagen y el contenido */
+}
+
+.step h3 {
+  font-size: 1.2rem; /* Tamaño de fuente para los títulos */
+  margin-bottom: 10px; /* Espacio inferior entre el título y el párrafo */
+  display: flex;
+  justify-content: center;
+}
+
+.step p {
+  font-size: 1rem; /* Tamaño de fuente para los párrafos */
+}
+
+.h3-card {
+  font-family: "Poppins-MediumItalic";
+  src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
