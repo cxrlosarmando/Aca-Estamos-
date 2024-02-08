@@ -1005,3 +1005,14 @@ div.col-lg-8.bg-light {
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
 /* Fin de los cambios del carlos */
+
+
+
+header {
+  overflow: hidden;
+}
+
+.dropdown-menu {
+    max-height: 200px; /* Ajusta el valor según sea necesario */
+    overflow-y: auto;
+}
