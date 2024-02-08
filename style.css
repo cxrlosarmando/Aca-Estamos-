@@ -279,9 +279,10 @@ div#buscador-pr.conteiner-fluid {
 }
 
 /* *****************************Navbar***************************** */
-#hire:hover{
+#hire:hover {
   transform: scale(1.04);
 }
+
 .ml-4 {
   /*hashtags*/
   margin-left: 5%;
@@ -294,26 +295,33 @@ div#buscador-pr.conteiner-fluid {
 .buttonInicio {
   font-family: "Poppins-Regular";
 }
+
 #botonInicio {
   /* margin-left: 0px; */
   margin-top: 10px;
   /* align-items: center; */
 }
-.btn-custom{ /*sombra para botones*/
+
+.btn-custom {
+  /*sombra para botones*/
   box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
   transform: translateY(-2px);
   transition: transform 0.2s ease-in-out;
 }
-.btn-custom:hover { /*efecto movimiento en botones*/
+
+.btn-custom:hover {
+  /*efecto movimiento en botones*/
   transform: translateY(-4px);
-} 
-.nav-link {  
+}
+
+.nav-link {
   color: #83A637;
   margin-right: 50px;
   margin-left: 50px;
   font-size: larger;
   font-family: "Poppins-Regular";
 }
+
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
@@ -323,14 +331,17 @@ div#buscador-pr.conteiner-fluid {
   #greenContainer {
     justify-content: center;
   }
+
   #botonesnav {
     width: 100%;
     text-align: center;
   }
+
   #hashtagDelInicio {
     text-align: center;
   }
-  #Nav2{
+
+  #Nav2 {
     text-align: center;
   }
 }
@@ -339,50 +350,59 @@ div#buscador-pr.conteiner-fluid {
 
   #botonesnav {
     width: 55%;
-    align-items:flex-end;
-    text-align: right; 
+    align-items: flex-end;
+    text-align: right;
     margin-top: 0%;
     margin-left: 0%;
   }
-  .ml-4{
+
+  .ml-4 {
     margin-left: 5%;
     margin-right: auto;
   }
-  #Nav2{
+
+  #Nav2 {
     text-align: center;
   }
 }
+
 @media (min-width: 991px) and (max-width: 1000px) {
-  #hire{
+  #hire {
     margin-left: 50%;
   }
-  .ml-4{
+
+  .ml-4 {
     margin-left: 0px;
     margin-right: 15%;
   }
+
   #botonesnav {
     width: auto;
     margin-right: 10%;
     margin-top: 0;
     text-align: right;
   }
-  #Nav2{
+
+  #Nav2 {
     text-align: center;
   }
 }
 
 @media (min-width: 1001px) and (max-width: 1930px) {
-  #hire{
+  #hire {
     margin-left: 50%;
   }
-  .ml-4{
+
+  .ml-4 {
     margin-left: 10%;
   }
+
   #botonesnav {
     width: 100%;
     margin-right: 10%;
   }
 }
+
 /******************** fin css navbar ********************/
 #card-empleo {
   margin: 40px;
@@ -418,11 +438,12 @@ div#buscador-pr.conteiner-fluid {
   align-items: center;
   color: #03A688;
 }
+
 .h3-Partners {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 #boton-info {
@@ -530,19 +551,23 @@ div.col-lg-8.bg-light {
   align-items: center;
   background-color: #03A688;
 }
+
 #ccv {
   margin: 0%;
   padding: 0%;
 }
+
 .cursosUsuario,
 .cTecnics {
-  list-style:none;
+  list-style: none;
   padding: 0%;
 }
-.colName{
+
+.colName {
   padding: 3%;
 }
-.iconCv{
+
+.iconCv {
   color: white;
   margin: 0;
 }
@@ -645,9 +670,10 @@ div.col-lg-8.bg-light {
     margin-right: 0;
   }
 }
+
 /*Perfil usuario*/
 
-.row-perfil{
+.row-perfil {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -658,45 +684,54 @@ div.col-lg-8.bg-light {
   width: 50%;
 }
 
-.col-perfil1, .col-perfil3 {
+.col-perfil1,
+.col-perfil3 {
   width: 25%;
 }
 
-.mi-perfil{
+.mi-perfil {
   margin: 40px;
   font-family: 'Heavitas';
 }
+
 .perfilusuario {
   margin: 40px;
   padding: 0%;
   justify-content: center;
 }
+
 #user-perfil {
   width: 300px;
 }
-.Nombre-perfil{
+
+.Nombre-perfil {
   margin-top: 41px;
 }
+
 .Elementos-perfil {
   margin-top: 20px;
   list-style-type: none;
   padding: 0;
 }
+
 .Elementos-perfil li {
   margin-bottom: 10px;
 }
-.actualizar-datos{
+
+.actualizar-datos {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   margin-top: 15px;
   text-decoration: underline;
   font-weight: bold;
   margin-right: 10px;
 }
+
 .actualizar-datos a {
   color: inherit;
   text-decoration: none;
 }
+
 #pen-edit {
   width: 15px;
 }
@@ -704,6 +739,7 @@ div.col-lg-8.bg-light {
 .elementos-adjuntos {
   font-family: 'Poppins-Regular';
 }
+
 /* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
 #Img-Empleos {
   display: flex;
@@ -711,15 +747,20 @@ div.col-lg-8.bg-light {
   margin: 4%;
 
 }
+
 /* Por definir el height para que sea responsive las img */
 .carousel-item img {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; /* Para mantener la proporción de aspecto */
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
 }
+
 .carousel-item {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; 
-  
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
 }
 
 .certificadoslist {
@@ -729,29 +770,35 @@ div.col-lg-8.bg-light {
   padding: 0;
   font-weight: bold;
 }
+
 .certificadoslist li a {
   color: inherit;
   text-decoration: none;
 }
+
 .colcv {
   display: flex;
   justify-content: flex-end;
   text-decoration: underline;
-  font-weight: bold; 
+  font-weight: bold;
 }
+
 .colcv p {
-  font-weight: bold; 
+  font-weight: bold;
   margin-right: 5px;
-  
+
 }
+
 .colcv a {
-  color: inherit; 
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
 }
+
 .colcv img {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
-#mostrar-perfil{
+
+#mostrar-perfil {
   width: 16px;
 }
 
@@ -759,28 +806,34 @@ div.col-lg-8.bg-light {
   .certificadoslist {
     text-align: start;
   }
-  }
+}
+
 @media (min-width: 280px) and (max-width: 1131px) {
   .perfilusuario {
-    text-align: center; 
-}
-.Elementos-perfil {
-    text-align: start; 
+    text-align: center;
+  }
+
+  .Elementos-perfil {
+    text-align: start;
     padding-left: 10px;
-}
-.actualizar-datos{
-  text-align: center; 
-}
+  }
+
+  .actualizar-datos {
+    text-align: center;
+  }
+
   .col-perfil1,
   .col-perfil2,
   .col-perfil3 {
     width: 100%;
   }
+
   #user-perfil {
     height: 200px;
     width: 200px;
   }
-  .Nombre-perfil{
+
+  .Nombre-perfil {
     margin-top: 0px;
   }
 
@@ -793,18 +846,23 @@ div.col-lg-8.bg-light {
   margin: 4%;
 
 }
+
 /* Por definir el height para que sea responsive las img */
 .carousel-item img {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; /* Para mantener la proporción de aspecto */
-}
-.carousel-item {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; 
-  
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
 }
 
-/* paneladmin*/ 
+.carousel-item {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
+}
+
+/* paneladmin*/
 .perfiladmin {
   margin: 40px;
   padding: 0;
@@ -812,25 +870,28 @@ div.col-lg-8.bg-light {
   align-items: center;
   display: flex;
 }
+
 #btn-empresas {
   font-family: 'Heavitas';
   padding: 35px 80px;
-  background-color:#03A688;
+  background-color: #03A688;
   margin: 70px 200px 70px 50px
-  
 }
+
 #btn-solicitudes {
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color:#D97D0D;
+  background-color: #D97D0D;
   margin: 70px 80px;
 }
+
 #btn-ofertas {
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color:#83A637;
+  background-color: #83A637;
   margin: 70px 30px;
 }
+
 /* Finde lo danny <3 que es panel Admin */
 
 
@@ -842,7 +903,7 @@ div.col-lg-8.bg-light {
 
 /* Estilos para evitar la distorsión del contenido cuando el menú está desplegado */
 .navbar-collapse {
-    position: relative;
+  position: relative;
 }
 
 /* Cambios en las cards  */
@@ -853,20 +914,22 @@ div.col-lg-8.bg-light {
   margin-top: 2%;
   padding: 2%;
 }
+
 .Paso {
   margin: 2%;
   padding: 1%;
 }
+
 .step {
   flex-grow: 1;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border: 1px solid #dee2e6;
-  border-radius: 8px; 
-  padding: 20px; 
-  margin-bottom: 20px; 
-  max-width: 200px; 
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 200px;
   height: 200px;
-  }
+}
 
 .step.contenido-card {
   display: flex;
@@ -874,26 +937,167 @@ div.col-lg-8.bg-light {
 }
 
 .step img {
-  width: 95%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-  height: 95%; /* Ajusta la altura de la imagen al 100% del contenedor */
-  object-fit: cover; /* Escala y recorta la imagen para que se ajuste al contenedor */
-  border-top-left-radius: 8px; /* Redondea solo las esquinas superiores izquierdas */
-  border-top-right-radius: 8px; /* Espacio inferior entre la imagen y el contenido */
+  width: 95%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 95%;
+  /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover;
+  /* Escala y recorta la imagen para que se ajuste al contenedor */
+  border-top-left-radius: 8px;
+  /* Redondea solo las esquinas superiores izquierdas */
+  border-top-right-radius: 8px;
+  /* Espacio inferior entre la imagen y el contenido */
 }
 
 .step h3 {
-  font-size: 1.2rem; /* Tamaño de fuente para los títulos */
-  margin-bottom: 10px; /* Espacio inferior entre el título y el párrafo */
+  font-size: 1.2rem;
+  /* Tamaño de fuente para los títulos */
+  margin-bottom: 10px;
+  /* Espacio inferior entre el título y el párrafo */
   display: flex;
   justify-content: center;
 }
 
 .step p {
-  font-size: 1rem; /* Tamaño de fuente para los párrafos */
+  font-size: 1rem;
+  /* Tamaño de fuente para los párrafos */
 }
 
 .h3-card {
   font-family: "Poppins-MediumItalic";
   src: url("/Fuentes/Poppins-MediumItalic.ttf");
 }
+
 /* Fin de los cambios del carlos */
+
+/* Comienza estilos del Testimonios */
+/* Contenido primer testimonio */
+.contenido-Testimonios {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.img-testimonios1 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/hombre-mayor.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios1:hover .over-1 {
+  height: 100%;
+  opacity: 1;
+}
+
+.text-over {
+  text-align: center;
+  /* Alinear el texto al centro */
+  color: white;
+}
+
+.h3-over {
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
+  font-size: 1.5rem;
+}
+
+.p-1 {
+  font-size: 1rem;
+}
+
+/* Comienza segundo testimonio */
+.img-testimonios2 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/trajador-digital.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios2:hover .over-2 {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Comienza testimonio de dayana */
+.img-testimonios3 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/retrato-jardinera.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios3:hover .over-3 {
+  height: 100%;
+  opacity: 1;
+}
