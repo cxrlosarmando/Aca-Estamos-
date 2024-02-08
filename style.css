@@ -1353,3 +1353,39 @@ header {
     max-height: 200px; /* Ajusta el valor según sea necesario */
     overflow-y: auto;
 }
+.userButton{
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
+  color: white
+}
+.userName{
+  color: white
+}
+@media(min-width: 280px) and (max-width: 460px) {
+  .userButton{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .userName{
+   margin-right: 20px;
+   margin-left: 20px;
+  }
+}
+@media(min-width: 767px) and (max-width:812px) {
+.userButton{
+  text-align: center;
+}
+    .userN{
+      width: 83%;
+      margin-top: 0%;
+      margin-left: 0%;
+      text-align: center;
+    }
+    .userName{
+      font-size: 13px;
+      /* margin-top: 10px; */
+    }
+    
+
+  
+}
+
