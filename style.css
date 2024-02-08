@@ -543,13 +543,18 @@ div.col-lg-8.bg-light {
 
 
 /*AQUI COMIENZA DISEÑO DE EDITAR CV */
-#cvContainer {
+.cvContainer {
   /*estp es main*/
-  margin-top: 50px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  background-color: #03A688;
+  width: 70%;
+  height: 100%;
+  margin-top: 40px;
+  padding: 30%;
+  /* padding: 0; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* align-items: center; */
+  /* background-color: #03A688; */
 }
 
 #ccv {
@@ -565,28 +570,29 @@ div.col-lg-8.bg-light {
 
 .colName {
   padding: 3%;
-}
+  text-align: center;}
 
 .iconCv {
   color: white;
-  margin: 0;
+  /* margin: 0; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.itemsCv{
+  margin-left: 30px;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.containerItems{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.nameUsuario{
+  margin-bottom: 20px;
+}  
+.firstColCv{
+  padding-top: 20px;
+  padding-bottom: 0px;}
+.contInfo{
+  margin-top: 10px;}
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
 /* Aqui comienza estilo de letra de registro(registro.html) */
