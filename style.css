@@ -440,10 +440,22 @@ div#buscador-pr.conteiner-fluid {
 }
 
 .h3-Partners {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
+  
+}
 
+.container-color {
+  display: flex;
+  height: 1px;
+  width: 100%; 
+
+}
+
+.color-linea {
+  color: #535353;
+  flex-grow: 1;
+  background-color: #818181;
 }
 
 #boton-info {
@@ -457,10 +469,7 @@ div#buscador-pr.conteiner-fluid {
 
 .contenido-empleos {
   margin: 40px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.322);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  
 }
 
 .container-fluids img {
@@ -567,6 +576,7 @@ div.col-lg-8.bg-light {
 .colName {
   padding: 3%;
   text-align: center;
+
 }
 
 .iconCv {
@@ -575,7 +585,8 @@ div.col-lg-8.bg-light {
   padding-top: 0%;
 }
 
-.itemsCv {
+
+.itemsCv  {
   /* margin-left: 45px; */
   margin-top: 16px;
   /* align-items: center; */
@@ -583,12 +594,14 @@ div.col-lg-8.bg-light {
   font-size: 26px;
 }
 
-.containerItems {
+
+.containerItems  {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.nameUsuario {
+
+.nameUsuario  {
   margin-bottom: 20px;
 }
 .contactData{
@@ -775,6 +788,8 @@ div.col-lg-8.bg-light {
   }
 }
 
+/*Responsive formulario fin*/
+
 /*Perfil usuario*/
 
 .row-perfil {
@@ -943,6 +958,31 @@ div.col-lg-8.bg-light {
 
 }
 
+/*Perfil usuario fin*/
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
+}
+
+.carousel-item {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
+}
+
+
 /* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
 #Img-Empleos {
   display: flex;
@@ -975,15 +1015,21 @@ div.col-lg-8.bg-light {
   display: flex;
 }
 
+
 .admin-row {
   display: flex;
+  flex-direction: row;
   flex-direction: row;
   width: 100%;
 }
 
+
 .admin-col1 {
   width: 40%;
 }
+
+.admin-col2,
+.admin-col3 {
 
 .admin-col2,
 .admin-col3 {
@@ -993,21 +1039,29 @@ div.col-lg-8.bg-light {
 #btn-empresas,
 #btn-perfil,
 #btn-usuario {
+
+#btn-empresas,
+#btn-perfil,
+#btn-usuario {
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Heavitas';
   padding: 35px 80px;
-  background-color: #03A688;
+  background-color:  #03A688;
   margin-top: 40px;
   margin-bottom: 40px;
   border-color: #03A688;
+  border-color: #03A688;
 }
 
+#btn-empresas:hover,
+#btn-perfil:hover {
 #btn-empresas:hover,
 #btn-perfil:hover {
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
   transition: all 0.2s ease;
 }
+
 
 #btn-usuario:hover {
   color: rgba(255, 255, 255, 1);
@@ -1020,10 +1074,13 @@ div.col-lg-8.bg-light {
   border-color: #D97D0D;
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color: #D97D0D;
+  background-color:  #D97D0D;
   margin-top: 49px;
   margin-bottom: 49px;
 }
+
+#btn-activos:hover,
+#btn-solicitudes:hover {
 
 #btn-activos:hover,
 #btn-solicitudes:hover {
@@ -1037,30 +1094,36 @@ div.col-lg-8.bg-light {
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color: #83A637;
+  background-color:  #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
+
 
 #btn-newcv {
   color: rgba(255, 255, 255, 0.9);
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 71px;
-  background-color: #83A637;
+  background-color:  #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
+
 
 #btn-inactivos {
   color: rgba(255, 255, 255, 0.9);
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 77px;
-  background-color: #83A637;
+  background-color:  #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
+
+#btn-inactivos:hover,
+#btn-newcv:hover,
+#btn-ofertas:hover {
 
 #btn-inactivos:hover,
 #btn-newcv:hover,
@@ -1070,29 +1133,37 @@ div.col-lg-8.bg-light {
   transition: all 0.2s ease;
 }
 
+
 #btn-activos {
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Poppins-Regular';
   border-color: #D97D0D;
   padding: 25px 68px;
-  background-color: #D97D0D;
+  background-color:  #D97D0D;
   margin-top: 49px;
   margin-bottom: 49px;
 }
+
 
 @media (min-width: 280px) and (max-width: 1100px) {
   .admin-row {
     flex-direction: column;
   }
 
+
   .admin-col1,
+ 
   .admin-col2,
+ 
   .admin-col3 {
     width: 100%;
   }
 
+
   #btn-empresas,
+ 
   #btn-perfil,
+ 
   #btn-usuario {
     text-align: center;
     padding: 35px 0px;
@@ -1101,11 +1172,13 @@ div.col-lg-8.bg-light {
     margin-bottom: 10px;
   }
 
+
   #btn-solicitudes {
     padding: 10px 45px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
 
   #btn-ofertas {
     padding: 10px 25px;
@@ -1113,17 +1186,20 @@ div.col-lg-8.bg-light {
     margin-bottom: 10px;
   }
 
+
   #btn-newcv {
     padding: 10px 45px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
+
   #btn-inactivos {
     padding: 10px 55px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
 
   #btn-activos {
     padding: 10px 64px;
@@ -1485,28 +1561,36 @@ header {
   max-height: 200px;
   /* Ajusta el valor según sea necesario */
   overflow-y: auto;
+  max-height: 200px;
+  /* Ajusta el valor según sea necesario */
+  overflow-y: auto;
 }
 
-.userButton {
+
+.userButton  {
   box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
   color: white
 }
 
-.userName {
+
+.userName  {
   color: white
 }
 
+
 @media(min-width: 280px) and (max-width: 460px) {
-  .userButton {
+  .userButton  {
     font-size: 12px;
     margin-top: 10px;
   }
 
-  .userName {
-    margin-right: 20px;
-    margin-left: 20px;
+
+  .userName  {
+     margin-right: 20px;
+     margin-left: 20px;
   }
 }
+
 
 @media(min-width: 767px) and (max-width:812px) {
   .userButton {
@@ -1525,6 +1609,38 @@ header {
     /* margin-top: 10px; */
   }
 
+  .userButton {
+    text-align: center;
+  }
+
+  .userN {
+    width: 83%;
+    margin-top: 0%;
+    margin-left: 0%;
+    text-align: center;
+  }
+
+  .userName {
+    font-size: 12px;
+    /* margin-top: 10px; */
+  }
 
 
+
+
+}
+
+/* responsive filtro */
+.filtros {
+  margin: 30px;
+
+}
+
+@media (min-width: 280px) and (max-width: 800px) {
+ #filtros-row {
+  flex-direction: column;
+ }
+ #filtros-col{
+  width: 100%;
+ }
 }

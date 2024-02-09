@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acá Estamos - Login </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acá Estamos- Admin Solicitudes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=pop">
 </head>
 
 <body>
@@ -17,10 +18,10 @@
                 <div class="container-fluid text-light p-3" style="background-color: #83A637;">
                     <nav class="navbar navbar-expand-lg ">
                         <div class="container-fluid" style="background-color: #83A637;" id="greenContainer">
-    
+
                             <div>
-                                <a class="navbar-brand " href="/index.html"><img src="/Logos/logo2.0.png" alt="Bootstrap"
-                                        width="100" height="100" id="hire"></a>
+                                <a class="navbar-brand " href="../index.html"><img src="../Logos/logo2.0.png"
+                                        alt="Bootstrap" width="100" height="100" id="hire"></a>
                             </div>
                             <div class="ml-4" id="hashtagDelInicio">
                                 <p class="mb-0">#RencaOrgullosa</p>
@@ -31,17 +32,17 @@
                                 style="justify-content: flex-end;" id="botonesnav">
                                 <button class="btn btn-custom btn-lg me-2" id="botonInicio" type="button"
                                     style="background-color:#049DD9;">
-                                    <a href="/pages/IniciarSes.html">Iniciar Sesión</a>
+                                    <a href="../pages/IniciarSes.html">Iniciar Sesión</a>
                                 </button>
                                 <button class="btn btn-custom btn-lg me-2" type="button" id="botonInicio"
                                     style="background-color: #D97D0D">
-                                    <a href="/pages/registro.html">Regístrate</a>
+                                    <a href="../pages/registro.html">Regístrate</a>
                                 </button>
                             </div>
                         </div>
                     </nav>
                 </div>
-    
+
                 <div class="container-fluid" style="background-color: #f2f7ea;">
                     <nav class="navbar navbar-expand-lg  ">
                         <div class="container-fluid " style="background-color: #f2f7ea;">
@@ -70,54 +71,27 @@
                     </nav>
                 </div>
     </header>
-    <!-- puntodeinicio -->
-    <!-- vh-100 w-100 -->
-    <main class="d-flex justify-content-center" style="margin-top: 80px; margin-bottom: 120px;">
-        <div class="row" id="nuevoregistro">
-            <div class="col align-self-center">
-                <div class="border p-4"
-                    style="font-family: Poppins-Regular; border-radius: 10px; border-style: solid; border-color: black; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-                    <div class="row align-items-center">
-                        <div class="col-12">
-                            <h1 style="font-family: Heavitas;" class="text-center"><strong>Iniciar sesión</strong></h1>
-                            <h3 class="text-center" style="padding-top: 40px;"><strong>Seleccione tipo de
-                                    usuario:</strong></h3>
-                        </div>
-                    </div>
-                    <div class="row align-items-center" style="padding-top: 60px;">
-                        <div class="col-6">
-                            <button type="button" class="btn btn-light btn-lg me-2" onclick="volverAInicioDeSesion()">
-                                <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" class="img-fluid">
-                            </button>
-                        </div>
-                        <div class="col-6">
-                            <button class="btn btn-light btn-lg me-2" onclick="volverAInicioDeSesion()">
-                                <img href="" src="../Img/empresas-renca.png" alt="Descripción de la imagen"
-                                    class="img-fluid">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <h3 class="text-center">Busca empleos<br>
-                                como usuario<br>
-                            </h3>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="text-center">Publica empleos<br>
-                                como empresa<br>
-                            </h3>
-                        </div>
-                    </div>
+
+    <!-- Comienza main solicitudes-->
+
+    <main class="solicitudescv">
+        <div class="container-fluid"
+            style="border-radius: 10px; background-color:rgba(4, 157, 217, 0.15); box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); width: 100%;">
+            <div class="solici-row">
+                <div class="solici-col1">
+                    <img src="../Img/user-perfil.png" alt="Imagen perfil" id="user-perfil">
                 </div>
+            <div class="solici-col2">
+                <h3 class="Curriculum">Curriculum</h3>
+                <p> <a href="#">Mostrar CV Generado</p></a>
+            </div>
+            <div class="solici-col3">
+                <button id="btn-Aprobar" class="btn btn-primary btn-lg">Aprobar</button>
+                <button id="btn-Denegar" class="btn btn-secondary btn-lg">Denegar</button>
             </div>
         </div>
+    </div>
     </main>
-
-
-
-
-
 
     <footer class="footer">
         <div class="barracolor">
@@ -164,10 +138,16 @@
         </div>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/script.js"></script>
+
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
