@@ -676,7 +676,7 @@ div.col-lg-8.bg-light {
     margin-right: 0;
   }
 }
-
+/*Responsive formulario fin*/
 /*Perfil usuario*/
 
 .row-perfil {
@@ -744,29 +744,6 @@ div.col-lg-8.bg-light {
 
 .elementos-adjuntos {
   font-family: 'Poppins-Regular';
-}
-
-/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
-#Img-Empleos {
-  display: flex;
-  padding: 4%;
-  margin: 4%;
-
-}
-
-/* Por definir el height para que sea responsive las img */
-.carousel-item img {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-  /* Para mantener la proporción de aspecto */
-}
-
-.carousel-item {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-
 }
 
 .certificadoslist {
@@ -844,6 +821,31 @@ div.col-lg-8.bg-light {
   }
 
 }
+
+/*Perfil usuario fin*/
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
+}
+
+.carousel-item {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
+}
+
 
 /* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
 #Img-Empleos {
@@ -1395,3 +1397,82 @@ header {
   
 }
 
+/*Solicitudes CV*/
+.solicitudescv {
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.solici-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.solici-col1 {
+  width: 40%;
+}
+
+.solici-col2,
+.solici-col3 {
+  width: 30%;
+}
+
+.solici-col3 {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.colcv {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.colcv p {
+  font-weight: bold;
+  margin-right: 5px;
+
+}
+
+.colcv a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#btn-Aprobar {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  padding: 15px 40px;
+  background-color:#03A688;
+  margin-bottom: 20px;
+  border-color: #03A688; 
+}
+
+#btn-Denegar {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  padding: 15px 40px;
+  background-color:#D95525;
+  margin-bottom: 20px;
+  border-color: #D95525; 
+}
+
+#btn-Aprobar:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-Denegar:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(217, 85, 37, 0.8);
+  transition: all 0.2s ease;
+}
