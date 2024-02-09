@@ -868,19 +868,6 @@ div.col-lg-8.bg-light {
 }
 
 /* Por definir el height para que sea responsive las img */
-.carousel-item img {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-  /* Para mantener la proporción de aspecto */
-}
-
-.carousel-item {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-
-}
 
 .certificadoslist {
   list-style-type: none;
@@ -968,19 +955,8 @@ div.col-lg-8.bg-light {
 }
 
 /* Por definir el height para que sea responsive las img */
-.carousel-item img {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-  /* Para mantener la proporción de aspecto */
-}
 
-.carousel-item {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
 
-}
 
 
 /* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
@@ -992,19 +968,9 @@ div.col-lg-8.bg-light {
 }
 
 /* Por definir el height para que sea responsive las img */
-.carousel-item img {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
-  /* Para mantener la proporción de aspecto */
-}
 
-.carousel-item {
-  max-width: 100%;
-  /* Forzar el máximo ancho al 100% */
-  height: auto;
 
-}
+
 
 /* paneladmin*/
 .perfiladmin {
