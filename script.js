@@ -114,7 +114,7 @@ function iniciarSesion() {
     if (usuarioEncontrado && usuarioEncontrado.contraseña === contraseñaInicioSesion) {
         alert("Inicio de sesión exitoso. Redirigiendo a la página principal.");
         // Puedes redirigir a la página principal u otra página después del inicio de sesión
-        window.location.href = "./SesiónIniciadaUsuario.html";
+        window.location.href = "./Perfilusuario.html";
     } else {
         alert("Correo o contraseña incorrectos. Por favor, verifica tus credenciales.");
     }
