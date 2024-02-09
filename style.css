@@ -1213,16 +1213,25 @@ div.col-lg-8.bg-light {
 }
 
 /* Cambios en las cards  */
+
+.h2-conecta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
 .contenido-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2%;
-  padding: 2%;
+
+  padding: 1%;
 }
 
 .Paso {
-  margin: 2%;
+  margin-top: 0%;
+ 
   padding: 1%;
 }
 
@@ -1232,7 +1241,7 @@ div.col-lg-8.bg-light {
   border: 1px solid #dee2e6;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   max-width: 200px;
   height: 200px;
 }
@@ -1727,3 +1736,4 @@ header {
 }
 
 /*Solicitudes CV fin*/
+/* */
