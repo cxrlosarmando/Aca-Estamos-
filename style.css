@@ -442,13 +442,13 @@ div#buscador-pr.conteiner-fluid {
 .h3-Partners {
   font-family: "Poppins-Bold";
   src: url("Fuentes/Poppins-Bold.ttf");
-  
+
 }
 
 .container-color {
   display: flex;
   height: 1px;
-  width: 100%; 
+  width: 100%;
 
 }
 
@@ -469,7 +469,7 @@ div#buscador-pr.conteiner-fluid {
 
 .contenido-empleos {
   margin: 40px;
-  
+
 }
 
 .container-fluids img {
@@ -559,10 +559,12 @@ div.col-lg-8.bg-light {
   margin-top: 40px;
   padding: 30%;
 }
+
 .cvContent {
   display: flex;
   flex-direction: row;
 }
+
 /* #ccv {
   margin: 0%;
   padding: 0%;
@@ -586,7 +588,7 @@ div.col-lg-8.bg-light {
 }
 
 
-.itemsCv  {
+.itemsCv {
   /* margin-left: 45px; */
   margin-top: 16px;
   /* align-items: center; */
@@ -595,18 +597,20 @@ div.col-lg-8.bg-light {
 }
 
 
-.containerItems  {
+.containerItems {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 
-.nameUsuario  {
+.nameUsuario {
   margin-bottom: 20px;
 }
-.contactData{
+
+.contactData {
   text-align: left;
 }
+
 .contInfo {
   margin-top: 10px;
   font-family: "Poppins-Regular";
@@ -618,32 +622,40 @@ div.col-lg-8.bg-light {
     margin-left: 11px;
     font-size: 15px;
   }
+
   .iconCv {
     font-size: 15px;
   }
+
   .cvContainer {
     width: 95%;
   }
+
   .firstColCv {
     width: 95%;
   }
+
   .secondColCv {
     width: 95%;
     padding-top: 20px;
     padding: 0%;
   }
+
   .nameCv {
     font-size: 18px;
   }
+
   .contInfo {
     font-size: 12px;
     align-items: center;
   }
+
   .colName {
     padding-top: 30px;
     text-align: left;
   }
-  .contactData{
+
+  .contactData {
     font-size: 12px;
   }
 }
@@ -653,47 +665,59 @@ div.col-lg-8.bg-light {
     margin-left: 11px;
     font-size: 20px;
   }
+
   .iconCv {
     font-size: 15px;
   }
+
   .cvContainer {
     width: 85%;
   }
+
   .firstColCv {
     width: 95%;
   }
+
   .secondColCv {
     width: 95%;
     padding-top: 20px;
     padding: 0%;
   }
+
   .nameCv {
     font-size: 18px;
   }
+
   .contInfo {
     font-size: 12px;
     align-items: center;
   }
+
   .colName {
     padding-top: 30px;
   }
 }
+
 @media (min-width: 767px) and (max-width: 990px) {
   .cvContainer {
     width: 95%;
   }
+
   .itemsCv {
     font-size: 18px;
   }
 }
+
 @media (min-width: 991px) and (max-width: 1198px) {
   .cvContainer {
     width: 85%;
   }
+
   .itemsCv {
     font-size: 20px;
   }
 }
+
 @media (min-width: 1199px) and (max-width: 1900px) {
   .itemsCv {
     font-size: 20px;
@@ -1012,7 +1036,7 @@ div.col-lg-8.bg-light {
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Heavitas';
   padding: 35px 80px;
-  background-color:  #03A688;
+  background-color: #03A688;
   margin-top: 40px;
   margin-bottom: 40px;
   border-color: #03A688;
@@ -1040,7 +1064,7 @@ div.col-lg-8.bg-light {
   border-color: #D97D0D;
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color:  #D97D0D;
+  background-color: #D97D0D;
   margin-top: 49px;
   margin-bottom: 49px;
 }
@@ -1060,7 +1084,7 @@ div.col-lg-8.bg-light {
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 50px;
-  background-color:  #83A637;
+  background-color: #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
@@ -1071,7 +1095,7 @@ div.col-lg-8.bg-light {
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 71px;
-  background-color:  #83A637;
+  background-color: #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
@@ -1082,7 +1106,7 @@ div.col-lg-8.bg-light {
   border-color: #83A637;
   font-family: 'Poppins-Regular';
   padding: 25px 77px;
-  background-color:  #83A637;
+  background-color: #83A637;
   margin-top: 49px;
   margin-bottom: 49px;
 }
@@ -1105,7 +1129,7 @@ div.col-lg-8.bg-light {
   font-family: 'Poppins-Regular';
   border-color: #D97D0D;
   padding: 25px 68px;
-  background-color:  #D97D0D;
+  background-color: #D97D0D;
   margin-top: 49px;
   margin-bottom: 49px;
 }
@@ -1118,18 +1142,18 @@ div.col-lg-8.bg-light {
 
 
   .admin-col1,
- 
+
   .admin-col2,
- 
+
   .admin-col3 {
     width: 100%;
   }
 
 
   #btn-empresas,
- 
+
   #btn-perfil,
- 
+
   #btn-usuario {
     text-align: center;
     padding: 35px 0px;
@@ -1525,27 +1549,27 @@ header {
 }
 
 
-.userButton  {
+.userButton {
   box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
   color: white
 }
 
 
-.userName  {
+.userName {
   color: white
 }
 
 
 @media(min-width: 280px) and (max-width: 460px) {
-  .userButton  {
+  .userButton {
     font-size: 12px;
     margin-top: 10px;
   }
 
 
-  .userName  {
-     margin-right: 20px;
-     margin-left: 20px;
+  .userName {
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -1583,9 +1607,6 @@ header {
     /* margin-top: 10px; */
   }
 
-
-
-
 }
 
 /* responsive filtro */
@@ -1595,10 +1616,114 @@ header {
 }
 
 @media (min-width: 280px) and (max-width: 800px) {
- #filtros-row {
-  flex-direction: column;
- }
- #filtros-col{
-  width: 100%;
- }
+  #filtros-row {
+    flex-direction: column;
+  }
+
+  #filtros-col {
+    width: 100%;
+  }
 }
+
+/*Solicitudes CV*/
+.solicitudescv {
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.solici-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.solici-col1 {
+  width: 30%;
+}
+
+.solici-col2 {
+  width: 40%;
+  font-weight: bold;
+}
+
+.solici-col2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.solici-col3 {
+  width: 30%
+}
+
+.solici-col3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Curriculum {
+  font-family: 'Heavitas';
+  margin-top: 43px;
+}
+
+#btn-Aprobar {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  padding: 15px 40px;
+  background-color: #03A688;
+  margin-bottom: 20px;
+  border-color: #03A688;
+}
+
+#btn-Denegar {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  padding: 15px 40px;
+  background-color: #D95525;
+  border-color: #D95525;
+}
+
+#btn-Aprobar:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-Denegar:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(217, 85, 37, 0.8);
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 280px) and (max-width: 700px) {
+  .solici-row {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .Curriculum {
+    font-family: 'Heavitas';
+    margin-top: 10px;
+  }
+
+  .solici-col1,
+  .solici-col2,
+  .solici-col3 {
+    width: 100%;
+  }
+
+  #btn-Aprobar {
+    padding: 6px 60px;
+  }
+
+  #btn-Denegar {
+    padding: 6px 60px;
+  }
+}
+
+/*Solicitudes CV fin*/
