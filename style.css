@@ -723,3 +723,18 @@ div.col-lg-8.bg-light {
 #mostrar-perfil{
   width: 16px;
 }
+
+/* responsive filtro */
+.filtros {
+  margin: 30px;
+
+}
+
+@media (min-width: 280px) and (max-width: 800px) {
+ #filtros-row {
+  flex-direction: column;
+ }
+ #filtros-col{
+  width: 100%;
+ }
+}
