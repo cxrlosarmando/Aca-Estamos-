@@ -279,126 +279,131 @@ div#buscador-pr.conteiner-fluid {
 }
 
 /* *****************************Navbar***************************** */
+#hire:hover {
+  transform: scale(1.04);
+}
 
 .ml-4 {
   /*hashtags*/
-  margin-left: 10%;
-  font-size: 110%;
+  margin-left: 5%;
+  font-size: 100%;
   font-family: "Poppins-Italic";
   color: white;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .buttonInicio {
   font-family: "Poppins-Regular";
 }
 
-#margenNav {
-  margin-top: 4%;
-  text-align: center;
+#botonInicio {
+  /* margin-left: 0px; */
+  margin-top: 10px;
+  /* align-items: center; */
 }
 
-#botonInicio {
-  margin-left: 0px;
-  margin-top: 10px;
-  align-items: center;
+.btn-custom {
+  /*sombra para botones*/
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
 }
- 
-.nav-link {  
+
+.btn-custom:hover {
+  /*efecto movimiento en botones*/
+  transform: translateY(-4px);
+}
+
+.nav-link {
   color: #83A637;
-  /* margin-right: 0px; */
+  margin-right: 50px;
+  margin-left: 50px;
   font-size: larger;
   font-family: "Poppins-Regular";
 }
+
 .custom-toggler {
   margin-left: auto;
   margin-right: 5%;
 }
 
-@media (min-width: 280px) and (max-width: 408px) {
+@media (min-width: 280px) and (max-width: 766px) {
   #greenContainer {
     justify-content: center;
   }
-  #hire {
+
+  #botonesnav {
+    width: 100%;
     text-align: center;
-    margin-left: 0px;
   }
+
   #hashtagDelInicio {
     text-align: center;
   }
-  #Nav2{
+
+  #Nav2 {
     text-align: center;
   }
 }
 
-@media (min-width: 280px) and (max-width: 767px) {
-  .logosNav,
+@media (min-width: 767px) and (max-width: 990px) {
+
   #botonesnav {
-    width: 100%;
-    justify-content: center;
-  }
-  #Nav2{
-    text-align: center;
+    width: 55%;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 0%;
+    margin-left: 0%;
   }
 
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .logosNav {
-    justify-content: left;
+  .ml-4 {
     margin-left: 5%;
+    margin-right: auto;
   }
 
-  #botonesnav {
-    justify-content: right;
-    margin-right: 5%;
-    margin-bottom: 3%;
-  }
-
-  #greenContainer {
-    width: 100%;
-    justify-content: center;
-  }
-  #Nav2{
+  #Nav2 {
     text-align: center;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1114px) {
-  .logosNav {
-    width: 100%;
-    justify-content: left;
+@media (min-width: 991px) and (max-width: 1000px) {
+  #hire {
+    margin-left: 50%;
+  }
+
+  .ml-4 {
+    margin-left: 0px;
+    margin-right: 15%;
   }
 
   #botonesnav {
-    width: 100%;
-    justify-content: right;
+    width: auto;
+    margin-right: 10%;
+    margin-top: 0;
+    text-align: right;
   }
 
-  #greenContainer {
-    width: 1%;
+  #Nav2 {
+    text-align: center;
   }
-  .nav-link {
-  margin-right: 50px;
-  margin-left: 50px;}
 }
 
-@media (min-width: 1115px) and (max-width: 1930px) {
-  .logosNav {
-    width: 100%;
+@media (min-width: 1001px) and (max-width: 1930px) {
+  #hire {
+    margin-left: 50%;
+  }
+
+  .ml-4 {
+    margin-left: 10%;
   }
 
   #botonesnav {
     width: 100%;
     margin-right: 10%;
   }
-  .nav-link {
-    margin-right: 50px;
-    margin-left: 50px;}
 }
 
-
-/* fin css navbar */
+/******************** fin css navbar ********************/
 #card-empleo {
   margin: 40px;
   padding: 0%;
@@ -433,11 +438,24 @@ div#buscador-pr.conteiner-fluid {
   align-items: center;
   color: #03A688;
 }
+
 .h3-Partners {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
   
+}
+
+.container-color {
+  display: flex;
+  height: 1px;
+  width: 100%; 
+
+}
+
+.color-linea {
+  color: #535353;
+  flex-grow: 1;
+  background-color: #818181;
 }
 
 #boton-info {
@@ -451,10 +469,7 @@ div#buscador-pr.conteiner-fluid {
 
 .contenido-empleos {
   margin: 40px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.322);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  
 }
 
 .container-fluids img {
@@ -537,15 +552,64 @@ div.col-lg-8.bg-light {
 
 
 /*AQUI COMIENZA DISEÑO DE EDITAR CV */
+.cvContainer {
+  /*estp es main*/
+  width: 70%;
+  height: 100%;
+  margin-top: 40px;
+  padding: 30%;
+  /* padding: 0; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* align-items: center; */
+  /* background-color: #03A688; */
+}
 
+#ccv {
+  margin: 0%;
+  padding: 0%;
+}
 
+.cursosUsuario,
+.cTecnics {
+  list-style: none;
+  padding: 0%;
+}
 
+.colName {
+  padding: 3%;
+  text-align: center;
+}
 
+.iconCv {
+  color: white;
+  /* margin: 0; */
+}
 
+.itemsCv {
+  margin-left: 30px;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
 
+.containerItems {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
+.nameUsuario {
+  margin-bottom: 20px;
+}
 
+.firstColCv {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
 
+.contInfo {
+  margin-top: 10px;
+}
 
 /* ACA TERMINA DISEÑO DE EDITAR CV */
 
@@ -630,42 +694,70 @@ div.col-lg-8.bg-light {
     margin-right: 0;
   }
 }
+
+/*Responsive formulario fin*/
+
 /*Perfil usuario*/
-.mi-perfil{
+
+.row-perfil {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.col-perfil2 {
+  width: 50%;
+}
+
+.col-perfil1,
+.col-perfil3 {
+  width: 25%;
+}
+
+.mi-perfil {
   margin: 40px;
   font-family: 'Heavitas';
 }
+
 .perfilusuario {
   margin: 40px;
   padding: 0%;
   justify-content: center;
 }
+
 #user-perfil {
   width: 300px;
 }
-.Nombre-perfil{
-  margin-top: 38px;
+
+.Nombre-perfil {
+  margin-top: 41px;
 }
+
 .Elementos-perfil {
   margin-top: 20px;
   list-style-type: none;
   padding: 0;
 }
+
 .Elementos-perfil li {
   margin-bottom: 10px;
 }
-.actualizar-datos{
+
+.actualizar-datos {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   margin-top: 15px;
   text-decoration: underline;
   font-weight: bold;
   margin-right: 10px;
 }
+
 .actualizar-datos a {
   color: inherit;
   text-decoration: none;
 }
+
 #pen-edit {
   width: 15px;
 }
@@ -673,6 +765,7 @@ div.col-lg-8.bg-light {
 .elementos-adjuntos {
   font-family: 'Poppins-Regular';
 }
+
 /* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
 #Img-Empleos {
   display: flex;
@@ -680,15 +773,20 @@ div.col-lg-8.bg-light {
   margin: 4%;
 
 }
+
 /* Por definir el height para que sea responsive las img */
 .carousel-item img {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; /* Para mantener la proporción de aspecto */
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
 }
+
 .carousel-item {
-  max-width: 100%; /* Forzar el máximo ancho al 100% */
-  height: auto; 
-  
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
 }
 
 .certificadoslist {
@@ -698,31 +796,687 @@ div.col-lg-8.bg-light {
   padding: 0;
   font-weight: bold;
 }
+
 .certificadoslist li a {
   color: inherit;
   text-decoration: none;
 }
+
 .colcv {
   display: flex;
   justify-content: flex-end;
   text-decoration: underline;
-  font-weight: bold; 
+  font-weight: bold;
 }
+
 .colcv p {
-  font-weight: bold; 
+  font-weight: bold;
   margin-right: 5px;
-  
+
 }
+
 .colcv a {
-  color: inherit; 
-  text-decoration: none; 
+  color: inherit;
+  text-decoration: none;
 }
+
 .colcv img {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
-#mostrar-perfil{
+
+#mostrar-perfil {
   width: 16px;
 }
+
+@media (min-width: 460px) and (max-width: 1130px) {
+  .certificadoslist {
+    text-align: start;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 1131px) {
+  .perfilusuario {
+    text-align: center;
+  }
+
+  .Elementos-perfil {
+    text-align: start;
+    padding-left: 10px;
+  }
+
+  .actualizar-datos {
+    text-align: center;
+  }
+
+  .col-perfil1,
+  .col-perfil2,
+  .col-perfil3 {
+    width: 100%;
+  }
+
+  #user-perfil {
+    height: 200px;
+    width: 200px;
+  }
+
+  .Nombre-perfil {
+    margin-top: 0px;
+  }
+
+}
+
+/*Perfil usuario fin*/
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
+}
+
+.carousel-item {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
+}
+
+
+/* Cambios de css por Carlos, en el div de colaboradores y parte del carrusell */
+#Img-Empleos {
+  display: flex;
+  padding: 4%;
+  margin: 4%;
+
+}
+
+/* Por definir el height para que sea responsive las img */
+.carousel-item img {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+  /* Para mantener la proporción de aspecto */
+}
+
+.carousel-item {
+  max-width: 100%;
+  /* Forzar el máximo ancho al 100% */
+  height: auto;
+
+}
+
+/* paneladmin*/
+.perfiladmin {
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.admin-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.admin-col1 {
+  width: 40%;
+}
+
+.admin-col2,
+.admin-col3 {
+  width: 30%;
+}
+
+#btn-empresas,
+#btn-perfil,
+#btn-usuario {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Heavitas';
+  padding: 35px 80px;
+  background-color: #03A688;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-color: #03A688;
+}
+
+#btn-empresas:hover,
+#btn-perfil:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-usuario:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(4, 157, 217, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-solicitudes {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #D97D0D;
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color: #D97D0D;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-activos:hover,
+#btn-solicitudes:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(217, 125, 13, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-ofertas {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-newcv {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 71px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-inactivos {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 77px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-inactivos:hover,
+#btn-newcv:hover,
+#btn-ofertas:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(131, 166, 55, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-activos {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  border-color: #D97D0D;
+  padding: 25px 68px;
+  background-color: #D97D0D;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+@media (min-width: 280px) and (max-width: 1100px) {
+  .admin-row {
+    flex-direction: column;
+  }
+
+  .admin-col1,
+  .admin-col2,
+  .admin-col3 {
+    width: 100%;
+  }
+
+  #btn-empresas,
+  #btn-perfil,
+  #btn-usuario {
+    text-align: center;
+    padding: 35px 0px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btn-solicitudes {
+    padding: 10px 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btn-ofertas {
+    padding: 10px 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btn-newcv {
+    padding: 10px 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btn-inactivos {
+    padding: 10px 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #btn-activos {
+    padding: 10px 64px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Finde lo danny <3 que es panel Admin */
+
+
+/* De quién es es este dropdown */
+.dropdown-menu {
+  position: fixed;
+
+}
+
+/* Estilos para evitar la distorsión del contenido cuando el menú está desplegado */
+.navbar-collapse {
+  position: relative;
+}
+
+/* Cambios en las cards  */
+.contenido-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2%;
+  padding: 2%;
+}
+
+.Paso {
+  margin: 2%;
+  padding: 1%;
+}
+
+.step {
+  flex-grow: 1;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 200px;
+  height: 200px;
+}
+
+.step.contenido-card {
+  display: flex;
+  position: absolute;
+}
+
+.step img {
+  width: 95%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 95%;
+  /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover;
+  /* Escala y recorta la imagen para que se ajuste al contenedor */
+  border-top-left-radius: 8px;
+  /* Redondea solo las esquinas superiores izquierdas */
+  border-top-right-radius: 8px;
+  /* Espacio inferior entre la imagen y el contenido */
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  /* Tamaño de fuente para los títulos */
+  margin-bottom: 10px;
+  /* Espacio inferior entre el título y el párrafo */
+  display: flex;
+  justify-content: center;
+}
+
+.step p {
+  font-size: 1rem;
+  /* Tamaño de fuente para los párrafos */
+}
+
+.h3-card {
+  font-family: "Poppins-MediumItalic";
+  src: url("/Fuentes/Poppins-MediumItalic.ttf");
+}
+
+/* Fin de los cambios del carlos */
+
+/* Comienza estilos del Testimonios */
+/* Contenido primer testimonio */
+.contenido-Testimonios {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.img-testimonios1 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/hombre-mayor.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios1:hover .over-1 {
+  height: 100%;
+  opacity: 1;
+}
+
+.text-over {
+  text-align: center;
+  /* Alinear el texto al centro */
+  color: white;
+}
+
+.h3-over {
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
+  font-size: 1.5rem;
+}
+
+.p-1 {
+  font-size: 1rem;
+}
+
+/* Comienza segundo testimonio */
+.img-testimonios2 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/trajador-digital.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios2:hover .over-2 {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Comienza testimonio de dayana */
+.img-testimonios3 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/retrato-jardinera.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios3:hover .over-3 {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Comienza estilos del Testimonios */
+/* Contenido primer testimonio */
+.contenido-Testimonios {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.img-testimonios1 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/hombre-mayor.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios1:hover .over-1 {
+  height: 100%;
+  opacity: 1;
+}
+
+.text-over {
+  text-align: center;
+  /* Alinear el texto al centro */
+  color: white;
+}
+
+.h3-over {
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
+  font-size: 1.5rem;
+}
+
+.p-1 {
+  font-size: 1rem;
+}
+
+/* Comienza segundo testimonio */
+.img-testimonios2 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/trajador-digital.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios2:hover .over-2 {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Comienza testimonio de dayana */
+.img-testimonios3 {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('./Img/retrato-jardinera.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.over-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  /* Cambiar la altura inicial a 0 */
+  background-color: rgba(1, 146, 208, 0.5);
+  /* Cambiar el color de fondo con transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ocultar cualquier contenido que se extienda más allá del tamaño del contenedor */
+  transition: height 0.3s;
+  /* Añadir una transición para la altura */
+}
+
+.img-testimonios3:hover .over-3 {
+  height: 100%;
+  opacity: 1;
+}
+
+
+/* DIEGO Caro*/
+
+header {
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  /* Ajusta el valor según sea necesario */
+  overflow-y: auto;
+}
+
+.userButton {
+  box-shadow: 5px 8px 16px rgba(0, 0, 0, 0.792), 0 0 0 1px rgba(253, 252, 252, 0.089) inset;
+  color: white
+}
+
+.userName {
+  color: white
+}
+
+@media(min-width: 280px) and (max-width: 460px) {
+  .userButton {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .userName {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media(min-width: 767px) and (max-width:812px) {
+  .userButton {
+    text-align: center;
+  }
+
+  .userN {
+    width: 83%;
+    margin-top: 0%;
+    margin-left: 0%;
+    text-align: center;
+  }
+
+  .userName {
+    font-size: 13px;
+    /* margin-top: 10px; */
+  }
+
+
+
+}
+
+
 
 /* responsive filtro */
 .filtros {
