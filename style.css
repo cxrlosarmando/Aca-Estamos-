@@ -1254,6 +1254,10 @@ div.col-lg-8.bg-light {
 
 /* Comienza estilos del Testimonios */
 /* Contenido primer testimonio */
+.contenedor-testis {
+  margin-bottom: 4%;
+  padding-bottom: 2%;
+}
 
 .img-testimonios1 {
   width: 300px;
