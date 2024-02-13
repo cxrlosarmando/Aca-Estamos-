@@ -3,7 +3,7 @@
 /// JavaScript
 function volverAInicioDeSesion() {
     
-    window.location.href = './login.html';
+    window.location.href = './loginForm.html';
 }
 
 function irRegistro() {
@@ -19,7 +19,7 @@ function irRegistroempresas() {
 
 function RedirigiraloginE() {
     
-    window.location.href = './login.html';
+    window.location.href = './loginForm.html';
 }
 
 
