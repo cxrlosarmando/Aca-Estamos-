@@ -1,100 +1,183 @@
-/*Solicitudes CV*/
-.solicitudescv {
-    margin: 40px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+/* paneladmin*/
+.perfiladmin {
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.admin-row {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.admin-col1 {
+  width: 40%;
+}
+
+.admin-col2,
+.admin-col3 {
+  width: 30%;
+}
+
+#btn-empresas,
+#btn-perfil,
+#btn-usuario {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Heavitas';
+  padding: 35px 80px;
+  background-color: #03A688;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-color: #03A688;
+  border-color: #03A688;
+}
+
+#btn-empresas:hover,
+#btn-perfil:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
+  transition: all 0.2s ease;
+}
+
+
+#btn-usuario:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(4, 157, 217, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-solicitudes {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #D97D0D;
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color: #D97D0D;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-activos:hover,
+#btn-solicitudes:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(217, 125, 13, 0.8);
+  transition: all 0.2s ease;
+}
+
+#btn-ofertas {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 50px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+
+#btn-newcv {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 71px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+
+#btn-inactivos {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #83A637;
+  font-family: 'Poppins-Regular';
+  padding: 25px 77px;
+  background-color: #83A637;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+#btn-inactivos:hover,
+#btn-newcv:hover,
+#btn-ofertas:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px rgba(131, 166, 55, 0.8);
+  transition: all 0.2s ease;
+}
+
+
+#btn-activos {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins-Regular';
+  border-color: #D97D0D;
+  padding: 25px 68px;
+  background-color: #D97D0D;
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+
+
+@media (min-width: 280px) and (max-width: 1100px) {
+  .admin-row {
+    flex-direction: column;
   }
-  
-  .solici-row {
-    display: flex;
-    flex-direction: row;
+
+
+  .admin-col1,
+
+  .admin-col2,
+
+  .admin-col3 {
     width: 100%;
   }
-  
-  .solici-col1 {
-    width: 30%;
+
+
+  #btn-empresas,
+
+  #btn-perfil,
+
+  #btn-usuario {
+    text-align: center;
+    padding: 35px 0px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .solici-col2 {
-    width: 40%;
-    font-weight: bold;
+
+
+  #btn-solicitudes {
+    padding: 10px 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .solici-col2 a {
-    color: inherit;
-    text-decoration: none;
+
+
+  #btn-ofertas {
+    padding: 10px 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .solici-col3 {
-    width: 30%
+
+
+  #btn-newcv {
+    padding: 10px 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .solici-col3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+
+  #btn-inactivos {
+    padding: 10px 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  .Curriculum {
-    font-family: 'Heavitas';
-    margin-top: 43px;
+
+
+  #btn-activos {
+    padding: 10px 64px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  
-  #btn-Aprobar {
-    color: rgba(255, 255, 255, 0.9);
-    font-family: 'Poppins-Regular';
-    padding: 15px 40px;
-    background-color: #03A688;
-    margin-bottom: 20px;
-    border-color: #03A688;
-  }
-  
-  #btn-Denegar {
-    color: rgba(255, 255, 255, 0.9);
-    font-family: 'Poppins-Regular';
-    padding: 15px 40px;
-    background-color: #D95525;
-    border-color: #D95525;
-  }
-  
-  #btn-Aprobar:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgba(0, 84, 107, 0.8);
-    transition: all 0.2s ease;
-  }
-  
-  #btn-Denegar:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 16px rgba(217, 85, 37, 0.8);
-    transition: all 0.2s ease;
-  }
-  
-  @media (min-width: 280px) and (max-width: 700px) {
-    .solici-row {
-      flex-direction: column;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .Curriculum {
-      font-family: 'Heavitas';
-      margin-top: 10px;
-    }
-  
-    .solici-col1,
-    .solici-col2,
-    .solici-col3 {
-      width: 100%;
-    }
-  
-    #btn-Aprobar {
-      padding: 6px 60px;
-    }
-  
-    #btn-Denegar {
-      padding: 6px 60px;
-    }
-  }
+}
