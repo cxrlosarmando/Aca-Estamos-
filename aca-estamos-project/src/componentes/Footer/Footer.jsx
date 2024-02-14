@@ -15,11 +15,11 @@ const Footer = () => {
                     <div className="footer-row">
                         <div className="footer-info1">
                             <ul className="logosred">
-                                <a href="https://www.youtube.com/channel/UCEOLXqeFxbHD4OSsSoUPXNg"> <img src="../Logos/youtube.png" alt="YouTube"></img></a>
-                                <a href="https://www.instagram.com/muni_renca/"> <img src="../Logos/🦆 icon _instagram fill icon_.png" alt="Instagram"></img></a>
-                                <a href="https://web.facebook.com/MuniRenca/?_rdc=1&_rdr"> <img src="../Logos/🦆 icon _facebook icon_.png" alt="Facebook"></img></a>
-                                <a href="https://www.flickr.com/photos/153772620@N02"> <img src="../Logos/🦆 icon _Flickr_.png" alt="Flickr"></img></a>
-                                <a href="https://twitter.com/Muni_Renca"> <img src="../Logos/twitter.png" alt="Twitter"></img></a>
+                                <a href="https://www.youtube.com/channel/UCEOLXqeFxbHD4OSsSoUPXNg"> <img src="../public/Logos/youtube.png" alt="YouTube"></img></a>
+                                <a href="https://www.instagram.com/muni_renca/"> <img src="../public/Logos/icon_instagram.png" alt="Instagram"></img></a>
+                                <a href="https://web.facebook.com/MuniRenca/?_rdc=1&_rdr"> <img src="../public/Logos/icon_facebook.png" alt="Facebook"></img></a>
+                                <a href="https://www.flickr.com/photos/153772620@N02"> <img src="../public/Logos/icon_Flickr.png" alt="Flickr"></img></a>
+                                <a href="https://twitter.com/Muni_Renca"> <img src="../public/Logos/twitter.png" alt="Twitter"></img></a>
                             </ul>
                             <ul id="datosfooter">
                                 <li><a>lafabrica@renca.cl</a></li>
