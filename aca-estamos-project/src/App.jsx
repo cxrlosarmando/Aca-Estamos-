@@ -5,6 +5,7 @@ import NavBar from '../src/componentes/Navbar/Navbar';
 import Registro from '../src/componentes/Registro/Registro';
 import OlvidoContraseña from '../src/componentes/OlvidoContraseña/OlvidoContraseña';
 import Header from '../src/componentes/Header/Header';
+import Index from '../src/componentes/Index/Index'
 function App() {
 
   return (
@@ -12,7 +13,7 @@ function App() {
     <Header/>
     <NavBar/>
     
-    <OlvidoContraseña/>
+    <Index/>
     <Footer />
     
     </>
