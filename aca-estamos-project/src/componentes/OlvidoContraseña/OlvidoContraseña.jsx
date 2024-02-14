@@ -1,31 +1,38 @@
 import React from 'react';
-import './OlvidoContraseña.css';
+import './OlvidoContraseña.css'
 
-const OlvidoContraseña = () => {
-  return (
-    <main className="d-flex justify-content-center vh-100 w-100">
-      <div className="row">
-        <div id="ContenedorOlvCont" className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 align-self-center">
-          
-            <h2 className="text-center">Recuperación de contraseña</h2>
-            <div className="from-ingreso">
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1" className="form-label">Ingrese su correo electrónico</label>
-                  <input type="email" className="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                  <div id="emailHelp" className="form-text">Ingrese un correo electrónico registrado</div>
+const Experiencia = () => {
+    return (
+        <>
+            <div id="OLVIDOCONTRA" style={{ margin: '50px auto', maxWidth: '800px', marginBottom: '147px',marginTop : '148px' }}>
+                <div
+                    className="border p-4"
+                    style={{ fontFamily: 'Poppins-Regular', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+                    <h2 style={{ fontFamily: 'Heavitas' , paddingTop:'10px' }} className="text-center"  > 
+                        Recuperación de Contraseña
+                    </h2>
+                    <div style={{ width: '80%', margin: 'auto' }} className="form-Experiencia">
+                        <form>
+                            <div className="mb-3" style={{padding:'32px'}}>
+                                <label htmlFor="cargo" className="form-label">
+                                    Ingrese correo 
+                                </label>
+                                <input type="text" className="form-control" id="cargo" placeholder="CORREO ELECTRONICO" />
+                            </div>
+                      
+                          
+                            <div className="d-flex justify-content-center btn-sendCorreo">
+                                <button type="button" className="btn btn-secondary btn-lg me-2">
+                                    Enviar correo
+                                </button>
+                               
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div className="d-flex justify-content-between">
-                  <button type="button" className="btn btn-secondary btn-lg" id="btn-back">Volver</button>
-                  <button type="submit" className="btn btn-primary btn-lg" id="bt-login">Recuperar Contraseña</button>
-                </div>
-              </form>
             </div>
-          </div>
-        </div>
-     
-    </main>
-  );
+        </>
+    );
 };
 
-export default OlvidoContraseña;
+export default Experiencia;
