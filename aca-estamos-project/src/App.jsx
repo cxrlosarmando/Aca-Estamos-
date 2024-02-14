@@ -5,7 +5,7 @@ import NavBar from '../src/componentes/Navbar/Navbar';
 import Registro from '../src/componentes/Registro/Registro';
 import OlvidoContraseña from '../src/componentes/OlvidoContraseña/OlvidoContraseña';
 import Header from '../src/componentes/Header/Header';
-import Index from '../src/componentes/Index/Index'
+import CrearNewPass from './componentes/CrearNewPass/CrearNewPass';
 function App() {
 
   return (
@@ -13,11 +13,11 @@ function App() {
     <Header/>
     <NavBar/>
     
-    <Index/>
+    <CrearNewPass/>
     <Footer />
     
     </>
   );
 }
 
-export default App
+export default App;
