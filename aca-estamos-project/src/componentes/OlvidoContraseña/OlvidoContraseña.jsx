@@ -6,7 +6,7 @@ const OlvidoContraseña = () => {
     <main className="d-flex justify-content-center vh-100 w-100">
       <div className="row">
         <div id="ContenedorOlvCont" className="col-lg-8 offset-lg-2 col-md-10 offset-md-1 align-self-center">
-          <div className="border p-4 mb-4 mb-lg-5 mx-lg-1">
+          
             <h2 className="text-center">Recuperación de contraseña</h2>
             <div className="from-ingreso">
               <form>
@@ -23,7 +23,7 @@ const OlvidoContraseña = () => {
             </div>
           </div>
         </div>
-      </div>
+     
     </main>
   );
 };
