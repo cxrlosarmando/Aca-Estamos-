@@ -1,0 +1,11 @@
+#ContenedorOlvCont {
+  border-radius: 10px;
+  
+  border-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
+}
+
+#btn-back {
+  margin-right: 5px;
+}
