@@ -1,0 +1,17 @@
+/* Import any external font files if necessary */
+
+#hire:hover {
+  transform: scale(1.04);
+}
+
+/* ... Your other styles */
+
+.nav-link {
+  color: #83A637;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: larger;
+  font-family: "Poppins-Regular";
+}
+
+/* ... Your other styles */
