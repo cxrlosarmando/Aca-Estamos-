@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="container-fluid" style={{ backgroundColor: '#83A637' }} id="greenContainer">
             <div>
               <a className="navbar-brand" href="/index.html">
-                
+                <img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" />
               </a>
             </div>
             <div className="ml-4" id="hashtagDelInicio">
@@ -19,10 +19,10 @@ const Navbar = () => {
             </div>
             <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4" id="botonesnav">
               <button className="btn btn-custom btn-lg me-2" id="botonInicio" type="button" style={{ backgroundColor: '#049DD9' }}>
-                <a href="./pages/IniciarSes.html">Iniciar Sesión</a>
+                Iniciar Sesión
               </button>
               <button className="btn btn-custom btn-lg me-2" type="button" id="botonInicio" style={{ backgroundColor: '#D97D0D' }}>
-                <a href="/pages/registro.html">Regístrate</a>
+                Regístrate
               </button>
             </div>
           </div>
