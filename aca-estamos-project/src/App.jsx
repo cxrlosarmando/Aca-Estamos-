@@ -6,14 +6,15 @@ import Registro from '../src/componentes/Registro/Registro';
 import OlvidoContraseña from '../src/componentes/OlvidoContraseña/OlvidoContraseña';
 import Header from '../src/componentes/Header/Header';
 import CrearNewPass from './componentes/CrearNewPass/CrearNewPass';
+import Index from './componentes/Index/Index';
 function App() {
 
   return (
     <>
     <Header/>
     <NavBar/>
-    
-    <CrearNewPass/>
+    <Index/>
+   
     <Footer />
     
     </>
