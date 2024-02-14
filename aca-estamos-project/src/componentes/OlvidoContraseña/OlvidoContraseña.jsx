@@ -4,16 +4,16 @@ import './OlvidoContraseña.css'
 const Experiencia = () => {
     return (
         <>
-            <div id="Experiencia" style={{ margin: '50px auto', maxWidth: '800px' }}>
+            <div id="OLVIDOCONTRA" style={{ margin: '50px auto', maxWidth: '800px', marginBottom: '147px',marginTop : '148px' }}>
                 <div
                     className="border p-4"
-                    style={{ fontFamily: 'Poppins-Regular', backgroundColor: 'rgba(4, 157, 217, 0.15)', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', }}>
-                    <h2 style={{ fontFamily: 'Heavitas' }} className="text-center">
-                        Experiencia Laboral
+                    style={{ fontFamily: 'Poppins-Regular', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+                    <h2 style={{ fontFamily: 'Heavitas' , paddingTop:'10px' }} className="text-center"  > 
+                        Recuperación de Contraseña
                     </h2>
                     <div style={{ width: '80%', margin: 'auto' }} className="form-Experiencia">
                         <form>
-                            <div className="mb-3">
+                            <div className="mb-3" style={{padding:'32px'}}>
                                 <label htmlFor="cargo" className="form-label">
                                     Ingrese correo 
                                 </label>
@@ -21,13 +21,11 @@ const Experiencia = () => {
                             </div>
                       
                           
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex justify-content-center btn-sendCorreo">
                                 <button type="button" className="btn btn-secondary btn-lg me-2">
-                                    Cancelar
+                                    Enviar correo
                                 </button>
-                                <button type="button" className="btn btn-primary btn-lg">
-                                    Guardar
-                                </button>
+                               
                             </div>
                         </form>
                     </div>
