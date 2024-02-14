@@ -1,11 +1,32 @@
-#ContenedorOlvCont {
-  border-radius: 10px;
+/* Estilos comunes para ambos componentes */
+.common-container {
+    margin: 100px auto; /* Ajusta el valor del margen superior e inferior según tus necesidades */
+    max-width: 800px !important;
+  }
   
-  border-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  word-wrap: break-word;
-}
-
-#btn-back {
-  margin-right: 5px;
-}
+  .common-box {
+    font-family: 'Poppins-Regular';
+    border-radius: 10px;
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 90px; /* Ajusta el valor del margen interno según tus necesidades */
+  }
+  
+  .common-title {
+    font-family: 'Heavitas';
+  }
+  
+  .common-form {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .common-input {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .common-buttons {
+    margin-top: 3rem;
+  }
+  
