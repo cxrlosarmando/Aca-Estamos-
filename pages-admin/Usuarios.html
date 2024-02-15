@@ -88,6 +88,63 @@
 
     <!--**************** Inicio cv ****************-->
 
+    <!-- Comienza el buscador -->
+
+    <div class="container-sm" id="buscardor-pr">
+        <form class="d-flex" role="search" id="buscar-ofertas">
+            <input class="form-control me-2" type="search" placeholder="Buscar Ofertas.."
+                aria-label="Buscar Ofertas...">
+            <button class="btn btn-outline-success" type="submit"><img src="../Img/Lupa.png"
+                    alt="Descripción de la imagen" class="img-fluid"></button>
+            <button style="background-color:#049DD9; width: 120px;" class="btn btn-outline-light" type="submit">Más
+                filtros</button>
+        </form>
+    </div>
+    <!-- Termina el buscador -->
+    <!-- Comienzan los filtros -->
+    <div class="container-fluid">
+        <div id="filtros-row" class="row">
+          <div id="filtros-col" class="col-2">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Área Laboral</option>
+                <option value="1">Logística</option>
+                <option value="2">Seguridad</option>
+                <option value="3">Programación</option>
+              </select>
+          </div>
+          <div  id="filtros-col" class="col-2">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Jornada</option>
+                <option value="1">Mañana</option>
+                <option value="2">Tarde</option>
+                <option value="3">Noche</option>
+              </select>
+          </div>
+          <div id="filtros-col" class="col-2">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Modalidad</option>
+                <option value="1">Online</option>
+                <option value="2">Presencial</option>
+                <option value="3">Hibrido</option>
+              </select>
+          </div>
+          <div id="filtros-col" class="col-2">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+          </div>
+          <div id="filtros-col" class="col-4">
+            <label for="customRange2" class="form-label">Años de Experiencia</label>
+<input type="range" class="form-range" style="padding-bottom: 25px;" min="0" max="20" id="customRange2">
+          </div>
+        </div>
+    </div>
+
+    <!-- Terminan los filtros -->
+    <!-- Inicio tabla con la lista de usuarios registrados -->
     <main class="d-flex ">
         <div class="container-fluid  mb-5  w-60 p-4 h-50 "
             >
