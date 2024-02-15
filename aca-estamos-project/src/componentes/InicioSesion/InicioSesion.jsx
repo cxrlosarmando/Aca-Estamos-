@@ -34,14 +34,14 @@ export const InicioSesion = () => {
                   </div>
                   <div className="row align-items-center" style={{ paddingTop: '60px' }}>
                     <div className="col-6">
-                      <button type="button" className="btn btn-light btn-lg me-2">
-                        <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                      </button>
+                      <Link to="/Login-form" className="btn btn-light btn-lg me-2">
+                        <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid" />
+                      </Link>
                     </div>
                     <div className="col-6">
-                      <button type="button" className="btn btn-light btn-lg me-2" onClick={()=>cambiarEstado}>
+                    <Link to="#" className="btn btn-light btn-lg me-2" onClick={() => cambiarEstado}>
                         <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   <div className="row align-items-center">
