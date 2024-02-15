@@ -42,4 +42,4 @@ export const InicioSesion = () => {
         </>
     );
 };
-export default Inicio-Sesion;
+export default InicioSesion;
