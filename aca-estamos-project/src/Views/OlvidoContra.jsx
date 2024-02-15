@@ -3,7 +3,7 @@ import Header from "../componentes/Header/Header";
 import Navbar from "../componentes/Navbar/Navbar";
 import OlvidoContraseña from "../componentes/OlvidoContraseña/OlvidoContraseña"
 
-const LoginFormulario = () => {
+const OlvidoContra = () => {
   return (
     <>
     <Header />
@@ -14,4 +14,4 @@ const LoginFormulario = () => {
   )
 }
 
-export default LoginFormulario
+export default OlvidoContra

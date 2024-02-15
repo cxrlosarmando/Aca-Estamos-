@@ -28,7 +28,7 @@ function LoginFrom() {
                                 <div className="text-center">
                                     <Link to="/Perfil-Usuario" type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</Link><br />
                                 </div>
-                                <div className="Olvide"><a className="Olvide-con" href="./olvidoContra.html">Recuperar Contraseña</a></div>
+                                <div className="Olvide"><Link to ="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
                             </form>
                         </div>
                     </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import './OlvidoContraseña.css'
 
-const Experiencia = () => {
+const OlvidoContraseña = () => {
     return (
         <>
-            <div id="OLVIDOCONTRA" style={{ margin: '50px auto', maxWidth: '800px', marginBottom: '147px',marginTop : '148px' }}>
+            <div id="OLVIDOCONTRA" style={{ margin: '50px auto', maxWidth: '800px', marginBottom: '2%',marginTop : '10%', paddingBottom :'11%'}}>
                 <div
                     className="border p-4"
                     style={{ fontFamily: 'Poppins-Regular', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
@@ -35,4 +35,4 @@ const Experiencia = () => {
     );
 };
 
-export default Experiencia;
+export default OlvidoContraseña;
