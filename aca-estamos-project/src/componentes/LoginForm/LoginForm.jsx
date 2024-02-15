@@ -1,0 +1,40 @@
+import React from 'react';
+
+function LoginFrom() {
+    return (
+        <main className="d-flex justify-content-center vh-100 w-100">
+            <div className="row" id="login-user">
+                <div className="col align-self-center">
+                    <div className="border p-4"
+                        style={{ borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+                        <h2 className="text-center">Inicio de sesión</h2>
+                        <div style={{ width: '80%', margin: 'auto' }} className="from-ingreso">
+                            <form>
+                                <div className="mb-3">
+                                    <label htmlFor="correoInicioSesion" className="form-label">Ingrese email</label>
+                                    <input type="email" className="form-control" id="correoInicioSesion"
+                                        aria-describedby="emailHelp" />
+                                    <div id="emailHelp" className="form-text">Ingrese un Email Registrado</div>
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="contraseñaInicioSesion" className="form-label">Contraseña</label>
+                                    <input type="password" className="form-control" id="contraseñaInicioSesion" />
+                                </div>
+                                <div className="mb-3 form-check">
+                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                    <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
+                                </div>
+                                <div className="text-center">
+                                    <button type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
+                                </div>
+                                <div className="Olvide"><a className="Olvide-con" href="./olvidoContra.html">Recuperar Contraseña</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
+}
+
+export default LoginFrom;
