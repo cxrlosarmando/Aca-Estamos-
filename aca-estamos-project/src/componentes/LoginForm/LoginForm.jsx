@@ -27,7 +27,7 @@ function LoginFrom() {
                                     <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
                                 </div>
                                 <div className="text-center">
-                                    <button type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
+                                    <Link to="/Perfil-Usuario" type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</Link><br />
                                 </div>
                                 <div className="Olvide" style={{textAlign:'center', marginTop:'10px'}}><Link to ="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
                             </form>
