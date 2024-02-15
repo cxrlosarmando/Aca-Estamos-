@@ -1,17 +1,17 @@
-import Index from "../componentes/Index/Index";
 import Footer from "../componentes/Footer/Footer";
 import Header from "../componentes/Header/Header";
 import Navbar from "../componentes/Navbar/Navbar";
+import InicioSesion from "../componentes/InicioSesion/InicioSesion"
 
-
-const Home = () => {
+const Login = () => {
   return (
     <>
     <Header />
     <Navbar />
-    <Index />
+    <InicioSesion />
     <Footer />
     </>
-  );
-};
-export default Home
+  )
+}
+
+export default Login;
