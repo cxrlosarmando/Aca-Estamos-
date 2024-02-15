@@ -4,6 +4,7 @@ import React from 'react';
 import './CrearNewPass'
 
 const CrearNewPass = () => {
+
   return (
     <>
       <div id="ContenedorOlvCont" className="OLVIDOCONTRA">
