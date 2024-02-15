@@ -1,10 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const InicioSesion = () => {
-    return (
-        <>
-            <section>
-            <main className="d-flex justify-content-center" style={{ marginTop: '80px', marginBottom: '120px' }}>
+  return (
+    <>
+      <section>
+        <main className="d-flex justify-content-center" style={{ marginTop: '80px', marginBottom: '120px' }}>
           <div className="row" id="nuevoregistro">
             <div className="col align-self-center">
               <div className="border p-4" style={{ fontFamily: 'Poppins-Regular', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
@@ -16,14 +16,14 @@ export const InicioSesion = () => {
                 </div>
                 <div className="row align-items-center" style={{ paddingTop: '60px' }}>
                   <div className="col-6">
-                    <button type="button" className="btn btn-light btn-lg me-2">
-                      <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                    </button>
+                    <Link to="/Login-form" className="btn btn-light btn-lg me-2">
+                      <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid" />
+                    </Link>
                   </div>
                   <div className="col-6">
-                    <button type="button" className="btn btn-light btn-lg me-2">
+                  <Link to="#" className="btn btn-light btn-lg me-2">
                       <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="row align-items-center">
@@ -38,8 +38,8 @@ export const InicioSesion = () => {
             </div>
           </div>
         </main>
-            </section>
-        </>
-    );
+      </section>
+    </>
+  );
 };
 export default InicioSesion;
