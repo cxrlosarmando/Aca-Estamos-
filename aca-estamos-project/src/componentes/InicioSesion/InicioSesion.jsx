@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-import Loading from '../../Efectos/Loading';
 
 export const InicioSesion = () => {
 
-  const [loading, setLoading] = useState(false)
+/*   const [loading, setLoading] = useState(false)
 
   const cambiarEstado = () => {
     setLoading(true)
@@ -18,7 +17,7 @@ export const InicioSesion = () => {
       <Loading />
     )
   }
-  else {
+  else { */
     return (
       <>
         <section>
@@ -60,8 +59,6 @@ export const InicioSesion = () => {
       </>
     );
   };
-
-}
 
 
 export default InicioSesion;
