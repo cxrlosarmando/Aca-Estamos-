@@ -15,16 +15,16 @@ const Navbar = () => {
             <div className="collapse navbar-collapse justify-content-center" id="Nav2">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="/index.html">Inicio</a>
+                  <a className="nav-link" href="/">Inicio</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Cursos</a>
+                  <a className="nav-link" href="/cursos">Cursos</a>
                 </li>
                 <li>
-                  <a className="nav-link" href="#">Nosotros</a>
+                  <a className="nav-link" href="/cursos">Nosotros</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contacto</a>
+                  <a className="nav-link" href="/cursos">Contacto</a>
                 </li>
               </ul>
             </div>
