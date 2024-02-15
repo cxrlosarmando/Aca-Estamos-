@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginFrom() {
     return (
@@ -25,7 +26,7 @@ function LoginFrom() {
                                     <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
                                 </div>
                                 <div className="text-center">
-                                    <button type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
+                                    <Link to="/Perfil-Usuario" type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</Link><br />
                                 </div>
                                 <div className="Olvide"><a className="Olvide-con" href="./olvidoContra.html">Recuperar Contraseña</a></div>
                             </form>
