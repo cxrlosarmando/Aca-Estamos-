@@ -3,7 +3,6 @@ import './Index.css';
 const Index = () => {
     return (
         <>
-        <Loading/>
             <section>
                 <div className="container-fluid">
                     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
