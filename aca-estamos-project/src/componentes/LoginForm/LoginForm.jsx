@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function LoginFrom() {
     return (
         <main className="d-flex justify-content-center vh-100 w-100">
@@ -27,7 +27,7 @@ function LoginFrom() {
                                 <div className="text-center">
                                     <button type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
                                 </div>
-                                <div className="Olvide"><a className="Olvide-con" href="./olvidoContra.html">Recuperar Contraseña</a></div>
+                                <div className="Olvide"><Link to ="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
                             </form>
                         </div>
                     </div>
