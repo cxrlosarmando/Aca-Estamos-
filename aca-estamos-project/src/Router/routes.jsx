@@ -4,6 +4,7 @@ import Home from "../Views/Home";
 import Login from "../Views/Login";
 /* import LoginFormulario from '../Views/LoginFormulario'; */
 import PerfilUsers from '../Views/PerfilUsers';
+import OlvidoContraseña from '../Views/OlvidoContraseña';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
