@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './LoginForm.css'
 function LoginFrom() {
     return (
-        <main className="d-flex justify-content-center vh-100 w-100">
+        <div className='container-fluid'>
+        <main  className="d-flex justify-content-center vh-100 w-100">
             <div className="row" id="login-user">
                 <div className="col align-self-center">
                     <div className="border p-4"
                         style={{ borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
                         <h2 className="text-center">Inicio de sesión</h2>
-                        <div style={{ width: '80%', margin: 'auto' }} className="from-ingreso">
+                        <div style={{ width: '600px', margin: 'auto' }} className="from-ingreso">
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="correoInicioSesion" className="form-label">Ingrese email</label>
@@ -27,13 +29,14 @@ function LoginFrom() {
                                 <div className="text-center">
                                     <button type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
                                 </div>
-                                <div className="Olvide"><Link to ="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
+                                <div className="Olvide" style={{textAlign:'center', marginTop:'10px'}}><Link to ="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+        </div>
     );
 }
 
