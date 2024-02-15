@@ -1,4 +1,4 @@
-
+import '../Efectos/Loading.css'
 const Loading = () => {
     return (
         <>
