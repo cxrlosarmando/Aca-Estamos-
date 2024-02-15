@@ -1,8 +1,20 @@
 import './Index.css';
+import { useState, useEffect } from 'react';
+import Loading from '../../Efectos/Loading';
 
 const Index = () => {
+    const [loading, setLoading] = useState(true)
+    useEffect(()=> {
+        setTimeout(() => {
+            setLoading(false);
+
+        }, 2000);
+    }, [])
     return (
         <>
+        {
+            loading ? <Loading/> : 
+        
             <section>
                 <div className="container-fluid">
                     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
@@ -190,6 +202,7 @@ const Index = () => {
                 </div>
 
             </section>
+            }
         </>
 
     )

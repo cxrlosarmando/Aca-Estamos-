@@ -22,7 +22,7 @@ const Header = () => {
                 <Link to="/Login" className="btn btn-custom btn-lg me-2" id="botonInicio" style={{ backgroundColor: '#049DD9' }}>
                   Iniciar Sesión
                 </Link>
-                <Link to="/Login" className="btn btn-custom btn-lg me-2" id="botonInicio" style={{ backgroundColor: '#D97D0D' }}>
+                <Link to="#" className="btn btn-custom btn-lg me-2" id="botonInicio" style={{ backgroundColor: '#D97D0D' }}>
                   Regístrate
                 </Link>
               </div>
