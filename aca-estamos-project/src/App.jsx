@@ -3,6 +3,7 @@ import './App.css';
 import Loading from './Efectos/Loading';
 import Alert from './Efectos/Alert.';
 import React from 'react';
+import './Efectos/Alert.css'
 
 function App() {
 
