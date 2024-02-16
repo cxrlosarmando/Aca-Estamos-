@@ -34,7 +34,7 @@ const NavbarLogin = () => {
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     Nombre de usuario
                                                 </a>
-                                                <div className="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+                                                <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown">
                                                     {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
                                                     <a className="dropdown-item" href="#">Mi perfil</a>
                                                     <a className="dropdown-item" href="#">Actualizar mi CV</a>
