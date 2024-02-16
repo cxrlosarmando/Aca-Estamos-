@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Loading from './Efectos/Loading';
-import Alert from './Efectos/Alert';
+import Alert from './Efectos/Alert.';
 import React from 'react';
 
 function App() {
