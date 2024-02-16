@@ -42,4 +42,4 @@ const LoginEmpresa = () => {
     )
 }
 
-export default LoginEmpresa
+export default LoginEmpresa;

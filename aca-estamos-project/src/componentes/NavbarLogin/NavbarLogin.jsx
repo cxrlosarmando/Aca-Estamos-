@@ -2,11 +2,11 @@
 import './NavbarLogin.css'
 
 const NavbarLogin = () => {
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    //const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
+    //const toggleDropdown = () => {
+        //setDropdownOpen(!dropdownOpen);
+   // };
     return (
         <>
             <header>
@@ -17,7 +17,7 @@ const NavbarLogin = () => {
                                 <div className="container-fluid" style={{ backgroundColor: '#83A637' }} id="greenContainer">
 
                                     <div>
-                                        <a className="navbar-brand " href="/index.html"><img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" /></a>
+                                        <a className="navbar-brand " href="/"><img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" /></a>
                                     </div>
                                     <div className="ml-4" id="hashtagDelInicio">
                                         <p className="mb-0">#RencaOrgullosa</p>
@@ -61,16 +61,16 @@ const NavbarLogin = () => {
                                     <div className="collapse navbar-collapse justify-content-center" id="Nav2">
                                         <ul className="navbar-nav ">
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/index.html">Inicio</a>
+                                                <a className="nav-link" href="/">Inicio</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">Cursos</a>
+                                                <a className="nav-link" href="/Cursos">Cursos</a>
                                             </li>
                                             <li>
-                                                <a className="nav-link" href="#">Nosotros</a>
+                                                <a className="nav-link" href="/Nosotros">Nosotros</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">Contacto</a>
+                                                <a className="nav-link" href="/Contacto">Contacto</a>
                                             </li>
                                         </ul>
                                     </div>
