@@ -1,5 +1,6 @@
 import React from 'react'
 import './EditarCv.css'
+import { Link } from 'react-router-dom'
 
 const EditarCv = () => {
   return (
@@ -12,7 +13,7 @@ const EditarCv = () => {
                 <h3 className="nameCv" style={{ color: "white" }}>Profesión</h3>
             </div>
             <div className="col-1 colName">
-                <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+            <Link to="/Actualizar-Perfil"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
             </div>
             {/* <!-- No borren este punto, es para agrandar el contenedor del nombre --> */}
         </div>
@@ -23,7 +24,7 @@ const EditarCv = () => {
                         <h5 className="itemsCv">MI PERFIL</h5>
                     </div>
                     <div className="col-1">
-                        <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                    <Link to="/Actualizar-Perfil"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                 </div>
                 <div className="container-fluid contInfo">
@@ -37,7 +38,7 @@ const EditarCv = () => {
                         <h5 className="itemsCv">CONOCIMIENTOS TÉCNICOS</h5>
                     </div>
                     <div className="col-1">
-                        <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                    <Link to="/Actualizar-Perfil"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                 </div>
                 <div className="row justify-content-center contInfo">
@@ -67,7 +68,7 @@ const EditarCv = () => {
                         <h5 className="itemsCv">CONTACTO</h5>
                     </div>
                     <div className="col-1">
-                        <a href="/pages/Datosperso.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                    <Link to="/Actualizar-Datos-Perfil"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                 </div>
                 <div className="contactData">
@@ -84,7 +85,7 @@ const EditarCv = () => {
                         <h4 className="itemsCv p-2">EXPERIENCIA</h4>
                     </div>
                     <div className="col-1">
-                        <a href="/pages/Experiencia.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                    <Link to="/Actualizar-Experiencia"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                     <div className="contInfo">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi
@@ -97,7 +98,7 @@ const EditarCv = () => {
                         <h4 className="itemsCv">EDUCACIÓN</h4>
                     </div>
                     <div className="col-1">
-                        <a href="/pages/Educacion.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                    <Link to="/Actualizar-Educacion"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                     <div className="contInfo">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi

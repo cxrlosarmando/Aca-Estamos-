@@ -10,7 +10,10 @@ import RegisterForm from '../Views/RegisterForm';
 import ActualizarDatosPerfil from '../Views/ActualizarDatosPerfil';
 import CrearCV from '../Views/CrearCV';
 import App from '../App';
-/* import LoginFormulario from '../Views/LoginFormulario'; */
+import EditEducacion from '../Views/EditEducacion';
+import EditExperiencia from '../Views/EditExperiencia';
+import EditPerfil from '../Views/EditPerfil';
+
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -19,7 +22,6 @@ const router = createBrowserRouter([
   { path: '/Contacto', element: <ErrorComponent statusCode={404} /> },
   { path: '/Login', element: <Login /> },
   { path: '/Pruebas', element: <App /> },
-  /* { path: '/Login-form', element: <LoginFormulario /> }, */
   { path: '/Login-form', element: <LoginFormulario /> },
   { path: '/Perfil-Usuario', element: <PerfilUsers /> },
   { path: '/OlvidoContra', element: <OlvidoContra/>},
@@ -27,6 +29,9 @@ const router = createBrowserRouter([
   { path: '/Registro-form', element: <RegisterForm /> },
   { path: '/Actualizar-Datos-Perfil', element: <ActualizarDatosPerfil /> },
   { path: '/Actualizar-Cv', element: <CrearCV /> },
+  { path: '/Actualizar-Educacion', element: <EditEducacion /> },
+  { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
+  { path: '/Actualizar-Perfil', element: <EditPerfil /> },
 ]);
 
 export default router;
