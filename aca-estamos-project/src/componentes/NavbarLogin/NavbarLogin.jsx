@@ -1,8 +1,8 @@
-
-import './NavbarLogin.css'
+import './NavbarLogin.css';
+import { Link } from 'react-router-dom';
 
 const NavbarLogin = () => {
-   
+
     return (
         <>
             <header>
@@ -13,7 +13,7 @@ const NavbarLogin = () => {
                                 <div className="container-fluid" style={{ backgroundColor: '#83A637' }} id="greenContainer">
 
                                     <div>
-                                        <a className="navbar-brand " href="/"><img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" /></a>
+                                        <Link to="/" className="navbar-brand "><img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" /></Link>
                                     </div>
                                     <div className="ml-4" id="hashtagDelInicio">
                                         <p className="mb-0">#RencaOrgullosa</p>
@@ -22,7 +22,7 @@ const NavbarLogin = () => {
                                     </div>
                                     <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4 secondNav" style={{ justifyContent: 'flex-end' }} id="botonesnav">
                                         <div className="position-relative">
-                                            <button className="btn btn-m me-2 userButton" type="button" style={{ backgroundColor: '#D97D0D'}}>
+                                            <button className="btn btn-m me-2 userButton" type="button" style={{ backgroundColor: '#D97D0D' }}>
                                                 <a href="#"><i className="fa-solid fa-bell"></i></a>
                                             </button>
                                             <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
@@ -57,16 +57,16 @@ const NavbarLogin = () => {
                                     <div className="collapse navbar-collapse justify-content-center" id="Nav2">
                                         <ul className="navbar-nav ">
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/">Inicio</a>
+                                                <Link to="/" className="nav-link" >Inicio</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/Cursos">Cursos</a>
+                                                <Link to="/cursos" className="nav-link">Cursos</Link>
                                             </li>
                                             <li>
-                                                <a className="nav-link" href="/Nosotros">Nosotros</a>
+                                                <Link to="/Nosotros" className="nav-link">Nosotros</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/Contacto">Contacto</a>
+                                                <Link to="/Contacto" className="nav-link">Contacto</Link>
                                             </li>
                                         </ul>
                                     </div>

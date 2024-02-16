@@ -22,6 +22,9 @@ import Test from '../Views/TestCaro'
 import Nosotrosview from '../Views/Nosotrosview';
 import Contactoview from '../Views/Contactoview';
 import LoginFormularioE from '../Views/LoginFormularioE';
+import Editinfoempresas from '../Views/Editinfoempresas';
+import EditPerfilE from '../Views/EditPerfilE';
+import Empresasinfoview from '../Views/Empresasinfoview';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -43,8 +46,11 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
-  { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Perfil-Empresa', element: <PerfilEmpresas /> },
+  { path: '/Edit-Info-Empresa', element: <Editinfoempresas /> },
+  { path: '/Edit-Perfil-Empresa', element: <EditPerfilE /> },
+  { path: '/Info-Empresa', element: <Empresasinfoview /> },
+  { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
   { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
 ]);
