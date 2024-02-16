@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './LoginEmpresa.css'
 
 const LoginEmpresa = () => {
@@ -28,7 +29,7 @@ const LoginEmpresa = () => {
                                             <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
                                         </div>
                                         <div className="text-center">
-                                            <Link to="/Perfil-Usuario" type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</Link><br />
+                                            <Link to="/Perfil-Empresa" type="button" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</Link><br />
                                         </div>
                                         <div className="Olvide" style={{ textAlign: 'center', marginTop: '10px' }}><Link to="/OlvidoContra" className="Olvide-con" >Recuperar Contraseña</Link></div>
                                     </form>
@@ -42,4 +43,4 @@ const LoginEmpresa = () => {
     )
 }
 
-export default LoginEmpresa
+export default LoginEmpresa;

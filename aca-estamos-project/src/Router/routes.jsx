@@ -14,18 +14,22 @@ import EditEducacion from '../Views/EditEducacion';
 import EditExperiencia from '../Views/EditExperiencia';
 import EditPerfil from '../Views/EditPerfil';
 import PerfilAdmin from '../Views/PerfilAdmin';
+import PerfilEmpresas from '../Views/PerfilEmpresas'
 import AdminVisualizacion from '../Views/AdminVisualizacion';
 import AdminSolicitudescv from '../Views/AdminSolicitudescv';
 import RegisterFormEmpresa from '../Views/RegisterFormEmpresa';
-
 import Test from '../Views/TestCaro'
+import Nosotrosview from '../Views/Nosotrosview';
+import Contactoview from '../Views/Contactoview';
+import LoginFormularioE from '../Views/LoginFormularioE';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
   { path: '/Cursos', element: <ErrorComponent statusCode={404} /> },
-  { path: '/Nosotros', element: <ErrorComponent statusCode={404} /> },
-  { path: '/Contacto', element: <ErrorComponent statusCode={404} /> },
+  { path: '/Nosotros', element: <Nosotrosview /> },
+  { path: '/Contacto', element: <Contactoview /> },
   { path: '/Login', element: <Login /> },
+  { path: '/Login-Empresas', element: <LoginFormularioE /> },
   { path: '/Pruebas', element: <App /> },
   { path: '/Test', element: <Test /> },
   { path: '/Login-form', element: <LoginFormulario /> },
@@ -40,6 +44,7 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
   { path: '/Perfil-Admin', element: <PerfilAdmin /> },
+  { path: '/Perfil-Empresa', element: <PerfilEmpresas /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
   { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
 ]);
