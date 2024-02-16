@@ -15,8 +15,10 @@
   .buttonInicio {
     font-family: "Poppins-Regular";
   }
-  
-
+  .fa-solid, .fas {
+    color: white;
+    font-weight: 900;
+  }
   /* SEGUNDA PARTE DE LA NAV */
 header {
     overflow: hidden;
