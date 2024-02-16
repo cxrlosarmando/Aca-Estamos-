@@ -1,16 +1,9 @@
-/* :root {
+:root {
   --loader-width: 250px;
   --loader-dot-size: 20px;
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  font-family: Helvetica;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .loader {
   height: var(--loader-dot-size);
@@ -109,4 +102,4 @@
   75% {
     content: "Cargando...";
   }
-} */
+}
