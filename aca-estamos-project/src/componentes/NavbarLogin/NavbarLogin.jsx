@@ -1,7 +1,12 @@
-import React from 'react'
+// import React {useState} from 'react'
 import './NavbarLogin.css'
 
 const NavbarLogin = () => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
     return (
         <>
             <header>
