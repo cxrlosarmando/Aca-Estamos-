@@ -41,9 +41,9 @@ const InfoEmpresa = () => {
                             </div>
                             <div className="contactEmp">
                                 <ul>
-                                    <p><i className="fa-solid fa-phone"></i> +56999999999</p>
-                                    <p><i className="fa-brands fa-linkedin"> </i> linkedin.com/milinkedin</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
-                                    <p><i className="fa-solid fa-envelope"></i> correo@gmail.com</p>
+                                    <p><i className="fa-solid fa-phone" style={{color: 'black'}}></i> +56999999999</p>
+                                    <p><i className="fa-brands fa-linkedin" style={{color: 'black'}}> </i> linkedin.com/milinkedin</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
+                                    <p><i className="fa-solid fa-envelope" style={{color: 'black'}}></i> correo@gmail.com</p>
                                 </ul>
                             </div>
                         </div>

@@ -1,23 +1,9 @@
-/* .row {
-    margin: 0%;
-    padding: 0%;
-  } */
-
-  /* .container-fluid {
-    width: 100%;
-    margin: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-  } */
-
 .cvContainer {
     /*estp es main*/
     width: 70%;
     height: 100%;
     margin-top: 40px;
     padding: 30%;
-    justify-content: right !important ;
     
 }
 
@@ -33,9 +19,8 @@
 }
 
 .colName {
-    padding: 2%;
+    padding: 3%;
     text-align: center;
-    /* margin-right: 0%; */
 }
 
 .iconCv {
@@ -54,7 +39,6 @@
 .containerItems {
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-right: 0%;
 }
 
 
@@ -64,10 +48,12 @@
 
 .contactData {
     text-align: left;
+    margin-top: 20px;
 }
 
 .contInfo {
     margin-top: 10px;
+    margin-bottom: 10px;
     font-family: "Poppins-Regular";
     text-align: center;
 }
@@ -88,7 +74,6 @@
 
     .firstColCv {
         width: 95%;
-        padding: 0%;
     }
 
     .secondColCv {
@@ -104,7 +89,6 @@
     .contInfo {
         font-size: 12px;
         align-items: center;
-        margin-top: 10px;
     }
 
     .colName {
@@ -115,9 +99,7 @@
     .contactData {
         font-size: 12px;
     }
-    .containerItems{
-        margin-right: 0%;
-    }
+
 }
 
 @media (min-width: 577px) and (max-width: 766px) {
@@ -127,7 +109,7 @@
     }
 
     .iconCv {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .cvContainer {
@@ -171,7 +153,6 @@
 @media (min-width: 991px) and (max-width: 1198px) {
     .cvContainer {
         width: 85%;
-        justify-content: right !important ;
     }
 
     .itemsCv {

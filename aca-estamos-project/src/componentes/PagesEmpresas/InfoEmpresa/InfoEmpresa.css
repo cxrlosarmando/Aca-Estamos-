@@ -44,6 +44,12 @@
     text-align: center;
 }
 
+.imagen{
+    text-align: center;
+    width: 70%;
+    margin-top: 40px;
+}
+
 @media (min-width: 280px) and (max-width: 576px) {
     .itemsE {
         margin-left: 11px;
