@@ -9,6 +9,7 @@ import Register from '../Views/Register';
 import RegisterForm from '../Views/RegisterForm';
 import ActualizarDatosPerfil from '../Views/ActualizarDatosPerfil';
 import CrearCV from '../Views/CrearCV';
+import Test from '../Views/TestCaro'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   { path: '/Registro-form', element: <RegisterForm /> },
   { path: '/Actualizar-Datos-Perfil', element: <ActualizarDatosPerfil /> },
   { path: '/Actualizar-Cv', element: <CrearCV /> },
+  { path: '/Test', element: <Test /> },
 ]);
 
 export default router;
