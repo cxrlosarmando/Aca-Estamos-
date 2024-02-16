@@ -6,13 +6,13 @@ function Alert() {
 
   // Función para mostrar una alerta
   const showAlert = () => {
-    alertApi.show("¡Este es un mensaje de alerta!");
+    alertApi.show("¡No llenaste correctamente los datos solicitados!");
   };
 
   return (
     <div>
       {/* Botón para mostrar la alerta */}
-      <button onClick={showAlert}>Mostrar Alerta</button>
+      <button onClick={showAlert}>Enviar Formulario</button>
 
       {/* Contenedor de alertas */}
       <div id="alertsElement">

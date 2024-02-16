@@ -1,15 +1,16 @@
 import Footer from "../componentes/Footer/Footer";
 import NavbarLogin from "../componentes/NavbarLogin/NavbarLogin";
-import EditarPerfil from "../componentes/PagesUsuario/EditarPerfil/EditarPerfil";
+import VisualizacionCv from "../componentes/PagesUsuario/VisualizacionCV/VisualizacionCv";
 
-const EditPerfil = () => {
+
+const MostrarCV = () => {
   return (
     <>
     <NavbarLogin />
-    <EditarPerfil />
+    <VisualizacionCv />
     <Footer />
     </>
   )
 }
 
-export default EditPerfil;
+export default MostrarCV;

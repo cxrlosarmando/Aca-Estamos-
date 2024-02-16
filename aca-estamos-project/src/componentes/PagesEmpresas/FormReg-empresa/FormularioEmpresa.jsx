@@ -1,4 +1,5 @@
 import React from 'react'
+import './FormularioEmpresa.css'
 
 const FormularioEmpresa = () => {
   return (
@@ -11,8 +12,8 @@ const FormularioEmpresa = () => {
           <div className="from-Registro">
             <form>
               <div className="row">
-                <div className="col">
-                  <div className="md-5">
+                <div className="row">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom01" className="form-label">Nombre Empresa</label>
                     <input type="text" className="form-control" id="validationCustom01"
                       placeholder="Nombre Empresa" />
@@ -20,7 +21,7 @@ const FormularioEmpresa = () => {
                       Looks good!
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Rut Empresa</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="11.111.111-1" />
@@ -28,7 +29,7 @@ const FormularioEmpresa = () => {
                       Looks good!
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Teléfono</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="+59 999999999" />
@@ -36,7 +37,7 @@ const FormularioEmpresa = () => {
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Rubro</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="Hoteleria, Consultoria, ect..." />
@@ -44,7 +45,7 @@ const FormularioEmpresa = () => {
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Correo</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="example@Email.com" />
@@ -52,7 +53,7 @@ const FormularioEmpresa = () => {
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Repetir Correo</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="example@Email.com" />
@@ -60,7 +61,7 @@ const FormularioEmpresa = () => {
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Url de Página web</label>
                     <input type="text" className="form-control" id="validationCustom02"
                       placeholder="Url" />
@@ -68,14 +69,14 @@ const FormularioEmpresa = () => {
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Contraseña</label>
                     <input type="text" className="form-control" id="validationCustom02" placeholder="*********" />
                     <div className="invalid-feedback">
                       Please choose a username.
                     </div>
                   </div>
-                  <div className="md-5">
+                  <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
                     <input type="text" className="form-control" id="validationCustom02" placeholder="*********" />
                     <div className="invalid-feedback">
@@ -85,7 +86,7 @@ const FormularioEmpresa = () => {
                 </div>
               </div>
               <div className="row" id="contendor-registro">
-                <button type="button" className="btn btn-primary btn-lg" id="boton-regist">Registrarse</button>
+                <button type="button" className="btn btn-primary btn-lg" id="boton-registro">Registrarse</button>
               </div>
               <div className="row">
                 <div className="col">
