@@ -5,7 +5,6 @@ import Login from "../Views/Login";
 import LoginFormulario from '../Views/LoginFormulario';
 import PerfilUsers from '../Views/PerfilUsers';
 import OlvidoContra from '../Views/OlvidoContra';
-
 import Register from '../Views/Register';
 import RegisterForm from '../Views/RegisterForm';
 
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
   { path: '/Perfil-Usuario', element: <PerfilUsers /> },
   { path : '/OlvidoContra', element: <OlvidoContra/>},
   { path: '/Registro', element: <Register /> },
-  { path: '/Rgistro-form', element: <RegisterForm /> },
+  { path: '/Registro-form', element: <RegisterForm /> },
 ]);
 
 export default router;

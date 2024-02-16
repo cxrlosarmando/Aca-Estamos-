@@ -1,8 +1,8 @@
 import React from 'react';
 import './Registro.css';
+import { Link } from 'react-router-dom';
 
 export const Registro = () => {
-  
 
   return (
     <>
@@ -19,14 +19,14 @@ export const Registro = () => {
                 </div>
                 <div className="row align-items-center" style={{ paddingTop: '60px' }}>
                   <div className="col-6">
-                    <button type="button" className="btn btn-light btn-lg me-2">
+                  <Link to="/Registro-form" className="btn btn-light btn-lg me-2">
                       <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                    </button>
+                    </Link>
                   </div>
                   <div className="col-6">
-                    <button type="button" className="btn btn-light btn-lg me-2">
+                  <Link to="/Login-form" className="btn btn-light btn-lg me-2">
                       <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="row align-items-center">
