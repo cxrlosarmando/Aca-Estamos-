@@ -18,6 +18,7 @@ import AdminVisualizacion from '../Views/AdminVisualizacion';
 import AdminSolicitudescv from '../Views/AdminSolicitudescv';
 import RegisterFormEmpresa from '../Views/RegisterFormEmpresa';
 
+import Test from '../Views/TestCaro'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
   { path: '/Contacto', element: <ErrorComponent statusCode={404} /> },
   { path: '/Login', element: <Login /> },
   { path: '/Pruebas', element: <App /> },
+  { path: '/Test', element: <Test /> },
   { path: '/Login-form', element: <LoginFormulario /> },
   { path: '/Perfil-Usuario', element: <PerfilUsers /> },
   { path: '/OlvidoContra', element: <OlvidoContra/>},

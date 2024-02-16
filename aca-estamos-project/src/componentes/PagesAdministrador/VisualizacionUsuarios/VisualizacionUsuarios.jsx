@@ -4,7 +4,7 @@ import './VisualizacionUsuarios.css'
 const VisualizacionUsuarios = () => {
     return (
         <>
-            <div className="container-sm buscador">
+            <div className="container-sm buscador" style={{ fontFamily: 'Poppins-Regular' }}>
                 <form className="d-flex" role="search" id="buscar-ofertas">
                     <input className="form-control me-2" type="search" placeholder="Buscar Ofertas.." aria-label="Buscar Ofertas..." />
                     <button className="btn btn-outline-success" type="submit">
@@ -15,7 +15,7 @@ const VisualizacionUsuarios = () => {
             </div>
             {/* Termina el buscador */}
             {/* Comienzan los filtros */}
-            <div className="container-fluid filtroAdmin">
+            <div className="container-fluid filtroAdmin" style={{ fontFamily: 'Poppins-Regular' }}>
                 <div className="row filtros-row">
                     <div className="col-2 filtros-col">
                         <select className="form-select" aria-label="Default select example">
