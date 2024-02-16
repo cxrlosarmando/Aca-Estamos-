@@ -39,7 +39,7 @@ export const InicioSesion = () => {
                       </Link>
                     </div>
                     <div className="col-6">
-                    <Link to="#" className="btn btn-light btn-lg me-2" onClick={() => cambiarEstado}>
+                    <Link to="/Login-form" className="btn btn-light btn-lg me-2" onClick={() => cambiarEstado}>
                         <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
                       </Link>
                     </div>
