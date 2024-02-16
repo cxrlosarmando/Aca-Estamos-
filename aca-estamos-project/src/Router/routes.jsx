@@ -16,6 +16,7 @@ import EditPerfil from '../Views/EditPerfil';
 import PerfilAdmin from '../Views/PerfilAdmin';
 import AdminVisualizacion from '../Views/AdminVisualizacion';
 import AdminSolicitudescv from '../Views/AdminSolicitudescv';
+import RegisterFormEmpresa from '../Views/RegisterFormEmpresa';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
   { path: '/OlvidoContra', element: <OlvidoContra/>},
   { path: '/Registro', element: <Register /> },
   { path: '/Registro-form', element: <RegisterForm /> },
+  { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
   { path: '/Actualizar-Datos-Perfil', element: <ActualizarDatosPerfil /> },
   { path: '/Actualizar-Cv', element: <CrearCV /> },
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
