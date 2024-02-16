@@ -7,7 +7,7 @@ const NavbarLogin = () => {
         <>
             <header>
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row navLog">
                         <div className="container-fluid text-light p-3" style={{ backgroundColor: '#83A637' }}>
                             <nav className="navbar navbar-expand-lg ">
                                 <div className="container-fluid" style={{ backgroundColor: '#83A637' }} id="greenContainer">
