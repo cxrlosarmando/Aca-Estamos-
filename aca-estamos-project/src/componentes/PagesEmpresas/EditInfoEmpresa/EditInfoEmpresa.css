@@ -9,7 +9,7 @@
 .cvContent {
     display: flex;
     flex-direction: row;
-    padding: 300px;
+    /* padding: 300px; */
 }
 
 .cursosUsuario,
@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-.iconCv {
+.iconEmpresa {
     color: black;
     margin: 0;
     padding-top: 0%;

@@ -48,7 +48,7 @@ const InfoEmpresa = () => {
                             </div>
                         </div>
                         <div className="col-6 secondColCv">
-                            <div className="row container-fluid  cvContent justify-content-center">
+                            <div className="row container-fluid cvContent justify-content-center">
                                 <div>
                                     <img className="imagen" src="/Img/LogoCompany.png" alt="Bootstrap" />
                                 </div>
