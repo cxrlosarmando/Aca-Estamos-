@@ -6,6 +6,7 @@ import EditInfoEmpresa from "../componentes/PagesEmpresas/EditInfoEmpresa/EditIn
 import EditarCv from "../componentes/PagesUsuario/EditarCv/EditarCv"
 import FormularioRegistro from "../componentes/FormularioRegistro/Formularioregistro"
 import NavbarLogin from '../componentes/NavbarLogin/NavbarLogin'
+import Nosotros from '../componentes/Nosotros/Nosotros'
 
 const TestCaro = () => {
     return (
@@ -16,7 +17,8 @@ const TestCaro = () => {
       {/* <EditarCv /> */}
       {/* <InfoEmpresa /> */}
       {/* <EditInfoEmpresa /> */}
-      <FormularioRegistro />
+      {/* <FormularioRegistro /> */}
+      <Nosotros/>
       <Footer />
       </>
     )
