@@ -1,13 +1,11 @@
 import Footer from "../componentes/Footer/Footer";
-import Header from "../componentes/Header/Header";
-import Navbar from "../componentes/Navbar/Navbar";
+import NavbarLogin from "../componentes/NavbarLogin/NavbarLogin";
 import EditarCv from "../componentes/PagesUsuario/EditarCv/EditarCv";
 
 const CrearCV = () => {
   return (
     <>
-    <Header />
-    <Navbar />
+    <NavbarLogin />
     <EditarCv />
     <Footer />
     </>
