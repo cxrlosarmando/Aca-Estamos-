@@ -3,7 +3,14 @@
   --loader-dot-size: 20px;
 }
 
-
+.containerLoa {
+  height: 100vh;
+  width: 100vw;
+  font-family: Helvetica;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .loader {
   height: var(--loader-dot-size);
