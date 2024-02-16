@@ -13,6 +13,9 @@ import App from '../App';
 import EditEducacion from '../Views/EditEducacion';
 import EditExperiencia from '../Views/EditExperiencia';
 import EditPerfil from '../Views/EditPerfil';
+import PerfilAdmin from '../Views/PerfilAdmin';
+import AdminVisualizacion from '../Views/AdminVisualizacion';
+import AdminSolicitudescv from '../Views/AdminSolicitudescv';
 
 
 const router = createBrowserRouter([
@@ -32,6 +35,9 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
+  { path: '/Perfil-Admin', element: <PerfilAdmin /> },
+  { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
+  { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
 ]);
 
 export default router;
