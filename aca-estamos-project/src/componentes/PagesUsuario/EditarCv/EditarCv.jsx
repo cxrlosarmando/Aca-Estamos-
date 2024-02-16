@@ -6,7 +6,7 @@ const EditarCv = () => {
   return (
     <>
     <main className="d-flex justify-content-center">
-    <div className="container-fluid p-6 mb-5 rounded w-60 p-4 h-50 text-center cvContainer" style={{ backgroundColor: "#049dd963" }}>
+    <div className="  rounded w-60 p-4 h-50 text-center cvContainer" style={{ backgroundColor: "#049dd963" }}>
         <div className="row justify-content-center nameUsuario p-3" style={{ backgroundColor: "#0077B7" }}>
             <div className="col-11 colName">
                 <h1 className="nameCv" style={{ color: "white", fontFamily: "Heavitas" }}>Nombre de la persona</h1>

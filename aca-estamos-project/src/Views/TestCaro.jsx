@@ -15,8 +15,8 @@ const TestCaro = () => {
       <Navbar />
       {/* <NavbarLogin /> */}
       <EditarCv />
-      {/* <InfoEmpresa /> */}
-      {/* <EditInfoEmpresa /> */}
+      <InfoEmpresa />
+      <EditInfoEmpresa />
       {/* <FormularioRegistro /> */}
       <Footer />
       </>

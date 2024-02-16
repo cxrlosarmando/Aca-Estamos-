@@ -5,7 +5,7 @@ function LoginFrom() {
     return (
         <div className='container-fluid'>
         <main  className="d-flex justify-content-center vh-100 w-100">
-            <div className="row" id="login-user">
+            <div className="row rowCR" id="login-user">
                 <div className="col align-self-center">
                     <div className="border p-4"
                         style={{ borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
