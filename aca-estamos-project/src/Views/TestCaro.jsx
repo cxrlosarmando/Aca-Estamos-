@@ -13,10 +13,10 @@ const TestCaro = () => {
       <Header />
       <Navbar />
       {/* <NavbarLogin /> */}
-      {/* <EditarCv /> */}
-      {/* <InfoEmpresa /> */}
-      {/* <EditInfoEmpresa /> */}
-      <FormularioRegistro />
+      <EditarCv />
+      <InfoEmpresa />
+      <EditInfoEmpresa />
+      {/* <FormularioRegistro /> */}
       <Footer />
       </>
     )

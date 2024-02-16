@@ -11,7 +11,7 @@ const EditInfoEmpresa = () => {
                             <h1 className="nameCv" style={{ color: "white", fontFamily: "Heavitas" }}>NOMBRE DE LA EMPRESA</h1>
                         </div>
                         <div className="col-1 colName">
-                            <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                            <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                         </div>
                         {/* <!-- No borren este punto, es para agrandar el contenedor del nombre --> */}
                     </div>
@@ -22,7 +22,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsCv">QUIENES SOMOS</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                                 </div>
                             </div>
                             <div className="container-fluid contInfo">
@@ -35,7 +35,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsCv">MISIÓN</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                                 </div>
                             </div>
                             <div className="container-fluid contInfo">
@@ -48,7 +48,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsCv">CONTACTO</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Datosperso.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                                    <a href="/pages/Datosperso.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                                 </div>
                             </div>
                             <div className="contactData">
@@ -65,7 +65,7 @@ const EditInfoEmpresa = () => {
 
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Experiencia.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                                    <a href="/pages/Experiencia.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                                 </div>
                                 <div>
                                     <img className="imagen" src="/Img/LogoCompany.png" alt="Bootstrap" />
@@ -76,7 +76,7 @@ const EditInfoEmpresa = () => {
                                     <h4 className="itemsCv">UBICACIÓN</h4>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Educacion.html"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></a>
+                                    <a href="/pages/Educacion.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
                                 </div>
                                 <div className="contInfo">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi
