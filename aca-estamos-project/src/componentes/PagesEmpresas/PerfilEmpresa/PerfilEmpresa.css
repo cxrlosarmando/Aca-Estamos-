@@ -8,10 +8,10 @@
   }
   
   .col-perfile2 {
-    width: 75%;
+    width: 50%;
   }
   
-  .col-perfile1 {
+  .col-perfile1, .col-perfile3 {
     width: 25%;
   }
   
@@ -84,7 +84,8 @@
     }
   
     .col-perfile1,
-    .col-perfile2{
+    .col-perfile2,
+    .col-perfile3 {
       width: 100%;
     }
   

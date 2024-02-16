@@ -1,5 +1,6 @@
 import React from 'react'
 import './EditInfoEmpresa.css'
+import { Link } from 'react-router-dom'
 
 const EditInfoEmpresa = () => {
     return (
@@ -11,7 +12,7 @@ const EditInfoEmpresa = () => {
                             <h1 className="nameEdit" style={{ color: "white", fontFamily: "Heavitas" }}>NOMBRE DE LA EMPRESA</h1>
                         </div>
                         <div className="col-1 colEdit">
-                            <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                            <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                         </div>
                         {/* <!-- No borren este punto, es para agrandar el contenedor del nombre --> */}
                     </div>
@@ -22,7 +23,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsEdit">QUIENES SOMOS</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                                <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                                 </div>
                             </div>
                             <div className="container-fluid editInfo">
@@ -35,7 +36,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsEdit">MISIÓN</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                                <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                                 </div>
                             </div>
                             <div className="container-fluid editInfo">
@@ -48,7 +49,7 @@ const EditInfoEmpresa = () => {
                                     <h5 className="itemsEdit">CONTACTO</h5>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Datosperso.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                                <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                                 </div>
                             </div>
                             <div className="contactedit">
@@ -65,7 +66,7 @@ const EditInfoEmpresa = () => {
 
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Experiencia.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                                <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                                 </div>
                                 <div>
                                     <img className="imagen" src="/Img/LogoCompany.png" alt="Bootstrap" />
@@ -76,7 +77,7 @@ const EditInfoEmpresa = () => {
                                     <h4 className="itemsEdit">UBICACIÓN</h4>
                                 </div>
                                 <div className="col-1">
-                                    <a href="/pages/Educacion.html"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></a>
+                                <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>
                                 </div>
                                 <div className="editInfo">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi
