@@ -24,7 +24,7 @@ export const Registro = () => {
                     </Link>
                   </div>
                   <div className="col-6">
-                  <Link to="#" className="btn btn-light btn-lg me-2">
+                  <Link to="/Registro-form-Empresa" className="btn btn-light btn-lg me-2">
                       <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
                     </Link>
                   </div>
