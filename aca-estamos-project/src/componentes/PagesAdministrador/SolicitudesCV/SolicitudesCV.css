@@ -71,12 +71,7 @@
     box-shadow: 0 4px 16px rgba(217, 85, 37, 0.8);
     transition: all 0.2s ease;
   }
-
-  #user-perfil {
-    width: 300px;
-  }
-  
-  
+   
   @media (min-width: 280px) and (max-width: 700px) {
     .solici-row {
       flex-direction: column;
