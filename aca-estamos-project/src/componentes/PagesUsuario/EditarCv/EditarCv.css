@@ -1,3 +1,16 @@
+/* .row {
+    margin: 0%;
+    padding: 0%;
+  } */
+
+  /* .container-fluid {
+    width: 100%;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  } */
+
 .cvContainer {
     /*estp es main*/
     width: 70%;
@@ -18,7 +31,7 @@
 }
 
 .colName {
-    padding: 3%;
+    padding: 2%;
     text-align: center;
 }
 
@@ -57,12 +70,12 @@
 
 @media (min-width: 280px) and (max-width: 576px) {
     .itemsCv {
-        margin-left: 11px;
-        font-size: 15px;
+        margin-left: 11px !important;
+        font-size: 15px !important;
     }
 
     .iconCv {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .cvContainer {
@@ -71,10 +84,11 @@
 
     .firstColCv {
         width: 95%;
+        padding: 0%;
     }
 
     .secondColCv {
-        width: 95%;
+        width: 95% ;
         padding-top: 20px;
         padding: 0%;
     }
@@ -86,6 +100,7 @@
     .contInfo {
         font-size: 12px;
         align-items: center;
+        margin-top: 10px;
     }
 
     .colName {
@@ -95,6 +110,9 @@
 
     .contactData {
         font-size: 12px;
+    }
+    .containerItems{
+        margin-right: 0%;
     }
 }
 

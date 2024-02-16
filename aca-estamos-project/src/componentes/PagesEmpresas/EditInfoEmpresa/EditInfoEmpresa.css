@@ -1,4 +1,4 @@
-.cvContainer {
+.ContainerEdit {
     /*esto es main*/
     width: 70%;
     height: 100%;
@@ -6,19 +6,13 @@
     padding: 30%;
 }
 
-.cvContent {
+.ContentEdit {
     display: flex;
     flex-direction: row;
     /* padding: 300px; */
 }
 
-.cursosUsuario,
-.cTecnics {
-    list-style: none;
-    padding: 0%;
-}
-
-.colName {
+.colEdit {
     padding: 3%;
     text-align: center;
 }
@@ -29,28 +23,28 @@
     padding-top: 0%;
 }
 
-.itemsCv {
+.itemsEdit {
     margin-top: 16px;
     font-family: 'Poppins-Bold';
     font-size: 26px;
 }
 
 
-.containerItems {
+.editItems {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 
-.nameUsuario {
+.editName {
     margin-bottom: 20px;
 }
 
-.contactData {
+.contactedit {
     text-align: left;
 }
 
-.contInfo {
+.editInfo {
     margin-top: 10px;
     font-family: "Poppins-Regular";
     text-align: center;
@@ -62,108 +56,108 @@
 }
 
 @media (min-width: 280px) and (max-width: 576px) {
-    .itemsCv {
+    .itemsEdit {
         margin-left: 11px;
         font-size: 15px;
     }
 
-    .iconCv {
+    .iconEmpresa {
         font-size: 15px;
     }
 
-    .cvContainer {
+    .ContainerEdit {
         width: 95%;
     }
 
-    .firstColCv {
+    .firstColEdit {
         width: 95%;
     }
 
-    .secondColCv {
+    .secondColEdit {
         width: 95%;
         padding-top: 20px;
         padding: 0%;
     }
 
-    .nameCv {
+    .nameEdit {
         font-size: 18px;
     }
 
-    .contInfo {
+    .editInfo {
         font-size: 12px;
         align-items: center;
     }
 
-    .colName {
+    .colEdit {
         padding-top: 30px;
         text-align: left;
     }
 
-    .contactData {
+    .contactedit {
         font-size: 12px;
     }
 }
 
 @media (min-width: 577px) and (max-width: 766px) {
-    .itemsCv {
+    .itemsEdit {
         margin-left: 11px;
         font-size: 20px;
     }
 
-    .iconCv {
+    .iconEmpresa {
         font-size: 15px;
     }
 
-    .cvContainer {
+    .ContainerEdit {
         width: 85%;
     }
 
-    .firstColCv {
+    .firstColEdit {
         width: 95%;
     }
 
-    .secondColCv {
+    .secondColEdit {
         width: 95%;
         padding-top: 20px;
         padding: 0%;
     }
 
-    .nameCv {
+    .nameEdit {
         font-size: 18px;
     }
 
-    .contInfo {
+    .editInfo {
         font-size: 12px;
         align-items: center;
     }
 
-    .colName {
+    .colEdit {
         padding-top: 30px;
     }
 }
 
 @media (min-width: 767px) and (max-width: 990px) {
-    .cvContainer {
+    .ContainerEdit {
         width: 95%;
     }
 
-    .itemsCv {
+    .itemsEdit {
         font-size: 18px;
     }
 }
 
 @media (min-width: 991px) and (max-width: 1198px) {
-    .cvContainer {
+    .ContainerEdit {
         width: 85%;
     }
 
-    .itemsCv {
+    .itemsEdit {
         font-size: 20px;
     }
 }
 
 @media (min-width: 1199px) and (max-width: 1900px) {
-    .itemsCv {
+    .itemsEdit {
         font-size: 20px;
     }
 }

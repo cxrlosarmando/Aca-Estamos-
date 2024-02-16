@@ -27,7 +27,7 @@ const EditarCv = () => {
                     <Link to="/Actualizar-Perfil"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                     </div>
                 </div>
-                <div className="container-fluid contInfo">
+                <div className="contInfo">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam
                         eaque, sint accusamus facere asperiores nobis, incidunt ullam quisquam sunt perferendis
                         natus ex! Tempore tempora dolor cupiditate soluta!</p>

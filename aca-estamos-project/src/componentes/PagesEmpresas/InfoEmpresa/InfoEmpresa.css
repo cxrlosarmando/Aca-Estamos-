@@ -1,4 +1,4 @@
-.cvContainer {
+.ContainerEmp {
     /*esto es main*/
     width: 70%;
     height: 100%;
@@ -6,153 +6,139 @@
     padding: 30%;
 }
 
-.cvContent {
+.EmpContent {
     display: flex;
     flex-direction: row;
     /* padding: 300px; */
 }
 
-.cursosUsuario,
-.cTecnics {
-    list-style: none;
-    padding: 0%;
-}
-
-.colName {
+.colEmpresa {
     padding: 3%;
     text-align: center;
 }
 
-.itemsCv {
+.itemsE {
     margin-top: 16px;
     font-family: 'Poppins-Bold';
     font-size: 26px;
 }
 
 
-.containerItems {
+.containerItemsE {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 
-.nameUsuario {
+.nameEmpresa {
     margin-bottom: 20px;
 }
 
-.contactData {
+.contactEmp {
     text-align: left;
 }
 
-.contInfo {
+.infoEmpresa {
     margin-top: 10px;
     font-family: "Poppins-Regular";
     text-align: center;
 }
 
 @media (min-width: 280px) and (max-width: 576px) {
-    .itemsCv {
+    .itemsE {
         margin-left: 11px;
         font-size: 15px;
     }
 
-    .iconCv {
-        font-size: 15px;
-    }
-
-    .cvContainer {
+    .ContainerEmp {
         width: 95%;
     }
 
-    .firstColCv {
+    .firstColE {
         width: 95%;
     }
 
-    .secondColCv {
+    .secondColE {
         width: 95%;
         padding-top: 20px;
         padding: 0%;
     }
 
-    .nameCv {
+    .nameE {
         font-size: 18px;
     }
 
-    .contInfo {
+    .infoEmpresa {
         font-size: 12px;
         align-items: center;
     }
 
-    .colName {
+    .colEmpresa {
         padding-top: 30px;
         text-align: left;
     }
 
-    .contactData {
+    .contactEmp {
         font-size: 12px;
     }
 }
 
 @media (min-width: 577px) and (max-width: 766px) {
-    .itemsCv {
+    .itemsE {
         margin-left: 11px;
         font-size: 20px;
     }
 
-    .iconCv {
-        font-size: 15px;
-    }
-
-    .cvContainer {
+    .ContainerEmp {
         width: 85%;
     }
 
-    .firstColCv {
+    .firstColE {
         width: 95%;
     }
 
-    .secondColCv {
+    .secondColE {
         width: 95%;
         padding-top: 20px;
         padding: 0%;
     }
 
-    .nameCv {
+    .nameE {
         font-size: 18px;
     }
 
-    .contInfo {
+    .infoEmpresa {
         font-size: 12px;
         align-items: center;
     }
 
-    .colName {
+    .colEmpresa {
         padding-top: 30px;
     }
 }
 
 @media (min-width: 767px) and (max-width: 990px) {
-    .cvContainer {
+    .ContainerEmp {
         width: 95%;
     }
 
-    .itemsCv {
+    .itemsE {
         font-size: 18px;
     }
 }
 
 @media (min-width: 991px) and (max-width: 1198px) {
-    .cvContainer {
+    .ContainerEmp {
         width: 85%;
     }
 
-    .itemsCv {
+    .itemsE {
         font-size: 20px;
     }
 }
 
 @media (min-width: 1199px) and (max-width: 1900px) {
-    .itemsCv {
+    .itemsE {
         font-size: 20px;
     }
 }
