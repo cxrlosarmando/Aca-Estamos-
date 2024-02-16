@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Alertas con useAlert</h1>
+        <h1>Alertas con useAlert:aviso de mal envio de datos</h1>
         <Alert /> {/* Renderiza el componente de alerta */}
       </div>
     </>
