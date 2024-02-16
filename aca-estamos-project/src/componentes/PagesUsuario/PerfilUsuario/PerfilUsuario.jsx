@@ -1,5 +1,6 @@
 import React from 'react';
-import './PerfilUsuario.css'
+import './PerfilUsuario.css';
+import { Link } from 'react-router-dom';
 
 const PerfilUsuario = () => {
     return (
@@ -23,8 +24,8 @@ const PerfilUsuario = () => {
                         </div>
                         <div className="col-perfil3">
                             <div className="actualizar-datos">
-                                <p><a href="./Datosperso.html">Actualizar datos Perfil</a></p>
-                                <a href="./Datosperso.html"><img src="../Img/pen-edit.png" alt="Editar perfil icon" id="pen-edit" /></a>
+                                <p><Link to="/Actualizar-Datos-Perfil">Actualizar datos Perfil</Link></p>
+                                <Link to="/Actualizar-Datos-Perfil"><img src="../Img/pen-edit.png" alt="Editar perfil icon" id="pen-edit" /></Link>
                             </div>
                         </div>
                     </div>
@@ -44,10 +45,10 @@ const PerfilUsuario = () => {
                             </div>
                             <div className="col">
                                 <div className="colcv">
-                                    <p><a href="#">Mostrar CV Generado</a></p>
-                                    <a href="#"><img src="../Img/mostrar.png" alt="Mostrar perfil icon" id="mostrar-perfil" /></a>
-                                    <p><a href="./editarCV.html">Actualizar y crear CV</a></p>
-                                    <a href="./editarCV.html"><img src="../Img/pen-edit.png" alt="Editar perfil icon" id="pen-edit" /></a>
+                                    <p><Link to="#">Mostrar CV Generado</Link></p>
+                                    <Link to="#"><img src="../Img/mostrar.png" alt="Mostrar perfil icon" id="mostrar-perfil" /></Link>
+                                    <p><Link to="/Actualizar-Cv">Actualizar y crear CV</Link></p>
+                                    <Link to="/Actualizar-Cv"><img src="../Img/pen-edit.png" alt="Editar perfil icon" id="pen-edit" /></Link>
                                 </div>
                             </div>
                         </div>
