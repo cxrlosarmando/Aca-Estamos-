@@ -1,5 +1,6 @@
 import React from 'react'
 import './LoginEmpresa.css'
+
 const LoginEmpresa = () => {
     return (
         <>
