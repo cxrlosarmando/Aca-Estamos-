@@ -2,6 +2,13 @@ import { createBrowserRouter } from 'react-router-dom';
 import ErrorComponent from '../Views/Cursos';
 import Home from "../Views/Home";
 import Login from "../Views/Login";
+import LoginFormulario from '../Views/LoginFormulario';
+import PerfilUsers from '../Views/PerfilUsers';
+import OlvidoContra from '../Views/OlvidoContra';
+import Register from '../Views/Register';
+import RegisterForm from '../Views/RegisterForm';
+import ActualizarDatosPerfil from '../Views/ActualizarDatosPerfil';
+import CrearCV from '../Views/CrearCV';
 import App from '../App';
 /* import LoginFormulario from '../Views/LoginFormulario'; */
 
@@ -13,6 +20,13 @@ const router = createBrowserRouter([
   { path: '/Login', element: <Login /> },
   { path: '/Pruebas', element: <App /> },
   /* { path: '/Login-form', element: <LoginFormulario /> }, */
+  { path: '/Login-form', element: <LoginFormulario /> },
+  { path: '/Perfil-Usuario', element: <PerfilUsers /> },
+  { path: '/OlvidoContra', element: <OlvidoContra/>},
+  { path: '/Registro', element: <Register /> },
+  { path: '/Registro-form', element: <RegisterForm /> },
+  { path: '/Actualizar-Datos-Perfil', element: <ActualizarDatosPerfil /> },
+  { path: '/Actualizar-Cv', element: <CrearCV /> },
 ]);
 
 export default router;

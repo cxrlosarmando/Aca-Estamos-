@@ -69,6 +69,8 @@
 
 .loader-text:after {
   content: "Cargando Página";
+  font-family: "Poppins-Bold";
+  src: url("Fuentes/Poppins-Bold.ttf");
   font-weight: bold;
   animation: loading-text 3s infinite;
 }
