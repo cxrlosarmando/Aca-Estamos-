@@ -6,8 +6,8 @@ const CrearUsuario = async (req, res) => {
     try {
         const nuevoUsuario = await User.create(body);
 
-        res.status(201).json({
-            code: 201,
+        res.status(200).json({
+            code: 200,
             msg: "Usuario creado con éxito",
             data: nuevoUsuario
         });
