@@ -7,15 +7,15 @@ const ActualizarUser = require('../controllers/user-update');
 const IdUsuario = require('../controllers/user-get-id');
 
 //Router   USUARIOS //
-router.get('/', listaUsuarios);
+router.get('/Usuario', listaUsuarios);
 
-router.get('/:id', IdUsuario);
+router.get('/Usuario/:id', IdUsuario);
 
 router.post('/crear-usuario', CrearUsuario);
 
-router.put('/:id', ActualizarUser);
+router.put('/Actualizar-Usuario/:id', ActualizarUser);
 
-router.delete('/:id', DeleteUser);
+router.delete('/Borrar-Usuario/:id', DeleteUser);
 
 //Router   EMPRESAS //
 
