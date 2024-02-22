@@ -1,17 +1,17 @@
 const express = require('express');
+const listaUsuarios = require('../controllers/user-get');
+const CrearUsuario = require('../controllers/user-create');
 const router = express.Router();
 
 //Router   USUARIOS //
-router.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+router.get('/', listaUsuarios);
+
+router.post('/crear-usuario', CrearUsuario)
 
 //Router   EMPRESAS //
 
 
 //Router   ADMINISTRADOR //
-
-
 
 
 module.exports = router;
