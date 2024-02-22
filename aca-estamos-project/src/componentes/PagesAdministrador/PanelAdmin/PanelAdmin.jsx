@@ -14,7 +14,7 @@ const PanelAdmin = () => {
               <button id="btn-solicitudes" className="btn btn-primary btn-lg">Solicitudes</button>
             </div>
             <div className="admin-col3">
-              <button id="btn-ofertas" className="btn btn-secondary btn-lg">Nuevas Ofertas</button>
+              <button id="btn-ofertas" className="btn btn-secondary btn-lg">Info Empresas</button>
             </div>
           </div>
         </div>
