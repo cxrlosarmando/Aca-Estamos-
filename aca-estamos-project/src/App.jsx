@@ -5,6 +5,7 @@ import Alert from './Efectos/Alert.';
 import React from 'react';
 import './Efectos/Alert.css'
 import EnvioFormulario from './Efectos/EnvioFormulario'
+import './Efectos/EnvioFormulario.css'
 function App() {
 
   return (
