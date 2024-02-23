@@ -1,7 +1,7 @@
 import './Index.css';
 import { useState, useEffect } from 'react';
 import Loading from '../../Efectos/Loading';
-import ChatBot from '../imagen-flotante/ChatBot';
+
 
 
 const Index = () => {
