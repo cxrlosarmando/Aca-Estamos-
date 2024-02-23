@@ -1,10 +1,17 @@
 const User = require("../models/user-model");
 
 const CrearUsuario = async (req, res) => {
-    const body = req.body;
+    const { Nombre, Apellido, Telefono, FechaNacimiento, Email, Password } = req.body;
 
     try {
-        const nuevoUsuario = await User.create(body);
+        const nuevoUsuario = await User.create({
+            Nombre: Nombre,
+            Apellido: Apellido,
+            Telefono: Telefono,
+            FechaNacimiento: FechaNacimiento,
+            Email: Email,
+            Password: Password
+        });
 
         res.status(200).json({
             code: 200,
@@ -14,6 +21,13 @@ const CrearUsuario = async (req, res) => {
     } catch (error) {
         console.error(error);
 
+        if (error.code === 11000) {
+            return res.status(400).json({
+                code: 400,
+                msg: "El correo electrónico ya está en uso",
+                data: null
+            });
+        }
         res.status(500).json({
             code: 500,
             msg: "Error interno del servidor",
