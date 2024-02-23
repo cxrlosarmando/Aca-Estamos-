@@ -37,7 +37,7 @@ const NavbarAdmin = () => {
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown">
                                                 {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
-                                                <Link to="" className="dropdown-item" >
+                                                <Link to="./" className="dropdown-item" >
                                                 <i class="fa-solid fa-building" style={{ color: "#D95525" }}></i> <b>Empresas</b>
                                                 </Link>
                                                 <a className="dropdown-item" href="#"><i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i> <b>Postulantes</b></a>
