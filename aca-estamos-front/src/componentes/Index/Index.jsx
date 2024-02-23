@@ -1,6 +1,8 @@
 import './Index.css';
 import { useState, useEffect } from 'react';
 import Loading from '../../Efectos/Loading';
+import ChatBot from '../imagen-flotante/ChatBot';
+
 
 const Index = () => {
     const [loading, setLoading] = useState(true)
@@ -49,9 +51,6 @@ const Index = () => {
                         </button>
                     </div>
                 </div>
-
-
-
                 <div className="container-fluid">
                     <div className="h2-conecta">
                         <h2 className="h3-testimnios">Se parte de nosotros</h2>
@@ -89,7 +88,9 @@ const Index = () => {
                     </div>
                 </div>
 
-
+                <div className='btn-chat'>
+            <img src='./Img/chatbot.png'></img>
+        </div>
 
                 <div className="container-fluid">
                     <h2 className="h2-empleos text-fluid">¡Colaboradores!</h2>

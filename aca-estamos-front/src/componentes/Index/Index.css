@@ -380,3 +380,13 @@
     flex-grow: 1;
     background-color: #818181;
 }
+
+
+/* Chatbot */
+.btn-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
