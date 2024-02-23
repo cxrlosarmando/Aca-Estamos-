@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Formularioregistro';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Formularioregistro = () => {
@@ -11,6 +12,7 @@ const Formularioregistro = () => {
   const [Fechanacimiento, setFechanacimiento] = useState('');
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const Formularioregistro = () => {
       });
 
       alert(JSON.stringify(response.data, null, 2));
+      navigate('/Login-form')
     } catch (error) {
       console.error('Error al enviar la solicitud:', error.response?.data || error.message);
     }
