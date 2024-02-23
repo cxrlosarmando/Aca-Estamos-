@@ -23,17 +23,17 @@ const Formularioregistro = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <label htmlFor="validationCustom01" className="form-label">Nombre</label>
-                    <input type="text" className="form-control" id="nombre" placeholder="Nombre" />
+                    <input type="text" className="form-control" id="nombre" placeholder="Nombre" required minlength="2"/>
                     <div className="valid-feedback">Looks good!</div>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Apellido</label>
-                    <input type="text" className="form-control" id="apellido" placeholder="Apellido" />
+                    <input type="text" className="form-control" id="apellido" placeholder="Apellido" required minlength="3" />
                     <div className="valid-feedback">Looks good!</div>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Teléfono</label>
-                    <input type="text" className="form-control" id="telefono" placeholder="+59 999999999" />
+                    <input type="text" className="form-control" id="telefono" placeholder="+59 999999999" required  minlength="3"/>
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                   <div className="col-md-6">
@@ -43,31 +43,31 @@ const Formularioregistro = () => {
                   </div>
                   <div className="col-md-6 mb-3">
                     <label htmlFor="fechaNacimiento" className="form-label">Fecha Nacimiento:</label>
-                    <input type="date" className="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA" />
+                    <input type="date" className="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA" required/>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Correo</label>
-                    <input type="text" className="form-control" id="correo" placeholder="example@Email.com" />
+                    <input type="text" className="form-control" id="correo" placeholder="example@Email.com"required minlength="3" />
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Repetir Correo</label>
-                    <input type="text" className="form-control" id="repetirCorreo" placeholder="example@Email.com" />
+                    <input type="text" className="form-control" id="repetirCorreo" placeholder="example@Email.com" required  minlength="3"/>
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Contraseña</label>
-                    <input type="password" className="form-control" id="contraseña" placeholder="*********" />
+                    <input type="password" className="form-control" id="contraseña" placeholder="*********" required minlength="3"/>
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
-                    <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" />
+                    <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" required minlength="3" />
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                 </div>
                 <div className="row" id="contendor-registro">
-                  <button type="button" className="btn btn-primary btn-lg" id="boton-registro">Registrarse</button>
+                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registro">Registrarse</button>
                 </div>
                 <div className="col">
                   <div className="google-icon">
