@@ -8,6 +8,7 @@ const CrearUsuario = async (req, res) => {
             Nombre: Nombre,
             Apellido: Apellido,
             Telefono: Telefono,
+            Rut: Rut,
             FechaNacimiento: FechaNacimiento,
             Email: Email,
             Password: Password
