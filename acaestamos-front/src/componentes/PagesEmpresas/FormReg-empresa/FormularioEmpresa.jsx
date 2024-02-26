@@ -12,11 +12,28 @@ const FormularioEmpresa = () => {
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
   const navigate = useNavigate();
+
+  const formatRut = (rut) => {
+    // Formatear rut
+    rut = rut.replace(/[^\dkK]/g, '');
+    rut = rut.replace(/^0+/, '');
+
+    if (rut.length > 1) {
+      rut = rut.replace(/^(\d{1,2})(\d{3})(\d{3})([\dkK]{1})$/, '$1.$2.$3-$4');
+    }
+
+    return rut;
+  };
   
 
 
   const handleSumbit = async (e) => {
     e.preventDefault();
+    const rutRegex = /^[0-9]{1,2}\.[0-9]{3}\.[0-9]{3}-[0-9kK]{1}$/;
+    if (!rutRegex.test(Rut)) {
+      alert('El Rut no cumple con el formato requerido');
+      return;
+    }
 
     try {
       const response = await axios.post('http://localhost:3000/Crear-Empresa', {
@@ -61,7 +78,7 @@ const FormularioEmpresa = () => {
                     <div className="col-md-6">
                       <label htmlFor="validationCustom02" className="form-label">Rut Empresa</label>
                       <input type="text" className="form-control" id="validationCustom02"
-                        placeholder="11.111.111-1" value={RutEmpresa} onChange={(e) => setRutEmpresa(e.target.value)} />
+                        placeholder="11.111.111-1" value={RutEmpresa} onChange={(e) => setRutEmpresa(formatRut(e.target.value))} />
                       <div className="valid-feedback">
                         Looks good!
                       </div>
