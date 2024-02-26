@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LoginEmpresa.css';
+import { useNavigate } from'react-router-dom';
 import axios from 'axios';
 
 const LoginEmpresa = () => {
     const [Email, setEmail] = useState('');
     const [Password, setPassword] = useState('');
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            // Realizar la solicitud al backend
+            
             const response = await axios.post('http://localhost:3000/Login-empresa', {
                 Email,
                 Password
             });
 
             alert(JSON.stringify(response.data, null, 2));
+            navigate('/Perfil-Empresa');
             
-            history.push('./PerfilEmpresa');
         } catch (error) {
             console.error('Error al enviar la solicitud:', error.response?.data || error.message);
         }
