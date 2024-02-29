@@ -5,8 +5,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const VisualizacionUsuarios = () => {
-    const [records, setRecords] = useState([]);
-    const navegate = useNavigate()
+    const [records, setRecords] = useState([]); //Dos estructura de data, una constante y una función 
+    
+    const navegate = useNavigate();
 
 
     useEffect(() => {
@@ -20,6 +21,25 @@ const VisualizacionUsuarios = () => {
                 console.error('Error fetching data:', err);
             });
     }, []);
+
+    function handleSumbit(_id) {
+        const conf = window.confirm('Seguro que quieres Elimnar a este Usuario?')
+    
+        if (conf) {
+            axios.delete(`http://localhost:3000/Borrar-Usuario/`+_id)
+                .then(res => {
+                    alert('Usuario Eliminado')
+                   /*  window.location.reload(); */
+                   const newRecords = records.filter(record => record._id!== _id); //filter es un filtro, sirve para la disponibilidad del los usuarios
+                    console.log(res);
+                    setRecords(newRecords);
+                })
+                .catch(err => {
+                    console.error('Error deleting data:', err);
+                });
+        }
+    
+    };
 
 
 
@@ -114,9 +134,6 @@ const VisualizacionUsuarios = () => {
                                                 <td>{record.Apellido}</td>
                                                 <td>{record.Rut}</td>
                                                 <td>{record.Email}</td>
-                                                <td className='Botones-tablero'>
-                                                    <button id='Editar-Boton' className="btn btn-success" type="button">Editar</button>
-                                                </td>
                                                 <td>
                                                     <button onClick= {e => handleSumbit(record._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
                                             </td>
@@ -133,22 +150,6 @@ const VisualizacionUsuarios = () => {
         </main >
         </>
     );
-function handleSumbit(_id) {
-    const conf = window.confirm('Seguro que quieres Elimnar a este Usuario?')
-
-    if (conf) {
-        axios.delete(`http://localhost:3000/Borrar-Usuario/`+_id)
-            .then(res => {
-                alert('Usuario Eliminado');
-                window.location.reload();
-                console.log(res);
-            })
-            .catch(err => {
-                console.error('Error deleting data:', err);
-            });
-    }
-
-}
 };
 
 export default VisualizacionUsuarios
