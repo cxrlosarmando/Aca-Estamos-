@@ -3,7 +3,12 @@ import './NavbarLogin.css';
 import { Link } from 'react-router-dom';
 
 const NavbarLogin = () => {
-
+    
+    
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        window.location.href = '/';
+    }
     return (
         <>
             <header>
@@ -35,7 +40,7 @@ const NavbarLogin = () => {
                                                     {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
                                                     <a className="dropdown-item" href="#">Mi perfil</a>
                                                     <a className="dropdown-item" href="#">Actualizar mi CV</a>
-                                                    <a className="dropdown-item" href="#">Cerrar sesión</a>
+                                                    <a className="dropdown-item" href="#" onClick ={handleLogout}>Cerrar sesión</a>
                                                     {/* <a className="dropdown-item" href="#">Item 4</a> */}
                                                     {/* ... */}
                                                 </div>
@@ -81,4 +86,4 @@ const NavbarLogin = () => {
     )
 }
 
-export default NavbarLogin
+export default NavbarLogin;
