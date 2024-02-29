@@ -3,6 +3,15 @@ const User = require("../models/user-model");
 const CrearUsuario = async (req, res) => {
     const { Nombre, Apellido, Telefono, Rut, FechaNacimiento, Email, Password } = req.body;
 
+    const userExisting = await User.findOne({ Rut: Rut });
+    if (userExisting) {
+        return res.status(400).json({
+            code: 400,
+            msg: "El usuario ya existe",
+            data: null
+        });
+    };
+
     try {
         const nuevoUsuario = await User.create({
             Nombre: Nombre,
@@ -17,7 +26,7 @@ const CrearUsuario = async (req, res) => {
         res.status(200).json({
             code: 200,
             msg: "Usuario creado con éxito",
-            data: nuevoUsuario
+            data: nuevoUsuario //Temas de seguridad devolver token y no usuario 
         });
     } catch (error) {
         console.error(error);
