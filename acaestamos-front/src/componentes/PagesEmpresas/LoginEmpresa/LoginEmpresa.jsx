@@ -24,6 +24,7 @@ const LoginEmpresa = () => {
                 Password
             });
 
+            localStorage.setItem('accessToken', response?.data?.token);
             alertApi.show(JSON.stringify(response.data, null, 2));
             navigate('/Perfil-Empresa');
 
