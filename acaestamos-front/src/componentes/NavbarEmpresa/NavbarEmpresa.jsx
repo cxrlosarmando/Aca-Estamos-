@@ -38,9 +38,9 @@ const NavbarEmpresa = () => {
                                                 </a>
                                                 <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown" style={{backgroundColor: '#f2f7ea'}}>
                                                     {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
-                                                    <a className="dropdown-item" href="#">Mi perfil</a>
+                                                    <a className="dropdown-item" href="#"> <i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i>                              <b>Mi perfil</b></a>
                                                     
-                                                    <a className="dropdown-item" href="#" onClick ={handleLogout} ><i class="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i>               Cerrar sesión</a>
+                                                    <a className="dropdown-item" href="#" onClick ={handleLogout} ><i class="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i>         <b>  Cerrar sesión</b>    </a>
 
                                                     {/* <a className="dropdown-item" href="#">Item 4</a> */}
                                                     {/* ... */}
