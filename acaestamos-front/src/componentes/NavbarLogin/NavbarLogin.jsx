@@ -6,7 +6,7 @@ const NavbarLogin = () => {
     
     
     const handleLogout = () => {
-        localStorage.removeItem('token');
+        localStorage.removeItem('accessToken');
         window.location.href = '/';
     }
     return (

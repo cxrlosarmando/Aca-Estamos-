@@ -3,7 +3,10 @@ import LoginForm from "../componentes/LoginForm/LoginForm"
 
 const LoginFormulario = () => {
   return (
+
+    
     <Layout>
+      
       <LoginForm />
     </Layout>
   )
