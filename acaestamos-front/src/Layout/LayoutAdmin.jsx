@@ -2,12 +2,12 @@ import Header from "../componentes/Header/Header";
 import Footer from "../componentes/Footer/Footer";
 import NavbarAdmin from "../componentes/NavbarAdmin/NavbarAdmin";
 
-const LayoutAdmin = () => {
+
+const LayoutAdmin = ({children}) => {
   return (
     <>
-      <Header />
       <NavbarAdmin />
-      
+      <div style={{ flex: 1 }}>{children}</div>
       <Footer />
     
     </>
