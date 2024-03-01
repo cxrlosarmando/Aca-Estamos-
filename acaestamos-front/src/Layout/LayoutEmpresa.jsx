@@ -2,7 +2,7 @@ import Header from "../componentes/Header/Header";
 import Footer from "../componentes/Footer/Footer";
 import NavbarEmpresa from "../componentes/NavbarAdmin/NavbarEmpresa";
 
-const LayoutAdmin = ({ children }) => {
+const LayoutEmpresa = ({ children }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <Header />
@@ -13,4 +13,4 @@ const LayoutAdmin = ({ children }) => {
   );
 };
 
-export default LayoutAdmin;
+export default LayoutEmpresa;
