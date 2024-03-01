@@ -1,12 +1,11 @@
 import './PerfilUsuario.css';
-import { Link, useParams, useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import client from '../../../Utils/axios.Client';
+import getUserId from '../../../Utils/getUserId';
 
 const PerfilUsuario = () => {
     const [perfil, setPerfil] = useState(null);
-    const {id} = useParams();
-    const navigate = useNavigate();
 
     useEffect(() => {
         const obtenerPerfil = async () => {
@@ -14,15 +13,9 @@ const PerfilUsuario = () => {
 
                 const token = localStorage.getItem('token'); 
 
-                const response = await axios.get('http://localhost:3000/Obtener-Perfil/${id}', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-
+                const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
                 setPerfil(response.data);
-                console.log(response)
-                console.log(perfil)
+                
             } catch (error) {
                 if (error.response) {
                     console.error('Error en la respuesta:', error.response.data);
@@ -35,7 +28,8 @@ const PerfilUsuario = () => {
         };
 
         obtenerPerfil();
-    }, [id, navigate]);
+    }, []);
+
     return (
         <>
             <h2 className="mi-perfil"><br />Mi perfil</h2>
@@ -70,10 +64,10 @@ const PerfilUsuario = () => {
                                 <h3 style={{ marginTop: '40px' }}>Archivos Adjuntos</h3>
 
                                 <ul className="certificadoslist">
-                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF1}`} download>CV</a></li>
-                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download>Certificados de Estudios</a></li>
-                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF3}`} download>Certificado de Antecedentes</a></li>
-                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF4}`} download>Certificado de Cursos</a></li>
+                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF1}`} download target='_blank'>CV</a></li>
+                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download target='_blank'>Certificados de Estudios</a></li>
+                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF3}`} download target='_blank'>Certificado de Antecedentes</a></li>
+                                    <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF4}`} download target='_blank'>Certificado de Cursos</a></li>
                                 </ul>
                             </div>
                             <div className="col">

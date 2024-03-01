@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from '../../Efectos/useAlert'
 
+
 function LoginFrom() {
 
     const [Email, setEmail] = useState('');
@@ -23,6 +24,7 @@ function LoginFrom() {
                 Email,
                 Password
             });
+            localStorage.setItem('accessToken', response?.data?.token);
 
             alertApi.show(JSON.stringify(response.data, null, 2));
             navigate('/Perfil-Usuario')

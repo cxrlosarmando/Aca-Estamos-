@@ -1,26 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './DatosPersonales.css';
-import axios from 'axios';
+import client from '../../../Utils/axios.Client';
+import getUserId from '../../../Utils/getUserId';
+
 
 const DatosPersonales = () => {
     const [perfil, setPerfil] = useState(null);
+    const [Nombre, setNombre] = useState('');
+    const [Apellido, setApellido] = useState('');
+    const [Telefono, setTelefono] = useState('');
+    const [EstadoCivil, setEstadoCivil] = useState('');
+    const [LinkedIn, setLinkedIn] = useState('');
+    const [Rubro, setRubro] = useState('');
+    const [Disponibilidad, setDisponibilidad] = useState(false);
+    const [ArchivoPDF1, setArchivoPDF1] = useState(null);
+    const [ArchivoPDF2, setArchivoPDF2] = useState(null);
+    const [ArchivoPDF3, setArchivoPDF3] = useState(null);
+    const [ArchivoPDF4, setArchivoPDF4] = useState(null);
+    const [ImagenPerfil, setImagenPerfil] = useState(null);
 
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
 
-                const token = localStorage.getItem('token'); 
+                const response = await client.get(`/Obtener-Perfil/${getUserId()}`) 
+                setPerfil(response?.data);
 
-                const response = await axios.get('http://localhost:3000/Obtener-Perfil/${id}', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
+                if(response?.data?.Nombre) setNombre(response?.data?.Nombre);
+                if(response?.data?.Apellido) setApellido(response?.data?.Apellido);
+                if(response?.data?.Telefono) setTelefono(response?.data?.Telefono);
+                if(response?.data?.EstadoCivil) setEstadoCivil(response?.data?.EstadoCivil);
+                if(response?.data?.LinkedIn) setLinkedIn(response?.data?.LinkedIn);
+                if(response?.data?.Rubro) setRubro(response?.data?.Rubro);
+                if(response?.data?.Disponibilidad) setDisponibilidad(response?.data?.Disponibilidad);
+                if(response?.data?.ArchivoPDF1) setArchivoPDF1(response?.data?.ArchivoPDF1);
+                if(response?.data?.ArchivoPDF2) setArchivoPDF2(response?.data?.ArchivoPDF2);
+                if(response?.data?.ArchivoPDF3) setArchivoPDF3(response?.data?.ArchivoPDF3);
+                if(response?.data?.ArchivoPDF4) setArchivoPDF4(response?.data?.ArchivoPDF4);
+                if(response?.data?.ImagenPerfil) setImagenPerfil(response?.data?.ImagenPerfil);
 
-                setPerfil(response.data);
-                console.log(response)
-                console.log(perfil)
+                
             } catch (error) {
                 if (error.response) {
                     console.error('Error en la respuesta:', error.response.data);
@@ -35,18 +55,7 @@ const DatosPersonales = () => {
         obtenerPerfil();
     }, []);
 
-    const [Nombre, setNombre] = useState('');
-    const [Apellido, setApellido] = useState('');
-    const [Telefono, setTelefono] = useState('');
-    const [EstadoCivil, setEstadoCivil] = useState('');
-    const [LinkedIn, setLinkedIn] = useState('');
-    const [Rubro, setRubro] = useState('');
-    const [Disponibilidad, setDisponibilidad] = useState(false);
-    const [ArchivoPDF1, setArchivoPDF1] = useState(null);
-    const [ArchivoPDF2, setArchivoPDF2] = useState(null);
-    const [ArchivoPDF3, setArchivoPDF3] = useState(null);
-    const [ArchivoPDF4, setArchivoPDF4] = useState(null);
-    const [ImagenPerfil, setImagenPerfil] = useState(null);
+    
     const navigate = useNavigate();
 
     const handleArchivoPDF1Change = (e) => {
@@ -86,7 +95,8 @@ const DatosPersonales = () => {
             formData.append('ArchivoPDF4', ArchivoPDF4);
             formData.append('ImagenPerfil', ImagenPerfil);
 
-            const response = await axios.post('http://localhost:3000/Guardar-Perfil/65d7a22372d431e019a29d89', formData);
+            const userId = getUserId();
+            const response = await client.post(`http://localhost:3000/Guardar-Perfil/${userId}`, formData);
 
             console.log(response.data);
             navigate('/Perfil-Usuario')

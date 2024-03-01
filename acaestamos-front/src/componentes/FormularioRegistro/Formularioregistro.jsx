@@ -10,7 +10,7 @@ const Formularioregistro = () => {
   const [Apellido, setApellido] = useState('');
   const [Telefono, setTelefono] = useState('');
   const [Rut, setRut] = useState('');
-  const [Fechanacimiento, setFechanacimiento] = useState('');
+  const [FechaNacimiento, setFechaNacimiento] = useState('');
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
   const [Repassword, setRepassword] = useState('');
@@ -25,7 +25,7 @@ const Formularioregistro = () => {
 
     let hasError = true;
 
-    if (!Nombre || !Apellido || !Telefono || !Rut || !Fechanacimiento || !Email || !Reemail || !Password || !Repassword) {
+    if (!Nombre || !Apellido || !Telefono || !Rut || !FechaNacimiento || !Email || !Reemail || !Password || !Repassword) {
       alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
       hasError = false;
     }
@@ -68,7 +68,7 @@ const Formularioregistro = () => {
           Apellido,
           Telefono,
           Rut,
-          Fechanacimiento,
+          FechaNacimiento,
           Email,
           Password,
         });
@@ -123,8 +123,8 @@ const Formularioregistro = () => {
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
                   <div className="col-md-6 mb-3">
-                    <label htmlFor="fechaNacimiento" className="form-label">Fecha Nacimiento:</label>
-                    <input type="date" className="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA" value={Fechanacimiento} onChange={(e) => setFechanacimiento(e.target.value)} />
+                    <label htmlFor="FechaNacimiento" className="form-label">Fecha Nacimiento:</label>
+                    <input type="date" className="form-control" id="FechaNacimiento" placeholder="DD/MM/AAAA" value={FechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="validationCustom02" className="form-label">Correo</label>
