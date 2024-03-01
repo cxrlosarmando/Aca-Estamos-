@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
+
 function LoginFrom() {
 
     const [Email, setEmail] = useState('');
@@ -20,6 +21,7 @@ function LoginFrom() {
                 Email,
                 Password
             });
+            localStorage.setItem('accessToken', response?.data?.token);
 
             alert(JSON.stringify(response.data, null, 2));
             navigate('/Perfil-Usuario')
