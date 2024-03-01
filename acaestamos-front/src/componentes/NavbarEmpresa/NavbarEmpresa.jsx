@@ -1,8 +1,8 @@
 import React from 'react';
-import './NavbarLogin.css';
+import './NavbarEmpresa.css';
 import { Link } from 'react-router-dom';
 
-const NavbarLogin = () => {
+const NavbarEmpresa = () => {
     
     
     const handleLogout = () => {
@@ -34,13 +34,14 @@ const NavbarLogin = () => {
                                             <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                                 <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Nombre de usuario
+                                                    Nombre Empresa
                                                 </a>
-                                                <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown">
+                                                <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown" style={{backgroundColor: '#f2f7ea'}}>
                                                     {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
-                                                    <a className="dropdown-item" href="#">Mi perfil</a>
-                                                    <a className="dropdown-item" href="#">Actualizar mi CV</a>
-                                                    <a className="dropdown-item" href="#" onClick ={handleLogout}>Cerrar sesión</a>
+                                                    <a className="dropdown-item" href="#"> <i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i>                              <b>Mi perfil</b></a>
+                                                    
+                                                    <a className="dropdown-item" href="#" onClick ={handleLogout} ><i class="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i>         <b>  Cerrar sesión</b>    </a>
+
                                                     {/* <a className="dropdown-item" href="#">Item 4</a> */}
                                                     {/* ... */}
                                                 </div>
@@ -86,4 +87,4 @@ const NavbarLogin = () => {
     )
 }
 
-export default NavbarLogin;
+export default NavbarEmpresa;
