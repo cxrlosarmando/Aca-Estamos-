@@ -19,6 +19,21 @@ const userSchema = new Schema({
   ArchivoPDF3: String,
   ArchivoPDF4: String,
   ImagenPerfil: String,
+  //Educacion agregado//
+  NivelEducacional: String,
+  InstitucionEducativa: String,
+  Titulo: String,
+  FechaInicio: Date,
+  FechaFinalizacion: Date,
+  Descripcion: String,
+  // Experiencia //
+  Cargo: String,
+  TipoEmpleo: String,
+  NombredelaEmp: String,
+  FechaExpInicio: Date,
+  FechaExpFin: Date,
+  CheckCargo: String,
+  DescripcionCargo: String
 }, { 
     timestamps: true,
     versionKey: false

@@ -1,7 +1,69 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import './Educacion.css';
+import client from '../../../Utils/axios.Client';
+import getUserId from '../../../Utils/getUserId';
+import { useNavigate, Link } from'react-router-dom';
 
 const Educacion = () => {
+  const [perfil, setPerfil] = useState(null);
+  const [NivelEducacional, setNivelEducacional] = useState('');
+  const [InstitucionEducativa, setInstitucionEducativa] = useState('');
+  const [FechaInicio, setFechaInicio] = useState('');
+  const [FechaFinalizacion, setFechaFinalizacion] = useState('');
+  const [titulo, setTitulo] = useState('');
+  const [Descripcion, setDescripcion] = useState('');
+
+  useEffect(() => {
+    const obtenerPerfil = async () => {
+      try {
+        const response = await client.get(`/Obtener-Perfil/${getUserId()}`)
+        setPerfil(response?.data);
+
+        if (response?.data?.NivelEducacional) setNivelEducacional(response?.data?.NivelEducacional);
+        if (response?.data?.InstitucionEducativa) setInstitucionEducativa(response?.data?.InstitucionEducativa);
+        if (response?.data?.FechaInicio) setFechaInicio(response?.data?.FechaInicio);
+        if (response?.data?.FechaFinalizacion) setFechaFinalizacion(response?.data?.FechaFinalizacion);
+        if (response?.data?.Titulo) setTitulo(response?.data?.Titulo);
+        if (response?.data?.Descripcion) setDescripcion(response?.data?.Descripcion);
+
+      } catch (error) {
+        if (error.response) {
+          console.error('Error en la respuesta:', error.response.data);
+        } else if (error.request) {
+          console.error('Error en la solicitud:', error.request);
+        } else {
+          console.error('Error general:', error.message);
+        }
+      }
+    };
+
+    obtenerPerfil();
+  }, []);
+
+  const navigate = useNavigate();
+
+  const GuardarPerfil = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData();
+      formData.append('NivelEducacional', NivelEducacional);
+      formData.append('InstitucionEducativa', InstitucionEducativa);
+      formData.append('FechaInicio', FechaInicio);
+      formData.append('FechaFinalizacion', FechaFinalizacion);
+      formData.append('Titulo', titulo);
+      formData.append('Descripcion', Descripcion);
+
+      const userId = getUserId();
+      const response = await client.post(`http://localhost:3000/Guardar-Perfil/${userId}`, formData);
+
+      console.log(response.data);
+      navigate('/Actualizar-Cv')
+    } catch (error) {
+      console.error('Error al guardar el perfil:', error);
+    }
+  };
+
+
   return (
     <>
       <div id="Educacion" style={{ margin: '50px auto', maxWidth: '800px' }}>
@@ -20,48 +82,48 @@ const Educacion = () => {
             Educación
           </h2>
           <div style={{ width: '80%', margin: 'auto' }} className="form-Educacion">
-            <form>
+            <form onSubmit={GuardarPerfil} encType="multipart/form-data">
               <div className="mb-3">
                 <label htmlFor="nivelEducacional" className="form-label">
                   Nivel educacional:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. Universitario completo" />
+                <input type="text" className="form-control" placeholder="Ej. Universitario completo" defaultValue={perfil && perfil.NivelEducacional} onChange={(e) => setNivelEducacional(e.target.value)}/>
               </div>
               <div className="mb-3">
                 <label htmlFor="institucionEducativa" className="form-label">
                   Institución Educativa:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. Universidad Austral" />
+                <input type="text" className="form-control" placeholder="Ej. Universidad Austral" defaultValue={perfil && perfil.InstitucionEducativa} onChange={(e) => setInstitucionEducativa(e.target.value)}/>
               </div>
               <div className="mb-3">
                 <label htmlFor="titulo" className="form-label">
                   Título:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. MQQ" />
+                <input type="text" className="form-control" placeholder="Ej. MQQ" defaultValue={perfil && perfil.Titulo} onChange={(e) => setTitulo(e.target.value)}/>
               </div>
               <div className="mb-3">
                 <label htmlFor="fechaInicio" className="form-label">
                   Fecha Inicio:
                 </label>
-                <input type="date" className="form-control" placeholder="DD/MM/AAAA" />
+                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaInicio} onChange={(e) => setFechaInicio(e.target.value)}/>
               </div>
               <div className="mb-3">
                 <label htmlFor="fechaFin" className="form-label">
                   Fecha finalización:
                 </label>
-                <input type="date" className="form-control" placeholder="DD/MM/AAAA" />
+                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaFinalizacion} onChange={(e) => setFechaFinalizacion(e.target.value)}/>
               </div>
               <div className="mb-3">
                 <label htmlFor="descripcionCargo" className="form-label">
                   Descripción:
                 </label>
-                <input type="text" className="form-control" placeholder="Agrega una descripción de la carrera" />
+                <input type="text" className="form-control" placeholder="Agrega una descripción de la carrera" defaultValue={perfil && perfil.Descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
               </div>
               <div className="d-flex justify-content-center">
-                <button type="button" className="btn btn-secondary btn-lg me-2">
+                <Link to="/Actualizar-Cv" type="button" className="btn btn-secondary btn-lg me-2">
                   Cancelar
-                </button>
-                <button type="button" className="btn btn-primary btn-lg">
+                </Link>
+                <button type="submit" className="btn btn-primary btn-lg">
                   Guardar
                 </button>
               </div>
