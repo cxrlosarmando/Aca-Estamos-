@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import './Educacion.css';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
-import { useNavigate, Link } from'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAlert } from '../../../Efectos/useAlert'
 
 const Educacion = () => {
+
+  //Definicion de constantes
   const [perfil, setPerfil] = useState(null);
   const [NivelEducacional, setNivelEducacional] = useState('');
   const [InstitucionEducativa, setInstitucionEducativa] = useState('');
@@ -12,6 +15,20 @@ const Educacion = () => {
   const [FechaFinalizacion, setFechaFinalizacion] = useState('');
   const [Titulo, setTitulo] = useState('');
   const [Descripcion, setDescripcion] = useState('');
+
+  //Usa el hook useAlert para obtener el estado y la API de alerta
+  const [alertState, alertApi] = useAlert("alertsElement");
+
+  //Definicion de funciones
+  const showAlert = () => {
+
+    let hasError = true;
+
+    if (!NivelEducacional || !InstitucionEducativa || !titulo || !FechaInicio || !FechaFinalizacion || !Descripcion) {
+      alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
+      hasError = false;
+    }
+  }
 
   useEffect(() => {
     const obtenerPerfil = async () => {
@@ -80,47 +97,54 @@ NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, 
                 <label htmlFor="nivelEducacional" className="form-label">
                   Nivel educacional:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. Universitario completo" defaultValue={perfil && perfil.NivelEducacional} onChange={(e) => setNivelEducacional(e.target.value)}/>
+                <input type="text" className="form-control" placeholder="Ej. Universitario completo" defaultValue={perfil && perfil.NivelEducacional} onChange={(e) => setNivelEducacional(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="institucionEducativa" className="form-label">
                   Institución Educativa:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. Universidad Austral" defaultValue={perfil && perfil.InstitucionEducativa} onChange={(e) => setInstitucionEducativa(e.target.value)}/>
+                <input type="text" className="form-control" placeholder="Ej. Universidad Austral" defaultValue={perfil && perfil.InstitucionEducativa} onChange={(e) => setInstitucionEducativa(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="titulo" className="form-label">
                   Título:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. MQQ" defaultValue={perfil && perfil.Titulo} onChange={(e) => setTitulo(e.target.value)}/>
+                <input type="text" className="form-control" placeholder="Ej. MQQ" defaultValue={perfil && perfil.Titulo} onChange={(e) => setTitulo(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="fechaInicio" className="form-label">
                   Fecha Inicio:
                 </label>
-                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaInicio} onChange={(e) => setFechaInicio(e.target.value)}/>
+                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaInicio} onChange={(e) => setFechaInicio(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="fechaFin" className="form-label">
                   Fecha finalización:
                 </label>
-                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaFinalizacion} onChange={(e) => setFechaFinalizacion(e.target.value)}/>
+                <input type="date" className="form-control" placeholder="DD/MM/AAAA" defaultValue={perfil && perfil.FechaFinalizacion} onChange={(e) => setFechaFinalizacion(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="descripcionCargo" className="form-label">
                   Descripción:
                 </label>
-                <input type="text" className="form-control" placeholder="Agrega una descripción de la carrera" defaultValue={perfil && perfil.Descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
+                <input type="text" className="form-control" placeholder="Agrega una descripción de la carrera" defaultValue={perfil && perfil.Descripcion} onChange={(e) => setDescripcion(e.target.value)} />
               </div>
               <div className="d-flex justify-content-center">
                 <Link to="/Actualizar-Cv" type="button" className="btn btn-secondary btn-lg me-2">
                   Cancelar
                 </Link>
-                <button type="submit" className="btn btn-primary btn-lg">
+                <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>
                   Guardar
                 </button>
               </div>
             </form>
+
+            {/* Muestra la alerta si está visible */}
+            {alertState.visible && (
+              <div id="alertsElement" className={`alert ${alertState.type}`}>
+                {alertState.message}
+              </div>
+            )}
           </div>
         </div>
       </div>
