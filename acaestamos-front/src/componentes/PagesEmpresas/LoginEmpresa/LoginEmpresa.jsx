@@ -49,7 +49,7 @@ const LoginEmpresa = () => {
     return (
         <div className='container-fluid'>
             <main className="d-flex justify-content-center vh-100 w-100">
-                <div className="row" id="login-user">
+                <div className="row" id="login-emp">
                     <div className="col align-self-center">
                         <div className="border p-4"
                             style={{ borderRadius: '10px', backgroundColor: 'rgba(131, 166, 55, 0.15)', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
