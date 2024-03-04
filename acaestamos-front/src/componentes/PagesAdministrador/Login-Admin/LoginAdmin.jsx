@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import './LoginAdmin.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from '../../../Efectos/useAlert';
 
@@ -43,11 +43,18 @@ function LoginAdmin() {
 
   return (
     <div className='container-fluid'>
-      <main className="d-flex justify-content-center vh-100 w-100">
-        <div className="row rowCR" id="login-admin">
+      <main className="d-flex justify-content-center ">
+        <div className="row" id="login-admin " style={{ margin: '50px auto', maxWidth: '800px' }}>
           <div className="col align-self-center">
             <div className="border p-4"
-              style={{ borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+              style={{
+                margin: '50px auto',
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                borderRadius: '10px',
+                borderStyle: 'solid',
+                borderColor: 'black',
+                boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+              }}>
               <h2 className="text-center">Inicio de sesión de Administrador</h2>
               <div style={{ width: '600px', margin: 'auto' }} className="from-ingreso">
                 <form onSubmit={handleSubmit}>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './RegistroAdmin.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from '../../../Efectos/useAlert';
 
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -56,7 +56,7 @@ const RegistroAdmin = () => {
 
   return (
     <>
-      <main className="d-flex justify-content-center">
+      <main className="d-flex justify-content-center ">
         <div style={{ margin: '50px auto', maxWidth: '800px' }}>
           <div
             className="border p-4"
@@ -70,7 +70,7 @@ const RegistroAdmin = () => {
             }}
           >
             <h2 className="text-center">Registro de Administrador</h2>
-            <div className="form-Registro">
+            <div  className="form-Registro" style={{ width: '600px', margin: 'auto' }} >
               <form onSubmit={handleSubmit} id="registroForm">
                 <div className="col-md-12">
                   <label htmlFor="validationCustom02" className="form-label">Correo</label>
@@ -94,7 +94,7 @@ const RegistroAdmin = () => {
                   </div>
                 )}
                 <div className="row" id="contendor-registro">
-                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registroEmp" onClick={showAlert}>Registrarse</button>
+                  <button type="submit" className="btn btn-primary btn-lg" id="btn-registroAdm" onClick={showAlert}>Registrarse</button>
                 </div>
               </form>
             </div>

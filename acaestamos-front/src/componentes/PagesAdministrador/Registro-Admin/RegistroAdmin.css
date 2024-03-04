@@ -1,25 +1,7 @@
-#boton-registro {
-
-    margin-top: 10%;
-    background-color: #D95525;
-    border-color: #D95525;
-}
-
-.google-icon {
-    display: flex;
-    justify-content: center;
-    padding-top: 4%;
-    margin-top: 3%;
-}
-
-.img-google {
-    width: 60px;
-    height: 60px;
-}
 
 
 
-#boton-registroEmp{
-    margin-top: 20px;
-    background-color: rgb(48, 134, 134);
+#btn-registroAdm {
+    margin-top: 40px;
+    
 }
