@@ -24,7 +24,7 @@ const Educacion = () => {
 
     let hasError = true;
 
-    if (!NivelEducacional || !InstitucionEducativa || !titulo || !FechaInicio || !FechaFinalizacion || !Descripcion) {
+    if (!NivelEducacional || !InstitucionEducativa || !Titulo || !FechaInicio || !FechaFinalizacion || !Descripcion) {
       alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
       hasError = false;
     }
