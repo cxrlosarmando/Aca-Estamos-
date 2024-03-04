@@ -57,11 +57,13 @@ const FormularioEmpresa = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const rutRegex = /^[0-9]{1,2}\.[0-9]{3}\.[0-9]{3}-[0-9kK]{1}$/;
     if (!rutRegex.test(RutEmpresa)) {
       alertApi.show('El Rut no cumple con el formato requerido', 'error');
       return;
     }
+
     // Se efectua la alerta de contenido vacio o incorrecto
     if (showAlert() === true) {
       try {
@@ -95,6 +97,7 @@ const FormularioEmpresa = () => {
             style={{ margin: '50px auto', backgroundColor: 'rgba(131, 166, 55, 0.15)', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
             <h2 className="text-center">Datos Registro</h2>
             <div className="from-Registro">
+
               <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="row">
@@ -196,4 +199,4 @@ const FormularioEmpresa = () => {
   )
 }
 
-export default FormularioEmpresa
+export default FormularioEmpresa;

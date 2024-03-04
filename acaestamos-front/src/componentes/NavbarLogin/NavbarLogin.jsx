@@ -68,7 +68,9 @@ const NavbarLogin = () => {
                                                 <Link to="/cursos" className="nav-link">Cursos</Link>
                                             </li>
                                             <li>
+                                                <li className="nav-item">
                                                 <Link to="/Nosotros" className="nav-link">Nosotros</Link>
+                                            </li>
                                             </li>
                                             <li className="nav-item">
                                                 <Link to="/Contacto" className="nav-link">Contacto</Link>
