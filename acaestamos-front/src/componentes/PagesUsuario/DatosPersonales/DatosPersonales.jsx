@@ -125,24 +125,25 @@ const DatosPersonales = () => {
 
     return (
         <>
-            <form onSubmit={GuardarPerfil} encType="multipart/form-data">
-                <div id="Datos-personales" style={{ margin: '50px auto', maxWidth: '800px' }}>
-                    <div
-                        className="border p-4"
-                        style={{
-                            fontFamily: 'Poppins-Regular',
-                            margin: '50px auto 50px auto',
-                            backgroundColor: 'rgba(4, 157, 217, 0.15)',
-                            borderRadius: '10px',
-                            borderStyle: 'solid',
-                            borderColor: 'black',
-                            boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
-                        }}
-                    >
-                        <h2 style={{ fontFamily: 'Heavitas' }} className="text-center">
-                            Datos Personales
-                        </h2>
-                        <div className="form-Datospersonales">
+
+            <div id="Datos-personales" style={{ margin: '50px auto', maxWidth: '800px' }}>
+                <div
+                    className="border p-4"
+                    style={{
+                        fontFamily: 'Poppins-Regular',
+                        margin: '50px auto 50px auto',
+                        backgroundColor: 'rgba(4, 157, 217, 0.15)',
+                        borderRadius: '10px',
+                        borderStyle: 'solid',
+                        borderColor: 'black',
+                        boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+                    }}
+                >
+                    <h2 style={{ fontFamily: 'Heavitas' }} className="text-center">
+                        Datos Personales
+                    </h2>
+                    <div className="form-Datospersonales">
+                        <form onSubmit={GuardarPerfil} encType="multipart/form-data">
                             <div className="row">
                                 <div className="col">
                                     <div className="mb-3">
@@ -225,17 +226,18 @@ const DatosPersonales = () => {
                                     Guardar
                                 </button>
                             </div>
-                        </div>
+                        </form>
+
+                        {/* Muestra la alerta si está visible */}
+                        {alertState.visible && (
+                            <div id="alertsElement" className={`alert ${alertState.type}`}>
+                                {alertState.message}
+                            </div>
+                        )}
                     </div>
                 </div>
-            </form>
+            </div>
 
-            {/* Muestra la alerta si está visible */}
-            {alertState.visible && (
-                <div id="alertsElement" className={`alert ${alertState.type}`}>
-                    {alertState.message}
-                </div>
-            )}
         </>
     );
 };
