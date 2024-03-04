@@ -96,7 +96,7 @@ const DatosPersonales = () => {
             formData.append('ImagenPerfil', ImagenPerfil);
 
             const userId = getUserId();
-            const response = await client.post(`http://localhost:3000/Guardar-Perfil/${userId}`, formData);
+            const response = await client.post(`http://localhost:3000/Guardar-Datos-Personales/${userId}`, formData);
 
             console.log(response.data);
             navigate('/Perfil-Usuario')

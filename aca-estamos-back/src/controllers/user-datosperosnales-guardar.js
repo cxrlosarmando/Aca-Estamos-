@@ -24,19 +24,6 @@ const GuardarPerfil = async (req, res) => {
       Rubro: req.body.Rubro,
       Disponibilidad: req.body.Disponibilidad === "on",
       LinkedIn: req.body.LinkedIn,
-      NivelEducacional: req.body.NivelEducacional,
-      InstitucionEducativa: req.body.InstitucionEducativa,
-      Titulo: req.body.Titulo,
-      FechaInicio: req.body.FechaInicio,
-      FechaFinalizacion: req.body.FechaFinalizacion,
-      Descripcion: req.body.Descripcion,
-      Cargo: req.body.Cargo,
-      TipoEmpleo: req.body.TipoEmpleado,
-      NombredelaEmp: req.body.NombredelaEmp,
-      FechaExpInicio: req.body.FechaExpInicio,
-      FechaExpFin: req.body.FechaExpFin,
-      CheckCargo: req.body.CheckCargo,
-      DescripcionCargo: req.body.DescripcionCargo
 
     };
 

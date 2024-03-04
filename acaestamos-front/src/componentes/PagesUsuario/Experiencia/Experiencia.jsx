@@ -44,20 +44,13 @@ const Experiencia = () => {
     
       const navigate = useNavigate();
     
-      const GuardarPerfil = async (e) => {
+      const GuardarExperiencia = async (e) => {
         e.preventDefault();
         try {
-          const formData = new FormData();
-          formData.append('Cargo', Cargo);
-          formData.append('TipodeEmpleo', TipoEmpleo);
-          formData.append('FechaExpInicio', FechaExpInicio);
-          formData.append('NombredelaEmp', NombredelaEmp);
-          formData.append('FechaExpFin', FechaExpFin);
-          formData.append('CheckCargo', CheckCargo);
-          formData.append('DescripcionCargo', DescripcionCargo);
-    
-          const userId = getUserId();
-          const response = await client.post(`http://localhost:3000/Guardar-Perfil/${userId}`, formData);
+            const userId = getUserId();
+            const response = await client.post(`http://localhost:3000/Guardar-Experiencia/${userId}`, {
+        Cargo, TipoEmpleo, FechaExpInicio, NombredelaEmp, FechaExpFin, CheckCargo, DescripcionCargo
+    });
     
           console.log(response.data);
           navigate('/Actualizar-Cv')
@@ -76,7 +69,7 @@ const Experiencia = () => {
                         Experiencia Laboral
                     </h2>
                     <div style={{ width: '80%', margin: 'auto' }} className="form-Experiencia">
-                        <form onSubmit={GuardarPerfil} encType="multipart/form-data">
+                        <form onSubmit={GuardarExperiencia}>
                             <div className="mb-3">
                                 <label htmlFor="cargo" className="form-label">
                                     Cargo:
@@ -87,7 +80,7 @@ const Experiencia = () => {
                                 <label htmlFor="tipoEmpleo" className="form-label">
                                     Tipo de empleo:
                                 </label>
-                                <input type="text" className="form-control" id="tipoEmpleo" placeholder="Part Time" defaultValue={perfil && perfil.TipoEmpleo} onChange={(e) => TipoEmpleo(e.target.value)}/>
+                                <input type="text" className="form-control" id="tipoEmpleo" placeholder="Part Time" defaultValue={perfil && perfil.TipoEmpleo} onChange={(e) => setTipoEmpleo(e.target.value)}/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="nombreEmpresa" className="form-label">
@@ -120,7 +113,7 @@ const Experiencia = () => {
                                 <input type="text" className="form-control" id="descripcionCargo" placeholder="Agrega una descripción del cargo" defaultValue={perfil && perfil.DescripcionCargo} onChange={(e) => setDescripcionCargo(e.target.value)}/>
                             </div>
                             <div className="d-flex justify-content-center">
-                                <Link to="/Actualizar-Cv "type="button" className="btn btn-secondary btn-lg me-2">
+                                <Link to="/Actualizar-Cv"type="button" className="btn btn-secondary btn-lg me-2">
                                     Cancelar
                                 </Link>
                                 <button type="submit" className="btn btn-primary btn-lg">

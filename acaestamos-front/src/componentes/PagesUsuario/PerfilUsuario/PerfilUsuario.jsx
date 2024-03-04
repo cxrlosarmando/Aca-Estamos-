@@ -1,6 +1,6 @@
 import './PerfilUsuario.css';
 import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
 

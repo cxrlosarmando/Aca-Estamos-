@@ -10,7 +10,7 @@ const Educacion = () => {
   const [InstitucionEducativa, setInstitucionEducativa] = useState('');
   const [FechaInicio, setFechaInicio] = useState('');
   const [FechaFinalizacion, setFechaFinalizacion] = useState('');
-  const [titulo, setTitulo] = useState('');
+  const [Titulo, setTitulo] = useState('');
   const [Descripcion, setDescripcion] = useState('');
 
   useEffect(() => {
@@ -42,20 +42,13 @@ const Educacion = () => {
 
   const navigate = useNavigate();
 
-  const GuardarPerfil = async (e) => {
+  const GuardarEducacion = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append('NivelEducacional', NivelEducacional);
-      formData.append('InstitucionEducativa', InstitucionEducativa);
-      formData.append('FechaInicio', FechaInicio);
-      formData.append('FechaFinalizacion', FechaFinalizacion);
-      formData.append('Titulo', titulo);
-      formData.append('Descripcion', Descripcion);
-
       const userId = getUserId();
-      const response = await client.post(`http://localhost:3000/Guardar-Perfil/${userId}`, formData);
-
+      const response = await client.post(`http://localhost:3000/Guardar-Educacion/${userId}`, {
+NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, Descripcion
+    });
       console.log(response.data);
       navigate('/Actualizar-Cv')
     } catch (error) {
@@ -82,7 +75,7 @@ const Educacion = () => {
             Educación
           </h2>
           <div style={{ width: '80%', margin: 'auto' }} className="form-Educacion">
-            <form onSubmit={GuardarPerfil} encType="multipart/form-data">
+            <form onSubmit={GuardarEducacion}>
               <div className="mb-3">
                 <label htmlFor="nivelEducacional" className="form-label">
                   Nivel educacional:

@@ -9,7 +9,7 @@ const userSchema = new Schema({
   FechaNacimiento: Date,
   Email: String,
   Password: String,
-  //Actualizar perfil//
+  //Datos personales//
   EstadoCivil: String,
   Rubro: String,
   LinkedIn: String,
@@ -33,7 +33,13 @@ const userSchema = new Schema({
   FechaExpInicio: Date,
   FechaExpFin: Date,
   CheckCargo: String,
-  DescripcionCargo: String
+  DescripcionCargo: String,
+  //Perfil cv//
+  NombreCV: String,
+  TitularCV: String,
+  AcercadeCV: String,
+  ConocimientosCV: String,
+  CursosCV: String,
 }, { 
     timestamps: true,
     versionKey: false
