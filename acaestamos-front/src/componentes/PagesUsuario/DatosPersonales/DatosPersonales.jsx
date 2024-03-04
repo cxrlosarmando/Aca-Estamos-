@@ -3,9 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import './DatosPersonales.css';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
+import { useAlert } from '../../../Efectos/useAlert'
 
 
 const DatosPersonales = () => {
+
+    //Definicion de constantes
     const [perfil, setPerfil] = useState(null);
     const [Nombre, setNombre] = useState('');
     const [Apellido, setApellido] = useState('');
@@ -20,27 +23,41 @@ const DatosPersonales = () => {
     const [ArchivoPDF4, setArchivoPDF4] = useState(null);
     const [ImagenPerfil, setImagenPerfil] = useState(null);
 
+    //Usa el hook useAlert para obtener el estado y la API de alerta
+    const [alertState, alertApi] = useAlert("alertsElement");
+
+    //Definicion de funciones
+    const showAlert = () => {
+
+        let hasError = true;
+
+        if (!Nombre || !Apellido || !Telefono || !Rubro || !EstadoCivil || !LinkedIn) {
+            alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
+            hasError = false;
+        }
+    };
+
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
 
-                const response = await client.get(`/Obtener-Perfil/${getUserId()}`) 
+                const response = await client.get(`/Obtener-Perfil/${getUserId()}`)
                 setPerfil(response?.data);
 
-                if(response?.data?.Nombre) setNombre(response?.data?.Nombre);
-                if(response?.data?.Apellido) setApellido(response?.data?.Apellido);
-                if(response?.data?.Telefono) setTelefono(response?.data?.Telefono);
-                if(response?.data?.EstadoCivil) setEstadoCivil(response?.data?.EstadoCivil);
-                if(response?.data?.LinkedIn) setLinkedIn(response?.data?.LinkedIn);
-                if(response?.data?.Rubro) setRubro(response?.data?.Rubro);
-                if(response?.data?.Disponibilidad) setDisponibilidad(response?.data?.Disponibilidad);
-                if(response?.data?.ArchivoPDF1) setArchivoPDF1(response?.data?.ArchivoPDF1);
-                if(response?.data?.ArchivoPDF2) setArchivoPDF2(response?.data?.ArchivoPDF2);
-                if(response?.data?.ArchivoPDF3) setArchivoPDF3(response?.data?.ArchivoPDF3);
-                if(response?.data?.ArchivoPDF4) setArchivoPDF4(response?.data?.ArchivoPDF4);
-                if(response?.data?.ImagenPerfil) setImagenPerfil(response?.data?.ImagenPerfil);
+                if (response?.data?.Nombre) setNombre(response?.data?.Nombre);
+                if (response?.data?.Apellido) setApellido(response?.data?.Apellido);
+                if (response?.data?.Telefono) setTelefono(response?.data?.Telefono);
+                if (response?.data?.EstadoCivil) setEstadoCivil(response?.data?.EstadoCivil);
+                if (response?.data?.LinkedIn) setLinkedIn(response?.data?.LinkedIn);
+                if (response?.data?.Rubro) setRubro(response?.data?.Rubro);
+                if (response?.data?.Disponibilidad) setDisponibilidad(response?.data?.Disponibilidad);
+                if (response?.data?.ArchivoPDF1) setArchivoPDF1(response?.data?.ArchivoPDF1);
+                if (response?.data?.ArchivoPDF2) setArchivoPDF2(response?.data?.ArchivoPDF2);
+                if (response?.data?.ArchivoPDF3) setArchivoPDF3(response?.data?.ArchivoPDF3);
+                if (response?.data?.ArchivoPDF4) setArchivoPDF4(response?.data?.ArchivoPDF4);
+                if (response?.data?.ImagenPerfil) setImagenPerfil(response?.data?.ImagenPerfil);
 
-                
+
             } catch (error) {
                 if (error.response) {
                     console.error('Error en la respuesta:', error.response.data);
@@ -55,7 +72,7 @@ const DatosPersonales = () => {
         obtenerPerfil();
     }, []);
 
-    
+
     const navigate = useNavigate();
 
     const handleArchivoPDF1Change = (e) => {
@@ -204,7 +221,7 @@ const DatosPersonales = () => {
                                 <Link to="/Perfil-Usuario" type="button" className="btn btn-secondary btn-lg me-2">
                                     Cancelar
                                 </Link>
-                                <button type="submit" className="btn btn-primary btn-lg">
+                                <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>
                                     Guardar
                                 </button>
                             </div>
@@ -212,6 +229,13 @@ const DatosPersonales = () => {
                     </div>
                 </div>
             </form>
+
+            {/* Muestra la alerta si está visible */}
+            {alertState.visible && (
+                <div id="alertsElement" className={`alert ${alertState.type}`}>
+                    {alertState.message}
+                </div>
+            )}
         </>
     );
 };
