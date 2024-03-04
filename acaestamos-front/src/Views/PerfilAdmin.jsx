@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../Efectos/Loading';
 import LayoutAdmin from "../Layout/LayoutAdmin"
 import FiltroAdmin from '../componentes/Filtros/FiltroAdmin/FiltroAdmin';
+import PanelAdmin from '../componentes/PagesAdministrador/PanelAdmin/PanelAdmin';
 
 const PerfilAdmin = () => {
   const [loading, setLoading] = useState(true);
