@@ -12,7 +12,7 @@ const EditarCv = () => {
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
-                const token = localStorage.getItem('token');
+                
                 const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
                 setPerfil(response.data);
             } catch (error) {

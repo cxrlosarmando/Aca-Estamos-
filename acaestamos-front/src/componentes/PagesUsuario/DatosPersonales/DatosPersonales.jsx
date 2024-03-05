@@ -34,6 +34,8 @@ const DatosPersonales = () => {
         if (!Nombre || !Apellido || !Telefono || !Rubro || !EstadoCivil || !LinkedIn) {
             alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
             hasError = false;
+            
+            return hasError;
         }
     };
 
@@ -172,7 +174,7 @@ const DatosPersonales = () => {
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="RubroOpciones" className="form-label">
-                                            Opciones de Disponibilidad:
+                                            Rubro de interes:
                                         </label>
                                         <select className="form-select" id="disponibilidadOpciones" value={Rubro} onChange={(e) => setRubro(e.target.value)}>
                                             <option value="Administración">Administración</option>
@@ -231,7 +233,7 @@ const DatosPersonales = () => {
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="disponibilidadOpciones" className="form-label">
-                                            Opciones de Disponibilidad:
+                                            Disponibilidad:
                                         </label>
                                         <select className="form-select" id="disponibilidadOpciones" value={Disponibilidad} onChange={(e) => setDisponibilidad(e.target.value)}>
                                             <option value="Disponible">Disponible</option>

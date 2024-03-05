@@ -11,7 +11,7 @@ const EditInfoEmpresa = () => {
     useEffect(() => {
         const obtenerPerfilE = async () => {
             try {
-                const token = localStorage.getItem('token');
+                
                 const response = await client.get(`http://localhost:3000/Obtener-Perfil-Empresa/${getUserId()}`);
                 setPerfilE(response.data);
             } catch (error) {

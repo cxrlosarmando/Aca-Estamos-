@@ -17,10 +17,14 @@ const GuardarPerfilE = async (req, res) => {
       return res.status(404).json({ mensaje: "empresa no encontrado" });
     }
     const nuevosDatos = {
+      NombreEmpresa: req.body.NombreEmpresa,
+      RutEmpresa: req.body.RutEmpresa,
       Acercade: req.body.Acercade,
       Trayectoria: req.body.Trayectoria,
+      Rubro: req.body.Rubro,
       Numeroempleados: req.body.Numeroempleados,
       CorreoContacto: req.body.CorreoContacto,
+      Telefono: req.body.Telefono,
       Ubicacion: req.body.Ubicacion,
       LinkedIn: req.body.LinkedIn,
 

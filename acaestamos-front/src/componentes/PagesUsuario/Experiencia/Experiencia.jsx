@@ -28,6 +28,8 @@ const Experiencia = () => {
         if (!Cargo || !TipoEmpleo || !NombredelaEmp || !FechaExpInicio || !FechaExpFin || !DescripcionCargo) {
             alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
             hasError = false;
+
+            return hasError;
         }
     }
 
