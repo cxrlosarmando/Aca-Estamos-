@@ -42,7 +42,7 @@ const PerfilUsuario = () => {
                         <div className="col-perfil2">
                             <h3 className="Nombre-perfil">{perfil && perfil.Nombre} {perfil && perfil.Apellido}</h3>
                             <ul className="Elementos-perfil">
-                                <li><span>Disponibilidad: {perfil && perfil.Disponibilidad ? 'Inmediata' : 'No Inmediata'}</span></li>
+                                <li><span>Disponibilidad: {perfil && perfil.Disponibilidad}</span></li>
                                 <li><span>Estado Civil: {perfil && perfil.EstadoCivil} ｜ Fecha de nacimiento:  {perfil && moment(perfil.FechaNacimiento).locale('es').format('DD [de] MMMM [de] YYYY')}</span></li>
                                 <li><span>LinkedIn: {perfil && perfil.LinkedIn}</span></li>
                                 <li><span>Rubro de interés: {perfil && perfil.Rubro}</span></li>

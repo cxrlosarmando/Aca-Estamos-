@@ -104,7 +104,7 @@ const DatosPersonales = () => {
             formData.append('Telefono', Telefono);
             formData.append('EstadoCivil', EstadoCivil);
             formData.append('Rubro', Rubro);
-            formData.append('Disponibilidad', Disponibilidad ? 'Inmediata' : 'No Inmediata');
+            formData.append('Disponibilidad', Disponibilidad);
             formData.append('LinkedIn', LinkedIn);
             formData.append('ArchivoPDF1', ArchivoPDF1);
             formData.append('ArchivoPDF2', ArchivoPDF2);
@@ -171,22 +171,73 @@ const DatosPersonales = () => {
                                         <input type="text" className="form-control" id="estadoCivil" placeholder="Ejemplo: Soltero" defaultValue={perfil && perfil.EstadoCivil} onChange={(e) => setEstadoCivil(e.target.value)} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="Descripcion" className="form-label">
-                                            Rubro de interes:
+                                        <label htmlFor="RubroOpciones" className="form-label">
+                                            Opciones de Disponibilidad:
                                         </label>
-                                        <input type="text" className="form-control" id="Acerca de" placeholder="Rubro al cual desea emplearse" defaultValue={perfil && perfil.Rubro} onChange={(e) => setRubro(e.target.value)} />
+                                        <select className="form-select" id="disponibilidadOpciones" value={Rubro} onChange={(e) => setRubro(e.target.value)}>
+                                            <option value="Administración">Administración</option>
+                                            <option value="Agropecuaria">Agropecuaria</option>
+                                            <option value="Alimenticia">Alimenticia</option>
+                                            <option value="Arquitectura">Arquitectura</option>
+                                            <option value="Artesanal">Artesanal</option>
+                                            <option value="Automotriz">Automotriz</option>
+                                            <option value="Banca/Financiera">Banca/Financiera</option>
+                                            <option value="Bioteconología">Bioteconología</option>
+                                            <option value="Call-Center">Call-Center</option>
+                                            <option value="Comercio">Comercio</option>
+                                            <option value="Comercio exterior">Comercio exterior</option>
+                                            <option value="Comunicaciones">Comunicaciones</option>
+                                            <option value="Construcción">Construcción</option>
+                                            <option value="Consultoría">Consultoría</option>
+                                            <option value="Correo">Correo</option>
+                                            <option value="Defensa">Defensa</option>
+                                            <option value="Diseño">Diseño</option>
+                                            <option value="Editorial">Editorial</option>
+                                            <option value="Educación">Educación</option>
+                                            <option value="Energía">Energía</option>
+                                            <option value="Entretenimiento">Entretenimiento</option>
+                                            <option value="Farmacéutica">Farmacéutica</option>
+                                            <option value="Ferroviaria">Ferroviaria</option>
+                                            <option value="Financiera">Financiera</option>
+                                            <option value="Gastronomía">Gastronomía</option>
+                                            <option value="Hotelería/Turismo">Hotelería/Turismo</option>
+                                            <option value="Imprenta">Imprenta</option>
+                                            <option value="Industrial">Industrial</option>
+                                            <option value="Información e investigación">Información e investigación</option>
+                                            <option value="Informática">Informática</option>
+                                            <option value="Ingeniería">Ingeniería</option>
+                                            <option value="Inmobiliaria">Inmobiliaria</option>
+                                            <option value="Internet">Internet</option>
+                                            <option value="Laboratorio">Laboratorio</option>
+                                            <option value="Legal">Legal</option>
+                                            <option value="Logística/Transporte">Logística/Transporte</option>
+                                            <option value="Manufactura">Manufactura</option>
+                                            <option value="Medios">Medios</option>
+                                            <option value="Publicidad">Publicidad</option>
+                                            <option value="Recursos Humanos">Recursos Humanos</option>
+                                            <option value="Retail">Retail</option>
+                                            <option value="Salud">Salud</option>
+                                            <option value="Seguridad">Seguridad</option>
+                                            <option value="Seguros">Seguros</option>
+                                            <option value="Servicios">Servicios</option>
+                                            <option value="Tecnología">Tecnología</option>
+                                            <option value="Telecomunicaciones">Telecomunicaciones</option>
+                                            <option value="Textil">Textil</option>
+                                            <option value="Transporte">Transporte</option>
+                                            <option value="Turismo">Turismo</option>
+                                            <option value="Veterinaria">Veterinaria</option>
+                                            <option value="Otros">Otros</option>
+                                        </select>
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="disponibilidad" className="form-label">
-                                            Disponibilidad:
+                                        <label htmlFor="disponibilidadOpciones" className="form-label">
+                                            Opciones de Disponibilidad:
                                         </label>
-                                        <div className="form-check">
-                                            <input className="form-check-input" type="checkbox" id="disponibilidad" checked={Disponibilidad}
-                                                onChange={(e) => setDisponibilidad(e.target.checked)} />
-                                            <label className="form-check-label" htmlFor="disponibilidad" >
-                                                Inmediata
-                                            </label>
-                                        </div>
+                                        <select className="form-select" id="disponibilidadOpciones" value={Disponibilidad} onChange={(e) => setDisponibilidad(e.target.value)}>
+                                            <option value="Disponible">Disponible</option>
+                                            <option value="En Busqueda Activa">En Busqueda Activa</option>
+                                            <option value="No Disponible">No disponible</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="col">
