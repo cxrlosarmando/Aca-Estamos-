@@ -5,39 +5,33 @@ import axios from 'axios';
 
 
 const SolicitudesUsuarios = () => {
-    const [solicitudes, setSolicitudes] = useState([]); //Dos estructura de data
+    const [solicitudes, setSolicitudes] = useState([]);
 
-  /*   useEffect(() => {
+    useEffect(() => {
         axios.get('http://localhost:3000/Usuario')
             .then(res => {
-                setSolicitudes(res.data.data);
-                console.log(res);
-
+                const solicitudesNoAceptadas = res.data.data.filter(solicitud => !solicitud.aceptado);
+                setSolicitudes(solicitudesNoAceptadas);
             })
             .catch(err => {
                 console.error('Error en obtener la información', err);
             });
-    },[]); */
-    
-    function handleSumbit(_id) {
-        const conf = window.confirm('Seguro que quieres Aceptar este usuario?')
-        
+    }, []);
+
+    function handleSubmit(_id) {
+        const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
         if (conf) {
-            axios.put(`http://localhost:3000/Usuarios-Aceptados/` + _id)
-            .then(res => {
-                alert('Usuario Aceptado')
-                const newSolicitudes = solicitudes.filter(record => record._id!== _id);
-                axios.get('http://localhost:3000/Usuarios-Aceptados')
+            axios.put(`http://localhost:3000/Usuarios-Aceptados/${_id}`)
                 .then(res => {
-                    setRecords(res.data.data);
-                    console.log(res);
+                    alert('Usuario Aceptado');
+                    const newSolicitudes = solicitudes.filter(solicitud => solicitud._id !== _id);
+                    setSolicitudes(newSolicitudes);
                 })
-                console.log(res);
-                setSolicitudes(newSolicitudes);
-            });
+                .catch(err => {
+                    console.error('Error al aceptar usuario', err);
+                });
         }
     };
-
 
 
 
@@ -59,7 +53,7 @@ const SolicitudesUsuarios = () => {
                                 <p><a href="#">Ver perfil de usuario</a></p>
                             </div>
                             <div className="soliciu-col3">
-                                <button onClick={e => handleSumbit (solicitud._id)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
+                                <button onClick={e => handleSubmit (solicitud._id)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
                                 <button id="btn-Denegar" className="btn btn-secondary btn-lg">Denegar</button>
                             </div>
                         </div>

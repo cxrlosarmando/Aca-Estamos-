@@ -77,7 +77,7 @@ const VisualizacionUsuarios = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        records.map((record) => (
+                                        records.map((record, index) => (
                                             <tr key={index}>
                                                 <td>{record.Nombre}</td>
                                                 <td>{record.Apellido}</td>
