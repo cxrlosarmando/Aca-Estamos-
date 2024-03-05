@@ -20,6 +20,9 @@ const GuardarPerfilcv = require('../controllers/user-perfilcv-guardar');
 const AceptarUsuario = require('../controllers/aceptar-usuario')
 const ListaUsuariosAceptados = require('../controllers/admin-list-user')
 
+//COSAS PARA ADMINISTRADOR 
+const RegAdm = require('../controllers/adm-create');
+const LogAdm = require('../controllers/adm-login');
 // Multer para Usuarios
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -42,6 +45,15 @@ router.post('/Guardar-Experiencia/:id', GuardarExperiencia);
 router.post('/Guardar-Educacion/:id', GuardarEducacion);
 router.post('/Guardar-PerfilCV/:id', GuardarPerfilcv);
 router.get('/Obtener-Perfil/:id', ObtenerPerfil);
+
+
+
+
+//Router   ADMINISTRADOR //
+router.post('/Registro-Admin', RegAdm);
+router.post('/Login-Admin', LogAdm);
+
+
 
 //Router   EMPRESAS //
 

@@ -56,7 +56,7 @@ function LoginAdmin() {
                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
               }}>
               <h2 className="text-center">Inicio de sesión de Administrador</h2>
-              <div style={{ width: '600px', margin: 'auto' }} className="from-ingreso">
+              <div className="from-ingreso">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="correoInicioSesion" className="form-label">Ingrese email</label>

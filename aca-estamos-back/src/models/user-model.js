@@ -38,8 +38,12 @@ const userSchema = new Schema({
   NombreCV: String,
   TitularCV: String,
   AcercadeCV: String,
-  ConocimientosCV: String,
-  CursosCV: String,
+  ConocimientosCV: {
+    type: [String], 
+  },
+  CursosCV: {
+    type: [String], 
+  },
 }, { 
     timestamps: true,
     versionKey: false

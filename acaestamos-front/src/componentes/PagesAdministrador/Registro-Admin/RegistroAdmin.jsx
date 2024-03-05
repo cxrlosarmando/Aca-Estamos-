@@ -41,7 +41,7 @@ const RegistroAdmin = () => {
     // Se efectua la alerta de contenido vacío o incorrecto
     if (showAlert()) {
       try {
-        const response = await axios.post('http://localhost:3000/Crear-Admin', {
+        const response = await axios.post('http://localhost:3000/Registro-Admin', {
           Email,
           Password,
         });
@@ -56,10 +56,11 @@ const RegistroAdmin = () => {
 
   return (
     <>
-      <main className="d-flex justify-content-center ">
-        <div style={{ margin: '50px auto', maxWidth: '800px' }}>
+      <main className="d-flex justify-content-center " >
+        <div  style={{ margin: '50px auto', maxWidth: '800px' }} >
           <div
-            className="border p-4"
+            className="border p-4" 
+            
             style={{
               margin: '50px auto',
               backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -70,8 +71,8 @@ const RegistroAdmin = () => {
             }}
           >
             <h2 className="text-center">Registro de Administrador</h2>
-            <div  className="form-Registro" style={{ width: '600px', margin: 'auto' }} >
-              <form onSubmit={handleSubmit} id="registroForm">
+            <div  className="form-Registro" >
+              <form onSubmit={handleSubmit} id="registroAdmForm">
                 <div className="col-md-12">
                   <label htmlFor="validationCustom02" className="form-label">Correo</label>
                   <input type="text" className="form-control" id="correo" placeholder="example@Email.com" value={Email} onChange={(e) => setEmail(e.target.value)} />
