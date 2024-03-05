@@ -9,5 +9,5 @@ const AdminSchema = new Schema({
     versionKey: false
 });
 
-const Admin = mongoose.model('Empresa', AdminSchema);
+const Admin = mongoose.model('Admin', AdminSchema);
 module.exports = Admin;

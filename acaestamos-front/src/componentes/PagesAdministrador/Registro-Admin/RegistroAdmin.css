@@ -1,7 +1,10 @@
 
+#login-adm{
+    margin-right:50% ;
+    margin-left: 1%;
+    width: 99%;
+}
+.form-RegistroAdm {
 
-
-#btn-registroAdm {
-    margin-top: 40px;
-    
+    width: 10%;
 }
