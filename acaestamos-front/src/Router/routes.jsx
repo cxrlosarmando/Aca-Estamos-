@@ -29,6 +29,11 @@ import AdminVisualizacionEmpresas from '../Views/AdminVisualizacionEmpresas';
 import AdminSolicitudesEmpresas from '../Views/AdminSolicitudesEmpresas';
 import AdminSolicitudesUsuarios from '../Views/AdminSolicitudesUsuarios';
 
+//ADMIN COSAS
+import RegFormularioAdmin from '../Views/RegisterFormAdmin';
+import LogFormularioAdmin from '../Views/LoginFormularioAdm';
+
+
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -60,6 +65,10 @@ const router = createBrowserRouter([
   { path: '/Solicitudes-Usuarios-Admin', element: <AdminSolicitudesUsuarios /> },
   { path: '/Solicitudes-Empresas-Admin', element: <AdminSolicitudesEmpresas />},
   { path: '/Visualizacion-Empresas-Admin', element: <AdminVisualizacionEmpresas /> },
+
+  //REGISTRO Y LOGIN DE ADMIN
+  { path: '/Registro-Admin', element: <RegFormularioAdmin /> },
+  { path: '/Login-Admin', element: <LogFormularioAdmin /> },
 ]);
 
 export default router;
