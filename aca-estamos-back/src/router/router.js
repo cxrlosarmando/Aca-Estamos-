@@ -18,6 +18,10 @@ const GuardarPerfilcv = require('../controllers/user-perfilcv-guardar');
 const GuardarPerfilE = require('../controllers/emp-perfil-guardar');
 const ObtenerPerfilE = require('../controllers/emp-perfil-obtener');
 
+// Controllers Administrador
+const AceptarUsuario = require('../controllers/aceptar-usuario')
+const ListaUsuariosAceptados = require('../controllers/admin-list-user')
+
 //COSAS PARA ADMINISTRADOR 
 const RegAdm = require('../controllers/adm-create');
 const LogAdm = require('../controllers/adm-login');
@@ -64,7 +68,9 @@ router.get('/Obtener-Perfil-Empresa/:id', ObtenerPerfilE);
 router.post('/Guardar-Perfil-Empresa/:id', upload.fields([
     { name: 'ImagenEmpresa', maxCount: 1 }]), GuardarPerfilE );
 
-
+//Router   ADMINISTRADOR //
+router.put('/Usuarios-Aceptados/:id', AceptarUsuario);
+router.get('/Usuarios-Aceptados/', ListaUsuariosAceptados);
 
 
 // Router ruta protegida

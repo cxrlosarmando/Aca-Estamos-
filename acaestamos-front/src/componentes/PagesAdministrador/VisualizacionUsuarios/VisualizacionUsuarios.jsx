@@ -12,7 +12,7 @@ const VisualizacionUsuarios = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3000/Usuario')
+        axios.get('http://localhost:3000/Usuarios-Aceptados')
             .then(res => {
                 setRecords(res.data.data);
                 console.log(res);

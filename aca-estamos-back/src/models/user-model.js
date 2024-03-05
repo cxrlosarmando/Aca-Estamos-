@@ -9,7 +9,6 @@ const userSchema = new Schema({
   FechaNacimiento: Date,
   Email: String,
   Password: String,
-  //Datos personales//
   EstadoCivil: String,
   Rubro: String,
   LinkedIn: String,
@@ -19,14 +18,12 @@ const userSchema = new Schema({
   ArchivoPDF3: String,
   ArchivoPDF4: String,
   ImagenPerfil: String,
-  //Educacion agregado//
   NivelEducacional: String,
   InstitucionEducativa: String,
   Titulo: String,
   FechaInicio: Date,
   FechaFinalizacion: Date,
   Descripcion: String,
-  // Experiencia //
   Cargo: String,
   TipoEmpleo: String,
   NombredelaEmp: String,
@@ -34,7 +31,6 @@ const userSchema = new Schema({
   FechaExpFin: Date,
   CheckCargo: String,
   DescripcionCargo: String,
-  //Perfil cv//
   NombreCV: String,
   TitularCV: String,
   AcercadeCV: String,
@@ -44,6 +40,10 @@ const userSchema = new Schema({
   CursosCV: {
     type: [String], 
   },
+  aceptado: {
+    type: Boolean,
+    default: false
+  }
 }, { 
     timestamps: true,
     versionKey: false

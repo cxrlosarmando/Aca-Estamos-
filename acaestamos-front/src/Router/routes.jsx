@@ -36,39 +36,42 @@ import LogFormularioAdmin from '../Views/LoginFormularioAdm';
 
 
 const router = createBrowserRouter([
+  //Routers de landing
   { path: '/', element: <Home /> },
   { path: '/Cursos', element: <ErrorComponent statusCode={404} /> },
   { path: '/Nosotros', element: <Nosotrosview /> },
   { path: '/Contacto', element: <Contactoview /> },
   { path: '/Login', element: <Login /> },
-  { path: '/Login-Empresas', element: <LoginFormularioE /> },
   { path: '/Pruebas', element: <App /> },
   { path: '/Test', element: <Test /> },
+  //Routers para usuarios
   { path: '/Login-form', element: <LoginFormulario /> },
   { path: '/Perfil-Usuario', element: <PerfilUsers /> },
   { path: '/OlvidoContra', element: <OlvidoContra/>},
   { path: '/Registro', element: <Register /> },
   { path: '/Registro-form', element: <RegisterForm /> },
-  { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
   { path: '/Actualizar-Datos-Perfil', element: <ActualizarDatosPerfil /> },
   { path: '/Actualizar-Cv', element: <CrearCV /> },
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
+  //Router empresas
+  { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
+  { path: '/Login-Empresas', element: <LoginFormularioE /> },
   { path: '/Perfil-Empresa', element: <PerfilEmpresas /> },
   { path: '/Edit-Info-Empresa', element: <Editinfoempresas /> },
   { path: '/Edit-Perfil-Empresa', element: <EditPerfilE /> },
   { path: '/Info-Empresa', element: <Empresasinfoview /> },
+  //Acá empieza enrutadoadmin
   { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
   { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
   { path: '/Solicitudes-Usuarios-Admin', element: <AdminSolicitudesUsuarios /> },
   { path: '/Solicitudes-Empresas-Admin', element: <AdminSolicitudesEmpresas />},
   { path: '/Visualizacion-Empresas-Admin', element: <AdminVisualizacionEmpresas /> },
-
-  //REGISTRO Y LOGIN DE ADMIN
   { path: '/Registro-Admin', element: <RegFormularioAdmin /> },
   { path: '/Login-Admin', element: <LogFormularioAdmin /> },
+
 ]);
 
 export default router;
