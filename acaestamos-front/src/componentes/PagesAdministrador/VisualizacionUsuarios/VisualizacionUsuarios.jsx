@@ -12,7 +12,7 @@ const VisualizacionUsuarios = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3000/Usuario')
+        axios.get('http://localhost:3000/Usuarios-Aceptados')
             .then(res => {
                 setRecords(res.data.data);
                 console.log(res);
@@ -77,7 +77,7 @@ const VisualizacionUsuarios = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        records.map((record, index) => (
+                                        records.map((record) => (
                                             <tr key={index}>
                                                 <td>{record.Nombre}</td>
                                                 <td>{record.Apellido}</td>

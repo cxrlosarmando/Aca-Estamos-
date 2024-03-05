@@ -16,6 +16,10 @@ const GuardarExperiencia = require('../controllers/user-experiencia-guardar');
 const GuardarEducacion = require('../controllers/user-educacion-guardar');
 const GuardarPerfilcv = require('../controllers/user-perfilcv-guardar');
 
+// Controllers Administrador
+const AceptarUsuario = require('../controllers/aceptar-usuario')
+const ListaUsuariosAceptados = require('../controllers/admin-list-user')
+
 // Multer para Usuarios
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -45,7 +49,8 @@ router.post('/Crear-Empresa', CrearEmpresa);
 router.post('/Login-empresa', LoginEmpresa);
 
 //Router   ADMINISTRADOR //
-
+router.put('/Usuarios-Aceptados/:id', AceptarUsuario);
+router.get('/Usuarios-Aceptados/', ListaUsuariosAceptados);
 
 
 // Router ruta protegida
