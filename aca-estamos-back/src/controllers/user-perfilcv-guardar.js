@@ -8,6 +8,7 @@ const GuardarPerfilcv = async (req, res) => {
     if (!usuario) {
       return res.status(404).json({ mensaje: "Usuario no encontrado" });
     }
+
     const nuevosDatos = {
       NombreCV: req.body.NombreCV,
       TitularCV: req.body.TitularCV,
@@ -17,7 +18,6 @@ const GuardarPerfilcv = async (req, res) => {
     };
 
     Object.assign(usuario, nuevosDatos);
-
 
     await usuario.save();
 

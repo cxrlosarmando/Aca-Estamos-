@@ -1,6 +1,8 @@
 import './PerfilUsuario.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import moment from 'moment';
+import 'moment/locale/es';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
 
@@ -10,12 +12,9 @@ const PerfilUsuario = () => {
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
-
-                const token = localStorage.getItem('token'); 
-
+                const token = localStorage.getItem('token');
                 const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
                 setPerfil(response.data);
-                
             } catch (error) {
                 if (error.response) {
                     console.error('Error en la respuesta:', error.response.data);
@@ -43,10 +42,10 @@ const PerfilUsuario = () => {
                         <div className="col-perfil2">
                             <h3 className="Nombre-perfil">{perfil && perfil.Nombre} {perfil && perfil.Apellido}</h3>
                             <ul className="Elementos-perfil">
-                                <li><a>Disponibilidad: {perfil && perfil.Disponibilidad ? 'Inmediata' : 'No Inmediata'}</a></li>
-                                <li><a>Estado Civil: {perfil && perfil.EstadoCivil}  ｜ Fecha de nacimiento: {perfil && perfil.FechaNacimiento}</a></li>
-                                <li><a>LinkedIn: {perfil && perfil.LinkedIn}</a></li>
-                                <li><a>Rubro de interes: {perfil && perfil.Rubro}</a></li>
+                                <li><span>Disponibilidad: {perfil && perfil.Disponibilidad ? 'Inmediata' : 'No Inmediata'}</span></li>
+                                <li><span>Estado Civil: {perfil && perfil.EstadoCivil} ｜ Fecha de nacimiento:  {perfil && moment(perfil.FechaNacimiento).locale('es').format('DD [de] MMMM [de] YYYY')}</span></li>
+                                <li><span>LinkedIn: {perfil && perfil.LinkedIn}</span></li>
+                                <li><span>Rubro de interés: {perfil && perfil.Rubro}</span></li>
                             </ul>
                         </div>
                         <div className="col-perfil3">
@@ -62,7 +61,6 @@ const PerfilUsuario = () => {
                         <div className="row">
                             <div className="col">
                                 <h3 style={{ marginTop: '40px' }}>Archivos Adjuntos</h3>
-
                                 <ul className="certificadoslist">
                                     <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF1}`} download target='_blank'>CV</a></li>
                                     <li><a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download target='_blank'>Certificados de Estudios</a></li>
