@@ -15,10 +15,14 @@ const isAuth = require('../middlewares/validar-jwt');
 const GuardarExperiencia = require('../controllers/user-experiencia-guardar');
 const GuardarEducacion = require('../controllers/user-educacion-guardar');
 const GuardarPerfilcv = require('../controllers/user-perfilcv-guardar');
+const GuardarPerfilE = require('../controllers/emp-perfil-guardar');
+const ObtenerPerfilE = require('../controllers/emp-perfil-obtener');
 
 //COSAS PARA ADMINISTRADOR 
 const RegAdm = require('../controllers/adm-create');
 const LogAdm = require('../controllers/adm-login');
+
+
 // Multer para Usuarios
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -51,10 +55,14 @@ router.post('/Login-Admin', LogAdm);
 
 
 
+
 //Router   EMPRESAS //
 
 router.post('/Crear-Empresa', CrearEmpresa);
 router.post('/Login-empresa', LoginEmpresa);
+router.get('/Obtener-Perfil-Empresa/:id', ObtenerPerfilE);
+router.post('/Guardar-Perfil-Empresa/:id', upload.fields([
+    { name: 'ImagenEmpresa', maxCount: 1 }]), GuardarPerfilE );
 
 
 
