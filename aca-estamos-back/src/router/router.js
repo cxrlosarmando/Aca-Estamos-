@@ -47,7 +47,7 @@ router.get('/Obtener-Perfil/:id', ObtenerPerfil);
 
 //Router   ADMINISTRADOR //
 router.post('/Registro-Admin', RegAdm);
-router.post('/Login-Admin', isAuth, LogAdm);
+router.post('/Login-Admin', LogAdm);
 
 
 

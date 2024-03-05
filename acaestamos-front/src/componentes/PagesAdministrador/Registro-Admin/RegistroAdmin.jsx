@@ -41,7 +41,7 @@ const RegistroAdmin = () => {
     // Se efectua la alerta de contenido vacío o incorrecto
     if (showAlert()) {
       try {
-        const response = await axios.post('http://localhost:3000/Crear-Admin', {
+        const response = await axios.post('http://localhost:3000/Registro-Admin', {
           Email,
           Password,
         });
