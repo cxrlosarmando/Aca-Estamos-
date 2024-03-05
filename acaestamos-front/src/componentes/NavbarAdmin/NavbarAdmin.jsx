@@ -19,7 +19,7 @@ const NavbarAdmin = () => {
                                 <div className="container-fluid" style={{ backgroundColor: '#83A637' }} id="greenContainer">
 
                                     <div>
-                                        <Link to="/" className="navbar-brand">
+                                        <Link to="/Perfil-Admin" className="navbar-brand">
                                             <img src="/Logos/logo2.0.png" alt="Bootstrap" width="100" height="100" id="hire" />
                                         </Link>                                    </div>
                                     <div className="ml-4" id="hashtagDelInicio">
@@ -66,8 +66,10 @@ const NavbarAdmin = () => {
                         <div className="container-fluid" style={{ backgroundColor: '#f2f7ea' }}>
                             <nav className="navbar navbar-expand-lg  ">
                                 <div className="container-fluid justify-content-center " style={{ backgroundColor: '#f2f7ea' }}>
+                                    <Link to="/Perfil-Admin" style={{ textDecoration: 'none', color:'black'}}>
                                     <h2 className='AdminNav'> Administrador Acá Estamos
                                     </h2>
+                                    </Link>
                                 </div>
                             </nav>
                         </div>
