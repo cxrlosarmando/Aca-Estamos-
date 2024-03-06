@@ -48,7 +48,7 @@ const VisualizacionCv = () => {
                           </div>
                           <div className="contInfo">
                               <p>{perfil && perfil.AcercadeCV ? perfil && perfil.AcercadeCV : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
-                              <a href="#" style={{ color: "black" }}><u> Cert. antecedentes</u></a>
+                              <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF3}`} download target='_blank' style={{ color: "black" }}><u> Cert. antecedentes</u></a>
                           </div>
                           <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
                               <div className="col-10">
@@ -80,7 +80,7 @@ const VisualizacionCv = () => {
                                               <li key={index}>{item}</li>
                                           ))}
                                   </ul>
-                                  <a href="#" style={{ color: "black" }}><u> Cert. cursos</u></a>
+                                  <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF4}`} download target='_blank' style={{ color: "black" }}><u> Cert. cursos</u></a>
                               </div>
                           </div>
                           <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
@@ -119,7 +119,7 @@ const VisualizacionCv = () => {
                               </div>
                           </div>
                           <div className="container-fluid contInfo">
-                              <a href="#" style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
+                          <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download target='_blank' style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
                           </div>
                       </div>
                   </div>
