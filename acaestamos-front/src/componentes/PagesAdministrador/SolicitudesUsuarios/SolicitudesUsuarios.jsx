@@ -2,10 +2,11 @@ import React from 'react';
 import './SolicitudesUsuarios.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 
 const SolicitudesUsuarios = () => {
     const [solicitudes, setSolicitudes] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         axios.get('http://localhost:3000/Usuario')
@@ -14,11 +15,29 @@ const SolicitudesUsuarios = () => {
                 setSolicitudes(solicitudesNoAceptadas);
             })
             .catch(err => {
-                console.error('Error en obtener la información', err);
+                console.error('Error en obtener la informaciÃ³n', err);
             });
-    }, []);
+    }, [searchTerm]);
 
-    function handleSubmit(_id) {
+    const filteredSolicitudes = solicitudes.filter(solicitud => {
+        return (
+            solicitud.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            solicitud.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            solicitud.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            solicitud.Email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            solicitud.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            solicitud.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Rubro?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Disponibilidad?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.FechaNacimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.NivelEducacional?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.InstitucionEducativa?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Titulo?.toLowerCase().includes(searchTerm.toLowerCase())
+            // solicitud.ConocimientosCV?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    });
+
+    function handleSubmit(_id,Email) {
         const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
         if (conf) {
             axios.put(`http://localhost:3000/Usuarios-Aceptados/${_id}`)
@@ -31,19 +50,31 @@ const SolicitudesUsuarios = () => {
                     console.error('Error al aceptar usuario', err);
                 });
         }
+        if (conf) {
+            axios.post(`http://localhost:3000/Enviar-Correo/${Email}`)
+            .then(res => {
+                console.log('si')
+            .catch (err => {
+                console.error('Error al enviar correo', err);
+            });    
+            const destinatarioCorreo = res.data.data.Email;
+            })}
     };
 
 
 
     return (
         <>
+            <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <div className="container-fluid">
                 <h1 className='tituloUsuarioSolicitud' style={{ fontFamily: 'Heavitas', fontSize: '30px' }}>Solicitudes de nuevos perfiles</h1>
             </div>
-
-            {solicitudes.map((solicitud) => (
+            
+            {filteredSolicitudes.map((solicitud) => (
                 <main className="solicitudesusuarios" key={solicitud._id}>
-                    <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
+                    
+                    <div className="container-fluid bigbox" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%', height:'200px' }}>
+                    
                         <div className="soliciu-row">
                             <div className="soliciu-col1">
                                 <img src={`http://localhost:3000/uploads/${solicitud.ImagenPerfil}`} alt="Imagen perfil" id="user-perfil" /> {/* Reemplaza '/ruta/imagen' con la ruta correcta */}
@@ -60,26 +91,6 @@ const SolicitudesUsuarios = () => {
                     </div>
                 </main>
             ))}
-
-            {/* <main className="solicitudesusuarios">
-                <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
-                    <div className="soliciu-row">
-                        <div className="soliciu-col1">
-                            <img src="../Img/user-perfil.png" alt="Imagen perfil" id="user-perfil" />
-                        </div>
-                        <div className="soliciu-col2">
-                            <h3 className="Usuario">Nombre de usuario</h3>
-                            <p><a href="#">Ver perfil de usuario</a></p>
-                        </div>
-                        <div className="soliciu-col3">
-                            <button id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
-                            <button id="btn-Denegar" className="btn btn-secondary btn-lg">Denegar</button>
-                        </div>
-                    </div>
-                </div>
-            </main> */}
-
-            
 
         </>
     );
