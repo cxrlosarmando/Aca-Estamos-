@@ -37,28 +37,22 @@ const SolicitudesUsuarios = () => {
         );
     });
 
-    function handleSubmit(_id,Email) {
+    function handleSubmit(_id,email) {
         const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
         if (conf) {
             axios.put(`http://localhost:3000/Usuarios-Aceptados/${_id}`)
-                .then(res => {
+                .then(async res => {
                     alert('Usuario Aceptado');
                     const newSolicitudes = solicitudes.filter(solicitud => solicitud._id !== _id);
                     setSolicitudes(newSolicitudes);
+                    await axios.post(`http://localhost:3000/Enviar-Correo/${email}`);
+
                 })
                 .catch(err => {
                     console.error('Error al aceptar usuario', err);
                 });
         }
-        if (conf) {
-            axios.post(`http://localhost:3000/Enviar-Correo/${Email}`)
-            .then(res => {
-                console.log('si')
-            .catch (err => {
-                console.error('Error al enviar correo', err);
-            });    
-            const destinatarioCorreo = res.data.data.Email;
-            })}
+       
     };
 
 
@@ -84,7 +78,7 @@ const SolicitudesUsuarios = () => {
                                 <p><a href="#">Ver perfil de usuario</a></p>
                             </div>
                             <div className="soliciu-col3">
-                                <button onClick={e => handleSubmit (solicitud._id)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
+                                <button onClick={e => handleSubmit (solicitud._id, solicitud.Email)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
                                 <button id="btn-Denegar" className="btn btn-secondary btn-lg">Denegar</button>
                             </div>
                         </div>
