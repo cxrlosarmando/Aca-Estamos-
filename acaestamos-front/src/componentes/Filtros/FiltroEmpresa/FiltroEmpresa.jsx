@@ -10,6 +10,13 @@ const FiltroEmpresa = () => {
         event.preventDefault();
     };
 
+    // contador de los años de experiencia
+    const [valorRango, setValorRango] = useState(0);
+    // contador de los años de experiencia
+    const handleInput = (event) => {
+        setValorRango(event.target.value);
+    };
+
     return (
         <>
 
@@ -39,7 +46,9 @@ const FiltroEmpresa = () => {
                 <div className="col-md-2 filtros-col">
                     <select className="form-select" aria-label="Default select example">
                         <option value="" disabled selected hidden>Disponibilidad</option>
-                        <option value="1">Inmediata</option>
+                        <option value="1">Disponible</option>
+                        <option value="2">En búsqueda activa</option>
+                        <option value="3">No disponible</option>
 
                     </select>
                 </div>
@@ -52,14 +61,14 @@ const FiltroEmpresa = () => {
                         </select>
                     </div>
 
-                <div className="col-2 filtros-col">
+                {/* <div className="col-2 filtros-col">
                         <select className="form-select" aria-label="Default select example">
                             <option value="" disabled selected hidden>Modalidad</option>
                             <option value="1">Online</option>
                             <option value="2">Presencial</option>
                             <option value="3">Hibrido</option>
                         </select>
-                    </div>
+                    </div> */}
 
                 <div className="col-md-2 filtros-col">
                     <select className="form-select" aria-label="Default select example">
@@ -121,7 +130,8 @@ const FiltroEmpresa = () => {
 
                 <div className="col-md-3 filtros-col">
                     <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
-                    <input type="range" className="form-range" style={{ paddingBottom: '25px' }} min="0" max="20" id="customRange2" />
+                    <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="20" id="customRange2" value={valorRango} onChange={handleInput} />
+                    <h6 className="contador">{valorRango}</h6>
                 </div>
                 {/* </div> */}
             </div>

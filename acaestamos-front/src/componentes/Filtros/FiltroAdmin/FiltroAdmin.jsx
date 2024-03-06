@@ -1,13 +1,21 @@
 import React, { useState} from "react"
 import "./FiltroAdmin.css"
 
-const FiltroAdmin = () => {
+const FiltroAdmin = ({ searchTerm, setSearchTerm }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = (event) => {
         setIsVisible(!isVisible);
         event.preventDefault();
     };
+
+    // contador de los años de experiencia
+    const [valorRango, setValorRango] = useState(0);
+    // contador de los años de experiencia
+    const handleInput = (event) => {
+        setValorRango(event.target.value);
+    };
+
     return (
         <>
 
@@ -15,7 +23,7 @@ const FiltroAdmin = () => {
                 <form className="d-flex container-fluid" role="search" id="buscar-ofertas">
                     {/* <div className='d-flex col-10 align-items-center buscadorLupa' style={{ marginRight: '0px' }}> */}
                     <div className='col-9 me-4 searchButton' >
-                        <input className="form-control " type="search" placeholder="Buscador..." aria-label="Buscador..." style={{ height: '48px' }} />
+                        <input value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="form-control " type="search" placeholder="Buscador..." aria-label="Buscador..." style={{ height: '48px' }} />
                     </div>
                     <div className='col-1  divLupa'>
                         <button className="btn btn-outline-success" >
@@ -109,7 +117,8 @@ const FiltroAdmin = () => {
 
                     <div className="col-md-3 filtros-col">
                         <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
-                        <input type="range" className="form-range" style={{ paddingBottom: '25px' }} min="0" max="20" id="customRange2" />
+                        <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="20" id="customRange2" value={valorRango} onChange={handleInput} />
+                        <h6 className="contador">{valorRango}</h6>
                     </div>
                     {/* </div> */}
                 </div>
