@@ -18,7 +18,7 @@ const SolicitudesUsuarios = () => {
             });
     }, []);
 
-    function handleSubmit(_id) {
+    function handleSubmit(_id,Email) {
         const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
         if (conf) {
             axios.put(`http://localhost:3000/Usuarios-Aceptados/${_id}`)
@@ -31,6 +31,15 @@ const SolicitudesUsuarios = () => {
                     console.error('Error al aceptar usuario', err);
                 });
         }
+        if (conf) {
+            axios.post(`http://localhost:3000/Enviar-Correo/${Email}`)
+            .then(res => {
+                console.log('si')
+            .catch (err => {
+                console.error('Error al enviar correo', err);
+            });    
+            const destinatarioCorreo = res.data.data.Email;
+            })}
     };
 
 

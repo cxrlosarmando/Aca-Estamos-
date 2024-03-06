@@ -79,6 +79,14 @@ router.get("/ruta-protegida", isAuth, (req, res) => {
 }
 );
 
+
+
+//rutar enviar correo 
+
+const nodemailer = require('../controllers/nodemailer');
+router.post('/Enviar-Correo/:email', nodemailer);
+
+
 module.exports = router;
 
 
