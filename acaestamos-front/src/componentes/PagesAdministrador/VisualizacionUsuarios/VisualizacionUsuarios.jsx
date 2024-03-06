@@ -8,6 +8,7 @@ import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 const VisualizacionUsuarios = () => {
     const [records, setRecords] = useState([]); //Dos estructura de data, una constante y una función 
     const [searchTerm, setSearchTerm] = useState('');
+    const [filteredRecords, setFilteredRecords] = useState([]);
     const navegate = useNavigate();
 
 
@@ -21,21 +22,32 @@ const VisualizacionUsuarios = () => {
             .catch(err => {
                 console.error('Error fetching data:', err);
             });
-    }, []);
+    }, [searchTerm]);
 
-    const filteredRecords = records.filter(record => {
-        console.log(record);
-        return (
-            record.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            record.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            record.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            record.Email.toLowerCase().includes(searchTerm.toLowerCase())||
-            record.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase())||
-            record.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    });
+    useEffect(() => {
+        const filteredRecords = records.filter(record => {
+            // console.log(record);
+            return (
+                record.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Telefono?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Rubro?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Disponibilidad?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.FechaNacimiento?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.NivelEducacional?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.InstitucionEducativa?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                record.Titulo?.toLowerCase().includes(searchTerm.toLowerCase())
+                // record.ConocimientosCV?.toLowerCase().includes(searchTerm.toLowerCase())
 
-    function handleSumbit(_id) {
+            );
+        });
+        setFilteredRecords(filteredRecords);
+    }, [searchTerm, records]);
+
+    function handleSubmit(_id) {
         const conf = window.confirm('Seguro que quieres Elimnar a este Usuario?')
 
         if (conf) {
@@ -58,11 +70,13 @@ const VisualizacionUsuarios = () => {
 
     return (
         <>
-
+            <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             {/* Inicio tabla con la lista de usuarios registrados */}
+
             <main className="d-flex ">
                 <div className="container-fluid mb-5 w-60 p-4 h-50">
-                <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
+
                     <div className="container-fluid">
                         <div className="row">
                             <h3 className="userList">Todos los usuarios</h3>
@@ -97,7 +111,7 @@ const VisualizacionUsuarios = () => {
                                                 <td>{record.Rut}</td>
                                                 <td>{record.Email}</td>
                                                 <td>
-                                                    <button onClick={e => handleSumbit(record._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
+                                                    <button onClick={e => handleSubmit(record._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
                                                 </td>
                                             </tr>
                                         ))
@@ -108,6 +122,7 @@ const VisualizacionUsuarios = () => {
                         </div>
 
                     </div>
+
                 </div>
             </main >
         </>

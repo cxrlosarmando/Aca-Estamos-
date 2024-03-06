@@ -26,7 +26,14 @@ const SolicitudesUsuarios = () => {
             solicitud.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solicitud.Email.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solicitud.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            solicitud.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())
+            solicitud.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Rubro?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Disponibilidad?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.FechaNacimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.NivelEducacional?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.InstitucionEducativa?.toLowerCase().includes(searchTerm.toLowerCase())||
+            solicitud.Titulo?.toLowerCase().includes(searchTerm.toLowerCase())
+            // solicitud.ConocimientosCV?.toLowerCase().includes(searchTerm.toLowerCase())
         );
     });
 

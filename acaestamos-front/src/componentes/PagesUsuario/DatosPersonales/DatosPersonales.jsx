@@ -237,7 +237,7 @@ const DatosPersonales = () => {
                                         </label>
                                         <select className="form-select" id="disponibilidadOpciones" value={Disponibilidad} onChange={(e) => setDisponibilidad(e.target.value)}>
                                             <option value="Disponible">Disponible</option>
-                                            <option value="En Busqueda Activa">En búsqueda activa</option>
+                                            <option value="En búsqueda activa">En búsqueda activa</option>
                                             <option value="No Disponible">No disponible</option>
                                         </select>
                                     </div>
