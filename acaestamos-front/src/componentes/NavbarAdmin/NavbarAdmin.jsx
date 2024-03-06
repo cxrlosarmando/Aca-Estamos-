@@ -27,11 +27,7 @@ const NavbarAdmin = () => {
                                         <p className="mb-0">#RencaParticipa</p>
                                     </div>
                                     <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4 secondNav" style={{ justifyContent: 'flex-end' }} id="botonesnav">
-                                        <div className="bell">
-                                            <Link to="/Login" className="btn btn-m  me-2 userButton" type="button" style={{ backgroundColor: '#D97D0D', color: 'white' }}>
-                                                <i className="fa-solid fa-bell"></i>
-                                            </Link>
-                                        </div>
+                                      
 
                                         <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                             <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
