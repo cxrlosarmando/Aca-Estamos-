@@ -50,9 +50,7 @@ const NavbarEmpresa = () => {
                                     </div>
                                     <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4 secondNav" style={{ justifyContent: 'flex-end' }} id="botonesnav">
                                         <div className="position-relative">
-                                            <button className="btn btn-m me-2 userButton" type="button" style={{ backgroundColor: '#D97D0D' }}>
-                                                <a href="#"><i className="fa-solid fa-bell"></i></a>
-                                            </button>
+                                           
                                             <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                                 <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
