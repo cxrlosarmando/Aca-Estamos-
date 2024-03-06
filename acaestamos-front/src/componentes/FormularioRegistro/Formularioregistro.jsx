@@ -102,61 +102,66 @@ const Formularioregistro = () => {
             <div className="form-Registro">
               <form onSubmit={handleSubmit} id="registroForm">
                 <div className="row">
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom01" className="form-label">Nombre</label>
-                    <input type="text" className="form-control" id="nombre" placeholder="Nombre" value={Nombre} onChange={(e) => setNombre(e.target.value)} />
-                    <div className="valid-feedback">Looks good!</div>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom01" className="form-label">Nombre</label>
+                      <input type="text" className="form-control" id="nombre" placeholder="Nombre" value={Nombre} onChange={(e) => setNombre(e.target.value)} />
+                      <div className="valid-feedback">Looks good!</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Apellido</label>
+                      <input type="text" className="form-control" id="apellido" placeholder="Apellido" value={Apellido} onChange={(e) => setApellido(e.target.value)} />
+                      <div className="valid-feedback">Looks good!</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Teléfono</label>
+                      <input type="text" className="form-control" id="telefono" placeholder="+59 999999999" value={Telefono} onChange={(e) => setTelefono(e.target.value)} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Rut</label>
+                      <input type="text" className="form-control" id="rut" placeholder="11.111.111-1" value={Rut} onChange={(e) => setRut(formatRut(e.target.value))} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div className="col-md-6 mb-3">
+                      <label htmlFor="FechaNacimiento" className="form-label">Fecha Nacimiento:</label>
+                      <input type="date" className="form-control" id="FechaNacimiento" placeholder="DD/MM/AAAA" value={FechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Correo</label>
+                      <input type="text" className="form-control" id="correo" placeholder="example@Email.com" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Repetir Correo</label>
+                      <input type="text" className="form-control" id="repetirCorreo" placeholder="example@Email.com" value={Reemail} onChange={(e) => setReemail(e.target.value)} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Contraseña</label>
+                      <input type="password" className="form-control" id="contraseña" placeholder="*********" value={Password} onChange={(e) => setPassword(e.target.value)} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
+                    <div className="col-md-6">
+                      <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
+                      <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
+                      <div className="invalid-feedback">Please choose a username.</div>
+                    </div>
                   </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Apellido</label>
-                    <input type="text" className="form-control" id="apellido" placeholder="Apellido" value={Apellido} onChange={(e) => setApellido(e.target.value)} />
-                    <div className="valid-feedback">Looks good!</div>
+
+                  <div className="row" id="contendor-registro">
+                    {/* Muestra la alerta si está visible */}
+                    {alertState.visible && (
+                      <div id="alertsElement" className={`alert ${alertState.type}`} style={{marginTop: '5%'}}>
+                        {alertState.message}
+                      </div>
+                    )}
+                    <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                   </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Teléfono</label>
-                    <input type="text" className="form-control" id="telefono" placeholder="+59 999999999" value={Telefono} onChange={(e) => setTelefono(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Rut</label>
-                    <input type="text" className="form-control" id="rut" placeholder="11.111.111-1" value={Rut} onChange={(e) => setRut(formatRut(e.target.value))} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6 mb-3">
-                    <label htmlFor="FechaNacimiento" className="form-label">Fecha Nacimiento:</label>
-                    <input type="date" className="form-control" id="FechaNacimiento" placeholder="DD/MM/AAAA" value={FechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} />
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Correo</label>
-                    <input type="text" className="form-control" id="correo" placeholder="example@Email.com" value={Email} onChange={(e) => setEmail(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Repetir Correo</label>
-                    <input type="text" className="form-control" id="repetirCorreo" placeholder="example@Email.com" value={Reemail} onChange={(e) => setReemail(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Contraseña</label>
-                    <input type="password" className="form-control" id="contraseña" placeholder="*********" value={Password} onChange={(e) => setPassword(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
-                    <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
-                    <div className="invalid-feedback">Please choose a username.</div>
-                  </div>
-                </div> <br />
-                {/* Muestra la alerta si está visible */}
-                {alertState.visible && (
-                  <div id="alertsElement" className={`alert ${alertState.type}`}>
-                    {alertState.message}
-                  </div>
-                )}
-                <div className="row" id="contendor-registro">
-                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                 </div>
-                <div className="col">
+                <div className="row">
+                  <div className="col">
+                  </div>
                 </div>
               </form>
             </div>

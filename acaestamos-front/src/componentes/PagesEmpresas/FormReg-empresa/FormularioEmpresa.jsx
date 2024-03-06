@@ -170,23 +170,22 @@ const FormularioEmpresa = () => {
                       <div className="invalid-feedback">Please choose a username.</div>
                     </div>
                   </div>
-                </div> <br />
-                {/* Muestra la alerta si está visible */}
-                {alertState.visible && (
-                  <div id="alertsElement" className={`alert ${alertState.type}`}>
-                    {alertState.message}
+
+                  <div className="row" id="contendor-registro">
+                    {/* Muestra la alerta si está visible */}
+                    {alertState.visible && (
+                      <div id="alertsElement" className={`alert ${alertState.type}`} style={{marginTop: '5%'}}>
+                        {alertState.message}
+                      </div>
+                    )}
+                    <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                   </div>
-                )}
-                <div className="row" id="contendor-registro">
-                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                 </div>
                 <div className="row">
                   <div className="col">
                   </div>
                 </div>
               </form>
-
-
             </div>
           </div>
         </div>
