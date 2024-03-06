@@ -167,12 +167,16 @@ const FormularioEmpresa = () => {
                     <div className="col-md-6">
                       <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
                       <input type="password" className="form-control" id="validationCustom02" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
-                      <div className="invalid-feedback">
-                        Please choose a username.
-                      </div>
+                      <div className="invalid-feedback">Please choose a username.</div>
                     </div>
                   </div>
-                </div>
+                </div> <br />
+                {/* Muestra la alerta si está visible */}
+                {alertState.visible && (
+                  <div id="alertsElement" className={`alert ${alertState.type}`}>
+                    {alertState.message}
+                  </div>
+                )}
                 <div className="row" id="contendor-registro">
                   <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                 </div>
@@ -185,12 +189,7 @@ const FormularioEmpresa = () => {
                 </div>
               </form>
 
-              {/* Muestra la alerta si está visible */}
-              {alertState.visible && (
-                <div id="alertsElement" className={`alert ${alertState.type}`}>
-                  {alertState.message}
-                </div>
-              )}
+
             </div>
           </div>
         </div>
