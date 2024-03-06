@@ -174,7 +174,7 @@ const DatosPersonales = () => {
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="RubroOpciones" className="form-label">
-                                            Rubro de interes:
+                                            Rubro de interés:
                                         </label>
                                         <select className="form-select" id="disponibilidadOpciones" value={Rubro} onChange={(e) => setRubro(e.target.value)}>
                                             <option value="Administración">Administración</option>
@@ -237,7 +237,7 @@ const DatosPersonales = () => {
                                         </label>
                                         <select className="form-select" id="disponibilidadOpciones" value={Disponibilidad} onChange={(e) => setDisponibilidad(e.target.value)}>
                                             <option value="Disponible">Disponible</option>
-                                            <option value="En Busqueda Activa">En Busqueda Activa</option>
+                                            <option value="En búsqueda activa">En búsqueda activa</option>
                                             <option value="No Disponible">No disponible</option>
                                         </select>
                                     </div>

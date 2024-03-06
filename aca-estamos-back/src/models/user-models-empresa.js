@@ -17,6 +17,10 @@ const EmpresaSchema = new Schema({
     Ubicacion: String,
     LinkedIn: String,
     ImagenEmpresa: String,
+    aceptado: {
+        type: Boolean,
+        default: false
+    }
 }, { 
     timestamps: true,
     versionKey: false

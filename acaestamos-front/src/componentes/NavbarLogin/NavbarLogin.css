@@ -66,6 +66,13 @@ header {
       margin-left: 20px;
     }
   }
+
+  @media(min-width: 519px) and (max-width: 766px) {
+    .userButton {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
   
   
   @media(min-width: 767px) and (max-width:812px) {

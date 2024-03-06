@@ -43,7 +43,7 @@ const NavbarAdmin = () => {
                                                 <Link to="/Visualizacion-Empresas-Admin" className="dropdown-item" >
                                                     <i className="fa-solid fa-building" style={{ color: "#D95525" }}></i> <b>Empresas</b>
                                                 </Link>
-                                                <Link to="/Solicitudes-Usuarios-Admin" className="dropdown-item" href="#"><i className="fa-solid fa-user" style={{ color: "#049DD9" }}></i> <b>Postulantes</b></Link>
+                                                <Link to="/Visualizacion-Usuario-Admin" className="dropdown-item" href="#"><i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i> <b>Postulantes</b></Link>
 
 
                                                 <a className="dropdown-item" href="#"><i className="fa-solid fa-toggle-on" style={{ color: "#83A637" }}></i><b> Operativo</b></a>

@@ -1,19 +1,41 @@
 import React, { useState} from "react"
 import "./FiltroAdmin.css"
 
-const FiltroAdmin = ({ searchTerm, setSearchTerm }) => {
+const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter  }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const [filters, setFilters] = useState({
+        perfil: "",
+        actividad: "",
+        rubro: "",
+        experiencia: 0,
+      });
 
     const toggleVisibility = (event) => {
         setIsVisible(!isVisible);
         event.preventDefault();
     };
 
+    const handleChange = (event, field) => {
+        const value = event.target.value;
+        setFilters((prevFilters) => ({
+          ...prevFilters,
+          [field]: value,
+        }));
+      };
+
     // contador de los años de experiencia
     const [valorRango, setValorRango] = useState(0);
     // contador de los años de experiencia
     const handleInput = (event) => {
-        setValorRango(event.target.value);
+        const value = event.target.value;
+    if (!isNaN(value)) {
+        // Si el valor es un número (años de experiencia), actualiza el estado correspondiente
+        setValorRango(value);
+    } else {
+        // Si el valor no es un número, actualiza el término de búsqueda
+        setSearchTerm(value);
+    }
+        
     };
 
     return (
@@ -43,7 +65,7 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm }) => {
                 <div className=" filtroAdmin row filtros-row" style={{ fontFamily: 'Poppins-Regular' }}>
                     {/* <div className=""> */}
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "perfil")}>
                             <option value="" disabled selected hidden>Perfiles</option>
                             <option value="1">Usuarios</option>
                             <option value="2">Empresas</option>
@@ -51,14 +73,14 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm }) => {
                             </select>
                     </div>
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "actividad")}>
                             <option value="" disabled selected hidden>Actividad</option>
                             <option value="1">Activo</option>
                             <option value="2">Inactivo</option>
                         </select>
                     </div>
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "rubro")}>
                             <option value="" disabled selected hidden>Rubro</option>
                             <option value="1">Administración</option>
                             <option value="2">Agropecuaria</option>
@@ -117,7 +139,7 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm }) => {
 
                     <div className="col-md-3 filtros-col">
                         <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
-                        <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="20" id="customRange2" value={valorRango} onChange={handleInput} />
+                        <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="40" id="customRange2" value={valorRango} onChange={handleInput} />
                         <h6 className="contador">{valorRango}</h6>
                     </div>
                     {/* </div> */}

@@ -40,8 +40,8 @@ const PerfilEmpresa = () => {
                         <div className="col-perfile2">
                             <h3 className="Nombre-perfile"> {PerfilE && PerfilE.NombreEmpresa}</h3>
                             <ul className="Elementos-perfile">
-                                <li><a>Correo: {PerfilE && PerfilE.Email}</a></li>
-                                <li><a>Descripción del perfil: {PerfilE && PerfilE.Acercade}</a></li>
+                                <li><a><b>Correo:</b> {PerfilE && PerfilE.Email}</a></li>
+                                <li><a><b>Descripción del perfil:</b> {PerfilE && PerfilE.Acercade}</a></li>
                             </ul>
                         </div>
                         <div className="col-perfile3">
