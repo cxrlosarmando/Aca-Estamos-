@@ -76,7 +76,7 @@ const FormularioEmpresa = () => {
           Email,
           Password
         });
-        alert(JSON.stringify(response.data, null, 2));
+        alert(response.data.message);
         navigate('/Login-Empresas')
       } catch (error) {
         console.error('Error al enviar la solicitud:', error.response?.data || error.message);

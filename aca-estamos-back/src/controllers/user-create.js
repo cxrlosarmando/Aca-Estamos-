@@ -29,10 +29,10 @@ const CrearUsuario = async (req, res) => {
         });
 
         res.status(200).json({
-            code: 200,
-            msg: "Usuario creado con éxito",
-            data: nuevoUsuario //Temas de seguridad devolver token y no usuario 
-        });
+            success: true,
+            message: "USUARIO CREADO CON ÉXITO",
+            data: nuevoUsuario
+          });
     } catch (error) {
         console.error(error);
 

@@ -26,11 +26,11 @@ const CrearEmpresa = async (req, res) => {
             Email: Email,
             Password: passwordEncripted
         });
-        res.status(200).json({
-            code:200,
-            msg: "Empresa creada con éxito",
+      res.status(200).json({
+            success: true,
+            message: "EMPRESA CREADA CON ÉXITO ",
             data: NuevaEmpresa
-        });
+          });
     } catch (error) {
         console.error(error);
 
