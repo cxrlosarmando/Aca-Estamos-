@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './VisualizacionUsuarios.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 
@@ -9,7 +8,7 @@ const VisualizacionUsuarios = () => {
     const [records, setRecords] = useState([]); //Dos estructura de data, una constante y una función 
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredRecords, setFilteredRecords] = useState([]);
-    const navegate = useNavigate();
+    
 
 
     useEffect(() => {

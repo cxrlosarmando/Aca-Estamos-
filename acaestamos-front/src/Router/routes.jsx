@@ -18,7 +18,6 @@ import PerfilEmpresas from '../Views/PerfilEmpresas'
 import AdminVisualizacion from '../Views/AdminVisualizacion';
 import AdminSolicitudescv from '../Views/AdminSolicitudescv';
 import RegisterFormEmpresa from '../Views/RegisterFormEmpresa';
-import Test from '../Views/TestCaro'
 import Nosotrosview from '../Views/Nosotrosview';
 import Contactoview from '../Views/Contactoview';
 import LoginFormularioE from '../Views/LoginFormularioE';
@@ -43,7 +42,6 @@ const router = createBrowserRouter([
   { path: '/Contacto', element: <Contactoview /> },
   { path: '/Login', element: <Login /> },
   { path: '/Pruebas', element: <App /> },
-  { path: '/Test', element: <Test /> },
   //Routers para usuarios
   { path: '/Login-form', element: <LoginFormulario /> },
   { path: '/Perfil-Usuario', element: <PerfilUsers /> },
