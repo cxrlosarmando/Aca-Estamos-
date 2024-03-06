@@ -26,6 +26,7 @@ const PerfilEmpresa = () => {
 
         obtenerPerfilE();
     }, []);
+    
     return (
         <>
             <h2 className="mi-perfil"><br />Mi perfil Empresa</h2>

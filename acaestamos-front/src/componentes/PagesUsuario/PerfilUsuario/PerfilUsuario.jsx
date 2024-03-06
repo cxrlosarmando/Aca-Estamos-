@@ -7,6 +7,7 @@ import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
 
 const PerfilUsuario = () => {
+    
     const [perfil, setPerfil] = useState(null);
 
     useEffect(() => {
