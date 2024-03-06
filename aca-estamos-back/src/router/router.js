@@ -17,12 +17,18 @@ const GuardarEducacion = require('../controllers/user-educacion-guardar');
 const GuardarPerfilcv = require('../controllers/user-perfilcv-guardar');
 
 // Controllers Administrador
-const AceptarUsuario = require('../controllers/aceptar-usuario')
-const ListaUsuariosAceptados = require('../controllers/admin-list-user')
+const AceptarUsuario = require('../controllers/aceptar-usuario');
+const ListaUsuariosAceptados = require('../controllers/admin-list-user');
+
+//Router de lista empresas 
+const listaEmpresas = require('../controllers/emp-get');
+const DeleteEmp = require('../controllers/emp-delete');
+const aceptarEmpresa = require('../controllers/aceptar-empresa');
 
 //COSAS PARA ADMINISTRADOR 
 const RegAdm = require('../controllers/adm-create');
 const LogAdm = require('../controllers/adm-login');
+const Admins = require('../controllers/admin-get')
 // Multer para Usuarios
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -52,6 +58,9 @@ router.get('/Obtener-Perfil/:id', ObtenerPerfil);
 //Router   ADMINISTRADOR //
 router.post('/Registro-Admin', RegAdm);
 router.post('/Login-Admin', LogAdm);
+router.get('/Administradores', Admins )
+router.put('/Usuarios-Aceptados/:id', AceptarUsuario);
+router.get('/Usuarios-Aceptados/', ListaUsuariosAceptados);
 
 
 
@@ -59,11 +68,9 @@ router.post('/Login-Admin', LogAdm);
 
 router.post('/Crear-Empresa', CrearEmpresa);
 router.post('/Login-empresa', LoginEmpresa);
-
-//Router   ADMINISTRADOR //
-router.put('/Usuarios-Aceptados/:id', AceptarUsuario);
-router.get('/Usuarios-Aceptados/', ListaUsuariosAceptados);
-
+router.get('/Empresas', listaEmpresas); 
+router.put('/Empresa-Aceptada/:id', aceptarEmpresa);
+router.delete('/Borrar-Empresa/:id', DeleteEmp);
 
 // Router ruta protegida
 router.get("/ruta-protegida", isAuth, (req, res) => {

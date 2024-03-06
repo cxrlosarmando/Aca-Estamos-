@@ -9,6 +9,10 @@ const EmpresaSchema = new Schema({
     Url: String,
     Email: String,
     Password: String,
+    aceptado: {
+        type: Boolean,
+        default: false
+    }
 }, { 
     timestamps: true,
     versionKey: false
