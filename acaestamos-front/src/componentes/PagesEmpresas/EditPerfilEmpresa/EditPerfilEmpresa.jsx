@@ -214,7 +214,7 @@ const EditPerfilEmpresa = () => {
                                         </select>
                                     </div>
                     <div className="mb-3">
-                      <label htmlFor="acerca-de" className="form-label">Quienes somos:</label>
+                      <label htmlFor="acerca-de" className="form-label">Quiénes somos:</label>
                       <input type="text" className="form-control" defaultValue={PerfilE && PerfilE.Acercade} onChange={(e) => setAcercade(e.target.value)} />
                     </div>
                     <div className="mb-3">
@@ -228,7 +228,7 @@ const EditPerfilEmpresa = () => {
                   </div>
                   <div className="col">
                     <div className="mb-3">
-                      <label htmlFor="correo" className="form-label">Correo Contacto:</label>
+                      <label htmlFor="correo" className="form-label">Correo de contacto:</label>
                       <input type="text" className="form-control" placeholder="correo@gmail.com" defaultValue={PerfilE && PerfilE.CorreoContacto} onChange={(e) => setCorreoContacto(e.target.value)} />
                     </div>
                     <div className="mb-3">
@@ -244,7 +244,7 @@ const EditPerfilEmpresa = () => {
                       <input type="text" className="form-control" placeholder="LinkedIn" defaultValue={PerfilE && PerfilE.LinkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
                     </div>
                     <div className="mb-3">
-                      <label className="form-label">Adjuntar imagen de Empresa o logotipo:</label>
+                      <label className="form-label">Adjuntar imagen de empresa o logotipo:</label>
                       <input className="form-control" type="file" name="ImagenEmpresa" accept="image/png, image/jpeg" onChange={handleImagenEmpresaChange} />
                     </div>
                   </div>

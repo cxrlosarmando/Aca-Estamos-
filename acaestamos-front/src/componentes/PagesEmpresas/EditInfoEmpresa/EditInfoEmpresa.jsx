@@ -45,7 +45,7 @@ const EditInfoEmpresa = () => {
                         <div className="col-5 firstColEdit" style={{ backgroundColor: "#D9D9D9" }}>
                             <div className="row container-fluid editItems p-2 justify-content-center" style={{ backgroundColor: "#03A688" }}>
                                 <div className="col-10">
-                                    <h5 className="itemsEdit">QUIENES SOMOS</h5>
+                                    <h5 className="itemsEdit">QUIÉNES SOMOS</h5>
                                 </div>
                                 <div className="col-1">
                                 <Link to="/Edit-Perfil-Empresa"><i className="fa-solid fa-pen-to-square fa-xl iconEmpresa"></i></Link>

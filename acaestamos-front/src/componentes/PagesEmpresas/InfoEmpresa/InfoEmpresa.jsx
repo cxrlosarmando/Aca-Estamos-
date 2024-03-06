@@ -42,7 +42,7 @@ const InfoEmpresa = () => {
                         <div className="col-5 firstColE" style={{ backgroundColor: "#D9D9D9" }}>
                             <div className="row container-fluid containerItemsE p-2 justify-content-center" style={{ backgroundColor: "#03A688" }}>
                                 <div className="col-10">
-                                    <h5 className="itemsE">QUIENES SOMOS</h5>
+                                    <h5 className="itemsE">QUIÉNES SOMOS</h5>
                                 </div>
                             </div>
                             <div className="container-fluid infoEmpresa">
