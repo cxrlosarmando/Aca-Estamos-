@@ -22,7 +22,7 @@ const GuardarPerfil = async (req, res) => {
       Telefono: req.body.Telefono,
       EstadoCivil: req.body.EstadoCivil,
       Rubro: req.body.Rubro,
-      Disponibilidad: req.body.Disponibilidad === "on",
+      Disponibilidad: req.body.Disponibilidad,
       LinkedIn: req.body.LinkedIn,
 
     };

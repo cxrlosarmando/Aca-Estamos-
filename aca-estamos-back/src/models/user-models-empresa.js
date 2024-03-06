@@ -9,6 +9,14 @@ const EmpresaSchema = new Schema({
     Url: String,
     Email: String,
     Password: String,
+    //Editar Perfil EMpresa//
+    Acercade: String,
+    Trayectoria: String,
+    Numeroempleados: String,
+    CorreoContacto: String,
+    Ubicacion: String,
+    LinkedIn: String,
+    ImagenEmpresa: String,
     aceptado: {
         type: Boolean,
         default: false

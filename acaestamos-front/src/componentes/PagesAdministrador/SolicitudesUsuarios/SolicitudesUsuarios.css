@@ -31,11 +31,14 @@
     text-decoration: none;
   }
 
-  .soliciu-col3 {
-    width: 30%
-  }
+  /* .soliciu-col3 {
+    width: 30%;
+    padding-top: 25px ;
+  } */
 
   .soliciu-col3 {
+    width: 30%;
+    padding-top: 25px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +97,10 @@
       width: 100%;
     }
 
+    .bigbox {
+      /* display: flex; */
+      height: auto !important;
+    }
     #btn-Aprobar {
       padding: 6px 60px;
     }

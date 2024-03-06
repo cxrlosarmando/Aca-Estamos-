@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './VisualizacionUsuarios.css';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 
 const VisualizacionUsuarios = () => {
     const [records, setRecords] = useState([]); //Dos estructura de data, una constante y una función 
-
+    const [searchTerm, setSearchTerm] = useState('');
     const navegate = useNavigate();
 
 
@@ -22,6 +22,18 @@ const VisualizacionUsuarios = () => {
                 console.error('Error fetching data:', err);
             });
     }, []);
+
+    const filteredRecords = records.filter(record => {
+        console.log(record);
+        return (
+            record.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            record.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            record.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            record.Email.toLowerCase().includes(searchTerm.toLowerCase())||
+            record.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase())||
+            record.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    });
 
     function handleSumbit(_id) {
         const conf = window.confirm('Seguro que quieres Elimnar a este Usuario?')
@@ -50,6 +62,7 @@ const VisualizacionUsuarios = () => {
             {/* Inicio tabla con la lista de usuarios registrados */}
             <main className="d-flex ">
                 <div className="container-fluid mb-5 w-60 p-4 h-50">
+                <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                     <div className="container-fluid">
                         <div className="row">
                             <h3 className="userList">Todos los usuarios</h3>
@@ -77,7 +90,7 @@ const VisualizacionUsuarios = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        records.map((record, index) => (
+                                        filteredRecords.map((record, index) => (
                                             <tr key={index}>
                                                 <td>{record.Nombre}</td>
                                                 <td>{record.Apellido}</td>

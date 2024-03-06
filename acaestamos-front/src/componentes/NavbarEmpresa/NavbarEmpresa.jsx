@@ -1,10 +1,32 @@
-import React from 'react';
 import './NavbarEmpresa.css';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import client from '../../Utils/axios.Client';
+import getUserId from '../../Utils/getUserId';
 
 const NavbarEmpresa = () => {
     
-    
+    const [PerfilE, setPerfilE] = useState(null);
+
+    useEffect(() => {
+        const obtenerPerfilE = async () => {
+            try {
+                const response = await client.get(`http://localhost:3000/Obtener-Perfil-Empresa/${getUserId()}`);
+                setPerfilE(response.data);
+            } catch (error) {
+                if (error.response) {
+                    console.error('Error en la respuesta:', error.response.data);
+                } else if (error.request) {
+                    console.error('Error en la solicitud:', error.request);
+                } else {
+                    console.error('Error general:', error.message);
+                }
+            }
+        };
+
+        obtenerPerfilE();
+    }, []);
+
     const handleLogout = () => {
         localStorage.removeItem('accessToken');
         window.location.href = '/';
@@ -34,13 +56,13 @@ const NavbarEmpresa = () => {
                                             <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                                 <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Nombre Empresa
+                                                    {PerfilE && PerfilE.NombreEmpresa}
                                                 </a>
                                                 <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown" style={{backgroundColor: '#f2f7ea'}}>
                                                     {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
-                                                    <a className="dropdown-item" href="#"> <i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i>                              <b>Mi perfil</b></a>
+                                                    <a className="dropdown-item" href="/Perfil-Empresa"> <i className="fa-solid fa-user" style={{ color: "#049DD9" }}></i>                              <b>Mi perfil</b></a>
                                                     
-                                                    <a className="dropdown-item" href="#" onClick ={handleLogout} ><i class="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i>         <b>  Cerrar sesión</b>    </a>
+                                                    <a className="dropdown-item" href="#" onClick ={handleLogout} ><i className="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i>         <b>  Cerrar sesión</b>    </a>
 
                                                     {/* <a className="dropdown-item" href="#">Item 4</a> */}
                                                     {/* ... */}

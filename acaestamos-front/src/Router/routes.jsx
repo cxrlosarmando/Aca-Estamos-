@@ -28,7 +28,7 @@ import Empresasinfoview from '../Views/Empresasinfoview';
 import AdminVisualizacionEmpresas from '../Views/AdminVisualizacionEmpresas';
 import AdminSolicitudesEmpresas from '../Views/AdminSolicitudesEmpresas';
 import AdminSolicitudesUsuarios from '../Views/AdminSolicitudesUsuarios';
-
+import MostrarCV from '../Views/MostrarCV';
 //ADMIN COSAS
 import RegFormularioAdmin from '../Views/RegisterFormAdmin';
 import LogFormularioAdmin from '../Views/LoginFormularioAdm';
@@ -55,6 +55,7 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
+  { path: '/Mostar-CV', element: <MostrarCV /> },
   //Router empresas
   { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
   { path: '/Login-Empresas', element: <LoginFormularioE /> },

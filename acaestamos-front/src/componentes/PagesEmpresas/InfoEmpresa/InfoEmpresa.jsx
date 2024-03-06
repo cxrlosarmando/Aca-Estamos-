@@ -1,7 +1,33 @@
-import React from 'react'
-import './InfoEmpresa.css'
+import './InfoEmpresa.css';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import client from '../../../Utils/axios.Client';
+import getUserId from '../../../Utils/getUserId';
 
 const InfoEmpresa = () => {
+
+    const [PerfilE, setPerfilE] = useState(null);
+
+    useEffect(() => {
+        const obtenerPerfilE = async () => {
+            try {
+                
+                const response = await client.get(`http://localhost:3000/Obtener-Perfil-Empresa/${getUserId()}`);
+                setPerfilE(response.data);
+            } catch (error) {
+                if (error.response) {
+                    console.error('Error en la respuesta:', error.response.data);
+                } else if (error.request) {
+                    console.error('Error en la solicitud:', error.request);
+                } else {
+                    console.error('Error general:', error.message);
+                }
+            }
+        };
+
+        obtenerPerfilE();
+    }, []);
+
     return (
         <>
             <main className="d-flex justify-content-center">
@@ -16,23 +42,24 @@ const InfoEmpresa = () => {
                         <div className="col-5 firstColE" style={{ backgroundColor: "#D9D9D9" }}>
                             <div className="row container-fluid containerItemsE p-2 justify-content-center" style={{ backgroundColor: "#03A688" }}>
                                 <div className="col-10">
-                                    <h5 className="itemsE">QUIENES SOMOS</h5>
+                                    <h5 className="itemsE">QUIÉNES SOMOS</h5>
                                 </div>
                             </div>
                             <div className="container-fluid infoEmpresa">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam
-                                    eaque, sint accusamus facere asperiores nobis, incidunt ullam quisquam sunt perferendis
-                                    natus ex! Tempore tempora dolor cupiditate soluta!</p>
+                            <h6><b><i>Rubro de la empresa: {PerfilE && PerfilE.Rubro} </i></b></h6>
+                                <p>{PerfilE && PerfilE.Acercade ?
+                                PerfilE && PerfilE.Acercade : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
+                                <h6><b><i>Página WEB: <a href={PerfilE && PerfilE.Url} target="_blank" rel="noopener noreferrer">{PerfilE && PerfilE.Url}</a></i></b></h6>
                             </div>
                             <div className="row container-fluid containerItemsE p-2 justify-content-center" style={{ backgroundColor: "#03A688" }}>
                                 <div className="col-10">
-                                    <h5 className="itemsE">MISIÓN</h5>
+                                    <h5 className="itemsE">TRAYECTORIA</h5>
                                 </div>
                             </div>
                             <div className="container-fluid infoEmpresa">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam
-                                    eaque, sint accusamus facere asperiores nobis, incidunt ullam quisquam sunt perferendis
-                                    natus ex! Tempore tempora dolor cupiditate soluta!</p>
+                            <h6><b><i>Número de empleados: {PerfilE && PerfilE.Numeroempleados} </i></b></h6>
+                                <p>{PerfilE && PerfilE.Trayectoria ?
+                                PerfilE && PerfilE.Trayectoria : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
                             </div>
                             <div className="row container-fluid containerItemsE p-2 justify-content-center" style={{ backgroundColor: "#03A688" }}>
                                 <div className="col-10">
@@ -41,16 +68,16 @@ const InfoEmpresa = () => {
                             </div>
                             <div className="contactEmp">
                                 <ul>
-                                    <p><i className="fa-solid fa-phone" style={{color: 'black'}}></i> +56999999999</p>
-                                    <p><i className="fa-brands fa-linkedin" style={{color: 'black'}}> </i> linkedin.com/milinkedin</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
-                                    <p><i className="fa-solid fa-envelope" style={{color: 'black'}}></i> correo@gmail.com</p>
+                                    <p><i className="fa-solid fa-phone" style={{color: 'black'}}></i> {PerfilE && PerfilE.Telefono}</p>
+                                    <p><i className="fa-brands fa-linkedin" style={{color: 'black'}}> </i> {PerfilE && PerfilE.LinkedIn ? PerfilE && PerfilE.LinkedIn : 'linkedin.com/milinkedin'}</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
+                                    <p><i className="fa-solid fa-envelope" style={{color: 'black'}}></i> {PerfilE && PerfilE.CorreoContacto ? PerfilE && PerfilE.CorreoContacto : 'correocontacto@gmail.com'}</p>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-6 secondColE">
                             <div className="row container-fluid  EmpContent justify-content-center">
                                 <div>
-                                    <img className="imagen" src="/Img/LogoCompany.png" alt="Bootstrap" />
+                                    <img className="imagen" src={PerfilE && PerfilE.ImagenEmpresa ? `http://localhost:3000/uploads/${PerfilE.ImagenEmpresa}` : "/Img/LogoCompany.png"} alt="Bootstrap" />
                                 </div>
                             </div>
                             <div className="row container-fluid p-2 justify-content-center">
@@ -58,9 +85,8 @@ const InfoEmpresa = () => {
                                     <h4 className="itemsE">UBICACIÓN</h4>
                                 </div>
                                 <div className="infoEmpresa">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi
-                                        reprehenderit repellat sit dignissimos? Molestias tenetur non voluptatibus accusamus, veniam
-                                        alias nesciunt necessitatibus vero saepe dolorum pariatur deleniti.</p>
+                                <p>{PerfilE && PerfilE.Ubicacion ?
+                                PerfilE && PerfilE.Ubicacion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
                                 </div>
                             </div>
                             <div className="container-fluid infoEmpresa">
