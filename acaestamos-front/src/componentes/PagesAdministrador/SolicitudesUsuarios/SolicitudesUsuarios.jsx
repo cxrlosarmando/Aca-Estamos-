@@ -57,10 +57,27 @@ const SolicitudesUsuarios = () => {
             .catch (err => {
                 console.error('Error al enviar correo', err);
             });    
-            const destinatarioCorreo = res.data.data.Email;
+            
             })}
+                        
+                const destinatarioCorreo = Email;
+            
+                if (destinatarioCorreo) {
+                    // Realiza la solicitud, enviar el correo electrónico al correo que se encuentra asociado a la solicitud 
+                    axios.post(`http://localhost:3000/Enviar-Correo/${destinatarioCorreo}`)
+                        .then(res => {
+                            console.log('Correo electrónico enviado con éxito');
+                        })
+                        .catch(err => {
+                            console.error('Error al enviar correo', err);
+                        });
+                } else {
+                    console.error('La dirección de correo electrónico del destinatario no está definida.');
+                }
+            
+            
+        
     };
-
 
 
     return (
