@@ -1,62 +1,46 @@
 import React from 'react'
 import './VisualizacionEmpresas.css'
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const VisualizacionEmpresas = () => {
+    const [column, setColumn] = useState([]); 
+
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/Empresa-Aceptada')
+        .then(res => {
+            setColumn(res.data.data);
+            console.log(res);
+        })
+        .catch(err => {
+            console.error('Error fetching data:', err);
+        });
+    }, []);
+
+    function handleSumbit(_id) {
+        const conf = window.confirm('Seguro que quieres Elimnar a esta Empresa?')
+
+        if (conf){
+            axios.delete(`http://localhost:3000/Borrar-Empresa/${_id}`)
+            .then(res => {
+                alert('Empresa Eliminada')
+                const newColumn = column.filter(column => column._id !== _id);
+                console.log(res);
+                setColumn(newColumn);
+            })
+            .catch(err => {
+                console.error('Error en eliminar los datos', err);
+            });
+        }
+    };
+        
+
+
+
     return (
         <>
-            {/* <div className="container-sm buscador" style={{ fontFamily: 'Poppins-Regular' }}>
-                <form className="d-flex" role="search" id="buscar-ofertas">
-                    <input className="form-control me-2" type="search" placeholder="Buscar Ofertas.." aria-label="Buscar Ofertas..." />
-                    <button className="btn btn-outline-success" type="submit">
-                        <img src="../Img/Lupa.png" alt="Descripción de la imagen" className="img-fluid" />
-                    </button>
-                    <button style={{ backgroundColor: '#049DD9', width: '120px' }} className="btn btn-outline-light" type="submit">Más filtros</button>
-                </form>
-            </div> */}
-            {/* Termina el buscador */}
-            {/* Comienzan los filtros */}
-            {/* <div className="container-fluid filtroAdmin" style={{ fontFamily: 'Poppins-Regular' }}>
-                <div className="row filtros-row">
-                    <div className="col-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Área Laboral</option>
-                            <option value="1">Logística</option>
-                            <option value="2">Seguridad</option>
-                            <option value="3">Programación</option>
-                        </select>
-                    </div>
-                    <div className="col-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Jornada</option>
-                            <option value="1">Mañana</option>
-                            <option value="2">Tarde</option>
-                            <option value="3">Noche</option>
-                        </select>
-                    </div>
-                    <div className="col-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Modalidad</option>
-                            <option value="1">Online</option>
-                            <option value="2">Presencial</option>
-                            <option value="3">Hibrido</option>
-                        </select>
-                    </div>
-                    <div className="col-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Ordenar por</option>
-                            <option value="1">Recientes</option>
-                            <option value="2">Más antiguos</option>
-               
-                        </select>
-                    </div>
-                    <div className="col-3 filtros-col">
-                        <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
-                        <input type="range" className="form-range" style={{ paddingBottom: '25px' }} min="0" max="20" id="customRange2" />
-                    </div>
-                </div>
-            </div> */}
-            {/* Terminan los filtros */}
 
             {/* Inicio tabla con la lista de usuarios registrados */}
             <main className="d-flex ">
@@ -79,66 +63,24 @@ const VisualizacionEmpresas = () => {
                                 <th className='tabla' scope="col">RUT</th>
                                 {/* <th className='tabla' scope="col">Apellido Materno</th> */}
                                 <th className='tabla' scope="col">Actividad</th>
-                                <th className='tabla' scope="col">Editar</th>
+                                <th className='tabla' scope="col">Eliminar Empresa</th>
                             </tr>
                         </thead>
                         <tbody className="table-group-divider">
-                            <tr>
-                                <th scope="row" className="userName">Empresa 1</th>
-                                <td className="userName">77.553.234-1</td>
-                                {/* <td className="userName">Otto</td> */}
-                                <td className="">
-                                    <button className="btn btn-sm me-2 botonActividad" type="button" style={{ backgroundColor: '#109CF1' }}
-                                        href="#">Activo
-                                    </button>
-                                </td>
-                                <td><a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconAdmin" style={{color:'black'}}></i></a> </td>
+                          {column.map((column, index) => (
+                            <tr key={index}>
+                                <td>{column.NombreEmpresa}</td>
+                                <td>{column.RutEmpresa}</td>
+                                {/* <td>{column.ApellidoMaterno}</td> */}
+                                <td>{column.Rubro}</td>
+                                <td>
+                                                    <button onClick={e =>  handleSumbit(column._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
+                                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row" className="userName">Empresa 1</th>
-                                <td className="userName">77.553.234-1</td>
-                                {/* <td className="userName">Otto</td> */}
-                                <td className="">
-                                    <button className="btn btn-sm me-2 botonActividad" type="button" style={{ backgroundColor: '#109CF1' }}
-                                        href="#">Activo
-                                    </button>
-                                </td>
-                                <td><a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconAdmin" style={{color:'black'}}></i></a> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" className="userName">Empresa 1</th>
-                                <td className="userName">77.553.234-1</td>
-                                {/* <td className="userName">Otto</td> */}
-                                <td className="">
-                                    <button className="btn btn-sm me-2 botonActividad" type="button" style={{ backgroundColor: '#109CF1' }}
-                                        href="#">Activo
-                                    </button>
-                                </td>
-                                <td><a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconAdmin" style={{color:'black'}}></i></a> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" className="userName">Empresa 1</th>
-                                <td className="userName">77.553.234-1</td>
-                                {/* <td className="userName">Otto</td> */}
-                                <td className="">
-                                    <button className="btn btn-sm me-2 botonActividad" type="button" style={{ backgroundColor: '#109CF1' }}
-                                        href="#">Activo
-                                    </button>
-                                </td>
-                                <td><a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconAdmin" style={{color:'black'}}></i></a> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" className="userName">Empresa 1</th>
-                                <td className="userName">77.553.234-1</td>
-                                {/* <td className="userName">Otto</td> */}
-                                <td className="">
-                                    <button className="btn btn-sm me-2 botonActividad" type="button" style={{ backgroundColor: '#109CF1' }}
-                                        href="#">Activo
-                                    </button>
-                                </td>
-                                <td><a href="/pages/Editarperfil.html"><i className="fa-solid fa-pen-to-square fa-xl iconAdmin" style={{color:'black'}}></i></a> </td>
-                            </tr>
+                          )
+
                             
+                          )}
                         </tbody>
                     </table>
                 </div>

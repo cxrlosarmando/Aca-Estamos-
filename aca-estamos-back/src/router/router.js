@@ -26,6 +26,7 @@ const ListaUsuariosAceptados = require('../controllers/admin-list-user');
 const listaEmpresas = require('../controllers/emp-get');
 const DeleteEmp = require('../controllers/emp-delete');
 const aceptarEmpresa = require('../controllers/aceptar-empresa');
+const EmpresaAceptada = require('../controllers/emp-aceptada')
 
 //COSAS PARA ADMINISTRADOR 
 const RegAdm = require('../controllers/adm-create');
@@ -77,6 +78,7 @@ router.post('/Guardar-Perfil-Empresa/:id', upload.fields([
 router.get('/Empresas', listaEmpresas); 
 router.put('/Empresa-Aceptada/:id', aceptarEmpresa);
 router.delete('/Borrar-Empresa/:id', DeleteEmp);
+router.get('/Empresa-Aceptada', EmpresaAceptada)
 
 // Router ruta protegida
 router.get("/ruta-protegida", isAuth, (req, res) => {
