@@ -157,9 +157,6 @@ const Formularioregistro = () => {
                   <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                 </div>
                 <div className="col">
-                  <div className="google-icon">
-                    <a href="#"><img className="img-google" src="/Img/Google.icon.jpg" alt="Google icon" /></a>
-                  </div>
                 </div>
               </form>
             </div>

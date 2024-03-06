@@ -182,9 +182,6 @@ const FormularioEmpresa = () => {
                 </div>
                 <div className="row">
                   <div className="col">
-                    <div className="google-icon">
-                      <a href="/"><img className="img-google" src="/Img/Google.icon.jpg" alt="Google Icon" /></a>
-                    </div>
                   </div>
                 </div>
               </form>
