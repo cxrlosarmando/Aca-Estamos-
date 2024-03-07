@@ -72,8 +72,8 @@ const PerfilUsuario = ({id}) => {
                             </div>
                             <div className="col">
                                 <div className="colcv">
-                                    <p><Link to="/Mostar-CV">Mostrar CV Generado</Link></p>
-                                    <Link to="/Mostar-CV"><img src="../Img/mostrar.png" alt="Mostrar perfil icon" id="mostrar-perfil" /></Link>
+                                    <p><Link to="/Mostrar-CV">Mostrar CV Generado</Link></p>
+                                    <Link to="/Mostrar-CV"><img src="../Img/mostrar.png" alt="Mostrar perfil icon" id="mostrar-perfil" /></Link>
                                     <p><Link to="/Actualizar-Cv">Actualizar y crear CV</Link></p>
                                     <Link to="/Actualizar-Cv"><img src="../Img/pen-edit.png" alt="Editar perfil icon" id="pen-edit" /></Link>
                                 </div>
