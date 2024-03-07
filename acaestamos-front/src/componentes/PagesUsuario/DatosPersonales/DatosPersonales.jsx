@@ -34,7 +34,7 @@ const DatosPersonales = () => {
         if (!Nombre || !Apellido || !Telefono || !Rubro || !EstadoCivil || !LinkedIn) {
             alertApi.show("¡No llenaste correctamente los datos solicitados!", 'error');
             hasError = false;
-            
+
             return hasError;
         }
     };
@@ -271,6 +271,12 @@ const DatosPersonales = () => {
                                     </div>
                                 </div>
                             </div>
+                            {/* Muestra la alerta si está visible */}
+                            {alertState.visible && (
+                                <div id="alertsElement" className={`alert ${alertState.type}`}>
+                                    {alertState.message}
+                                </div>
+                            )}
                             <div className="d-flex justify-content-center">
                                 <Link to="/Perfil-Usuario" type="button" className="btn btn-secondary btn-lg me-2">
                                     Cancelar
@@ -280,13 +286,6 @@ const DatosPersonales = () => {
                                 </button>
                             </div>
                         </form>
-
-                        {/* Muestra la alerta si está visible */}
-                        {alertState.visible && (
-                            <div id="alertsElement" className={`alert ${alertState.type}`}>
-                                {alertState.message}
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
