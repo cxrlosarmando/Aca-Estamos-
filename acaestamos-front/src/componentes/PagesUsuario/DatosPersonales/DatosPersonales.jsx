@@ -16,7 +16,7 @@ const DatosPersonales = () => {
     const [EstadoCivil, setEstadoCivil] = useState('');
     const [LinkedIn, setLinkedIn] = useState('');
     const [Rubro, setRubro] = useState('');
-    const [Disponibilidad, setDisponibilidad] = useState(false);
+    const [Disponibilidad, setDisponibilidad] = useState('');
     const [ArchivoPDF1, setArchivoPDF1] = useState(null);
     const [ArchivoPDF2, setArchivoPDF2] = useState(null);
     const [ArchivoPDF3, setArchivoPDF3] = useState(null);
