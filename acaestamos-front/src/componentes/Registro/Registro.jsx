@@ -19,12 +19,12 @@ export const Registro = () => {
                 </div>
                 <div className="row align-items-center" style={{ paddingTop: '60px' }}>
                   <div className="col-6">
-                  <Link to="/Registro-form" className="btn btn-light btn-lg me-2">
+                  <Link to="/Registro-form" className="btn btn-lg me-2">
                       <img src="../Img/usuario-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
                     </Link>
                   </div>
                   <div className="col-6">
-                  <Link to="/Registro-form-Empresa" className="btn btn-light btn-lg me-2">
+                  <Link to="/Registro-form-Empresa" className="btn btn-lg me-2">
                       <img src="../Img/empresas-renca.png" alt="Descripción de la imagen" className="img-fluid"></img>
                     </Link>
                   </div>

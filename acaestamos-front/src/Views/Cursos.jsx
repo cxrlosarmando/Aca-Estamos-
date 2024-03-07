@@ -1,11 +1,14 @@
 import React from 'react';
+import Layout from "../Layout/Layout";
+import Cursos1 from '../componentes/Cursos/Cursos';
 
-const ErrorComponent = ({ statusCode }) => (
-  <div style={{textAlign:'center'}}>
-    <h1>{statusCode} Not Found</h1>
-    <img src={`https://http.cat/${statusCode}`} alt={`HTTP ${statusCode}`} />
-    
-  </div>
-);
 
-export default ErrorComponent;
+const Cursos = () => {
+  return (
+    <Layout>
+      <Cursos1 />
+    </Layout>
+  );
+}
+
+export default Cursos;

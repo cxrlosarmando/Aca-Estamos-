@@ -5,37 +5,37 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const VisualizacionEmpresas = () => {
-    const [column, setColumn] = useState([]); 
+    const [column, setColumn] = useState([]);
 
 
     useEffect(() => {
         axios.get('http://localhost:3000/Empresa-Aceptada')
-        .then(res => {
-            setColumn(res.data.data);
-            console.log(res);
-        })
-        .catch(err => {
-            console.error('Error fetching data:', err);
-        });
+            .then(res => {
+                setColumn(res.data.data);
+                console.log(res);
+            })
+            .catch(err => {
+                console.error('Error fetching data:', err);
+            });
     }, []);
 
     function handleSumbit(_id) {
         const conf = window.confirm('Seguro que quieres Elimnar a esta Empresa?')
 
-        if (conf){
+        if (conf) {
             axios.delete(`http://localhost:3000/Borrar-Empresa/${_id}`)
-            .then(res => {
-                alert('Empresa Eliminada')
-                const newColumn = column.filter(column => column._id !== _id);
-                console.log(res);
-                setColumn(newColumn);
-            })
-            .catch(err => {
-                console.error('Error en eliminar los datos', err);
-            });
+                .then(res => {
+                    alert('Empresa Eliminada')
+                    const newColumn = column.filter(column => column._id !== _id);
+                    console.log(res);
+                    setColumn(newColumn);
+                })
+                .catch(err => {
+                    console.error('Error en eliminar los datos', err);
+                });
         }
     };
-        
+
 
 
 
@@ -50,10 +50,10 @@ const VisualizacionEmpresas = () => {
                             <h3 className="userList">Todas las empresas</h3>
                         </div>
                         <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4 containerAdmin" style={{ justifyContent: 'flex-end' }}>
-                        
-                        <Link to='/Solicitudes-Empresas-Admin' className="btn btn-lg me-2 buttonCv" type="button"> 
-                            Solicitudes de Empresas
-                        </Link>
+
+                            <Link to='/Solicitudes-Empresas-Admin' className="btn btn-lg me-2 buttonCv" type="button">
+                                Solicitudes de Empresas
+                            </Link>
                         </div>
                     </div>
                     <table className="table">
@@ -67,20 +67,20 @@ const VisualizacionEmpresas = () => {
                             </tr>
                         </thead>
                         <tbody className="table-group-divider">
-                          {column.map((column, index) => (
-                            <tr key={index}>
-                                <td>{column.NombreEmpresa}</td>
-                                <td>{column.RutEmpresa}</td>
-                                {/* <td>{column.ApellidoMaterno}</td> */}
-                                <td>{column.Rubro}</td>
-                                <td>
-                                                    <button onClick={e =>  handleSumbit(column._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
-                                                </td>
-                            </tr>
-                          )
+                            {column.map((column, index) => (
+                                <tr key={index}>
+                                    <td>{column.NombreEmpresa}</td>
+                                    <td>{column.RutEmpresa}</td>
+                                    {/* <td>{column.ApellidoMaterno}</td> */}
+                                    <td>{column.Rubro}</td>
+                                    <td>
+                                        <button onClick={e => handleSumbit(column._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
+                                    </td>
+                                </tr>
+                            )
 
-                            
-                          )}
+
+                            )}
                         </tbody>
                     </table>
                 </div>

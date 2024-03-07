@@ -32,7 +32,7 @@ const NavbarAdmin = () => {
                                         <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                             <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nombre administrador
+                                                Administrador
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown">
                                                 {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
