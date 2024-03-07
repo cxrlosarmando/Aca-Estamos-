@@ -28,6 +28,7 @@ import AdminVisualizacionEmpresas from '../Views/AdminVisualizacionEmpresas';
 import AdminSolicitudesEmpresas from '../Views/AdminSolicitudesEmpresas';
 import AdminSolicitudesUsuarios from '../Views/AdminSolicitudesUsuarios';
 import MostrarCV from '../Views/MostrarCV';
+import BuscadorUsuarioByE from '../Views/BuscadorUsuarioByE';
 //ADMIN COSAS
 import RegFormularioAdmin from '../Views/RegisterFormAdmin';
 import LogFormularioAdmin from '../Views/LoginFormularioAdm';
@@ -56,12 +57,14 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
   { path: '/Mostrar-CV/:id?', element: <MostrarCV /> },
   //Router empresas
+
   { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
   { path: '/Login-Empresas', element: <LoginFormularioE /> },
   { path: '/Perfil-Empresa/:id?', element: <PerfilEmpresas /> },
   { path: '/Edit-Info-Empresa', element: <Editinfoempresas /> },
   { path: '/Edit-Perfil-Empresa', element: <EditPerfilE /> },
   { path: '/Info-Empresa/:id?', element: <Empresasinfoview /> },
+  { path: '/Buscar-Talentos', element: <BuscadorUsuarioByE /> },
   //Acá empieza enrutadoadmin
   { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },

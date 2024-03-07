@@ -29,6 +29,12 @@ const PerfilEmpresa = ({id}) => {
     
     return (
         <>
+        
+        <div className="container-fluid talent" style={{background: '#049DD9', borderRadius: '10px', fontFamily: 'Poppins-Bold'}}>
+            <Link to='/Buscar-Talentos' style={{textDecoration: 'none', color: 'black'}}>
+            <h3 className=" " >Buscar talentos </h3>
+            </Link>
+        </div>
             <h2 className="mi-perfil"><br />Mi perfil Empresa</h2>
 
             <main className="perfilempresa">

@@ -10,10 +10,10 @@ const SolicitudesUsuarios = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const [filters, setFilters] = useState({
-        perfil: "",
+        disponibilidad: "",
         actividad: "",
         rubro: "",
-        experiencia: 0,
+        // experiencia: 0,
     });
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const SolicitudesUsuarios = () => {
             .then(res => {
                 const solicitudesNoAceptadas = res.data.data.filter(solicitud => !solicitud.aceptado);
                 setSolicitudes(solicitudesNoAceptadas);
-            })
+            }) 
             .catch(err => {
                 console.error('Error en obtener la informaciÃ³n', err);
             });
@@ -32,15 +32,21 @@ const SolicitudesUsuarios = () => {
             const searchTermMatch =
                 solicitud.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 solicitud.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                solicitud.Rubro.toLowerCase().includes(searchTerm.toLowerCase());
+                solicitud.Rubro?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.Rut?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.FechaNacimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.Disponibilidad?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase())||
+                solicitud.Email.toLowerCase().includes(searchTerm.toLowerCase()) ;
 
             const filtersMatch =
-                (filters.perfil === "" || solicitud.Perfil === filters.perfil) &&
+                (filters.disponibilidad === "" || solicitud.Disponibilidad === filters.disponibilidad) &&
                 (filters.actividad === "" ||
                     solicitud.Actividad === filters.actividad) &&
-                (filters.rubro === "" || solicitud.Rubro === filters.rubro) &&
-                (filters.experiencia === 0 ||
-                    solicitud.Experiencia >= filters.experiencia);
+                (filters.rubro === "" || solicitud.Rubro === filters.rubro);
+                // (filters.experiencia === 0 ||
+                //     solicitud.Experiencia >= filters.experiencia);
 
             return searchTermMatch && filtersMatch;
         });

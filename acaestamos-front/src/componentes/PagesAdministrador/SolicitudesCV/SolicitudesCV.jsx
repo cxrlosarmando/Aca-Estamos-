@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import './SolicitudesCV.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -8,13 +9,12 @@ const SolicitudesCV = () => {
   const [solicitudes, setSolicitudes] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState('');
-
   const [filters, setFilters] = useState({
-    perfil: "",
+    disponibilidad: "",
     actividad: "",
     rubro: "",
-    experiencia: 0,
-  });
+    // experiencia: 0,
+});
 
   useEffect(() => {
     axios.get('http://localhost:3000/Usuario')
@@ -27,26 +27,33 @@ const SolicitudesCV = () => {
       });
   }, [searchTerm]);
 
-  const filteredSolicitudes = useMemo(() => {
-    return solicitudes.filter((solicitud) => {
-      const searchTermMatch =
+const filteredSolicitudes = useMemo(() => {
+  return solicitudes.filter((solicitud) => {
+    const searchTermMatch =
         solicitud.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
         solicitud.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        solicitud.Rubro.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const filtersMatch =
-        (filters.perfil === "" || solicitud.Perfil === filters.perfil) &&
+        solicitud.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        solicitud.Email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        solicitud.EstadoCivil?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        solicitud.Telefono?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.Rubro?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.Disponibilidad?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.FechaNacimiento?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.NivelEducacional?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.InstitucionEducativa?.toLowerCase().includes(searchTerm.toLowerCase())||
+        solicitud.Titulo?.toLowerCase().includes(searchTerm.toLowerCase())
+        
+        const filtersMatch =
+        (filters.disponibilidad === "" || solicitud.Disponibilidad === filters.disponibilidad) &&
         (filters.actividad === "" ||
-          solicitud.Actividad === filters.actividad) &&
-        (filters.rubro === "" || solicitud.Rubro === filters.rubro) &&
-        (filters.experiencia === 0 ||
-          solicitud.Experiencia >= filters.experiencia);
+            solicitud.Actividad === filters.actividad) &&
+        (filters.rubro === "" || solicitud.Rubro === filters.rubro); 
+        
+        return searchTermMatch && filtersMatch;
+  });
+}, [solicitudes, searchTerm, filters]);
 
-      return searchTermMatch && filtersMatch;
-    });
-  }, [solicitudes, searchTerm, filters]);
-
-  function handleSubmit(_id, email) {
+function handleSubmit(_id,email) {
     const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
     if (conf) {
       axios.put(`http://localhost:3000/Usuarios-Aceptados/${_id}`)
@@ -65,19 +72,14 @@ const SolicitudesCV = () => {
 
   return (
     <>
-      <FiltroAdmin
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        filters={filters}
-        setFilters={setFilters}
-      />
-      <div className="container-fluid">
-        <h1 className='tituloUsuarioSolicitud' style={{ fontFamily: 'Heavitas', fontSize: '30px' }}>Solicitudes de nuevos currículums</h1>
-      </div>
-      {filteredSolicitudes.map((solicitud) => (
-        <main className="solicitudescv" key={solicitud._id}>
-
-          <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
+    <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} filters={filters} setFilters={setFilters} />
+    <div className="container-fluid">
+                <h1 className='tituloUsuarioSolicitud' style={{ fontFamily: 'Heavitas', fontSize: '30px' }}>Solicitudes de nuevos currículums</h1>
+            </div>
+            {filteredSolicitudes.map((solicitud) => (
+      <main className="solicitudescv" key={solicitud._id}> 
+                    
+        <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
 
             <div className="solici-row">
               <div className="solici-col1">
