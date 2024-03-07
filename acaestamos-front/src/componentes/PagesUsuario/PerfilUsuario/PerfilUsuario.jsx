@@ -1,11 +1,10 @@
 import './PerfilUsuario.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import moment from 'moment';
-import 'moment/locale/es';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
-moment.locale('es');
+import dayjs from "../../../Utils/dayjs";
+
 
 const PerfilUsuario = ({id}) => {
 
@@ -45,7 +44,7 @@ const PerfilUsuario = ({id}) => {
                             <h3 className="Nombre-perfil">{perfil && perfil.Nombre} {perfil && perfil.Apellido}</h3>
                             <ul className="Elementos-perfil">
                                 <li><span><b>Disponibilidad:</b> {perfil && perfil.Disponibilidad}</span></li>
-                                <li><span><b>Estado Civil:</b> {perfil && perfil.EstadoCivil} ｜ <b>Fecha de nacimiento:</b>  {perfil && moment(perfil.FechaNacimiento).locale('es').format('DD [de] MMMM [de] YYYY')}</span></li>
+                                <li><span><b>Estado Civil:</b> {perfil && perfil.EstadoCivil} ｜ <b>Fecha de nacimiento:</b>  {perfil && dayjs(perfil.FechaNacimiento).format('DD [de] MMMM [de] YYYY')}</span></li>
                                 <li><span><b>LinkedIn:</b> {perfil && perfil.LinkedIn}</span></li>
                                 <li><span><b>Rubro de interés:</b> {perfil && perfil.Rubro}</span></li>
                             </ul>

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import 'moment/locale/es';
-import moment from 'moment';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
+import dayjs from "../../../Utils/dayjs";
 
 const VisualizacionCv = ({id}) => {
   
@@ -102,7 +101,13 @@ const VisualizacionCv = ({id}) => {
                                   <h4 className="itemsCv p-2">EXPERIENCIA</h4>
                               </div>
                               <div className="contInfo">
-                              <h6><b><i>{perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i></b></h6>
+                              <h6><b><i>{perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil?.CheckCargo
+                          ? "Actualidad"
+                          : perfil &&
+                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                          ? perfil &&
+                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                          : "Fecha Finalizacion"}</i></b></h6>
                               <h6><b>{perfil && perfil.NombredelaEmp ? perfil && perfil.NombredelaEmp : 'Nombre de la empresa'}</b></h6>
                               <h6><b>{perfil && perfil.Cargo? perfil && perfil.Cargo : 'Cargo'} ｜ {perfil && perfil.TipoEmpleo ? perfil && perfil.TipoEmpleo : 'Tipo de empleo'}</b></h6>
                                   <p>{perfil && perfil.DescripcionCargo ? perfil && perfil.DescripcionCargo : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
@@ -113,7 +118,7 @@ const VisualizacionCv = ({id}) => {
                                   <h4 className="itemsCv">EDUCACIÓN</h4>
                               </div>
                               <div className="contInfo">
-                              <h6><b><i>{perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo? perfil && perfil.Titulo : 'Titulo'}</b></h6>
+                              <h6><b><i>{perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo? perfil && perfil.Titulo : 'Titulo'}</b></h6>
                               <h6><b>{perfil && perfil.InstitucionEducativa? perfil && perfil.InstitucionEducativa : 'Institucion Educativa'} ｜ {perfil && perfil.NivelEducacional ? perfil && perfil.NivelEducacional : 'Nivel Educacional'}</b></h6>
                                   <p>{perfil && perfil.Descripcion ? perfil && perfil.Descripcion : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
                               </div>
