@@ -5,16 +5,17 @@ import moment from 'moment';
 import 'moment/locale/es';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
+moment.locale('es');
 
-const PerfilUsuario = () => {
-    
+const PerfilUsuario = ({id}) => {
+
     const [perfil, setPerfil] = useState(null);
 
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
                 
-                const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
+                const response = await client.get(`http://localhost:3000/Obtener-Perfil/${id ??getUserId()}`);
                 setPerfil(response.data);
             } catch (error) {
                 if (error.response) {
