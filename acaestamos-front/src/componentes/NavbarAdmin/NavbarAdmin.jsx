@@ -42,7 +42,7 @@ const NavbarAdmin = () => {
                                                 <Link to="/Visualizacion-Usuario-Admin" className="dropdown-item" href="#"><i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i> <b>Postulantes</b></Link>
 
 
-                                                <a className="dropdown-item" href="#"><i className="fa-solid fa-toggle-on" style={{ color: "#83A637" }}></i><b> Operativo</b></a>
+                                                {/* <a className="dropdown-item" href="#"><i className="fa-solid fa-toggle-on" style={{ color: "#83A637" }}></i><b> Operativo</b></a> */}
                                                 {/* <a className="dropdown-item" href="#">     Activos</a>
                                                     <a className="dropdown-item" href="#">     Inactivos</a> */}
                                                 <a className="dropdown-item" href="#" onClick={handleLogout}><i className="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i><b> Cerrar sesión</b></a>
