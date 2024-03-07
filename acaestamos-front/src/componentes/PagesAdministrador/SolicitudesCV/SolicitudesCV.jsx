@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import React, { useMemo } from 'react';
 import './SolicitudesCV.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';

@@ -20,10 +20,11 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, filters, setFilters}) => {
         
     };
 
+
     const removerFiltros = () => {
         setFilters({
             disponibilidad: "",
-          actividad: "",
+        //   actividad: "",
           rubro: "",
         //   experiencia: 0,
         });
@@ -73,13 +74,13 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, filters, setFilters}) => {
                     </select>
                 </div>
 
-                    <div className="col-md-2 filtros-col">
+                    {/* <div className="col-md-2 filtros-col">
                         <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "actividad")} value={filters?.actividad} placeholder="Seleccione actividad" >
                             <option value="" disabled selected hidden>Actividad</option>
                             <option value="1">Activo</option>
                             <option value="2">Inactivo</option>
                         </select>
-                    </div>
+                    </div> */}
                     <div className="col-md-2 filtros-col">
                         <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "rubro")} value={filters?.rubro} placeholder="Seleccione rubro">
                             <option value="" disabled selected hidden>Rubro</option>

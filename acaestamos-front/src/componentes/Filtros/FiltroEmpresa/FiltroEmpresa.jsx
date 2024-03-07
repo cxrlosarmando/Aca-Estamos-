@@ -65,13 +65,13 @@ const FiltroEmpresa = ({searchTerm, setSearchTerm, filters, setFilters}) => {
                     </select>
                 </div>
 
-                <div className="col-2 filtros-col">
+                {/* <div className="col-2 filtros-col">
                         <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "orden")} value={filters?.orden} placeholder="Seleccione orden">
                             <option value="" disabled selected hidden>Ordenar por</option>
                             <option value="1">Recientes</option>
                             <option value="2">Más antiguos</option>
                         </select>
-                    </div>
+                    </div> */}
 
                 {/* <div className="col-2 filtros-col">
                         <select className="form-select" aria-label="Default select example">

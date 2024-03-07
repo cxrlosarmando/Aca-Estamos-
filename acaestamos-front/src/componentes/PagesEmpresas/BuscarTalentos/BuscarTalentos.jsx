@@ -8,7 +8,7 @@ const BuscarTalentos = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filters, setFilters] = useState({
         disponibilidad: "",
-        orden: "",
+        // orden: "",
         rubro: "",
         // experiencia: 0, 
     });
@@ -41,7 +41,7 @@ const BuscarTalentos = () => {
 
             const filtersMatch =
                 (filters.disponibilidad === "" || usuario.Disponibilidad === filters.disponibilidad) &&
-                (filters.orden === "" || usuario.Orden === filters.orden) &&
+                // (filters.orden === "" || usuario.Orden === filters.orden) &&
                 (filters.rubro === "" || usuario.Rubro === filters.rubro) 
 
             return searchTermMatch && filtersMatch;
