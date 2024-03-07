@@ -4,7 +4,7 @@ import moment from 'moment';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
 
-const VisualizacionCv = () => {
+const VisualizacionCv = ({id}) => {
   
   const [perfil, setPerfil] = useState(null);
 
@@ -12,7 +12,7 @@ const VisualizacionCv = () => {
       const obtenerPerfil = async () => {
           try {
               
-              const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
+              const response = await client.get(`http://localhost:3000/Obtener-Perfil/${id ??getUserId()}`);
               setPerfil(response.data);
           } catch (error) {
               if (error.response) {

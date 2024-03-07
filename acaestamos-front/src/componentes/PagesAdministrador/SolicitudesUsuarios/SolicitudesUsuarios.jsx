@@ -78,16 +78,16 @@ const SolicitudesUsuarios = () => {
 
             {filteredSolicitudes.map((solicitud) => (
                 <main className="solicitudesusuarios" key={solicitud._id}>
-
-                    <div className="container-fluid bigbox" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%', height: '200px' }}>
-
+                    
+                    <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: 'rgba(4, 157, 217, 0.15)', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
+                    
                         <div className="soliciu-row">
                             <div className="soliciu-col1">
-                                <img src={`http://localhost:3000/uploads/${solicitud.ImagenPerfil}`} alt="Imagen perfil" id="user-perfil" /> {/* Reemplaza '/ruta/imagen' con la ruta correcta */}
+                                <img src={solicitud && solicitud.ImagenPerfil ? `http://localhost:3000/uploads/${solicitud.ImagenPerfil}` : "../Img/user-perfil.png"} alt="Imagen perfil" id="user-perfil" /> {/* Reemplaza '/ruta/imagen' con la ruta correcta */}
                             </div>
                             <div className="soliciu-col2">
                                 <h3 className="Usuario">{solicitud.Nombre} {solicitud.Apellido}</h3>
-                                <p><a href="#">Ver perfil de usuario</a></p>
+                                <p><a href={`http://localhost:5173/Perfil-Usuario/${solicitud._id}`}>Ver perfil de usuario</a></p>
                             </div>
                             <div className="soliciu-col3">
                                 <button onClick={e => handleSubmit(solicitud._id, solicitud.Email)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>

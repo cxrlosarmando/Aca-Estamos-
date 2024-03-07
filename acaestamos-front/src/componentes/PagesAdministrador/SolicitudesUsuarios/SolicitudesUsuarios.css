@@ -31,14 +31,12 @@
     text-decoration: none;
   }
 
-  /* .soliciu-col3 {
-    width: 30%;
-    padding-top: 25px ;
-  } */
-
   .soliciu-col3 {
     width: 30%;
-    padding-top: 25px ;
+    
+  } 
+
+  .soliciu-col3 {
     display: flex;
     flex-direction: column;
     align-items: center;

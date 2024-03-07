@@ -63,11 +63,11 @@ const SolicitudesEmpresas = () => {
           <div className="container-fluid" style={{ borderRadius: '10px', backgroundColor: '#03a6883b', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%' }}>
             <div className="solici-row">
               <div className="solici-col1">
-                <img src={`http://localhost:3000/uploads/${solicitud.ImagenPerfil}`} id="user-perfil" />
+                <img src={solicitud && solicitud.ImagenEmpresa ? `http://localhost:3000/uploads/${solicitud.ImagenEmpresa}` : "../Img/user-perfil.png"} id="user-perfil" />
               </div>
               <div className="solici-col2">
                 <h3 className="Empresa">{solicitud.NombreEmpresa}</h3>
-                <p><a href="#">Ver perfil de la empresa</a></p>
+                <p><a href={`http://localhost:5173/Perfil-Empresa/${solicitud._id}`}>Ver perfil de la empresa</a></p>
               </div>
               <div className="solici-col3">
                 <button onClick={e => handleSubmitEmp(solicitud._id)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>

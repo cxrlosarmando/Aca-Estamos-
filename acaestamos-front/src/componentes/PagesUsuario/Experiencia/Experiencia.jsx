@@ -59,20 +59,20 @@ const Experiencia = () => {
         };
 
         obtenerPerfil();
-      }, []);
-    
-      const navigate = useNavigate();
-    
-      const GuardarExperiencia = async (e) => {
+    }, []);
+
+    const navigate = useNavigate();
+
+    const GuardarExperiencia = async (e) => {
         e.preventDefault();
         try {
             const userId = getUserId();
             const response = await client.post(`http://localhost:3000/Guardar-Experiencia/${userId}`, {
-        Cargo, TipoEmpleo, FechaExpInicio, NombredelaEmp, FechaExpFin, CheckCargo, DescripcionCargo
-    });
-    
-          console.log(response.data);
-          navigate('/Actualizar-Cv')
+                Cargo, TipoEmpleo, FechaExpInicio, NombredelaEmp, FechaExpFin, CheckCargo, DescripcionCargo
+            });
+
+            console.log(response.data);
+            navigate('/Actualizar-Cv')
         } catch (error) {
             console.error('Error al guardar el perfil:', error);
         }
@@ -99,7 +99,7 @@ const Experiencia = () => {
                                 <label htmlFor="tipoEmpleo" className="form-label">
                                     Tipo de empleo:
                                 </label>
-                                <input type="text" className="form-control" id="tipoEmpleo" placeholder="Part Time" defaultValue={perfil && perfil.TipoEmpleo} onChange={(e) => setTipoEmpleo(e.target.value)}/>
+                                <input type="text" className="form-control" id="tipoEmpleo" placeholder="Part Time" defaultValue={perfil && perfil.TipoEmpleo} onChange={(e) => setTipoEmpleo(e.target.value)} />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="nombreEmpresa" className="form-label">
@@ -131,8 +131,14 @@ const Experiencia = () => {
                                 </label>
                                 <input type="text" className="form-control" id="descripcionCargo" placeholder="Agrega una descripción del cargo" defaultValue={perfil && perfil.DescripcionCargo} onChange={(e) => setDescripcionCargo(e.target.value)} />
                             </div>
+                            {/* Muestra la alerta si está visible */}
+                            {alertState.visible && (
+                                <div id="alertsElement" className={`alert ${alertState.type}`}>
+                                    {alertState.message}
+                                </div>
+                            )}
                             <div className="d-flex justify-content-center">
-                                <Link to="/Actualizar-Cv"type="button" className="btn btn-secondary btn-lg me-2">
+                                <Link to="/Actualizar-Cv" type="button" className="btn btn-secondary btn-lg me-2">
                                     Cancelar
                                 </Link>
                                 <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>
@@ -140,13 +146,6 @@ const Experiencia = () => {
                                 </button>
                             </div>
                         </form>
-
-                        {/* Muestra la alerta si está visible */}
-                        {alertState.visible && (
-                            <div id="alertsElement" className={`alert ${alertState.type}`}>
-                                {alertState.message}
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>

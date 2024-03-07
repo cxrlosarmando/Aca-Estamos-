@@ -66,8 +66,8 @@ const Educacion = () => {
     try {
       const userId = getUserId();
       const response = await client.post(`http://localhost:3000/Guardar-Educacion/${userId}`, {
-NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, Descripcion
-    });
+        NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, Descripcion
+      });
       console.log(response.data);
       navigate('/Actualizar-Cv')
     } catch (error) {
@@ -131,6 +131,12 @@ NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, 
                 </label>
                 <input type="text" className="form-control" placeholder="Agrega una descripción de la carrera" defaultValue={perfil && perfil.Descripcion} onChange={(e) => setDescripcion(e.target.value)} />
               </div>
+              {/* Muestra la alerta si está visible */}
+              {alertState.visible && (
+                <div id="alertsElement" className={`alert ${alertState.type}`}>
+                  {alertState.message}
+                </div>
+              )}
               <div className="d-flex justify-content-center">
                 <Link to="/Actualizar-Cv" type="button" className="btn btn-secondary btn-lg me-2">
                   Cancelar
@@ -140,13 +146,6 @@ NivelEducacional, InstitucionEducativa, FechaInicio, FechaFinalizacion, Titulo, 
                 </button>
               </div>
             </form>
-
-            {/* Muestra la alerta si está visible */}
-            {alertState.visible && (
-              <div id="alertsElement" className={`alert ${alertState.type}`}>
-                {alertState.message}
-              </div>
-            )}
           </div>
         </div>
       </div>
