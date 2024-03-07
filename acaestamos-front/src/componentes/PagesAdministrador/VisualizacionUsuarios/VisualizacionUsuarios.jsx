@@ -108,7 +108,9 @@ const VisualizacionUsuarios = () => {
                                                 <td>{record.Nombre}</td>
                                                 <td>{record.Apellido}</td>
                                                 <td>{record.Rut}</td>
-                                                <td>{record.Email}</td>
+                                                <td>
+                                                  <a href={`mailto: ${record.Email}`}>{record.Email}</a> 
+                                                </td>
                                                 <td>
                                                     <button onClick={e => handleSubmit(record._id)} id='Eliminar-boton' className="btn btn-danger" type="button">Eliminar</button>
                                                 </td>
