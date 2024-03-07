@@ -120,7 +120,7 @@ const EditPerfilEmpresa = () => {
         formData.append('Ubicacion', Ubicacion);
         formData.append('ImagenEmpresa', ImagenEmpresa);
 
-      
+
         const response = await client.post(`http://localhost:3000/Guardar-Perfil-Empresa/${getUserId()}`, formData);
         console.log(response.data);
         navigate('/Perfil-Empresa');
@@ -131,142 +131,141 @@ const EditPerfilEmpresa = () => {
           console.error('Respuesta del servidor:', error.response.data);
         }
 
-        }
-
       }
-    };
+
+    }
+  };
 
 
-    return (
-      <>
-        <div id="Editperfilempresa" style={{ margin: '50px auto', maxWidth: '800px' }}>
-          <div className="border p-4" style={{ fontFamily: 'Poppins-Regular', margin: '50px auto 50px auto', backgroundColor: '#D9F2ED', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
-            <h2 style={{ fontFamily: 'Heavitas' }} className="text-center">Editar Perfil Empresa</h2>
-            <div className="form-DatosEmpresa">
-              <form onSubmit={handleSubmit} encType="multipart/form-data">
-                <div className="row">
-                  <div className="col">
-                    <div className="mb-3">
-                      <label htmlFor="nombre-empresa" className="form-label">Nombre Empresa:</label>
-                      <input type="text" className="form-control" id="nombre-empresa" placeholder="Nombre" defaultValue={PerfilE && PerfilE.NombreEmpresa} onChange={(e) => setNombreEmpresa(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="rut" className="form-label">Rut:</label>
-                      <input type="text" className="form-control" placeholder="11.111.111-1" defaultValue={PerfilE && PerfilE.RutEmpresa} onChange={(e) => setRutEmpresa(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                                        <label htmlFor="RubroOpciones" className="form-label">
-                                            Rubro o Giro:
-                                        </label>
-                                        <select className="form-select" id="disponibilidadOpciones" value={Rubro} onChange={(e) => setRubro(e.target.value)}>
-                                            <option value="Administración">Administración</option>
-                                            <option value="Agropecuaria">Agropecuaria</option>
-                                            <option value="Alimenticia">Alimenticia</option>
-                                            <option value="Arquitectura">Arquitectura</option>
-                                            <option value="Artesanal">Artesanal</option>
-                                            <option value="Automotriz">Automotriz</option>
-                                            <option value="Banca/Financiera">Banca/Financiera</option>
-                                            <option value="Bioteconología">Bioteconología</option>
-                                            <option value="Call-Center">Call-Center</option>
-                                            <option value="Comercio">Comercio</option>
-                                            <option value="Comercio exterior">Comercio exterior</option>
-                                            <option value="Comunicaciones">Comunicaciones</option>
-                                            <option value="Construcción">Construcción</option>
-                                            <option value="Consultoría">Consultoría</option>
-                                            <option value="Correo">Correo</option>
-                                            <option value="Defensa">Defensa</option>
-                                            <option value="Diseño">Diseño</option>
-                                            <option value="Editorial">Editorial</option>
-                                            <option value="Educación">Educación</option>
-                                            <option value="Energía">Energía</option>
-                                            <option value="Entretenimiento">Entretenimiento</option>
-                                            <option value="Farmacéutica">Farmacéutica</option>
-                                            <option value="Ferroviaria">Ferroviaria</option>
-                                            <option value="Financiera">Financiera</option>
-                                            <option value="Gastronomía">Gastronomía</option>
-                                            <option value="Hotelería/Turismo">Hotelería/Turismo</option>
-                                            <option value="Imprenta">Imprenta</option>
-                                            <option value="Industrial">Industrial</option>
-                                            <option value="Información e investigación">Información e investigación</option>
-                                            <option value="Informática">Informática</option>
-                                            <option value="Ingeniería">Ingeniería</option>
-                                            <option value="Inmobiliaria">Inmobiliaria</option>
-                                            <option value="Internet">Internet</option>
-                                            <option value="Laboratorio">Laboratorio</option>
-                                            <option value="Legal">Legal</option>
-                                            <option value="Logística/Transporte">Logística/Transporte</option>
-                                            <option value="Manufactura">Manufactura</option>
-                                            <option value="Medios">Medios</option>
-                                            <option value="Publicidad">Publicidad</option>
-                                            <option value="Recursos Humanos">Recursos Humanos</option>
-                                            <option value="Retail">Retail</option>
-                                            <option value="Salud">Salud</option>
-                                            <option value="Seguridad">Seguridad</option>
-                                            <option value="Seguros">Seguros</option>
-                                            <option value="Servicios">Servicios</option>
-                                            <option value="Tecnología">Tecnología</option>
-                                            <option value="Telecomunicaciones">Telecomunicaciones</option>
-                                            <option value="Textil">Textil</option>
-                                            <option value="Transporte">Transporte</option>
-                                            <option value="Turismo">Turismo</option>
-                                            <option value="Veterinaria">Veterinaria</option>
-                                            <option value="Otros">Otros</option>
-                                        </select>
-                                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="acerca-de" className="form-label">Quiénes somos:</label>
-                      <input type="text" className="form-control" defaultValue={PerfilE && PerfilE.Acercade} onChange={(e) => setAcercade(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="trayectoria" className="form-label">Trayectoria:</label>
-                      <input type="text" className="form-control" placeholder="Trayectoria de tu empresa" defaultValue={PerfilE && PerfilE.Trayectoria} onChange={(e) => setTrayectoria(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="cant-empleados" className="form-label">Cantidad de empleados:</label>
-                      <input type="text" className="form-control" placeholder="Ejemplo: 200" defaultValue={PerfilE && PerfilE.Numeroempleados} onChange={(e) => setNumeroempleados(e.target.value)} />
-                    </div>
+  return (
+    <>
+      <div id="Editperfilempresa" style={{ margin: '50px auto', maxWidth: '800px' }}>
+        <div className="border p-4" style={{ fontFamily: 'Poppins-Regular', margin: '50px auto 50px auto', backgroundColor: '#D9F2ED', borderRadius: '10px', borderStyle: 'solid', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+          <h2 style={{ fontFamily: 'Heavitas' }} className="text-center">Editar Perfil Empresa</h2>
+          <div className="form-DatosEmpresa">
+            <form onSubmit={handleSubmit} encType="multipart/form-data">
+              <div className="row">
+                <div className="col">
+                  <div className="mb-3">
+                    <label htmlFor="nombre-empresa" className="form-label">Nombre Empresa:</label>
+                    <input type="text" className="form-control" id="nombre-empresa" placeholder="Nombre" defaultValue={PerfilE && PerfilE.NombreEmpresa} onChange={(e) => setNombreEmpresa(e.target.value)} />
                   </div>
-                  <div className="col">
-                    <div className="mb-3">
-                      <label htmlFor="correo" className="form-label">Correo de contacto:</label>
-                      <input type="text" className="form-control" placeholder="correo@gmail.com" defaultValue={PerfilE && PerfilE.CorreoContacto} onChange={(e) => setCorreoContacto(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="telefono" className="form-label">Teléfono:</label>
-                      <input type="text" className="form-control" placeholder="(9)12345678" defaultValue={PerfilE && PerfilE.Telefono} onChange={(e) => setTelefono(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="ubicacion" className="form-label">Ubicación:</label>
-                      <input type="text" className="form-control" placeholder="Ej. Av. marina 000, stgo" defaultValue={PerfilE && PerfilE.Ubicacion} onChange={(e) => setUbicacion(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="pagina-web" className="form-label">LinkedIn:</label>
-                      <input type="text" className="form-control" placeholder="LinkedIn" defaultValue={PerfilE && PerfilE.LinkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
-                    </div>
-                    <div className="mb-3">
-                      <label className="form-label">Adjuntar imagen de empresa o logotipo:</label>
-                      <input className="form-control" type="file" name="ImagenEmpresa" accept="image/png, image/jpeg" onChange={handleImagenEmpresaChange} />
-                    </div>
+                  <div className="mb-3">
+                    <label htmlFor="rut" className="form-label">Rut:</label>
+                    <input type="text" className="form-control" placeholder="11.111.111-1" defaultValue={PerfilE && PerfilE.RutEmpresa} onChange={(e) => setRutEmpresa(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="RubroOpciones" className="form-label">
+                      Rubro o Giro:
+                    </label>
+                    <select className="form-select" id="disponibilidadOpciones" value={Rubro} onChange={(e) => setRubro(e.target.value)}>
+                      <option value="Administración">Administración</option>
+                      <option value="Agropecuaria">Agropecuaria</option>
+                      <option value="Alimenticia">Alimenticia</option>
+                      <option value="Arquitectura">Arquitectura</option>
+                      <option value="Artesanal">Artesanal</option>
+                      <option value="Automotriz">Automotriz</option>
+                      <option value="Banca/Financiera">Banca/Financiera</option>
+                      <option value="Bioteconología">Bioteconología</option>
+                      <option value="Call-Center">Call-Center</option>
+                      <option value="Comercio">Comercio</option>
+                      <option value="Comercio exterior">Comercio exterior</option>
+                      <option value="Comunicaciones">Comunicaciones</option>
+                      <option value="Construcción">Construcción</option>
+                      <option value="Consultoría">Consultoría</option>
+                      <option value="Correo">Correo</option>
+                      <option value="Defensa">Defensa</option>
+                      <option value="Diseño">Diseño</option>
+                      <option value="Editorial">Editorial</option>
+                      <option value="Educación">Educación</option>
+                      <option value="Energía">Energía</option>
+                      <option value="Entretenimiento">Entretenimiento</option>
+                      <option value="Farmacéutica">Farmacéutica</option>
+                      <option value="Ferroviaria">Ferroviaria</option>
+                      <option value="Financiera">Financiera</option>
+                      <option value="Gastronomía">Gastronomía</option>
+                      <option value="Hotelería/Turismo">Hotelería/Turismo</option>
+                      <option value="Imprenta">Imprenta</option>
+                      <option value="Industrial">Industrial</option>
+                      <option value="Información e investigación">Información e investigación</option>
+                      <option value="Informática">Informática</option>
+                      <option value="Ingeniería">Ingeniería</option>
+                      <option value="Inmobiliaria">Inmobiliaria</option>
+                      <option value="Internet">Internet</option>
+                      <option value="Laboratorio">Laboratorio</option>
+                      <option value="Legal">Legal</option>
+                      <option value="Logística/Transporte">Logística/Transporte</option>
+                      <option value="Manufactura">Manufactura</option>
+                      <option value="Medios">Medios</option>
+                      <option value="Publicidad">Publicidad</option>
+                      <option value="Recursos Humanos">Recursos Humanos</option>
+                      <option value="Retail">Retail</option>
+                      <option value="Salud">Salud</option>
+                      <option value="Seguridad">Seguridad</option>
+                      <option value="Seguros">Seguros</option>
+                      <option value="Servicios">Servicios</option>
+                      <option value="Tecnología">Tecnología</option>
+                      <option value="Telecomunicaciones">Telecomunicaciones</option>
+                      <option value="Textil">Textil</option>
+                      <option value="Transporte">Transporte</option>
+                      <option value="Turismo">Turismo</option>
+                      <option value="Veterinaria">Veterinaria</option>
+                      <option value="Otros">Otros</option>
+                    </select>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="acerca-de" className="form-label">Quiénes somos:</label>
+                    <input type="text" className="form-control" defaultValue={PerfilE && PerfilE.Acercade} onChange={(e) => setAcercade(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="trayectoria" className="form-label">Trayectoria:</label>
+                    <input type="text" className="form-control" placeholder="Trayectoria de tu empresa" defaultValue={PerfilE && PerfilE.Trayectoria} onChange={(e) => setTrayectoria(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="cant-empleados" className="form-label">Cantidad de empleados:</label>
+                    <input type="text" className="form-control" placeholder="Ejemplo: 200" defaultValue={PerfilE && PerfilE.Numeroempleados} onChange={(e) => setNumeroempleados(e.target.value)} />
                   </div>
                 </div>
-                <div className="d-flex justify-content-center">
-                  <Link to="/Perfil-Empresa" type="button" className="btn btn-secondary btn-lg me-2">Cancelar</Link>
-                  <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>Guardar</button>
+                <div className="col">
+                  <div className="mb-3">
+                    <label htmlFor="correo" className="form-label">Correo de contacto:</label>
+                    <input type="text" className="form-control" placeholder="correo@gmail.com" defaultValue={PerfilE && PerfilE.CorreoContacto} onChange={(e) => setCorreoContacto(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="telefono" className="form-label">Teléfono:</label>
+                    <input type="text" className="form-control" placeholder="(9)12345678" defaultValue={PerfilE && PerfilE.Telefono} onChange={(e) => setTelefono(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="ubicacion" className="form-label">Ubicación:</label>
+                    <input type="text" className="form-control" placeholder="Ej. Av. marina 000, stgo" defaultValue={PerfilE && PerfilE.Ubicacion} onChange={(e) => setUbicacion(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="pagina-web" className="form-label">LinkedIn:</label>
+                    <input type="text" className="form-control" placeholder="LinkedIn" defaultValue={PerfilE && PerfilE.LinkedIn} onChange={(e) => setLinkedIn(e.target.value)} />
+                  </div>
+                  <div className="mb-3">
+                    <label className="form-label">Adjuntar imagen de empresa o logotipo:</label>
+                    <input className="form-control" type="file" name="ImagenEmpresa" accept="image/png, image/jpeg" onChange={handleImagenEmpresaChange} />
+                  </div>
                 </div>
-              </form>
-
+              </div>
               {/* Muestra la alerta si está visible */}
               {alertState.visible && (
                 <div id="alertsElement" className={`alert ${alertState.type}`}>
                   {alertState.message}
                 </div>
               )}
-            </div>
+              <div className="d-flex justify-content-center">
+                <Link to="/Perfil-Empresa" type="button" className="btn btn-secondary btn-lg me-2">Cancelar</Link>
+                <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>Guardar</button>
+              </div>
+            </form>
           </div>
         </div>
-      </>
-    );
-  };
+      </div>
+    </>
+  );
+};
 
 
-  export default EditPerfilEmpresa;
+export default EditPerfilEmpresa;

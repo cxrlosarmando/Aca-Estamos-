@@ -120,7 +120,7 @@ const EditarPerfil = () => {
                 <label htmlFor="descripcionCargo" className="form-label">
                   Conocimientos Técnicos:
                 </label>
-                <input type="text" className="form-control" placeholder="Ej. Excel Medio" defaultValue={perfil && perfil.ConocimientosCV}onChange={(e) => setConocimientosCV(e.target.value)} />
+                <input type="text" className="form-control" placeholder="Ej. Excel Medio" defaultValue={perfil && perfil.ConocimientosCV} onChange={(e) => setConocimientosCV(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor="descripcionCargo" className="form-label">
@@ -128,6 +128,12 @@ const EditarPerfil = () => {
                 </label>
                 <input type="text" className="form-control" placeholder="Ej. Inglés II" defaultValue={perfil && perfil.CursosCV} onChange={(e) => setCursosCV(e.target.value)} />
               </div>
+              {/* Muestra la alerta si está visible */}
+              {alertState.visible && (
+                <div id="alertsElement" className={`alert ${alertState.type}`}>
+                  {alertState.message}
+                </div>
+              )}
               <div className="d-flex justify-content-center">
                 <Link to="/Actualizar-Cv" type="button" className="btn btn-secondary btn-lg me-2">
                   Cancelar
@@ -137,13 +143,6 @@ const EditarPerfil = () => {
                 </button>
               </div>
             </form>
-
-            {/* Muestra la alerta si está visible */}
-            {alertState.visible && (
-              <div id="alertsElement" className={`alert ${alertState.type}`}>
-                {alertState.message}
-              </div>
-            )}
           </div>
         </div>
       </div>
