@@ -1,6 +1,5 @@
-import Footer from "../componentes/Footer/Footer";
-import Header from "../componentes/Header/Header";
-import Navbar from "../componentes/Navbar/Navbar";
+import Layout from "../Layout/Layout";
+
 import Nosotros from "../componentes/Nosotros/Nosotros";
 
 
@@ -8,9 +7,9 @@ const Nosotrosview = () => {
   return (
     <>
     
-    <Navbar />
+    <Layout>
     <Nosotros />
-    <Footer />
+    </Layout>
     </>
   )
 }
