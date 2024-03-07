@@ -92,7 +92,7 @@ const VisualizacionUsuarios = () => {
                     </div>
                     <div className="conteiner fluid">
                         <div className="table-responsive">
-                            <table className="table table-bordered">
+                            <table className="table">
 
                                 <thead>
                                     <tr>
@@ -102,7 +102,7 @@ const VisualizacionUsuarios = () => {
                                         <th>Email</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody className="table-group-divider">
                                     {
                                         filteredRecords.map((record, index) => (
                                             <tr key={index}>
