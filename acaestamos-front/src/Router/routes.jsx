@@ -31,6 +31,7 @@ import MostrarCV from '../Views/MostrarCV';
 //ADMIN COSAS
 import RegFormularioAdmin from '../Views/RegisterFormAdmin';
 import LogFormularioAdmin from '../Views/LoginFormularioAdm';
+import AdminSolicitudesInfoEmpresas from '../Views/AdminSolicitudesInfoEmpresas';
 
 
 
@@ -65,6 +66,7 @@ const router = createBrowserRouter([
   { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
   { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
+  { path: '/Solicitudes-InfoEmpresas-Admin', element: < AdminSolicitudesInfoEmpresas/> },
   { path: '/Solicitudes-Usuarios-Admin', element: <AdminSolicitudesUsuarios /> },
   { path: '/Solicitudes-Empresas-Admin', element: <AdminSolicitudesEmpresas />},
   { path: '/Visualizacion-Empresas-Admin', element: <AdminVisualizacionEmpresas /> },
