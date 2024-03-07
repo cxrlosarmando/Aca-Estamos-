@@ -1,3 +1,4 @@
+import React, { useMemo } from 'react';
 import './SolicitudesCV.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -6,6 +7,12 @@ import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 const SolicitudesCV = () => {
   const [solicitudes, setSolicitudes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    disponibilidad: "",
+    actividad: "",
+    rubro: "",
+    // experiencia: 0,
+});
 
   useEffect(() => {
     axios.get('http://localhost:3000/Usuario')
@@ -18,8 +25,9 @@ const SolicitudesCV = () => {
         });
 }, [searchTerm]);
 
-const filteredSolicitudes = solicitudes.filter(solicitud => {
-    return (
+const filteredSolicitudes = useMemo(() => {
+  return solicitudes.filter((solicitud) => {
+    const searchTermMatch =
         solicitud.Nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
         solicitud.Apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
         solicitud.Rut.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -32,9 +40,16 @@ const filteredSolicitudes = solicitudes.filter(solicitud => {
         solicitud.NivelEducacional?.toLowerCase().includes(searchTerm.toLowerCase())||
         solicitud.InstitucionEducativa?.toLowerCase().includes(searchTerm.toLowerCase())||
         solicitud.Titulo?.toLowerCase().includes(searchTerm.toLowerCase())
-        // solicitud.ConocimientosCV?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-});
+        
+        const filtersMatch =
+        (filters.disponibilidad === "" || solicitud.Disponibilidad === filters.disponibilidad) &&
+        (filters.actividad === "" ||
+            solicitud.Actividad === filters.actividad) &&
+        (filters.rubro === "" || solicitud.Rubro === filters.rubro); 
+        
+        return searchTermMatch && filtersMatch;
+  });
+}, [solicitudes, searchTerm, filters]);
 
 function handleSubmit(_id,email) {
     const conf = window.confirm('Seguro que quieres Aceptar este usuario?');
@@ -56,7 +71,7 @@ function handleSubmit(_id,email) {
 
   return (
     <>
-    <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} filters={filters} setFilters={setFilters} />
     <div className="container-fluid">
                 <h1 className='tituloUsuarioSolicitud' style={{ fontFamily: 'Heavitas', fontSize: '30px' }}>Solicitudes de nuevos currículums</h1>
             </div>

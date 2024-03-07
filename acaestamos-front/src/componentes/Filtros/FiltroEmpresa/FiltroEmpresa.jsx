@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./FiltroEmpresa.css"
 
-const FiltroEmpresa = () => {
+const FiltroEmpresa = ({searchTerm, setSearchTerm, filters, setFilters}) => {
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -10,28 +10,40 @@ const FiltroEmpresa = () => {
         event.preventDefault();
     };
 
-    // contador de los años de experiencia
-    const [valorRango, setValorRango] = useState(0);
-    // contador de los años de experiencia
-    const handleInput = (event) => {
-        setValorRango(event.target.value);
+    const handleChange = (event, field) => {
+        console.log({ event, field });
+        const value = event.target.value;
+        setFilters((prevFilters) => ({
+            ...prevFilters,
+            [field]: value,
+        }));
+        
     };
+
+    const removerFiltros = () => {
+        setFilters({
+          disponibilidad: "",
+          orden: "",
+          rubro: "",
+        //   experiencia: 0,
+        });
+      };
+
 
     return (
         <>
 
             <div className=" row buscador" style={{ fontFamily: 'Poppins-Regular' }}>
                 <form className="d-flex container-fluid" role="search" id="buscar-ofertas">
-                    {/* <div className='d-flex col-10 align-items-center buscadorLupa' style={{ marginRight: '0px' }}> */}
                     <div className='col-9 me-4 searchButton' >
-                        <input className="form-control " type="search" placeholder="Buscador..." aria-label="Buscador..." style={{ height: '48px' }} />
+                        <input value={searchTerm} onChange={e => setSearchTerm(e.target.value)} className="form-control " type="search" placeholder="Buscador..." aria-label="Buscador..." style={{ height: '48px' }} />
                     </div>
                     <div className='col-1  divLupa'>
                         <button className="btn btn-outline-success" >
                             <i className="fa-solid fa-magnifying-glass img-fluid lupa" style={{ color: 'black', fontSize: '23px', width: '48px', height: '35px' }}></i>
                         </button>
                     </div>
-                    {/* </div> */}
+
                     <div className='col-2 colina'>
                         <button style={{ backgroundColor: '#049DD9', width: '120px', height: '48px' }} className="btn btn-outline-light moreFiltros" type="submit" onClick={toggleVisibility}>Más filtros</button>
                     </div>
@@ -44,17 +56,17 @@ const FiltroEmpresa = () => {
             <div className=" filtroAdmin row filtros-row" style={{ fontFamily: 'Poppins-Regular' }}>
                 {/* <div className=""> */}
                 <div className="col-md-2 filtros-col">
-                    <select className="form-select" aria-label="Default select example">
+                    <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "disponibilidad")} value={filters?.disponibilidad} placeholder="Seleccione disponibilidad">
                         <option value="" disabled selected hidden>Disponibilidad</option>
-                        <option value="1">Disponible</option>
-                        <option value="2">En búsqueda activa</option>
-                        <option value="3">No disponible</option>
+                        <option value="Disponible">Disponible</option>
+                        <option value="En búsqueda activa">En búsqueda activa</option>
+                        <option value="No disponible">No disponible</option>
 
                     </select>
                 </div>
 
                 <div className="col-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "orden")} value={filters?.orden} placeholder="Seleccione orden">
                             <option value="" disabled selected hidden>Ordenar por</option>
                             <option value="1">Recientes</option>
                             <option value="2">Más antiguos</option>
@@ -71,72 +83,72 @@ const FiltroEmpresa = () => {
                     </div> */}
 
                 <div className="col-md-2 filtros-col">
-                    <select className="form-select" aria-label="Default select example">
-                        <option value="" disabled selected hidden>Rubro</option>
-                        <option value="1">Administración</option>
-                        <option value="2">Agropecuaria</option>
-                        <option value="3">Alimenticia</option>
-                        <option value="4">Arquitectura</option>
-                        <option value="5">Artesanal</option>
-                        <option value="6">Automotriz</option>
-                        <option value="7">Banca/Financiera</option>
-                        <option value="8">Bioteconología</option>
-                        <option value="9">Call-Center</option>
-                        <option value="10">Comercio</option>
-                        <option value="11">Comercio exterior</option>
-                        <option value="12">Comunicaciones</option>
-                        <option value="13">Construcción</option>
-                        <option value="14">Consultoría</option>
-                        <option value="15">Correo</option>
-                        <option value="16">Defensa</option>
-                        <option value="17">Diseño</option>
-                        <option value="18">Editorial</option>
-                        <option value="19">Educación</option>
-                        <option value="20">Energía</option>
-                        <option value="21">Entretenimiento</option>
-                        <option value="22">Farmacéutica</option>
-                        <option value="23">Ferroviaria</option>
-                        <option value="24">Financiera</option>
-                        <option value="25">Gastronomía</option>
-                        <option value="26">Hotelería/Turismo</option>
-                        <option value="27">Imprenta</option>
-                        <option value="28">Industrial</option>
-                        <option value="29">Información e investigación</option>
-                        <option value="30">Informática</option>
-                        <option value="31">Ingeniería</option>
-                        <option value="32">Inmobiliaria</option>
-                        <option value="33">Internet</option>
-                        <option value="34">Laboratorio</option>
-                        <option value="35">Legal</option>
-                        <option value="36">Logística/Transporte</option>
-                        <option value="37">Manufactura</option>
-                        <option value="38">Medios</option>
-                        <option value="39">Publicidad</option>
-                        <option value="40">Recursos Humanos</option>
-                        <option value="41">Retail</option>
-                        <option value="42">Salud</option>
-                        <option value="43">Seguridad</option>
-                        <option value="44">Seguros</option>
-                        <option value="45">Servicios</option>
-                        <option value="46">Tecnología</option>
-                        <option value="47">Telecomunicaciones</option>
-                        <option value="48">Textil</option>
-                        <option value="49">Transporte</option>
-                        <option value="50">Turismo</option>
-                        <option value="51">Veterinaria</option>
-                        <option value="52">Otros</option>
+                    <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "rubro")} value={filters?.rubro} placeholder="Seleccione rubro">
+                    <option value="" disabled selected hidden>Rubro</option>
+                            <option value="Administración">Administración</option>
+                            <option value="Agropecuaria">Agropecuaria</option>
+                            <option value="Alimenticia">Alimenticia</option>
+                            <option value="Arquitectura">Arquitectura</option>
+                            <option value="Artesanal">Artesanal</option>
+                            <option value="Automotriz">Automotriz</option>
+                            <option value="Banca/Financiera">Banca/Financiera</option>
+                            <option value="Bioteconología">Bioteconología</option>
+                            <option value="Call-Center">Call-Center</option>
+                            <option value="Comercio">Comercio</option>
+                            <option value="Comercio exterior">Comercio exterior</option>
+                            <option value="Comunicaciones">Comunicaciones</option>
+                            <option value="Construcción">Construcción</option>
+                            <option value="Consultoría">Consultoría</option>
+                            <option value="Correo">Correo</option>
+                            <option value="Defensa">Defensa</option>
+                            <option value="Diseño">Diseño</option>
+                            <option value="Editorial">Editorial</option>
+                            <option value="Educación">Educación</option>
+                            <option value="Energía">Energía</option>
+                            <option value="Entretenimiento">Entretenimiento</option>
+                            <option value="Farmacéutica">Farmacéutica</option>
+                            <option value="Ferroviaria">Ferroviaria</option>
+                            <option value="Financiera">Financiera</option>
+                            <option value="Gastronomía">Gastronomía</option>
+                            <option value="Hotelería/Turismo">Hotelería/Turismo</option>
+                            <option value="Imprenta">Imprenta</option>
+                            <option value="Industrial">Industrial</option>
+                            <option value="Información e investigación">Información e investigación</option>
+                            <option value="Informática">Informática</option>
+                            <option value="Ingeniería">Ingeniería</option>
+                            <option value="Inmobiliaria">Inmobiliaria</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Laboratorio">Laboratorio</option>
+                            <option value="Legal">Legal</option>
+                            <option value="Logística/Transporte">Logística/Transporte</option>
+                            <option value="Manufactura">Manufactura</option>
+                            <option value="Medios">Medios</option>
+                            <option value="Publicidad">Publicidad</option>
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Salud">Salud</option>
+                            <option value="Seguridad">Seguridad</option>
+                            <option value="Seguros">Seguros</option>
+                            <option value="Servicios">Servicios</option>
+                            <option value="Tecnología">Tecnología</option>
+                            <option value="Telecomunicaciones">Telecomunicaciones</option>
+                            <option value="Textil">Textil</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Turismo">Turismo</option>
+                            <option value="Veterinaria">Veterinaria</option>
+                            <option value="Otros">Otros</option>
                     </select>
                 </div>
 
-                <div className="col-md-3 filtros-col">
+                {/* <div className="col-md-3 filtros-col">
                     <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
                     <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="20" id="customRange2" value={valorRango} onChange={handleInput} />
                     <h6 className="contador">{valorRango}</h6>
-                </div>
-                {/* </div> */}
+                </div> */}
+               
             </div>
             <div className='container-fluid botonfiltro' style={{ alignContent: 'center' }}>
-                <button className='btn btn-lg btn-primary botonFiltro' type='button'>Aplicar filtros</button>
+                <button className='btn btn-lg btn-primary botonFiltro' type='button' onClick={() => removerFiltros()}>Remover filtros</button>
             </div>
             </div>
         </>

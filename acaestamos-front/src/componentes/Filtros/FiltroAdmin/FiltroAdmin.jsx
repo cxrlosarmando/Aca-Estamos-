@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./FiltroAdmin.css"
 
-const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter, filters, setFilters}) => {
+const FiltroAdmin = ({ searchTerm, setSearchTerm, filters, setFilters}) => {
     const [isVisible, setIsVisible] = useState(false);
     
 
@@ -20,27 +20,12 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter, filters, setFil
         
     };
 
-    // contador de los años de experiencia
-    const [valorRango, setValorRango] = useState(0);
-    // contador de los años de experiencia
-    const handleInput = (event) => {
-        const value = event.target.value;
-        if (!isNaN(value)) {
-            // Si el valor es un número (años de experiencia), actualiza el estado correspondiente
-            setValorRango(value);
-        } else {
-            // Si el valor no es un número, actualiza el término de búsqueda
-            setSearchTerm(value);
-        }
-
-    };
-
     const removerFiltros = () => {
         setFilters({
-          perfil: "",
+            disponibilidad: "",
           actividad: "",
           rubro: "",
-          experiencia: 0,
+        //   experiencia: 0,
         });
       };
 
@@ -69,15 +54,25 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter, filters, setFil
             {/* Comienzan los filtros */}
             <div style={{ display: isVisible ? 'block' : 'none' }}>
                 <div className=" filtroAdmin row filtros-row" style={{ fontFamily: 'Poppins-Regular' }}>
-                    {/* <div className=""> */}
-                    <div className="col-md-2 filtros-col">
+                    
+                    {/* <div className="col-md-2 filtros-col">
                         <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "perfil")} value={filters?.perfil} placeholder="Seleccione perfil">
                             <option value="" disabled selected hidden>Perfiles</option>
                             <option value="1">Usuarios</option>
                             <option value="2">Empresas</option>
 
                         </select>
-                    </div>
+                    </div> */}
+                    <div className="col-md-2 filtros-col">
+                    <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "disponibilidad")} value={filters?.disponibilidad} placeholder="Seleccione disponibilidad">
+                        <option value="" disabled selected hidden>Disponibilidad</option>
+                        <option value="Disponible">Disponible</option>
+                        <option value="En búsqueda activa">En búsqueda activa</option>
+                        <option value="No disponible">No disponible</option>
+
+                    </select>
+                </div>
+
                     <div className="col-md-2 filtros-col">
                         <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "actividad")} value={filters?.actividad} placeholder="Seleccione actividad" >
                             <option value="" disabled selected hidden>Actividad</option>
@@ -143,12 +138,12 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter, filters, setFil
                         </select>
                     </div>
 
-                    <div className="col-md-3 filtros-col">
+                    {/* <div className="col-md-3 filtros-col">
                         <label htmlFor="customRange2" className="form-label">Años de Experiencia</label>
                         <input type="range" className="form-range" style={{ paddingBottom: '5px' }} min="0" max="40" id="customRange2" value={valorRango} onChange={handleInput} />
                         <h6 className="contador">{valorRango}</h6>
-                    </div>
-                    {/* </div> */}
+                    </div> */}
+                    
                 </div>
                 <div className='container-fluid botonfiltro' style={{ alignContent: 'center' }}>
                     <button className='btn btn-lg btn-primary botonFiltro' type='button' onClick={() => removerFiltros()}>Remover filtros</button>

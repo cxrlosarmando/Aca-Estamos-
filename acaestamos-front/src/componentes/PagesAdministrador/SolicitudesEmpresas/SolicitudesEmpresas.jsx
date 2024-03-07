@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './SolicitudesEmpresas.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -7,6 +7,12 @@ import FiltroAdmin from '../../Filtros/FiltroAdmin/FiltroAdmin';
 const SolicitudesEmpresas = () => {
   const [solicitudesEmpresas, setSolicitudesEmpresas] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    disponibilidad: "",
+    actividad: "",
+    rubro: "",
+    // experiencia: 0,
+});
 
   useEffect(() => {
     axios.get('http://localhost:3000/Empresas')
@@ -19,8 +25,9 @@ const SolicitudesEmpresas = () => {
 
   }, [searchTerm]);
 
-  const filteredSolicitudesEmpresas = solicitudesEmpresas.filter(solicitud => {
-    return (
+  const filteredSolicitudesEmpresas = useMemo(() => {
+    return solicitudesEmpresas.filter((solicitud) => {
+      const searchTermMatch =
         solicitud.NombreEmpresa.toLowerCase().includes(searchTerm.toLowerCase()) ||
         solicitud.RutEmpresa.toLowerCase().includes(searchTerm.toLowerCase()) ||
         solicitud.Email.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -30,9 +37,18 @@ const SolicitudesEmpresas = () => {
         solicitud.Ubicacion?.toLowerCase().includes(searchTerm.toLowerCase())||
         solicitud.LinkedIn?.toLowerCase().includes(searchTerm.toLowerCase())||
         solicitud.Url?.toLowerCase().includes(searchTerm.toLowerCase())||
-        solicitud.Numeroempleados?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-});
+        solicitud.Numeroempleados?.toLowerCase().includes(searchTerm.toLowerCase());
+
+        const filtersMatch =
+        (filters.disponibilidad === "" || solicitud.Disponibilidad === filters.disponibilidad) &&
+        (filters.actividad === "" ||
+            solicitud.Actividad === filters.actividad) &&
+        (filters.rubro === "" || solicitud.Rubro === filters.rubro); 
+        
+        return searchTermMatch && filtersMatch;
+
+  });
+}, [solicitudesEmpresas, searchTerm, filters]);
 
   function handleSubmitEmp(_id) {
     const conf = window.confirm('Seguro que quieres aceptar esta Empresa?');
@@ -52,7 +68,7 @@ const SolicitudesEmpresas = () => {
 
   return (
     <>
-    <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <FiltroAdmin searchTerm={searchTerm} setSearchTerm={setSearchTerm} filters={filters} setFilters={setFilters} />
       <div className="container-fluid">
         <h1 className='tituloUsuarioSolicitud' style={{ fontFamily: 'Heavitas', fontSize: '30px' }}>Solicitudes de nuevas empresas</h1>
       </div>
@@ -71,7 +87,7 @@ const SolicitudesEmpresas = () => {
               </div>
               <div className="solici-col3">
                 <button onClick={e => handleSubmitEmp(solicitud._id)} id="btn-Aprobar" className="btn btn-primary btn-lg">Aprobar</button>
-                <button id="btn-Denegar" className="btn btn-secondary btn-lg">Denegar</button>
+                <button onClick={e => handleDenegarEmpresa(solicitud._id)} id="btn-Denegar" className="btn btn-secondary btn-lg">Denegar</button>
               </div>
             </div>
           </div>
@@ -80,6 +96,6 @@ const SolicitudesEmpresas = () => {
 
     </>
   );
-}
 
+      }
 export default SolicitudesEmpresas;

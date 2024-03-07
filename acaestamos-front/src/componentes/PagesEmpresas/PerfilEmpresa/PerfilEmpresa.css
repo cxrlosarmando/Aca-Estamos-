@@ -1,4 +1,15 @@
-/* buscador */
+.talent{
+  width: 90%;
+  text-align: center;
+  margin: 30px;
+  margin-left: 60px;
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 5px 5px 20px;
+  
+ }
+ 
+ /* buscador */
 .buscador{
   margin: 30px;
 }

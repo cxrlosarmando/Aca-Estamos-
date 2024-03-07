@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../Efectos/Loading';
-import NavbarLogin from "../componentes/NavbarLogin/NavbarLogin";
 import PerfilEmpresa from "../componentes/PagesEmpresas/PerfilEmpresa/PerfilEmpresa";
-import FiltroEmpresa from '../componentes/Filtros/FiltroEmpresa/FiltroEmpresa';
 import LayoutEmpresa from '../Layout/LayoutEmpresa';
 import { useParams } from 'react-router-dom';
 
@@ -24,9 +22,7 @@ const PerfilEmpresas = () => {
               <Loading />
           ) : (
               <>
-                <LayoutEmpresa>
-                  
-                  <FiltroEmpresa />
+                <LayoutEmpresa>      
                   <PerfilEmpresa id={id}/>
                   </LayoutEmpresa>
               </>
