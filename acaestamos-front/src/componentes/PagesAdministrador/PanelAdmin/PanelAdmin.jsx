@@ -19,7 +19,9 @@ const PanelAdmin = () => {
             </Link>
             </div>
             <div className="admin-col3">
+              <Link to='/Solicitudes-InfoEmpresas-Admin'>
               <button id="btn-ofertas" className="btn btn-secondary btn-lg">Info Empresas</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -45,23 +47,7 @@ const PanelAdmin = () => {
             </div>
           </div>
         </div>
-      </main>
-
-      <main className="perfiladmin">
-        <div className="container-fluid" style={{ borderRadius: '10px', borderColor: 'black', boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', width: '100%', textAlign: 'center' }}>
-          <div className="admin-row">
-            <div className="admin-col1">
-              <button id="btn-perfil" type="button" className="btn btn-primary btn-lg">Perfiles</button>
-            </div>
-            <div className="admin-col2">
-              <button id="btn-activos" className="btn btn-primary btn-lg">Activos</button>
-            </div>
-            <div className="admin-col3">
-              <button id="btn-inactivos" className="btn btn-secondary btn-lg">Inactivos</button>
-            </div>
-          </div>
-        </div>
-      </main>
+      </main>   
     </>
   );
 }

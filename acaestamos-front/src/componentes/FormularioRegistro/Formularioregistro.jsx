@@ -73,7 +73,7 @@ const Formularioregistro = () => {
           Password,
         });
 
-        alert(JSON.stringify(response.data, null, 2));
+        alert(response.data.message);
         navigate('/Login-form')
       } catch (error) {
         console.error('Error al enviar la solicitud:', error.response?.data || error.message);
@@ -146,20 +146,17 @@ const Formularioregistro = () => {
                     <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
                     <div className="invalid-feedback">Please choose a username.</div>
                   </div>
-                </div> <br/>
-                 {/* Muestra la alerta si está visible */}
-              {alertState.visible && (
-                <div id="alertsElement" className={`alert ${alertState.type}`}>
-                  {alertState.message}
-                </div>
-              )}
+                </div> <br />
+                {/* Muestra la alerta si está visible */}
+                {alertState.visible && (
+                  <div id="alertsElement" className={`alert ${alertState.type}`}>
+                    {alertState.message}
+                  </div>
+                )}
                 <div className="row" id="contendor-registro">
                   <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
                 </div>
                 <div className="col">
-                  <div className="google-icon">
-                    <a href="#"><img className="img-google" src="/Img/Google.icon.jpg" alt="Google icon" /></a>
-                  </div>
                 </div>
               </form>
             </div>

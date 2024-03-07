@@ -1,10 +1,9 @@
 import './EditarCv.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import 'moment/locale/es';
-import moment from 'moment';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
+import dayjs from "../../../Utils/dayjs";
 
 const EditarCv = () => {
     const [perfil, setPerfil] = useState(null);
@@ -12,7 +11,7 @@ const EditarCv = () => {
     useEffect(() => {
         const obtenerPerfil = async () => {
             try {
-                
+
                 const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
                 setPerfil(response.data);
             } catch (error) {
@@ -55,7 +54,7 @@ const EditarCv = () => {
                             </div>
                             <div className="contInfo">
                                 <p>{perfil && perfil.AcercadeCV ? perfil && perfil.AcercadeCV : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
-                                <a href="#" style={{ color: "black" }}><u> Cert. antecedentes</u></a>
+                                <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF3}`} download target='_blank' style={{ color: "black" }}><u> Cert. antecedentes</u></a>
                             </div>
                             <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
                                 <div className="col-10">
@@ -90,7 +89,7 @@ const EditarCv = () => {
                                                 <li key={index}>{item}</li>
                                             ))}
                                     </ul>
-                                    <a href="#" style={{ color: "black" }}><u> Cert. cursos</u></a>
+                                    <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF4}`} download target='_blank' style={{ color: "black" }}><u> Cert. cursos</u></a>
                                 </div>
                             </div>
                             <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
@@ -104,7 +103,7 @@ const EditarCv = () => {
                             <div className="contactData">
                                 <ul>
                                     <p><i className="fa-solid fa-phone" style={{ color: 'black' }}></i> {perfil && perfil.Telefono}</p>
-                                    <p><i className="fa-brands fa-linkedin" style={{ color: 'black' }}> </i> {perfil && perfil.LinkedIn? perfil && perfil.LinkedIn : 'linkedin/milinkedin'}</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
+                                    <p><i className="fa-brands fa-linkedin" style={{ color: 'black' }}> </i> {perfil && perfil.LinkedIn ? perfil && perfil.LinkedIn : 'linkedin/milinkedin'}</p> {/* <!-- arreglar esto para que los lonks largos se vean facheros --> */}
                                     <p><i className="fa-solid fa-envelope" style={{ color: 'black' }}></i> {perfil && perfil.Email}</p>
                                 </ul>
                             </div>
@@ -118,9 +117,15 @@ const EditarCv = () => {
                                     <Link to="/Actualizar-Experiencia"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                                 </div>
                                 <div className="contInfo">
-                                <h6><b><i>{perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i></b></h6>
-                                <h6><b>{perfil && perfil.NombredelaEmp ? perfil && perfil.NombredelaEmp : 'Nombre de la empresa'}</b></h6>
-                                <h6><b>{perfil && perfil.Cargo? perfil && perfil.Cargo : 'Cargo'} ｜ {perfil && perfil.TipoEmpleo ? perfil && perfil.TipoEmpleo : 'Tipo de empleo'}</b></h6>
+                                    <h6><b><i>{perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil?.CheckCargo
+                                        ? "Actualidad"
+                                        : perfil &&
+                                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                                            ? perfil &&
+                                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                                            : "Fecha Finalizacion"}</i></b></h6>
+                                    <h6><b>{perfil && perfil.NombredelaEmp ? perfil && perfil.NombredelaEmp : 'Nombre de la empresa'}</b></h6>
+                                    <h6><b>{perfil && perfil.Cargo ? perfil && perfil.Cargo : 'Cargo'} ｜ {perfil && perfil.TipoEmpleo ? perfil && perfil.TipoEmpleo : 'Tipo de empleo'}</b></h6>
                                     <p>{perfil && perfil.DescripcionCargo ? perfil && perfil.DescripcionCargo : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
                                 </div>
                             </div>
@@ -132,13 +137,13 @@ const EditarCv = () => {
                                     <Link to="/Actualizar-Educacion"><i className="fa-solid fa-pen-to-square fa-xl iconCv"></i></Link>
                                 </div>
                                 <div className="contInfo">
-                                <h6><b><i>{perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo? perfil && perfil.Titulo : 'Titulo'}</b></h6>
-                                <h6><b>{perfil && perfil.InstitucionEducativa? perfil && perfil.InstitucionEducativa : 'Institucion Educativa'} ｜ {perfil && perfil.NivelEducacional ? perfil && perfil.NivelEducacional : 'Nivel Educacional'}</b></h6>
+                                    <h6><b><i>{perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo ? perfil && perfil.Titulo : 'Titulo'}</b></h6>
+                                    <h6><b>{perfil && perfil.InstitucionEducativa ? perfil && perfil.InstitucionEducativa : 'Institucion Educativa'} ｜ {perfil && perfil.NivelEducacional ? perfil && perfil.NivelEducacional : 'Nivel Educacional'}</b></h6>
                                     <p>{perfil && perfil.Descripcion ? perfil && perfil.Descripcion : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
                                 </div>
                             </div>
                             <div className="container-fluid contInfo">
-                                <a href="#" style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
+                                <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download target='_blank' style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
                             </div>
                         </div>
                     </div>

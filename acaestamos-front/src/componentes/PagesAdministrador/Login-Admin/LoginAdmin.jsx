@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './LoginAdmin.css';
-import { useNavigate , Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from '../../../Efectos/useAlert';
 
@@ -72,17 +72,16 @@ function LoginAdmin() {
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                     <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
                   </div>
+                  {/* Muestra la alerta si está visible */}
+                  {alertState.visible && (
+                    <div id="alertsElement" className={`alert ${alertState.type}`}>
+                      {alertState.message}
+                    </div>
+                  )}
                   <div className="text-center">
                     <button type='submit' className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button> <br />
                   </div>
                 </form>
-
-                {/* Muestra la alerta si está visible */}
-                {alertState.visible && (
-                  <div id="alertsElement" className={`alert ${alertState.type}`}>
-                    {alertState.message}
-                  </div>
-                )}
               </div>
             </div>
           </div>

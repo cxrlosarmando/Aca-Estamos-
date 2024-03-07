@@ -76,7 +76,7 @@ const FormularioEmpresa = () => {
           Email,
           Password
         });
-        alert(JSON.stringify(response.data, null, 2));
+        alert(response.data.message);
         navigate('/Login-Empresas')
       } catch (error) {
         console.error('Error al enviar la solicitud:', error.response?.data || error.message);
@@ -167,30 +167,25 @@ const FormularioEmpresa = () => {
                     <div className="col-md-6">
                       <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
                       <input type="password" className="form-control" id="validationCustom02" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
-                      <div className="invalid-feedback">
-                        Please choose a username.
-                      </div>
+                      <div className="invalid-feedback">Please choose a username.</div>
                     </div>
                   </div>
-                </div>
-                <div className="row" id="contendor-registro">
-                  <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
+
+                  <div className="row" id="contendor-registro">
+                    {/* Muestra la alerta si está visible */}
+                    {alertState.visible && (
+                      <div id="alertsElement" className={`alert ${alertState.type}`} style={{marginTop: '5%'}}>
+                        {alertState.message}
+                      </div>
+                    )}
+                    <button type="submit" className="btn btn-primary btn-lg" id="boton-registro" onClick={showAlert}>Registrarse</button>
+                  </div>
                 </div>
                 <div className="row">
                   <div className="col">
-                    <div className="google-icon">
-                      <a href="/"><img className="img-google" src="/Img/Google.icon.jpg" alt="Google Icon" /></a>
-                    </div>
                   </div>
                 </div>
               </form>
-
-              {/* Muestra la alerta si está visible */}
-              {alertState.visible && (
-                <div id="alertsElement" className={`alert ${alertState.type}`}>
-                  {alertState.message}
-                </div>
-              )}
             </div>
           </div>
         </div>

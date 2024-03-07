@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
 
-const PerfilEmpresa = () => {
+const PerfilEmpresa = ({id}) => {
 
     const [PerfilE, setPerfilE] = useState(null);
 
     useEffect(() => {
         const obtenerPerfilE = async () => {
             try {
-                const response = await client.get(`http://localhost:3000/Obtener-Perfil-Empresa/${getUserId()}`);
+                const response = await client.get(`http://localhost:3000/Obtener-Perfil-Empresa/${id ??getUserId()}`);
                 setPerfilE(response.data);
             } catch (error) {
                 if (error.response) {

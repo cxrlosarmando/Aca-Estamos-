@@ -29,7 +29,7 @@ const userSchema = new Schema({
   NombredelaEmp: String,
   FechaExpInicio: Date,
   FechaExpFin: Date,
-  CheckCargo: String,
+  CheckCargo: Boolean,
   DescripcionCargo: String,
   NombreCV: String,
   TitularCV: String,

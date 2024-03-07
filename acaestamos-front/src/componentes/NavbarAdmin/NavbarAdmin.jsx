@@ -27,16 +27,12 @@ const NavbarAdmin = () => {
                                         <p className="mb-0">#RencaParticipa</p>
                                     </div>
                                     <div className="container-fluid gap-5 d-md-flex justify-content-md-end p-4 secondNav" style={{ justifyContent: 'flex-end' }} id="botonesnav">
-                                        <div className="bell">
-                                            <Link to="/Login" className="btn btn-m  me-2 userButton" type="button" style={{ backgroundColor: '#D97D0D', color: 'white' }}>
-                                                <i className="fa-solid fa-bell"></i>
-                                            </Link>
-                                        </div>
+                                      
 
                                         <button className="btn nav-item dropdown btn-m userButton userN" style={{ backgroundColor: '#049DD9' }}>
                                             <a className="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nombre administrador
+                                                Administrador
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right position-absolute top-100 start-0" aria-labelledby="navbarDropdown">
                                                 {/* Agrega cualquier elemento adicional del menú desplegable según sea necesario */}
@@ -46,7 +42,7 @@ const NavbarAdmin = () => {
                                                 <Link to="/Visualizacion-Usuario-Admin" className="dropdown-item" href="#"><i class="fa-solid fa-user" style={{ color: "#049DD9" }}></i> <b>Postulantes</b></Link>
 
 
-                                                <a className="dropdown-item" href="#"><i className="fa-solid fa-toggle-on" style={{ color: "#83A637" }}></i><b> Operativo</b></a>
+                                                {/* <a className="dropdown-item" href="#"><i className="fa-solid fa-toggle-on" style={{ color: "#83A637" }}></i><b> Operativo</b></a> */}
                                                 {/* <a className="dropdown-item" href="#">     Activos</a>
                                                     <a className="dropdown-item" href="#">     Inactivos</a> */}
                                                 <a className="dropdown-item" href="#" onClick={handleLogout}><i className="fa-solid fa-door-open" style={{ color: "#D97D0D" }}></i><b> Cerrar sesión</b></a>

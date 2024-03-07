@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './RegistroAdmin.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from '../../../Efectos/useAlert';
 
@@ -87,7 +87,7 @@ const RegistroAdmin = () => {
                   <label htmlFor="validationCustom02" className="form-label">Repetir Contraseña</label>
                   <input type="password" className="form-control" id="repetircontraseña" placeholder="*********" value={Repassword} onChange={(e) => setRepassword(e.target.value)} />
                   <div className="invalid-feedback">Please choose a username.</div>
-                </div>
+                </div> <br />
                 {/* Muestra la alerta si está visible */}
                 {alertState.visible && (
                   <div id="alertsElement" className={`alert ${alertState.type}`}>

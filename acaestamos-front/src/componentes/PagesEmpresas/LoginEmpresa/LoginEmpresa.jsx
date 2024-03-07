@@ -83,6 +83,12 @@ const LoginEmpresa = () => {
                                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                         <label className="form-check-label" htmlFor="exampleCheck1">Guardar contraseña</label>
                                     </div>
+                                    {/* Muestra la alerta si está visible */}
+                                    {alertState.visible && (
+                                        <div id="alertsElement" className={`alert ${alertState.type}`}>
+                                            {alertState.message}
+                                        </div>
+                                    )}
                                     <div className="text-center">
                                         <button type="submit" className="btn btn-primary btn-lg" id="BotonInicioSesion">Ingresar</button><br />
                                     </div>
@@ -90,13 +96,6 @@ const LoginEmpresa = () => {
                                         <Link to="/OlvidoContra" className="Olvide-con">Recuperar Contraseña</Link>
                                     </div>
                                 </form>
-
-                                {/* Muestra la alerta si está visible */}
-                                {alertState.visible && (
-                                    <div id="alertsElement" className={`alert ${alertState.type}`}>
-                                        {alertState.message}
-                                    </div>
-                                )}
                             </div>
                         </div>
                     </div>

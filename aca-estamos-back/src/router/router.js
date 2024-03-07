@@ -31,7 +31,8 @@ const EmpresaAceptada = require('../controllers/emp-aceptada')
 //COSAS PARA ADMINISTRADOR 
 const RegAdm = require('../controllers/adm-create');
 const LogAdm = require('../controllers/adm-login');
-const Admins = require('../controllers/admin-get')
+const Admins = require('../controllers/admin-get');
+
 // Multer para Usuarios
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -56,17 +57,12 @@ router.post('/Guardar-PerfilCV/:id', GuardarPerfilcv);
 router.get('/Obtener-Perfil/:id', ObtenerPerfil);
 
 
-
-
 //Router   ADMINISTRADOR //
 router.post('/Registro-Admin', RegAdm);
 router.post('/Login-Admin', LogAdm);
 router.get('/Administradores', Admins )
 router.put('/Usuarios-Aceptados/:id', AceptarUsuario);
 router.get('/Usuarios-Aceptados/', ListaUsuariosAceptados);
-
-
-
 
 //Router   EMPRESAS //
 
@@ -85,8 +81,6 @@ router.get("/ruta-protegida", isAuth, (req, res) => {
     res.send("Ruta protegida");
 }
 );
-
-
 
 //rutar enviar correo 
 

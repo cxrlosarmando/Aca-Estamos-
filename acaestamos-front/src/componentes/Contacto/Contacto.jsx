@@ -83,19 +83,18 @@ const Contacto = () => {
                                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Comentario</label>
                                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comenta tus dudas acá" value={Comentario} onChange={(e) => setComentario(e.target.value)}></textarea>
                                     </div>
+                                    {/* Muestra la alerta si está visible */}
+                                    {alertState.visible && (
+                                        <div id="alertsElement" className={`alert ${alertState.type}`}>
+                                            {alertState.message}
+                                        </div>
+                                    )}
                                     <div className="d-flex justify-content-center">
                                         <button type="submit" className="btn btn-primary btn-lg" onClick={showAlert}>Enviar Formulario</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
-
-                        {/* Muestra la alerta si está visible */}
-                        {alertState.visible && (
-                            <div id="alertsElement" className={`alert ${alertState.type}`}>
-                                {alertState.message}
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>

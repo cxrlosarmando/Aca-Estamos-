@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import 'moment/locale/es';
-import moment from 'moment';
 import client from '../../../Utils/axios.Client';
 import getUserId from '../../../Utils/getUserId';
+import dayjs from "../../../Utils/dayjs";
 
-const VisualizacionCv = () => {
+const VisualizacionCv = ({id}) => {
   
   const [perfil, setPerfil] = useState(null);
 
@@ -12,7 +11,7 @@ const VisualizacionCv = () => {
       const obtenerPerfil = async () => {
           try {
               
-              const response = await client.get(`http://localhost:3000/Obtener-Perfil/${getUserId()}`);
+              const response = await client.get(`http://localhost:3000/Obtener-Perfil/${id ??getUserId()}`);
               setPerfil(response.data);
           } catch (error) {
               if (error.response) {
@@ -48,7 +47,7 @@ const VisualizacionCv = () => {
                           </div>
                           <div className="contInfo">
                               <p>{perfil && perfil.AcercadeCV ? perfil && perfil.AcercadeCV : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, perspiciatis non veniam'}</p>
-                              <a href="#" style={{ color: "black" }}><u> Cert. antecedentes</u></a>
+                              <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF3}`} download target='_blank' style={{ color: "black" }}><u> Cert. antecedentes</u></a>
                           </div>
                           <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
                               <div className="col-10">
@@ -80,7 +79,7 @@ const VisualizacionCv = () => {
                                               <li key={index}>{item}</li>
                                           ))}
                                   </ul>
-                                  <a href="#" style={{ color: "black" }}><u> Cert. cursos</u></a>
+                                  <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF4}`} download target='_blank' style={{ color: "black" }}><u> Cert. cursos</u></a>
                               </div>
                           </div>
                           <div className="row container-fluid containerItems p-2 justify-content-center" style={{ backgroundColor: "#0077B7" }}>
@@ -102,7 +101,13 @@ const VisualizacionCv = () => {
                                   <h4 className="itemsCv p-2">EXPERIENCIA</h4>
                               </div>
                               <div className="contInfo">
-                              <h6><b><i>{perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaExpFin).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i></b></h6>
+                              <h6><b><i>{perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaExpInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil?.CheckCargo
+                          ? "Actualidad"
+                          : perfil &&
+                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                          ? perfil &&
+                            dayjs(perfil.FechaExpFin).format("MMMM [de] YYYY")
+                          : "Fecha Finalizacion"}</i></b></h6>
                               <h6><b>{perfil && perfil.NombredelaEmp ? perfil && perfil.NombredelaEmp : 'Nombre de la empresa'}</b></h6>
                               <h6><b>{perfil && perfil.Cargo? perfil && perfil.Cargo : 'Cargo'} ｜ {perfil && perfil.TipoEmpleo ? perfil && perfil.TipoEmpleo : 'Tipo de empleo'}</b></h6>
                                   <p>{perfil && perfil.DescripcionCargo ? perfil && perfil.DescripcionCargo : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
@@ -113,13 +118,13 @@ const VisualizacionCv = () => {
                                   <h4 className="itemsCv">EDUCACIÓN</h4>
                               </div>
                               <div className="contInfo">
-                              <h6><b><i>{perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaInicio).locale('es').format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') ? perfil && moment(perfil.FechaFinalizacion).locale('es').format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo? perfil && perfil.Titulo : 'Titulo'}</b></h6>
+                              <h6><b><i>{perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaInicio).format('MMMM [de] YYYY') : 'Fecha Inicio'}</i>｜<i>{perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') ? perfil && dayjs(perfil.FechaFinalizacion).format('MMMM [de] YYYY') : 'Fecha Finalizacion'}</i> {perfil && perfil.Titulo? perfil && perfil.Titulo : 'Titulo'}</b></h6>
                               <h6><b>{perfil && perfil.InstitucionEducativa? perfil && perfil.InstitucionEducativa : 'Institucion Educativa'} ｜ {perfil && perfil.NivelEducacional ? perfil && perfil.NivelEducacional : 'Nivel Educacional'}</b></h6>
                                   <p>{perfil && perfil.Descripcion ? perfil && perfil.Descripcion : 'descripcion del trabajo:Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam? Culpa quasi'} </p>
                               </div>
                           </div>
                           <div className="container-fluid contInfo">
-                              <a href="#" style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
+                          <a href={`http://localhost:3000/uploads/${perfil && perfil.ArchivoPDF2}`} download target='_blank' style={{ color: "black" }}><u> Cert. de estudios PDF</u></a>
                           </div>
                       </div>
                   </div>

@@ -16,7 +16,7 @@ const GuardarExperiencia = async (req, res) => {
       FechaExpInicio: req.body.FechaExpInicio,
       FechaExpFin: req.body.FechaExpFin,
       CheckCargo: req.body.CheckCargo,
-      DescripcionCargo: req.body.DescripcionCargo
+      DescripcionCargo: req.body.DescripcionCargo,
     };
 
     Object.assign(usuario, nuevosDatos);

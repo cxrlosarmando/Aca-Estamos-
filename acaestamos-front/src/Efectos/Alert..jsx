@@ -1,5 +1,6 @@
 import React from 'react';
-import { useAlert } from './useAlert'; // Importa el hook useAlert
+import { useAlert } from './useAlert';
+import './Efectos/Alert.css';// Importa el hook useAlert
 
 function Alert() {
   const [alertState, alertApi] = useAlert("alertsElement"); // Usa el hook useAlert para obtener el estado y la API de alerta
