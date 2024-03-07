@@ -31,6 +31,7 @@ import MostrarCV from '../Views/MostrarCV';
 //ADMIN COSAS
 import RegFormularioAdmin from '../Views/RegisterFormAdmin';
 import LogFormularioAdmin from '../Views/LoginFormularioAdm';
+import AdminSolicitudesInfoEmpresas from '../Views/AdminSolicitudesInfoEmpresas';
 
 
 
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
   { path: '/Pruebas', element: <App /> },
   //Routers para usuarios
   { path: '/Login-form', element: <LoginFormulario /> },
-  { path: '/Perfil-Usuario', element: <PerfilUsers /> },
+  { path: '/Perfil-Usuario/:id?', element: <PerfilUsers /> },
   { path: '/OlvidoContra', element: <OlvidoContra/>},
   { path: '/Registro', element: <Register /> },
   { path: '/Registro-form', element: <RegisterForm /> },
@@ -53,18 +54,19 @@ const router = createBrowserRouter([
   { path: '/Actualizar-Educacion', element: <EditEducacion /> },
   { path: '/Actualizar-Experiencia', element: <EditExperiencia /> },
   { path: '/Actualizar-Perfil', element: <EditPerfil /> },
-  { path: '/Mostar-CV', element: <MostrarCV /> },
+  { path: '/Mostrar-CV/:id?', element: <MostrarCV /> },
   //Router empresas
   { path: '/Registro-form-Empresa', element: <RegisterFormEmpresa /> },
   { path: '/Login-Empresas', element: <LoginFormularioE /> },
-  { path: '/Perfil-Empresa', element: <PerfilEmpresas /> },
+  { path: '/Perfil-Empresa/:id?', element: <PerfilEmpresas /> },
   { path: '/Edit-Info-Empresa', element: <Editinfoempresas /> },
   { path: '/Edit-Perfil-Empresa', element: <EditPerfilE /> },
-  { path: '/Info-Empresa', element: <Empresasinfoview /> },
+  { path: '/Info-Empresa/:id?', element: <Empresasinfoview /> },
   //Acá empieza enrutadoadmin
   { path: '/Perfil-Admin', element: <PerfilAdmin /> },
   { path: '/Visualizacion-Usuario-Admin', element: <AdminVisualizacion /> },
   { path: '/Solicitudes-CV-Admin', element: <AdminSolicitudescv /> },
+  { path: '/Solicitudes-InfoEmpresas-Admin', element: < AdminSolicitudesInfoEmpresas/> },
   { path: '/Solicitudes-Usuarios-Admin', element: <AdminSolicitudesUsuarios /> },
   { path: '/Solicitudes-Empresas-Admin', element: <AdminSolicitudesEmpresas />},
   { path: '/Visualizacion-Empresas-Admin', element: <AdminVisualizacionEmpresas /> },

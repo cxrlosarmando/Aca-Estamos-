@@ -4,10 +4,13 @@ import NavbarLogin from "../componentes/NavbarLogin/NavbarLogin";
 import PerfilEmpresa from "../componentes/PagesEmpresas/PerfilEmpresa/PerfilEmpresa";
 import FiltroEmpresa from '../componentes/Filtros/FiltroEmpresa/FiltroEmpresa';
 import LayoutEmpresa from '../Layout/LayoutEmpresa';
+import { useParams } from 'react-router-dom';
 
 
 const PerfilEmpresas = () => {
   const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+
 
   useEffect(() => {
       setTimeout(() => {
@@ -24,7 +27,7 @@ const PerfilEmpresas = () => {
                 <LayoutEmpresa>
                   
                   <FiltroEmpresa />
-                  <PerfilEmpresa />
+                  <PerfilEmpresa id={id}/>
                   </LayoutEmpresa>
               </>
           )}
