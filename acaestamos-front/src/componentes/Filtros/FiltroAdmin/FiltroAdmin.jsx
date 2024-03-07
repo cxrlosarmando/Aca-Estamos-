@@ -1,14 +1,9 @@
 import React, { useState } from "react"
 import "./FiltroAdmin.css"
 
-const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
+const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter, filters, setFilters}) => {
     const [isVisible, setIsVisible] = useState(false);
-    const [filters, setFilters] = useState({
-        perfil: "",
-        actividad: "",
-        rubro: "",
-        experiencia: 0,
-    });
+    
 
     const toggleVisibility = (event) => {
         setIsVisible(!isVisible);
@@ -16,6 +11,7 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
     };
 
     const handleChange = (event, field) => {
+        console.log({ event, field });
         const value = event.target.value;
         setFilters((prevFilters) => ({
             ...prevFilters,
@@ -38,6 +34,15 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
         }
 
     };
+
+    const removerFiltros = () => {
+        setFilters({
+          perfil: "",
+          actividad: "",
+          rubro: "",
+          experiencia: 0,
+        });
+      };
 
     return (
         <>
@@ -66,7 +71,7 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
                 <div className=" filtroAdmin row filtros-row" style={{ fontFamily: 'Poppins-Regular' }}>
                     {/* <div className=""> */}
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "perfil")}>
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "perfil")} value={filters?.perfil} placeholder="Seleccione perfil">
                             <option value="" disabled selected hidden>Perfiles</option>
                             <option value="1">Usuarios</option>
                             <option value="2">Empresas</option>
@@ -74,14 +79,14 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
                         </select>
                     </div>
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "actividad")}>
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "actividad")} value={filters?.actividad} placeholder="Seleccione actividad" >
                             <option value="" disabled selected hidden>Actividad</option>
                             <option value="1">Activo</option>
                             <option value="2">Inactivo</option>
                         </select>
                     </div>
                     <div className="col-md-2 filtros-col">
-                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e)}>
+                        <select className="form-select" aria-label="Default select example" onChange={(e) => handleChange(e, "rubro")} value={filters?.rubro} placeholder="Seleccione rubro">
                             <option value="" disabled selected hidden>Rubro</option>
                             <option value="Administración">Administración</option>
                             <option value="Agropecuaria">Agropecuaria</option>
@@ -146,7 +151,7 @@ const FiltroAdmin = ({ searchTerm, setSearchTerm, onApplyFilter }) => {
                     {/* </div> */}
                 </div>
                 <div className='container-fluid botonfiltro' style={{ alignContent: 'center' }}>
-                    <button className='btn btn-lg btn-primary botonFiltro' type='button'>Aplicar filtros</button>
+                    <button className='btn btn-lg btn-primary botonFiltro' type='button' onClick={() => removerFiltros()}>Remover filtros</button>
                 </div>
 
             </div>
