@@ -1,7 +1,7 @@
 import Footer from "../componentes/Footer/Footer";
 import NavbarAdmin from "../componentes/NavbarAdmin/NavbarAdmin";
 import {useState, useEffect} from "react";
-
+import Navbar from "../componentes/Navbar/Navbar";
 
 const LayoutAdmin = ({ children }) => {
 
