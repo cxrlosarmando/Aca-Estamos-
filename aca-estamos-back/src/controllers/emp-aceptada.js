@@ -3,7 +3,7 @@ const Empresa = require("../models/user-models-empresa")
 
 const listaEmpresas = async (req, res) => {
     try {
-        const respuesta = await Empresa.find({aceptado: true}, 'Nombre Apellido Telefono Rut FechaNacimiento Email Password EstadoCivil Rubro LinkedIn Disponibilidad ArchivoPDF1 ArchivoPDF ArchivoPDF3 ArchivoPDF4 ImagenPerfil NivelEducacional InstitucionEducativa Titulo FechaInicio FechaFinalizacion Descripcion Cargo TipoEmpleo NombredelaEmp FechaExpInicio FechaExpFin CheckCargo DescripcionCargo NombreCV TitularCV AcercadeCV ConocimientosCV CursosCV' );
+        const respuesta = await Empresa.find({aceptado: true}, 'NombreEmpresa Telefono Rubro: RutEmpresa: Url: Email: Password: Acercade: Trayectoria: Numeroempleados: CorreoContacto: Ubicacion: LinkedIn: ImagenEmpresa');
 
         res.status(200).json({
             code: 200,
